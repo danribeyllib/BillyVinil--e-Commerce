@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bulma-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-*" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Bandeiras-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+  <!--CSS-->
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <link rel="stylesheet" href="./CSS/modais.css" />
+  <!--Ícone-->
+  <link rel="icon" type="image/png" href="./imagens/logos/Billy_logo_somente_gato.png" sizes="64x64" />
+  <title>Catálogo Completo - BillyVinil</title>
+</head>
+
+<body>
+  <!--NAV-->
+  <div class="navbar-brand is-justify-content-center">
+    <a class="navbar-item navbar-item-logo" href="#">
+    </a>
+  </div>
+
+  <nav class="navbar navbar-topo" role="navigation" aria-label="main navigation">
+    <a id="navbarIconeSanduiche" role="button" class="navbar-burger navbar-start mx-2" aria-label="menu"
+      aria-expanded="false" data-target="navbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
+    <div id="navbar" class="navbar-menu px-4">
+      <div class="navbar-start">
+        <a href="./index.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-home"></i></span>
+            <span>Home</span>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable nav-itens">
+          <a class="navbar-link">
+            <span class="icon-text">
+              <span><i class="fa-solid fa-record-vinyl"></i></span>
+              Discos
+            </span>
+          </a>
+
+          <div class="navbar-dropdown">
+            <a href="./acervo.html" class="navbar-item">
+              Nosso Acervo
+            </a>
+            <a href="./catalogo.html" class="navbar-item">
+              Catálogo completo
+            </a>
+          </div>
+        </div>
+
+        <a href="./ofertas.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fa-solid fa-gift"></i></span>
+            <span>Ofertas</span>
+          </span>
+        </a>
+
+        <a href="./contato.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span><i class="fa-regular fa-paper-plane"></i></span> Contato
+          </span>
+        </a>
+
+        <a href="./sobre.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span><i class="fas fa-cat"></i></span> Sobre
+          </span>
+        </a>
+
+      </div>
+
+      <div class="navbar-end">
+
+        <div class="level-item">
+          <p class="subtitle is-5"><strong></strong></p>
+        </div>
+
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="carrinho.html" target="_blank" class="button is-link is-light is-inverted">
+              <span class="icon has-text">
+                <i class="fas fa-shopping-cart"></i>
+              </span><strong> Carrinho</strong>
+            </a>
+
+            <a href="favoritos.html" target="_blank" class="button is-danger is-light is-inverted">
+              <span class="icon has-text">
+                <i class="fa-solid fa-heart"></i>
+              </span><strong> Favoritos</strong>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!--MAIN-->
+  <main>
+    <section class="destaques-fundo">
+
+      <h2 class="catalogo-titulo title is-3 has-text-centered has-text-white p-5 mb-0">CATÁLOGO DE DISCOS</h2>
+
+      <!--Filtrar-->
+      <nav class="filtros-nav navbar is-dark mt-0 mb-5" role="navigation" aria-label="filtros">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" id="botao-menu-mobile">
+              <p class="title is-4 has-text-white"><i class="fa-solid fa-list-check"></i></p>
+            </a>
+
+            <a class="navbar-item btn-limpar-filtro" onclick="limparFiltros()" title="Limpar filtros">
+              <span class="icon"><i class="has-text-white fa-solid fa-rotate-left"></i></span>
+            </a>
+          </div>
+
+          <div id="navbarFiltros" class="navbar-menu">
+            <div class="navbar-start navbarFiltros">
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless has-text-white">
+                  <span class="icon is-small mr-2"><i class="fa-solid fa-guitar has-text-white"></i></span>
+                  <span class="has-text-white">Artista</span>
+                  <span class="icon is-small ml-2"><i class="fa-solid fa-chevron-down has-text-white"></i></span>
+                </a>
+                <div class="navbar-dropdown is-boxed" id="filtro-artista">
+                  <a class="navbar-item has-text-weight-bold" onclick="ordenar('artista', 'asc')">A - Z</a>
+                  <a class="navbar-item has-text-weight-bold" onclick="ordenar('artista', 'desc')">Z - A</a>
+                  <hr class="navbar-divider">
+                </div>
+              </div>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless has-text-white">
+                  <span class="icon is-small mr-2"><i class="fa-solid fa-icons has-text-white"></i></span>
+                  <span class="has-text-white">Gênero</span>
+                  <span class="icon is-small ml-2"><i class="fa-solid fa-chevron-down has-text-white"></i></span>
+                </a>
+                <div class="navbar-dropdown is-boxed" id="filtro-genero"></div>
+              </div>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless has-text-white">
+                  <span class="icon is-small mr-2"><i class="fa-solid fa-calendar-days has-text-white"></i></span>
+                  <span class="has-text-white">Ano</span>
+                  <span class="icon is-small ml-2"><i class="fa-solid fa-chevron-down has-text-white"></i></span>
+                </a>
+                <div class="navbar-dropdown is-boxed" id="filtro-ano">
+                  <a class="navbar-item has-text-weight-bold" onclick="ordenar('lancamento', 'desc')">Mais recentes</a>
+                  <a class="navbar-item has-text-weight-bold" onclick="ordenar('lancamento', 'asc')">Mais antigos</a>
+                  <hr class="navbar-divider">
+                </div>
+              </div>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless has-text-white">
+                  <span class="icon is-small mr-2"><i class="fa-solid fa-earth-americas has-text-white"></i></span>
+                  <span class="has-text-white">País</span>
+                  <span class="icon is-small ml-2"><i class="fa-solid fa-chevron-down has-text-white"></i></span>
+                </a>
+                <div class="navbar-dropdown is-boxed" id="filtro-pais"></div>
+              </div>
+            </div>
+
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="field has-addons">
+                  <p class="control">
+                    <input id="inputBusca" class="input is-link" type="text" placeholder="Buscar álbum ou artista..." />
+                  </p>
+                  <p class="control">
+                    <button class="button is-link is-light is-inverted" onclick="executarBusca()">
+                      <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!--JS-->
+      <div id="lista-vertical" class="columns is-multiline is-centered py-6 px-6 mb-0">
+      </div>
+
+    </section>
+  </main>
+
+
+  <!--FOOTER-->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="columns is-vcentered">
+
+        <!--Social-->
+        <div class="column is-4 has-text">
+          <div class="field is-grouped is-grouped-centered-mobile is-grouped-left-desktop">
+            <a href="https://facebook.com" target="_blank" class="has-text-link px-3">
+              <span class="icon is-large">
+                <i class="fa-brands fa-facebook fa-2x"></i>
+              </span>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="has-text-link px-3">
+              <span class="icon is-large">
+                <i class="fa-brands fa-x-twitter fa-2x"></i>
+              </span>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="has-text-link px-3">
+              <span class="icon is-large">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+              </span>
+            </a>
+            <a href="https://github.com/danribeyllib" target="_blank" class="has-text-link px-3">
+              <span class="icon is-large">
+                <i class="fa-brands fa-github fa-2x"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!--Logo-->
+        <div class="column is-4 has-text-centered">
+          <figure class="image mx-auto mb-2" style="max-width: 160px;">
+            <img src="./imagens/logos/Billy_logo_gato_lateral_2.png" alt="BillyVinil Logo">
+          </figure>
+        </div>
+
+        <!--contato-->
+        <div class="column is-4 has-text-right-desktop has-text-centered-mobile">
+          <p class="is-size-6 mb-1">
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-phone"></i></span>
+              <span>+55 54 99999-9999</span>
+            </span>
+          </p>
+          <p class="is-size-6 mb-1"><b>CNPJ:</b> 99.999.999/0009-99</p>
+          <p class="is-size-6 mb-0">Porto Alegre - RS</p>
+        </div>
+
+      </div>
+
+      <hr class="my-5">
+
+      <!--Copy-->
+      <div class="has-text-centered">
+        <p class="is-size-6 mb-1">
+          &copy;
+          <script>document.write(new Date().getFullYear())</script>
+          <a href="#" class="has-text-weight-bold has-text-link">BillyVinil</a>
+        </p>
+        <p class="is-size-7 has-text-grey">
+          Compra e venda de discos de vinil.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!--Modal Carrinho-->
+  <div id="modal-carrinho" class="modal">
+    <div class="modal-background" onclick="fecharModalCarrinho()"></div>
+
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title"><span><i
+              class="fa-solid fa-cart-plus fa-flip-horizontal has-text-link-80"></i></span> Adicionar ao
+          Carrinho</p>
+        <button class="delete" aria-label="close" onclick="fecharModalCarrinho()"></button>
+      </header>
+
+      <section class="modal-card-body">
+        <div class="columns is-mobile is-vcentered">
+
+          <div class="column is-4">
+            <figure class="image is-square">
+              <img id="carrinho-capa" src="" alt="" class="is-square">
+            </figure>
+          </div>
+
+          <div class="column">
+            <h1 id="carrinho-album" class="title is-5 mb-1"></h1>
+            <p id="carrinho-artista" class="subtitle is-6 mb-2"></p>
+            <p id="carrinho-preco" class="has-text-weight-bold has-text-primary is-size-5"></p>
+          </div>
+        </div>
+
+        <div class="field is-horizontal is-justify-content-center mt-4">
+          <div class="control">
+            <div class="quantity-control-vertical">
+              <input id="carrinho-qtd" class="input has-text-centered" type="number" value="1" min="1" readonly>
+              <div class="spin-buttons">
+                <button type="button" class="spin-btn up" onclick="alterarQtd(1)">
+                  <i class="fas fa-chevron-up"></i>
+                </button>
+                <button type="button" class="spin-btn down" onclick="alterarQtd(-1)">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="modal-card-foot is-justify-content-flex-end">
+        <div class="is-flex is-align-items-center w-100">
+          <button class="button is-danger is-dark mx-1" onclick="fecharModalCarrinho()">Cancelar</button>
+          <button class="button is-primary is-light is-inverted mx-1" onclick="confirmarAdicao()">
+            <span class="mr-2">Adicionar</span>
+            <span><i class="fa-solid fa-cart-arrow-down"></i></span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--Modal Sucesso Carrinho-->
+  <div id="modal-carrinho-add-sucesso" class="modal">
+    <div class="modal-background" onclick="fecharModalCarrinhoSucesso()"></div>
+
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title"><span><i
+              class="fa-solid fa-cart-plus fa-flip-horizontal has-text-success-80"></i></span> Concluído!
+        </p>
+        <button class="delete" aria-label="close" onclick="fecharModalCarrinhoSucesso()"></button>
+      </header>
+
+      <section class="modal-card-body mx-4 my-4">
+        <div class="columns is-mobile is-vcentered">
+
+          <div class="is-flex is-align-items-center is-flex-wrap-wrap">
+            <div class="mr-5 mb-3">
+              <img src="../imagens/logos/carrinho.png" style="max-width: 100px;" />
+            </div>
+
+            <div class="column">
+              <p id="carrinho-artista" class="subtitle is-6 mb-2"></p>
+              <p id="carrinho-preco" class="has-text-white is-size-5">O álbum foi adicionado ao
+                carrinho!</p>
+            </div>
+          </div>
+
+      </section>
+
+      <footer class="modal-card-foot is-justify-content-flex-end">
+        <div class="is-flex is-align-items-center w-100">
+          <button class="button is-danger is-dark is-inverted mx-1"
+            onclick="fecharModalCarrinhoSucesso()">Fechar</button>
+          <a href="/carrinho.html" target="_blank"><button class="button is-link is-light is-inverted mx-1">
+              <span class="mr-2">Ver Carrinho</span>
+              <span><i class="fa-solid fa-cart-arrow-down"></i></span>
+            </button></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--Modal Erro Carrinho-->
+  <div id="modal-carrinho-erro" class="modal">
+    <div class="modal-background" onclick="fecharModalErroEstoque()"></div>
+
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title"><span><i
+              class="fa-solid fa-triangle-exclamation has-text-danger-60 mr-2"></i></span> Erro!</p>
+        <button class="delete" aria-label="close" onclick="fecharModalErroEstoque()"></button>
+      </header>
+
+      <section class="modal-card-body mx-4 my-4">
+        <div class="columns is-mobile is-vcentered">
+
+          <div class="is-flex is-align-items-center is-flex-wrap-wrap">
+            <div class="mr-5 mb-3">
+              <img src="../imagens/logos/erroEstoque.png" style="max-width: 100px;" />
+            </div>
+
+            <div class="column">
+              <p id="carrinho-artista" class="subtitle is-6 mb-2"></p>
+              <p id="carrinho-preco" class="has-text-white is-size-5">Não foi possível adicionar
+                ao carrinho. Estoque
+                insuficiente</p>
+            </div>
+          </div>
+
+      </section>
+
+      <footer class="modal-card-foot is-justify-content-flex-end">
+        <div class="is-flex is-align-items-center w-100">
+          <button class="button is-link is-dark is-inverted mx-1" onclick="fecharModalErroEstoque()">Ok</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--Modal Confirmar Exclusão -->
+  <div id="modal-carrinho-confirmacao" class="modal">
+    <div class="modal-background" onclick="fecharModalConfirmacao()"></div>
+
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title"><span><i
+              class="fa-solid fa-triangle-exclamation has-text-danger-60 mr-2"></i></span> Excluir Itens
+        </p>
+        <button class="delete" aria-label="close" onclick="fecharModalConfirmacao()"></button>
+      </header>
+
+      <section class="modal-card-body mx-4 my-4">
+        <div class="columns is-mobile is-vcentered">
+
+          <div class="is-flex is-align-items-center is-flex-wrap-wrap">
+            <div class="mr-5 mb-3">
+              <img src="../imagens/logos/lixeira.png" style="max-width: 100px;" />
+            </div>
+
+            <div class="column">
+              <p id="carrinho-artista" class="subtitle is-6 mb-2"></p>
+              <p id="carrinho-preco" class="has-text-white is-size-5">Tem certeza que deseja
+                excluir esse item do carrinho?
+              </p>
+            </div>
+          </div>
+
+      </section>
+
+      <footer class="modal-card-foot is-justify-content-flex-end">
+        <div class="is-flex is-align-items-center w-100">
+          <button class="button is-link is-light is-inverted mx-1" onclick="fecharModalConfirmacao()">Não</button>
+          <button class="button is-danger is-dark is-inverted mx-1"><span class="mr-2"><i
+                class="fa-solid fa-trash-can"></i></span>Excluir</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="./js/catalogo.js"></script>
+</body>
+
+</html>

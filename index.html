@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bulma CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-*" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Ícones Neon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yefferking/IconsNeon@main/neon-icons.css">
+  <!--Bandeiras-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+  <!--CSS-->
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <link rel="stylesheet" href="./CSS/carrossel.css" />
+  <link rel="stylesheet" href="./CSS/detalhes.css" />
+  <link rel="stylesheet" href="./CSS/modais.css" />
+  <!--Ícone-->
+  <link rel="icon" type="image/png" href="./imagens/logos/Billy_logo_somente_gato.png" sizes="64x64" />
+  <title>Home - BillyVinil</title>
+</head>
+
+<body>
+  <!--NAV-->
+  <div class="navbar-brand is-justify-content-center">
+    <a class="navbar-item navbar-item-logo" href="#">
+    </a>
+  </div>
+
+  <nav class="navbar navbar-topo" role="navigation" aria-label="main navigation">
+    <a id="navbarIconeSanduiche" role="button" class="navbar-burger navbar-start mx-2" aria-label="menu"
+      aria-expanded="false" data-target="navbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
+    <div id="navbar" class="navbar-menu px-4">
+      <div class="navbar-start">
+        <a href="./index.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-home"></i></span>
+            <span>Home</span>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable nav-itens">
+          <a class="navbar-link">
+            <span class="icon-text">
+              <span><i class="fa-solid fa-record-vinyl"></i></span>
+              Discos
+            </span>
+          </a>
+
+          <div class="navbar-dropdown">
+            <a href="./acervo.html" class="navbar-item">
+              Nosso Acervo
+            </a>
+            <a href="./catalogo.html" class="navbar-item">
+              Catálogo completo
+            </a>
+          </div>
+        </div>
+
+        <a href="./ofertas.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fa-solid fa-gift"></i></span>
+            <span>Ofertas</span>
+          </span>
+        </a>
+
+        <a href="./contato.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span><i class="fa-regular fa-paper-plane"></i></span> Contato
+          </span>
+        </a>
+
+        <a href="./sobre.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span><i class="fas fa-cat"></i></span> Sobre
+          </span>
+        </a>
+
+      </div>
+
+      <div class="navbar-end">
+
+        <div class="level-item">
+          <p class="subtitle is-5"><strong></strong></p>
+        </div>
+
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="carrinho.html" target="_blank" class="button is-link is-light is-inverted">
+              <span class="icon has-text">
+                <i class="fas fa-shopping-cart"></i>
+              </span><strong> Carrinho</strong>
+            </a>
+
+            <a href="favoritos.html" target="_blank" class="button is-danger is-light is-inverted">
+              <span class="icon has-text">
+                <i class="fa-solid fa-heart"></i>
+              </span><strong> Favoritos</strong>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end px-4 py-2">
+      <div class="field has-addons">
+        <p class="control">
+          <input id="busca-home" class="input" type="text" placeholder="Buscar..." />
+        </p>
+        <p class="control">
+          <button class="button is-link is-light is-inverted"><span><i
+                class="icon has-text fa-solid fa-magnifying-glass"></i></span></button>
+        </p>
+      </div>
+    </div>
+  </nav>
+
+  <!--MAIN-->
+  <main>
+
+    <!--HERO-->
+    <section class="fundo-topo hero mb-0 is-halfheight">
+      <div class="fundo-hero-topo">
+        <div class="is-relative">
+          <div class="columns is-multiline is-vcentered mx-6 my-4">
+            <div class="column is-6-tablet mb-12 mb-0-desktop is-relative">
+              <img class="img-hero mx-auto image is-fullwidth logo-gato"
+                src="./imagens/logos/Billy_logo_gato_contorno.png" alt="Vinyl Records Collection" />
+            </div>
+            <div class="column is-5">
+              <div class="container mb-5">
+                <h1 class="title is-1 mb-8 has-text-centered">
+                  <span class="has-text-white">Dos clássicos aos atuais.</span>
+                  <span class="has-text-link has-text-weight-semibold mb-4">Descubra novos ritmos.</span>
+                </h1>
+
+                <p class="subtitle has-text-centered has-text-white mt-5 mb-20">Raridades, clássicos e descobertas para
+                  sua
+                  coleção. Conheça nosso acervo!</p>
+
+                <hr>
+
+                <div class="buttons is-justify-content-center mt-6">
+                  <a href="#section-destaques"><button class="hero-ancoras button is-medium"
+                      href="#">Destaques</button></a>
+                  <a href="#section-novidades-ofertas"><button class="hero-ancoras button is-medium"
+                      href="#">Novidades</button></a>
+                  <a href="#section-novidades-ofertas"> <button class="hero-ancoras button is-medium"
+                      href="#">Ofertas</button></a>
+                  <a href="#section-newsletter"><button class="hero-ancoras button is-medium"
+                      href="#">Inscreva-se</button></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--BUSCA-->
+    <section id="section-resultados" class="section is-hidden destaques-fundo">
+      <div class="container">
+        <div class="level is-mobile px-4 my-4">
+          <div class="level-left">
+            <h2 class="mt-6 mb-4 title is-3 has-text-primary-60">RESULTADO DA BUSCA <span class="has-text-link"><i
+                  class="fa-solid fa-magnifying-glass fa-lg"></i></span></h2>
+          </div>
+          <div class="level-right">
+            <button onclick="limparBusca()" class="button is-medium is-danger is-dark">
+              <span class="icon is-small">
+                <i class="fa-solid fa-xmark"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <hr>
+        <!--Cards-->
+        <div id="lista-resultados" class="columns is-multiline"></div>
+      </div>
+    </section>
+
+    <!--Destaues-->
+    <section class="hero titulo-sessao has-text-white mt-0 mb-0">
+      <div class="hero-body has-text-centered">
+        <p class="title is-2 has-text-white">Destaques da Semana</p>
+      </div>
+    </section>
+
+    <!--Carrossel-->
+    <section class="hero mt-0 py-6">
+      <div id="section-carrossel-destaques"></div>
+    </section>
+
+    <!--Destaques Toggle-->
+    <section id="section-destaques" class="hero has-text-white mx-6 mt-5 mb-2">
+      <div class="hero-body has-text-centered titulo-destaques">
+        <p class="title is-2 has-text-white">Ver Todos os Destaques <span>
+            <input type="checkbox" id="toggle-destaques" class="toggle-checkbox">
+            <label for="toggle-destaques" class="toggle-destaques button is-link is-dark is-inverted mt-2">
+              <i class="fa-solid fa-angles-down"></i>
+            </label>
+          </span></p>
+      </div>
+    </section>
+
+    <!--Todos os Destaques-->
+    <section class="destaques-fundo section mb-4 pb-6 mt-0 mb-0 toggle-todos-destaques">
+      <div class="container">
+
+        <!--JS-->
+        <div id="lista-vertical" class="columns is-multiline">
+        </div>
+
+      </div>
+    </section>
+
+    <!--Novidades & Ofertas-->
+    <section id="section-novidades-ofertas" class="hero titulo-sessao-nov has-text-white mb-0 pb-0">
+      <div class="hero-body has-text-centered">
+        <p class="title has-text-white is-3">Novidades e Ofertas</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="columns ofertas-novidades-container">
+
+        <div class="ofertas-fundo column is-6">
+          <h2 class="title has-text-danger is-2 has-text-centered">Ofertas</h2>
+          <div id="lista-ofertas" class="columns is-multiline">
+          </div>
+        </div>
+
+        <div class="novidades-fundo column is-6">
+          <h2 class="title has-text-info-50 is-2 has-text-centered">Novidades</h2>
+          <div id="lista-novidades" class="columns is-multiline">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--Newsletter-->
+    <section id="section-newsletter" class="hero titulo-sessao-newsletter has-text-white mb-0 mt-0">
+      <div class="hero-body has-text-centered">
+        <p class="title is-2 has-text-white">Newsletter</p>
+      </div>
+    </section>
+
+    <section class="section newsletter-fundo">
+      <div class="container">
+        <div class="columns is-vcentered">
+
+          <div class="column is-6 div-form-newsletter">
+            <div class="field">
+              <label class="label has-text-white">Nome</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input newsletter-input" type="text" id="nomeNewsletter" placeholder="Nome Completo">
+                <span class="icon is-small is-left"><i class="fa-solid fa-user"></i></span>
+              </div>
+              <p class="help is-danger is-hidden" id="nomeErro">Por favor, digite seu nome.</p>
+            </div>
+
+            <div class="field">
+              <label class="label has-text-white">E-mail</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input newsletter-input" type="email" id="emailNewsletter" placeholder="nome@exemplo.com">
+                <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                </span>
+              </div>
+              <p class="help is-danger is-hidden" id="emailErro">Digite um e-mail válido.</p>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <label class="checkbox has-text-white">
+                  <input type="checkbox" id="checkNewsletter">
+                  Aceito receber e-mails com dicas e ofertas.
+                </label>
+              </div>
+              <p class="help is-danger is-hidden" id="checkboxError">Você precisa aceitar os termos para continuar.</p>
+            </div>
+
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link is-dark is-inverted" onclick="validarNewsletter()">Inscrever-se</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-5 is-offset-1 has-text-centered">
+            <img src="./imagens/logos/logo_vitrola_gato.png" style="max-width: 200px;" class="logo-gato">
+            <h3 class="title is-3 has-text-danger">Não perca o próximo giro!</h3>
+
+            <p class="subtitle has-text-white is-5 mt-4">
+              Sua coleção merece o melhor. Assine nossa newsletter, entre para o clube e receba dicas, ofertas
+              exclusivas e novidades.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="footer footer-geral py-5">
+    <div class="container">
+      <div class="columns footer-sociais is-vcentered">
+
+        <!--Social-->
+        <div class="column is-4 has-text sociais-footer">
+          <div class="field is-grouped is-grouped-centered">
+            <a href="https://facebook.com" target="_blank" class="has-text-link px-3">
+              <span class="icon social-icon is-large">
+                <i class="sociais-footer fa-brands fa-facebook fa-2x"></i>
+              </span>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="has-text-link px-3">
+              <span class="icon social-icon is-large">
+                <i class="sociais-footer fa-brands fa-x-twitter fa-2x"></i>
+              </span>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="has-text-link px-3">
+              <span class="icon social-icon is-large">
+                <i class="sociais-footer fa-brands fa-instagram fa-2x"></i>
+              </span>
+            </a>
+            <a href="https://github.com/danribeyllib" target="_blank" class="has-text-link px-3">
+              <span class="icon social-icon is-large">
+                <i class="sociais-footer fa-brands fa-github fa-2x"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!--Logo-->
+        <div class="column is-4 has-text-centered">
+          <figure class="image mx-auto mb-2" style="max-width: 160px;">
+            <img src="./imagens/logos/Billy_logo_gato_lateral_2.png" alt="BillyVinil Logo">
+          </figure>
+        </div>
+
+        <!--contato-->
+        <div class="column is-4 has-text-right-desktop has-text-centered-mobile">
+          <p class="is-size-6 mb-1">
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-phone"></i></span>
+              <span>+55 54 99999-9999</span>
+            </span>
+          </p>
+          <p class="is-size-6 mb-1"><b>CNPJ:</b> 99.999.999/0009-99</p>
+          <p class="is-size-6 mb-0">Porto Alegre - RS</p>
+        </div>
+
+      </div>
+
+      <hr class="my-5">
+
+      <!--Copy-->
+      <div class="has-text-centered">
+        <p class="is-size-6 mb-1">
+          &copy;
+          <script>document.write(new Date().getFullYear())</script>
+          <a href="#" class="sociais-footer has-text-weight-bold has-text-link">BillyVinil</a>
+        </p>
+        <p class="is-size-7 has-text-grey">
+          Compra e venda de discos de vinil.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!--Modal Carrinho-->
+  <div id="modal-carrinho" class="modal">
+    <div class="modal-background" onclick="fecharModalCarrinho()"></div>
+
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title"><span><i
+              class="fa-solid fa-cart-plus fa-flip-horizontal has-text-link-80"></i></span> Adicionar ao Carrinho</p>
+        <button class="delete" aria-label="close" onclick="fecharModalCarrinho()"></button>
+      </header>
+
+      <section class="modal-card-body">
+        <div class="columns is-mobile is-vcentered">
+
+          <div class="column is-4">
+            <figure class="image is-square">
+              <img id="carrinho-capa" src="" alt="" class="is-square">
+            </figure>
+          </div>
+
+          <div class="column">
+            <h1 id="carrinho-album" class="title is-5 mb-1"></h1>
+            <p id="carrinho-artista" class="subtitle is-6 mb-2"></p>
+            <div id="carrinho-preco"></div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal is-justify-content-center mt-4">
+          <div class="control">
+            <div class="quantity-control-vertical">
+              <input id="carrinho-qtd" class="input has-text-centered" type="number" value="1" min="1" readonly>
+              <div class="spin-buttons">
+                <button type="button" class="spin-btn up" onclick="alterarQtd(1)">
+                  <i class="fas fa-chevron-up"></i>
+                </button>
+                <button type="button" class="spin-btn down" onclick="alterarQtd(-1)">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="modal-card-foot is-justify-content-flex-end">
+        <div class="is-flex is-align-items-center w-100">
+          <button class="button is-danger is-dark mx-1" onclick="fecharModalCarrinho()">Cancelar</button>
+          <button class="button is-primary is-light is-inverted mx-1" onclick="confirmarAdicao()">
+            <span class="mr-2">Adicionar</span>
+            <span><i class="fa-solid fa-cart-arrow-down"></i></span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--Modal Sucesso Carrinho-->
+  <div id="modal-carrinho-add-sucesso" class="modal">
+    <div class="modal-background" onclick="fecharModalCarrinhoSucesso()"></div>
+
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title"><span><i
+              class="fa-solid fa-cart-plus fa-flip-horizontal has-text-success-80"></i></span> Concluído!</p>
+        <button class="delete" aria-label="close" onclick="fecharModalCarrinhoSucesso()"></button>
+      </header>
+
+      <section class="modal-card-body mx-4 my-4">
+        <div class="columns is-mobile is-vcentered">
+
+          <div class="is-flex is-align-items-center is-flex-wrap-wrap">
+            <div class="mr-5 mb-3">
+              <img src="../imagens/logos/carrinho.png" style="max-width: 100px;" />
+            </div>
+
+            <div class="column">
+              <p id="carrinho-artista" class="subtitle is-6 mb-2"></p>
+              <p id="carrinho-preco" class="has-text-white is-size-5">O álbum foi adicionado ao carrinho!</p>
+            </div>
+          </div>
+
+      </section>
+
+      <footer class="modal-card-foot is-justify-content-flex-end">
+        <div class="is-flex is-align-items-center w-100">
+          <button class="button is-danger is-dark is-inverted mx-1"
+            onclick="fecharModalCarrinhoSucesso()">Fechar</button>
+          <a href="/carrinho.html" target="_blank"><button class="button is-link is-light is-inverted mx-1">
+              <span class="mr-2">Ver Carrinho</span>
+              <span><i class="fa-solid fa-cart-arrow-down"></i></span>
+            </button></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--Modal Erro Estoque-->
+  <div id="modal-carrinho-erro" class="modal">
+    <div class="modal-background" onclick="fecharModalErroEstoque()"></div>
+
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title"><span><i
+              class="fa-solid fa-triangle-exclamation has-text-danger-60 mr-2"></i></span> Erro!</p>
+        <button class="delete" aria-label="close" onclick="fecharModalErroEstoque()"></button>
+      </header>
+
+      <section class="modal-card-body mx-4 my-4">
+        <div class="columns is-mobile is-vcentered">
+
+          <div class="is-flex is-align-items-center is-flex-wrap-wrap">
+            <div class="mr-5 mb-3">
+              <img src="../imagens/logos/erroEstoque.png" style="max-width: 100px;" />
+            </div>
+
+            <div class="column">
+              <p id="carrinho-artista" class="subtitle is-6 mb-2"></p>
+              <p id="carrinho-preco" class="has-text-white is-size-5">Não foi possível adicionar ao carrinho. Estoque
+                insuficiente</p>
+            </div>
+          </div>
+
+      </section>
+
+      <footer class="modal-card-foot is-justify-content-flex-end">
+        <div class="is-flex is-align-items-center w-100">
+          <button class="button is-link is-dark is-inverted mx-1" onclick="fecharModalErroEstoque()">Ok</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--Modal Newsletter-->
+  <div id="modal-newsletter-sucesso" class="modal">
+    <div class="modal-background" onclick="fecharModalCarrinhoSucesso()"></div>
+
+    <div class="modal-card">
+
+      <header class="modal-card-head">
+        <p class="modal-card-title">Inscrição concluída!</p>
+        <button class="delete" aria-label="close" onclick="fecharModalCarrinhoSucesso()"></button>
+      </header>
+
+      <section class="modal-card-body mx-4 my-4">
+        <div class="columns is-mobile is-vcentered">
+
+          <div class="is-flex is-align-items-center is-flex-wrap-wrap">
+            <div class="mr-5 mb-3">
+              <img src="../imagens/logos/logo_vitrola_gato.png" style="max-width: 100px;" />
+            </div>
+
+            <div class="column">
+              <p id="carrinho-artista" class="subtitle is-6 mb-2"></p>
+              <p id="carrinho-preco" class="has-text-white is-size-5">Agora você receberá dicas, ofertas e novidades em seu
+                e-mail.</p>
+            </div>
+          </div>
+
+      </section>
+
+      <footer class="modal-card-foot is-justify-content-flex-end">
+        <div class="is-flex is-align-items-center w-100">
+          <button class="button is-link is-dark is-inverted mx-1" onclick="fecharModalCarrinhoSucesso()">Ok</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--Script-->
+  <script src="./js/home.js" defer></script>
+  <script src="./js/acervo.js" defer></script>
+  <script src="./js/favoritosSalvos.js"></script>
+</body>
+
+</html>

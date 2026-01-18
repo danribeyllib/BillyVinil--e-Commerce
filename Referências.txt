@@ -1,0 +1,27 @@
+
+>>>>>     Estas são algumas referências que foram utilizadas para a elaboração da página. Visuais, funcionalidades e sites usados como inpiração.  <<<<<<
+
+
+---    VISUAL E DE FUNCIONALIDADES   ----
+
+Paleta de cores: https://bulma.io/documentation/helpers/palette-helpers/
+
+Sombras: https://getcssscan.com/css-box-shadow-examples
+    
+Efeito Glass:https://css.glass/
+
+Slideshow:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_multiple
+          https://codepen.io/Forte_high/pen/RNRNzPQ
+          
+Tutoriais: https://www.youtube.com/playlist?list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a
+
+------       SITES      ----- 
+
+--  Mundo Vinyl   --
+https://mundovinyl.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=17807094479&utm_term&utm_content&utm_network=x&gad_source=1&gad_campaignid=22322950998&gbraid=0AAAAAC0BjuVu6hNa5gAv8mANoK3tM8SOX&gclid=Cj0KCQiApL7KBhC7ARIsAD2Xq3DvV8QhjmEtfRS_6-bWYIr3Hgw0DuG_Tmygc5ubN2yS6QDXxo9bikoaAoSMEALw_wcB
+
+--  Bilesky Discos   --
+https://loja.bileskydiscos.com.br/discos-de-vinil-e-lps?srsltid=AfmBOopN89Ee8xQvCGrBK_mijBMSnH0gRMjuvAtgGtz7YIbcSgbpY3zh
+
+--  Vale Vinil   --
+https://valevinil.com.br/disco-de-vinil---queen-hot-space/p

@@ -1,0 +1,140 @@
+/* Capa */
+.capa-detalhes {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 4px 6px 6px rgba(47, 39, 53, 0.564);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* Lupa */
+.imagem-thumbnail,
+.capa-detalhes {
+    cursor: zoom-in;
+}
+
+/* Modais das imagens */
+.modal-content img {
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    max-height: 90vh;
+    width: auto;
+    margin: 0 auto;
+}
+
+.modal {
+    transition: opacity 0.3s ease;
+}
+
+.detalhes-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(75, 68, 79, 0.363);
+    padding: 1px;
+    transition: transform .25s ease, box-shadow .25s ease;
+    cursor: zoom-in;
+}
+
+.detalhes-thumbnail:hover,
+.capa-detalhes:hover {
+    transform: translateY(-3px);
+    box-shadow: rgba(132, 132, 132, 0.36) 0px 5px 15px, rgba(75, 68, 79, 0.363) 0px 5px 5px;
+    cursor: zoom-in;
+}
+
+.imagem-thumbnail {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detalhes-thumbnail {
+    background-color: white;
+}
+
+.title {
+    text-shadow: 1px 1px 1px rgba(94, 94, 94, 0.399);
+}
+
+.tabela-head-faixas {
+    background-color: rgb(17, 99, 114) !important;
+    color: aliceblue !important;
+}
+
+.tabela-head-detalhes {
+    background-color: rgb(114, 17, 49) !important;
+    color: aliceblue !important;
+}
+
+#detalhes-preco {
+    text-shadow: 1px 1px 1px rgba(94, 94, 94, 0.399);
+}
+
+.titulo-faixa {
+    background-color: rgb(17, 99, 114) !important;
+    color: aliceblue !important;
+    padding: 2px 2px 2px 10px !important;
+    /* topo dir base esq */
+}
+
+.tabela-icon {
+    color: rgb(224, 46, 106) !important;
+}
+
+.preco-detalhes {
+    color: #3ba7d5 !important;
+    text-shadow: 1px 1px 1px rgba(83, 83, 83, 0.399);
+}
+
+/* Faixas */
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-checkbox:checked~#colunasFaixas {
+    max-height: 20000px;
+    opacity: 1;
+    margin-top: 2px;
+}
+
+.toggle-checkbox:checked~h2 label i {
+    transform: rotate(180deg);
+}
+
+label.button i {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.conteudo-faixas {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.faixas-fundo {
+    background: rgba(50, 107, 90, 0.492);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(65, 123, 129, 0.29);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+}
+
+/* Seção Detalhes */
+.section-detalhes {
+    padding: 1.5rem;
+    background: rgba(38, 18, 40, 0.275);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+}
+
+/* Faixa do Disco Indisponível  */
+.indisponivel-container {
+    position: relative;
+    display: inline-block;
+}

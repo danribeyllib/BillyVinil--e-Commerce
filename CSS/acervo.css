@@ -1,0 +1,103 @@
+/* Banner Topo */
+.fundo-hero-topo-ofertas {
+    box-shadow: 0 10px 30px rgba(72, 72, 72, 0.5), 0 15px 40px rgba(183, 19, 96, 0.448);
+    background-image: url("../imagens/fundo/12362.jpg");
+    background-color: #5d7072c5;
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-ancoras-oferta {
+    border-radius: 20px;
+    background: #bf50f3a1;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid #9d76a784;
+    color: #a3eaff;
+    text-align: center;
+    box-shadow: -2px 2px #9d76a784;
+    padding: 15px;
+}
+
+/* Banners Geral */
+.banner-acervo {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+}
+
+.titulo-sessao-acervo {
+    background: linear-gradient(135deg, #000000, #0000003d);
+    backdrop-filter: blur(5px) saturate(100%);
+    box-shadow:
+        0 0 10px #c95de1,
+        0 0 12px #ffffff,
+        0 0 15px #db63e3;
+}
+
+
+/* Rock Internacional */
+.banner-acervo.rock-internacional-glass {
+    background: linear-gradient(135deg, rgba(54, 1, 66, 0.8), rgba(139, 0, 49, 0.6)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Rock Nacional */
+.banner-acervo.rock-nacional-glass {
+    background: linear-gradient(135deg, rgba(6, 1, 66, 0.8), rgba(0, 139, 116, 0.6)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Pop */
+.banner-acervo.pop-glass {
+    background: linear-gradient(135deg, rgba(66, 1, 63, 0.738), rgba(234, 73, 199, 0.59)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* MPB */
+.banner-acervo.mpb-glass {
+    background: linear-gradient(135deg, rgba(1, 66, 55, 0.8), rgba(49, 159, 67, 0.651)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Orquestra */
+.banner-acervo.orquestra-glass {
+    background: linear-gradient(135deg, rgba(1, 17, 66, 0.714), rgba(49, 122, 159, 0.659)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Trilhas Sonoras */
+.banner-acervo.games-glass {
+    background: linear-gradient(135deg, rgba(45, 1, 66, 0.645), rgba(84, 49, 159, 0.525)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Disco */
+.banner-acervo.discoteca-glass {
+    background: linear-gradient(135deg, rgba(127, 5, 129, 0.636), rgba(122, 44, 162, 0.499)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.btn-acervo-final {
+    border-radius: 20px;
+    background: #6621aa6c;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid #a3eaff;
+    color: #a3eaff;
+    text-align: center;
+    box-shadow: -2px 2px 20px #cf55eedd,
+        -4px 2px 10px rgba(125, 192, 238, 0.832);
+    padding: 15px;
+}

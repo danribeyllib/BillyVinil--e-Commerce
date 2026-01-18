@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bulma-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-*" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Bandeiras-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+  <!--CSS-->
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <link rel="stylesheet" href="./CSS/sobre.css" />
+  <!--Ícone-->
+  <link rel="icon" type="image/png" href="./imagens/logos/Billy_logo_somente_gato.png" sizes="64x64" />
+  <title>Sobre - BillyVinil</title>
+</head>
+
+<body>
+  <!--NAV-->
+  <div class="navbar-brand is-justify-content-center">
+    <a class="navbar-item navbar-item-logo" href="#">
+    </a>
+  </div>
+
+  <nav class="navbar navbar-topo" role="navigation" aria-label="main navigation">
+    <a id="navbarIconeSanduiche" role="button" class="navbar-burger navbar-start mx-2" aria-label="menu"
+      aria-expanded="false" data-target="navbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
+    <div id="navbar" class="navbar-menu px-4">
+      <div class="navbar-start">
+        <a href="./index.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-home"></i></span>
+            <span>Home</span>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable nav-itens">
+          <a class="navbar-link">
+            <span class="icon-text">
+              <span><i class="fa-solid fa-record-vinyl"></i></span>
+              Discos
+            </span>
+          </a>
+
+          <div class="navbar-dropdown">
+            <a href="./acervo.html" class="navbar-item">
+              Nosso Acervo
+            </a>
+            <a href="./catalogo.html" class="navbar-item">
+              Catálogo completo
+            </a>
+          </div>
+        </div>
+
+        <a href="./ofertas.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fa-solid fa-gift"></i></span>
+            <span>Ofertas</span>
+          </span>
+        </a>
+
+        <a href="./contato.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span><i class="fa-regular fa-paper-plane"></i></span> Contato
+          </span>
+        </a>
+
+        <a href="./sobre.html" class="navbar-item nav-itens">
+          <span class="icon-text">
+            <span><i class="fas fa-cat"></i></span> Sobre
+          </span>
+        </a>
+
+      </div>
+
+      <div class="navbar-end">
+
+        <div class="level-item">
+          <p class="subtitle is-5"><strong></strong></p>
+        </div>
+
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="carrinho.html" target="_blank" class="button is-link is-light is-inverted">
+              <span class="icon has-text">
+                <i class="fas fa-shopping-cart"></i>
+              </span><strong> Carrinho</strong>
+            </a>
+
+            <a href="favoritos.html" target="_blank" class="button is-danger is-light is-inverted">
+              <span class="icon has-text">
+                <i class="fa-solid fa-heart"></i>
+              </span><strong> Favoritos</strong>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--/NAV/-->
+
+  <!--MAIN-->
+  <main class="destaques-fundo">
+
+    <!--SOBRE-->
+    <section class="section sobre-hero-topo px-2">
+      <div class="texto-banner-topo">
+        <div class="columns is-vcentered is-multiline p-5-mobile p-6-tablet py-6-desktop px-6-desktop">
+
+          <div class="p-6 column is-12-mobile is-7-desktop has-text-centered-mobile pr-5-desktop">
+            <h1 class="title is-3-mobile is-1-tablet has-text-white has-text-weight-bold mb-5">
+              Sobre a página <span class="has-text-link-80">BillyVinil</span>
+            </h1>
+
+            <p class="subtitle is-5-mobile has-text-white mb-5">
+              A página foi desenvolvida como um projeto para o curso de Desenvolvedor Front-End do Programa de
+              Residência Tecnológica
+              <a href="https://www.hardware.org.br/capacitacao/bfd/inscricao/" target="_blank">
+                <span class="has-text-weight-bold has-text-primary is-underlined"> Bolsa Futuro Digital</span>
+              </a>.
+            </p>
+
+            <p class="subtitle is-6 has-text-white mb-6">
+              O desafio consistia em criar uma página de Marketplace com tema livre, aplicando os conhecimentos em HTML,
+              CSS e JavaScript desenvolvidos ao longo do curso.
+            </p>
+
+            <div class="buttons is-centered">
+              <a href="#mascote"><button class="hero-ancoras button is-medium"><span class="icon"><i
+                      class="has-text-primary-50 fa-solid fa-cat"></i></span><span> Mascote</span></button></a>
+              <a href="#vinil"><button class="hero-ancoras button is-medium"><span class="icon"><i
+                      class="has-text-primary-50 fa-solid fa-record-vinyl"></i></span><span> Por que
+                    Vinil?</span></button></a>
+              <a href="#autora"><button class="hero-ancoras button is-medium"><span class="icon"><i
+                      class="has-text-primary-50 fa-solid fa-user"></i></span><span> Sobre Mim</span></button></a>
+              <a href="https://github.com/danribeyllib" target="_blank"><button
+                  class="hero-ancoras button is-medium"><span class="icon"><i
+                      class="has-text-primary-50 fa-brands fa-github"></i></span><span> GitHub</span></button></a>
+            </div>
+          </div>
+
+          <div class="column is-12-mobile is-5-desktop has-text-centered">
+            <figure class="image is-inline-block" style="max-width: 450px; width: 100%;">
+              <img src="./imagens/logos/Billy_logo_gato_contorno_lateral.png" class="logo-gato">
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MASCOTE -->
+    <section class="section historia-secao" id="mascote">
+      <div class="container">
+
+        <div class="has-text-left ml-6 mb-6">
+          <h2 class="title is-2 has-text-white has-text-weight-bold">
+            Inpiração do <span class="has-text-primary">Mascote</span>
+          </h2>
+        </div>
+
+        <div class="columns is-3 is-vcentered mb-6">
+          <div class="column is-3">
+            <figure class="image historia-imagem-wrapper">
+              <img src="./imagens/sobre/fotos_billy_2 (6).jpg">
+            </figure>
+          </div>
+
+          <div class="column is-3">
+            <figure class="image historia-imagem-wrapper ">
+              <img src="./imagens/sobre/fotos_billy_2 (7).jpg">
+            </figure>
+          </div>
+
+          <div class="column is-5 ml-6">
+            <h3 class="title is-3 has-text-primary-60 has-text-weight-bold mb-4">
+              <i class="fa-solid fa-cat has-text-link-80"></i> Billy
+            </h3>
+
+            <p class="has-text-primary-90 is-size-5 mb-4">
+              Uma pequena homenagem a um pet querido.
+            </p>
+            <p class="has-text-white mb-2 has-text-justified"> A inspiração para o mascote e a logo da marca é meu gato
+              Billy. Adotei ele
+              em
+              2012 quando ainda era um filhote e infelizmente ele partiu no final de 2025.</p>
+            <p class="has-text-white mb-2 has-text-justified ">Ele era um gatinho extremamente carinhoso e esperto, me
+              trouxe muita alegria e esteve do meu lado nos momentos mais difíceis. Não tenho palavras para descrever o
+              quento ele foi importante para mim, por isso decidi usar desse projeto para fazer uma pequena homenagem ao
+              meu Billy. </p>
+          </div>
+        </div>
+    </section>
+
+    <!--Discos-->
+    <section class="section sobre-hero" id="vinil">
+      <div class="container">
+        <div class="columns is-vcentered">
+
+          <div class="column is-6 mr-4">
+            <h1 class="title is-1 has-text-white has-text-weight-bold mb-5">
+              Por que <span class="has-text-link-80">Discos?</span> <span class="mr-2"><i
+                  class="fa-solid fa-record-vinyl"></i></span>
+            </h1>
+
+            <p class="subtitle has-text-white mb-6">
+              A minha ideia inicial era mais ambiciosa, seriam discos, CDs e fitas cassete, mas por fim, acabei optando
+              pelo vinil.
+            </p>
+
+
+            <p class="subtitle is-size-6 has-text-white mb-4 has-text-justified">
+              Escolhi desenvolver o projeto a partir de algo que realmente faz parte da minha vida. Meu pai coleciona
+              discos, CDs e fitas cassete desde jovem então temos uma pequena coleção em casa.
+            </p>
+
+            <hr>
+
+            <p class="subtitle is-size-6 has-text-white mb-6 has-text-justified">
+              Em um tempo em que a mídia física está, aos poucos, desaparecendo, o vinil passa a ser cada vez mais
+              valorizado. Essa escolha reforça a importância de preservar as mídias clássicas, a cultura material e o
+              ritual de ouvir música com mais atenção e significado. Preservar essas mídias é manter viva não só a
+              música, mas também a experiência, o ritual e tudo o que existe ao redor dela.
+            </p>
+
+          </div>
+
+          <div class="column is-7 has-text-centered ml-6">
+            <figure class="image sobre-imagem-wrapper">
+              <img src="./imagens/sobre/vinyl-record-with-retro-texture-composition.jpg">
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--SOBRE MIM-->
+    <section class="section historia-secao" id="autora">
+      <div class="container">
+
+        <div class="has-text-centered mb-6">
+          <h2 class="title is-2 has-text-white has-text-weight-bold">
+            Sobre <span class="has-text-primary">Mim</span>
+          </h2>
+        </div>
+
+        <div class="columns is-vcentered mb-6">
+          <div class="column is-4 mr-2">
+            <figure class="image historia-imagem-wrapper">
+              <img src="/imagens/sobre/eu_e_billy_3.jpg">
+            </figure>
+          </div>
+
+          <div class="column is-8 ml-4">
+            <h3 class="title is-4 has-text-link-80 has-text-weight-bold mb-4">
+              <i class="fa-solid fa-user has-text-primary-60"></i> Daniela
+            </h3>
+
+            <p class="has-text-white is-size-5 mb-4">
+              Sou uma veterinária aspirante a desenvolvedora e apaixonada por música e gatos.
+            </p>
+
+            <hr>
+
+            <p class="has-text-white mb-4 has-text-justified">Minha paixão pela música e pelo vinil vem desde a
+              infância. Cresci ouvindo
+              os discos da coleção do meu pai e, hoje, também coleciono os meus. O interesse em migrar para a área de
+              tecnologia é mais
+              recente. Apesar de
+              sempre ter tido afinidade com a área, optei por cursar Medicina Veterinária ao concluir o ensino
+              médio. Anos depois, surgiu o desejo de mudança, tanto pelas possibilidades do mercado quanto pelo
+              interesse genuíno em programação e web design. </p>
+
+            <hr>
+
+            <p class="has-text-white mb-4 has-text-justified"> Atualmente participo do Programa de Residência
+              Tecnológica em
+              Desenvolvimento de Software, <a class="has-text-weight-bold has-text-primary-60 is-underlined"
+                href="https://www.hardware.org.br/capacitacao/bfd/inscricao/" target="_blank"> Bolsa Futuro Digital</a>
+              no curso de Desenvolvedor Front-End, para o qual esta
+              página foi desenvolvida. Também participei em 2025 do <a
+                class="has-text-weight-bold has-text-primary-60 is-underlined"
+                href="https://desenvolve.grupoboticario.com.br/" target="_blank">Programa Desenvolve GB</a> do Grupo
+              Boticário, na trilha de UX Design, onde desenvolvi um projeto para um aplicativo de organização de rotina
+              para pessoas com TDAH e do Bootcamp <a class="has-text-weight-bold has-text-primary-60 is-underlined"
+                href="https://blog.soulcode.com/2025/03/22/martech-academy-lanca-primeiro-bootcamp-exclusivo-para-pessoas-com-deficiencia/"
+                target="_blank"> Marketing sem Fronteiras</a>, realizado pela SoulCode e pela Martech
+              Academy, onde desenvolvi diversos projetos voltados para o Marketing Digital, incluindo a elaboração de
+              uma landing page para a marca Veja.</p>
+
+            <hr>
+
+            <p class="has-text-white mb-2">Abaixo estão os links de alguns dos projetos que desenvolvi. </p>
+
+          </div>
+        </div>
+
+        <!-- Projetos -->
+        <h1 class="title is-4 has-text-primary-60 has-text-weight-bold has-text-centered mb-4">
+          <i class="fa-solid fa-photo-film fa-lg has-text-link-80"></i> Projetos
+        </h1>
+        <div class="columns mt-6">
+          <div class="column is-4">
+            <a href="https://www.dropbox.com/scl/fi/as2s2jfnxc6ywipv3h7s0/Projeto-SouCode-e-Veja.pdf?rlkey=bf5uj472hlwxjsr1i2obicdfz&st=n9f43ual&dl=0"
+              target="_blank">
+              <div class="card projetos-card">
+                <i class="fa-solid fa-icons fa-2x has-text-primary-60"></i>
+                <p class="projetos-texto">
+                  Marketing Digital
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="column is-4">
+            <a href="https://pleasant-base-2fb.notion.site/OrganizaMente-Aplicativo-de-foco-e-organiza-o-2805cc433b12813eacbddfb80d9cd68d"
+              target="_blank">
+              <div class="card projetos-card">
+                <i class="fa-solid fa-palette fa-2x has-text-primary-60"></i>
+                <p class="projetos-texto">
+                  UX Design
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="column is-4">
+            <a href="index.html" target="_blank">
+              <div class="card projetos-card">
+                <i class="fa-solid fa-code fa-2x has-text-primary-60"></i>
+                <p class="projetos-texto">
+                  Programação Front-end
+                </p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <!--/MAIN/-->
+
+  <!--FOOTER-->
+  <footer class="footer footer-geral py-5">
+    <div class="container">
+      <div class="columns footer-sociais is-vcentered">
+
+        <!--Social-->
+        <div class="column is-4 has-text sociais-footer">
+          <div class="field is-grouped is-grouped-centered">
+            <a href="https://facebook.com" target="_blank" class="has-text-link px-3">
+              <span class="icon social-icon is-large">
+                <i class="sociais-footer fa-brands fa-facebook fa-2x"></i>
+              </span>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="has-text-link px-3">
+              <span class="icon social-icon is-large">
+                <i class="sociais-footer fa-brands fa-x-twitter fa-2x"></i>
+              </span>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="has-text-link px-3">
+              <span class="icon social-icon is-large">
+                <i class="sociais-footer fa-brands fa-instagram fa-2x"></i>
+              </span>
+            </a>
+            <a href="https://github.com/danribeyllib" target="_blank" class="has-text-link px-3">
+              <span class="icon social-icon is-large">
+                <i class="sociais-footer fa-brands fa-github fa-2x"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!--Logo-->
+        <div class="column is-4 has-text-centered">
+          <figure class="image mx-auto mb-2" style="max-width: 160px;">
+            <img src="./imagens/logos/Billy_logo_gato_lateral_2.png" alt="BillyVinil Logo">
+          </figure>
+        </div>
+
+        <!--contato-->
+        <div class="column is-4 has-text-right-desktop has-text-centered-mobile">
+          <p class="is-size-6 mb-1">
+            <span class="icon-text">
+              <span class="icon"><i class="fas fa-phone"></i></span>
+              <span>+55 54 99999-9999</span>
+            </span>
+          </p>
+          <p class="is-size-6 mb-1"><b>CNPJ:</b> 99.999.999/0009-99</p>
+          <p class="is-size-6 mb-0">Porto Alegre - RS</p>
+        </div>
+
+      </div>
+
+      <hr class="my-5">
+
+      <!--Copy-->
+      <div class="has-text-centered">
+        <p class="is-size-6 mb-1">
+          &copy;
+          <script>document.write(new Date().getFullYear())</script>
+          <a href="#" class="sociais-footer has-text-weight-bold has-text-link">BillyVinil</a>
+        </p>
+        <p class="is-size-7 has-text-grey">
+          Compra e venda de discos de vinil.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!--/FOOTER/-->
+
+  <script src="./js/sobre.js"></script>
+</body>
+
+</html>

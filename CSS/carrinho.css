@@ -1,0 +1,78 @@
+/* Topo */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+}
+
+/* Cards Discos Carrinho */
+.card-disco-carinho {
+    background: rgba(129, 13, 85, 0.233);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(4.4px);
+}
+
+/* Card Resumo da Compra */
+.resumo-disco {
+    background: rgba(137, 43, 226, 0.34);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(4.4px);
+}
+
+/* Imagens */
+.album-img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.concluir-compra-btn {
+    font-weight: 600;
+    height: 50px;
+}
+
+.qtde-num {
+    font-weight: 500;
+}
+
+.qtde-btn {
+    background: transparent;
+    border: none;
+    color: aquamarine;
+    padding: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.qtde-btn.up {
+    border-radius: 10px 10px 2px 2px;
+}
+
+.qtde-btn.down {
+    border-radius: 2px 2px 10px 10px;
+}
+
+.qtde-btn:hover {
+    background: #8c0ccc98;
+    box-shadow: 0 0 8px rgba(155, 89, 182, 0.8);
+}
+
+.qtde-btn:active {
+    transform: scale(0.95);
+}
+
+/* Desconto Preçomodal-compra-erro */
+.preco-normal-carrinho {
+  text-decoration: line-through;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+.preco-desconto-carrinho {
+  color: #3ee08f;
+  font-size: 1.1rem;
+}

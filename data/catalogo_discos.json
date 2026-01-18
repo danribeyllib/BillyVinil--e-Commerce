@@ -1,0 +1,4980 @@
+[
+    {
+        "id": 1,
+        "album": "Dark Side of the Moon",
+        "artista": "Pink Floyd",
+        "lancamento": 1973,
+        "edicao": 1985,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Speak to Me"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Breathe (In the Air)"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "On the Run"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Time"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "The Great Gig in the Sky"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Money"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Us and Them"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Any Colour You Like"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Brain Damage"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Eclipse"
+            }
+        ],
+        "pais": "gb",
+        "paisFab": "br",
+        "preco": 279.90,
+        "estilo": [
+            "Rock Internacional",
+            "Rock Psicodélico",
+            "Rock Progressivo"
+        ],
+        "resumo": [
+            "Lançado em 1973, é um marco do rock Progressivo e um dos discos mais vendidos da história. Explora temas complexos como o tempo, a ganância, o conflito e a saúde mental através de uma produção sonora inovadora para a época, com uso pioneiro de sintetizadores e efeitos de estúdio."
+        ],
+        "galeria": [
+            "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (1).jpeg",
+            "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (2).jpeg",
+            "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (3).jpeg"
+        ],
+        "capa": "../imagens/capas/pink_floyd_dark_side_of_the_moon.jpg",
+        "tags": [
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 2,
+        "album": "A Night To Remember",
+        "artista": "Cyndi Lauper",
+        "lancamento": 1989,
+        "edicao": 1989,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Intro"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "I Drove All Night"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Primitive"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "My First Night Without You"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Like A Cat"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Heading West"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "A Night To Remember"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Unconditional Love"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Insecurious"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Dancing With A Stranger"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "I Don't Want To Be Your Friend"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Kindred Spirit"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "br",
+        "preco": 189.90,
+        "estilo": [
+            "Pop",
+            "Synth-pop"
+        ],
+        "resumo": [
+            "Lançado em 1989, este quarto disco de estúdio apresenta um som pop rock mais maduro e polido. O álbum destaca-se pela poderosa balada I Drove All Night e por letras que exploram temas de amor e autorreflexão, consolidando a transição da artista para uma sonoridade mais adulta no final da década."
+        ],
+        "capa": "../imagens/capas/CyndiLauper_ANighttoRemember.jpg",
+        "galeria": [
+            "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (1).jpg",
+            "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (2).jpg",
+            "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Bom Estado",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
+        "id": 3,
+        "album": "Hot Space",
+        "artista": "Queen",
+        "lancamento": 1982,
+        "edicao": 2015,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Staying Power"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Dancer"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Back Chat"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Body Language"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Action This Day"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Put Out the Fire"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Life Is Real (Song for Lennon)"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Calling All Girls"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Las Palabras de Amor (The Words of Love)"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Cool Cat"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Under Pressure"
+            }
+        ],
+        "pais": "gb",
+        "paisFab": "gb",
+        "preco": 150.00,
+        "estilo": [
+            "Rock Internacional"
+        ],
+        "resumo": [
+            "Lançado em 1982, este álbum marcou uma fase experimental audaciosa, mergulhando profundamente em ritmos de dance-pop e funk. Embora controverso na época, o disco é lembrado pela lendária colaboração com David Bowie na faixa Under Pressure, que se tornou um hino geracional absoluto."
+        ],
+        "capa": "../imagens/capas/Queen-Hot_Space.jpg",
+        "galeria": [
+            "../imagens/galeria/queen_hs/Queen_HS (1).jpg",
+            "../imagens/galeria/queen_hs/Queen_HS (2).png",
+            "../imagens/galeria/queen_hs/Queen_HS (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Lacrado",
+                "cor": "prata-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 3,
+        "oferta": true,
+        "percentualDesconto": 5
+    },
+    {
+        "id": 4,
+        "album": "News of the World",
+        "artista": "Queen",
+        "lancamento": 1977,
+        "edicao": 1977,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "We Will Rock You"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "We Are the Champions"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Sheer Heart Attack"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "All Dead, All Dead"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Spread Your Wings"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Fight from the Inside"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Get Down, Make Love"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Sleeping on the Sidewalk"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Who Needs You"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "It's Late"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "My Melancholy Blues"
+            }
+        ],
+        "pais": "gb",
+        "paisFab": "gb",
+        "preco": 289.50,
+        "estilo": [
+            "Rock Internacional"
+        ],
+        "resumo": [
+            "Este disco de 1977 trouxe uma sonoridade mais direta e crua em relação aos trabalhos anteriores. O álbum é o lar dos hinos definitivos de estádio sWe Will Rock You e We Are the Champions, composições feitas sob medida para a interação coletiva e a celebração mundial."
+        ],
+        "capa": "../imagens/capas/Queen_News_of_The_World.jpg",
+        "galeria": [
+            "../imagens/galeria/queen_notw/Queen_NOTW (1).jpg",
+            "../imagens/galeria/queen_notw/Queen_NOTW (2).png",
+            "../imagens/galeria/queen_notw/Queen_NOTW (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Bom Estado",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": true,
+        "percentualDesconto": 5
+    },
+    {
+        "id": 5,
+        "album": "The Wall",
+        "artista": "Pink Floyd",
+        "lancamento": 1979,
+        "edicao": 2024,
+        "peso": "180g Duplo",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "In the Flesh?"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "The Thin Ice"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Another Brick in the Wall (Part I)"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "The Happiest Days of Our Lives"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Another Brick in the Wall (Part II)"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Mother"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Goodbye Blue Sky"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Empty Spaces"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Young Lust"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "One of My Turns"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Don't Leave Me Now"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Another Brick in the Wall (Part III)"
+            },
+            {
+                "lado": "B",
+                "faixa": 7,
+                "nome": "Goodbye Cruel World"
+            },
+            {
+                "lado": "C",
+                "faixa": 1,
+                "nome": "Hey You"
+            },
+            {
+                "lado": "C",
+                "faixa": 2,
+                "nome": "Is There Anybody Out There?"
+            },
+            {
+                "lado": "C",
+                "faixa": 3,
+                "nome": "Nobody Home"
+            },
+            {
+                "lado": "C",
+                "faixa": 4,
+                "nome": "Vera"
+            },
+            {
+                "lado": "C",
+                "faixa": 5,
+                "nome": "Bring the Boys Back Home"
+            },
+            {
+                "lado": "C",
+                "faixa": 6,
+                "nome": "Comfortably Numb"
+            },
+            {
+                "lado": "D",
+                "faixa": 1,
+                "nome": "The Show Must Go On"
+            },
+            {
+                "lado": "D",
+                "faixa": 2,
+                "nome": "In the Flesh"
+            },
+            {
+                "lado": "D",
+                "faixa": 3,
+                "nome": "Run Like Hell"
+            },
+            {
+                "lado": "D",
+                "faixa": 4,
+                "nome": "Waiting for the Worms"
+            },
+            {
+                "lado": "D",
+                "faixa": 5,
+                "nome": "Stop"
+            },
+            {
+                "lado": "D",
+                "faixa": 6,
+                "nome": "The Trial"
+            },
+            {
+                "lado": "D",
+                "faixa": 7,
+                "nome": "Outside the Wall"
+            }
+        ],
+        "pais": "gb",
+        "paisFab": "br",
+        "preco": 349.90,
+        "estilo": [
+            "Rock Internacional",
+            "Rock Progressivo"
+        ],
+        "capa": "../imagens/capas/PinkFloyd_The_Wall.jpg",
+        "resumo": [
+            "Lançado em 1979, é uma das óperas rock mais ambiciosas já criadas. O álbum conceitual narra a história de isolamento psicológico de um rockstar, explorando temas de trauma, repressão e o peso da fama através de uma narrativa sonora contínua e dramática."
+        ],
+        "galeria": [
+            "../imagens/galeria/pink_floyd_tw/PF_TW (1).jpg",
+            "../imagens/galeria/pink_floyd_tw/PF_TW (2).png",
+            "../imagens/galeria/pink_floyd_tw/PF_TW (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 6,
+        "album": "She's So Unusual",
+        "artista": "Cyndi Lauper",
+        "lancamento": 1983,
+        "edicao": 2019,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Money Changes Everything"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Girls Just Want to Have Fun"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "When You Were Mine"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Time After Time"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "She's So Unusual"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "She Bop"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "All Through the Night"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Witness"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "I'll Kiss You"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Yeah Yeah"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "us",
+        "preco": 299.99,
+        "estilo": [
+            "Pop",
+            "Pop Rock"
+        ],
+        "resumo": [
+            "O álbum de estreia solo de 1983 foi um fenômeno cultural instantâneo. Repleto de sucessos como Girls Just Want to Have Fun e Time After Time, o disco misturou pop, new wave e rock para celebrar a liberdade e a autenticidade, mudando o cenário pop para sempre."
+        ],
+        "capa": "../imagens/capas/Cyndi_shes_so_unnusual.jpg",
+        "galeria": [
+            "../imagens/galeria/cyndi_lauper_ssu/Cyndi_SSU (1).png",
+            "../imagens/galeria/cyndi_lauper_ssu/Cyndi_SSU (2).png",
+            "../imagens/galeria/cyndi_lauper_ssu/Cyndi_SSU (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            },
+            {
+                "nome": "Edição Limitada",
+                "cor": "azul-claro-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            }
+        ],
+        "estoque": 3,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
+        "id": 7,
+        "album": "Gita",
+        "artista": "Raul Seixas",
+        "lancamento": 1974,
+        "edicao": 1974,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Super-Heróis"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Medo da Chuva"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "As Aventuras de Raul Seixas na Cidade de Thor"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Água Viva"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Moleque Maravilhoso"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Sessão das 10"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Sociedade Alternativa"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "O Trem das 7"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "S.O.S."
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Prelúdio"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Loteria da Babilônia"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Gîtâ"
+            }
+        ],
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 125.00,
+        "estilo": [
+            "Rock Nacional",
+            "Jazz",
+            "Baião"
+        ],
+        "resumo": [
+            "Este disco de 1974 é um dos pilares do rock brasileiro, fundindo misticismo, filosofia e crítica social. A faixa-título, inspirada no Bhagavad Gita, tornou-se um hino da música nacional através de sua letra épica e arranjos grandiosos."
+        ],
+        "capa": "../imagens/capas/Raul_gita.jpg",
+        "galeria": [
+            "../imagens/galeria/raul_seixas_gita/Raul_Seixas_Gita (1).jpeg",
+            "../imagens/galeria/raul_seixas_gita/Raul_Seixas_Gita (2).jpeg",
+            "../imagens/galeria/raul_seixas_gita/Raul_Seixas_Gita (3).jpeg"
+        ],
+        "tags": [
+            {
+                "nome": "Bom Estado",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": true,
+        "percentualDesconto": 20
+    },
+    {
+        "id": 8,
+        "album": "Krig-ha, Bandolo!",
+        "artista": "Raul Seixas",
+        "lancamento": 1973,
+        "edicao": 1974,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Introdução: Good Rockin' Tonight"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Mosca na Sopa"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Metamorfose Ambulante"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Dentadura Postiça"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "As Minas do Rei Salomão"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "A Hora do Trem Passar"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Al Capone"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "How Could I Know"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Rockixe"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Cachorro Urubu"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Ouro de Tolo"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Meu Nome É Raul Santos Seixas (Vinheta)"
+            }
+        ],
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 250.50,
+        "estilo": [
+            "Rock Nacional",
+            "Folk",
+            "Country Rock"
+        ],
+        "resumo": [
+            "O primeiro álbum de estúdio oficial de Raul Seixas, lançado em 1973, apresentou clássicos como Metamorfose Ambulante e Ouro de Tolo. O disco é uma mistura brilhante de rock e elementos brasileiros, carregado de letras ácidas que desafiavam o status quo da época."
+        ],
+        "capa": "../imagens/capas/Raul_krig_ha_bandolo.jpg",
+        "galeria": [
+            "../imagens/galeria/raul_seixas_khb/Raul_Seixas_KHB (1).jpeg",
+            "../imagens/galeria/raul_seixas_khb/Raul_Seixas_KHB (2).jpeg",
+            "../imagens/galeria/raul_seixas_khb/Raul_Seixas_KHB (3).jpeg"
+        ],
+        "tags": [
+            {
+                "nome": "Excelente Estado",
+                "cor": "turquesa-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": true,
+        "percentualDesconto": 20
+    },
+    {
+        "id": 9,
+        "album": "Titãs (1984)",
+        "artista": "Titãs",
+        "lancamento": 1984,
+        "edicao": 1984,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Sonífera Ilha"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Marvin"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Babi Índio"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Go Back"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Pule"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Querem Meu Sangue"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Mulher Robot"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Demais"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Toda Cor"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Balada para John e Yoko"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Seu Interesse"
+            }
+        ],
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 294.90,
+        "estilo": [
+            "Rock Nacional",
+            "MPB"
+        ],
+        "resumo": [
+            "O disco de estreia de 1984 revelou um grupo vibrante influenciado pela New Wave e pelo pop rock urbano. Com o sucesso de Sonífera Ilha, o álbum mostrou a capacidade da banda de criar letras inteligentes e cativantes que falavam diretamente à juventude urbana brasileira."
+        ],
+        "capa": "../imagens/capas/Titas_1984.jpg",
+        "galeria": [
+            "../imagens/galeria/titas_1984/titas_1984 (1).jpg",
+            "../imagens/galeria/titas_1984/titas_1984 (2).jpg",
+            "../imagens/galeria/titas_1984/titas_1984 (3).png",
+            "../imagens/galeria/titas_1984/titas_1984 (4).png"
+        ],
+        "tags": [
+            {
+                "nome": "Bom Estado",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
+        "id": 10,
+        "album": "Cabeça Dinossauro",
+        "artista": "Titãs",
+        "lancamento": 1986,
+        "edicao": 1986,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Cabeça Dinossauro"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "AA UU"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Igreja"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Polícia"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Estado Violência"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "A Face do Destruidor"
+            },
+            {
+                "lado": "A",
+                "faixa": 7,
+                "nome": "Porrada"
+            },
+            {
+                "lado": "A",
+                "faixa": 8,
+                "nome": "Tô Cansado"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Bichos Escrotos"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Família"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Homem Primata"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Dívidas"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "O Que"
+            }
+        ],
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 151.22,
+        "estilo": [
+            "Rock Nacional",
+            "MPB"
+        ],
+        "resumo": [
+            "Lançado em 1986, marcou uma virada agressiva na carreira da banda, utilizando influências do punk e pós-punk para questionar agressivamente instituições como o Estado, a Igreja e a Família através de um som cru e pesado."
+        ],
+        "capa": "../imagens/capas/Titas_CabDin.jpg",
+        "galeria": [
+            "../imagens/galeria/titas_cd/titas_cd (1).png",
+            "../imagens/galeria/titas_cd/titas_cd (2).jpg",
+            "../imagens/galeria/titas_cd/titas_cd (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Excelente Estado",
+                "cor": "turquesa-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
+        "id": 11,
+        "album": "Zelda: Majora's Mask",
+        "artista": "Koji Kondo",
+        "lancamento": 2022,
+        "edicao": 2022,
+        "peso": "180g Triplo",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Title Theme"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Majora's Theme"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Chase"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Opening"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Happy Mask Salesman"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Clock Town, First Day"
+            },
+            {
+                "lado": "A",
+                "faixa": 7,
+                "nome": "Clock Tower"
+            },
+            {
+                "lado": "A",
+                "faixa": 8,
+                "nome": "House"
+            },
+            {
+                "lado": "A",
+                "faixa": 9,
+                "nome": "Mayor's Meeting"
+            },
+            {
+                "lado": "A",
+                "faixa": 10,
+                "nome": "Fairy Fountain"
+            },
+            {
+                "lado": "A",
+                "faixa": 11,
+                "nome": "Guru-Guru's Song"
+            },
+            {
+                "lado": "A",
+                "faixa": 12,
+                "nome": "Rosa Sisters"
+            },
+            {
+                "lado": "A",
+                "faixa": 13,
+                "nome": "Kamaro's Dance"
+            },
+            {
+                "lado": "A",
+                "faixa": 14,
+                "nome": "Astral Observatory"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Termina Field"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Zelda's Theme"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Southern Swamp"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Magic Hag's Potion Shop"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Woods Of Mystery"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Boat Cruise"
+            },
+            {
+                "lado": "B",
+                "faixa": 7,
+                "nome": "Deku Palace"
+            },
+            {
+                "lado": "B",
+                "faixa": 8,
+                "nome": "Sonata Of Awakening"
+            },
+            {
+                "lado": "B",
+                "faixa": 9,
+                "nome": "Owl"
+            },
+            {
+                "lado": "B",
+                "faixa": 10,
+                "nome": "Song Of Soaring"
+            },
+            {
+                "lado": "B",
+                "faixa": 11,
+                "nome": "Battle"
+            },
+            {
+                "lado": "B",
+                "faixa": 12,
+                "nome": "Woodfall Rises / Temple / Southern Swamp Clear"
+            },
+            {
+                "lado": "B",
+                "faixa": 13,
+                "nome": "Song Of Healing"
+            },
+            {
+                "lado": "B",
+                "faixa": 14,
+                "nome": "Ocarina Song Of Time"
+            },
+            {
+                "lado": "C",
+                "faixa": 1,
+                "nome": "Clock Town, Second Day"
+            },
+            {
+                "lado": "C",
+                "faixa": 2,
+                "nome": "Romani Ranch"
+            },
+            {
+                "lado": "C",
+                "faixa": 3,
+                "nome": "Ocarina Epona's Song"
+            },
+            {
+                "lado": "C",
+                "faixa": 4,
+                "nome": "Ghost Attack"
+            },
+            {
+                "lado": "C",
+                "faixa": 5,
+                "nome": "Gorman Attack"
+            },
+            {
+                "lado": "C",
+                "faixa": 6,
+                "nome": "Horse Race / Goal"
+            },
+            {
+                "lado": "C",
+                "faixa": 7,
+                "nome": "Keaton's Quiz"
+            },
+            {
+                "lado": "C",
+                "faixa": 8,
+                "nome": "Mountain Village"
+            },
+            {
+                "lado": "C",
+                "faixa": 9,
+                "nome": "Goron Village"
+            },
+            {
+                "lado": "C",
+                "faixa": 10,
+                "nome": "Goron Lullaby"
+            },
+            {
+                "lado": "C",
+                "faixa": 11,
+                "nome": "Giant's Theme"
+            },
+            {
+                "lado": "C",
+                "faixa": 12,
+                "nome": "Oath To Order"
+            },
+            {
+                "lado": "C",
+                "faixa": 13,
+                "nome": "Snowhead Temple"
+            },
+            {
+                "lado": "C",
+                "faixa": 14,
+                "nome": "Middle Boss Temple"
+            },
+            {
+                "lado": "C",
+                "faixa": 15,
+                "nome": "Snowhead Clear"
+            },
+            {
+                "lado": "C",
+                "faixa": 16,
+                "nome": "Ocarina Inverted Song Of Time"
+            },
+            {
+                "lado": "D",
+                "faixa": 1,
+                "nome": "Goron Race / Goal"
+            },
+            {
+                "lado": "D",
+                "faixa": 2,
+                "nome": "Swordman's School"
+            },
+            {
+                "lado": "D",
+                "faixa": 3,
+                "nome": "Mini Game"
+            },
+            {
+                "lado": "D",
+                "faixa": 4,
+                "nome": "Shooting Gallery"
+            },
+            {
+                "lado": "D",
+                "faixa": 5,
+                "nome": "Shop"
+            },
+            {
+                "lado": "D",
+                "faixa": 6,
+                "nome": "Cremia's Carriage"
+            },
+            {
+                "lado": "D",
+                "faixa": 7,
+                "nome": "Milk Bar"
+            },
+            {
+                "lado": "D",
+                "faixa": 8,
+                "nome": "Great Bay Coast"
+            },
+            {
+                "lado": "D",
+                "faixa": 9,
+                "nome": "Mikau"
+            },
+            {
+                "lado": "D",
+                "faixa": 10,
+                "nome": "Marine Research Laboratory"
+            },
+            {
+                "lado": "D",
+                "faixa": 11,
+                "nome": "Pirates' Fortress"
+            },
+            {
+                "lado": "D",
+                "faixa": 12,
+                "nome": "Zora Hall"
+            },
+            {
+                "lado": "D",
+                "faixa": 13,
+                "nome": "New Wave Bossa Nova"
+            },
+            {
+                "lado": "D",
+                "faixa": 14,
+                "nome": "Drums / Bass / Guitar Practice"
+            },
+            {
+                "lado": "D",
+                "faixa": 15,
+                "nome": "Piano Practice / Solo"
+            },
+            {
+                "lado": "D",
+                "faixa": 16,
+                "nome": "The Indigo-Go's"
+            },
+            {
+                "lado": "D",
+                "faixa": 17,
+                "nome": "Ballad Of The Wind Fish"
+            },
+            {
+                "lado": "D",
+                "faixa": 18,
+                "nome": "Ocarina Song Of Double Time"
+            },
+            {
+                "lado": "E",
+                "faixa": 1,
+                "nome": "Clock Town, Third Day"
+            },
+            {
+                "lado": "E",
+                "faixa": 2,
+                "nome": "Great Bay Temple"
+            },
+            {
+                "lado": "E",
+                "faixa": 3,
+                "nome": "Bremen March"
+            },
+            {
+                "lado": "E",
+                "faixa": 4,
+                "nome": "Frog Song"
+            },
+            {
+                "lado": "E",
+                "faixa": 5,
+                "nome": "Ikana Valley"
+            },
+            {
+                "lado": "E",
+                "faixa": 6,
+                "nome": "Cavern"
+            },
+            {
+                "lado": "E",
+                "faixa": 7,
+                "nome": "Sharp's Curse"
+            },
+            {
+                "lado": "E",
+                "faixa": 8,
+                "nome": "Ocarina Song Of Storms"
+            },
+            {
+                "lado": "E",
+                "faixa": 9,
+                "nome": "Music Box House"
+            },
+            {
+                "lado": "E",
+                "faixa": 10,
+                "nome": "Ikana Castle"
+            },
+            {
+                "lado": "E",
+                "faixa": 11,
+                "nome": "Elegy Of Emptiness"
+            },
+            {
+                "lado": "E",
+                "faixa": 12,
+                "nome": "Stone Tower"
+            },
+            {
+                "lado": "E",
+                "faixa": 13,
+                "nome": "Stone Tower Upside-Down"
+            },
+            {
+                "lado": "E",
+                "faixa": 14,
+                "nome": "Boss Battle"
+            },
+            {
+                "lado": "F",
+                "faixa": 1,
+                "nome": "Last Day"
+            },
+            {
+                "lado": "F",
+                "faixa": 2,
+                "nome": "Calling The Four Giants"
+            },
+            {
+                "lado": "F",
+                "faixa": 3,
+                "nome": "To The Moon"
+            },
+            {
+                "lado": "F",
+                "faixa": 4,
+                "nome": "Majora's Mask Battle"
+            },
+            {
+                "lado": "F",
+                "faixa": 5,
+                "nome": "Majora's Incarnate Battle"
+            },
+            {
+                "lado": "F",
+                "faixa": 6,
+                "nome": "Majora's Wrath Battle"
+            },
+            {
+                "lado": "F",
+                "faixa": 7,
+                "nome": "Moon's Destruction"
+            },
+            {
+                "lado": "F",
+                "faixa": 8,
+                "nome": "The Giants' Exit"
+            },
+            {
+                "lado": "F",
+                "faixa": 9,
+                "nome": "Tatl & Tael"
+            },
+            {
+                "lado": "F",
+                "faixa": 10,
+                "nome": "End Credits"
+            }
+        ],
+        "pais": "jp",
+        "paisFab": "us",
+        "preco": 652.99,
+        "estilo": [
+            "Trilha Sonora",
+            "Games"
+        ],
+        "resumo": [
+            "Esta edição orquestrada de 2022 traz a trilha de um dos títulos mais sombrios da franquia. A música evoca uma atmosfera surrealista e de urgência, refletindo o destino iminente do mundo de Termina e os sentimentos de melancolia que permeiam a jornada. Koji Kondo é o mestre compositor por trás das melodias mais memoráveis da Nintendo. Sua capacidade de criar temas que definem a identidade emocional de mundos inteiros elevou a música de videojogos ao status de arte orquestral admirada globalmente."
+        ],
+        "capa": "../imagens/capas/Majora.jpg",
+        "galeria": [
+            "../imagens/galeria/zelda_majora/zelda_majora_galeria (1).jpg",
+            "../imagens/galeria/zelda_majora/zelda_majora_galeria (2).jpg",
+            "../imagens/galeria/zelda_majora/zelda_majora_galeria (3).jpg",
+            "../imagens/galeria/zelda_majora/zelda_majora_galeria (4).jpg",
+            "../imagens/galeria/zelda_majora/zelda_majora_galeria (5).jpg",
+            "../imagens/galeria/zelda_majora/zelda_majora_galeria (6).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Lacrado",
+                "cor": "prata-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            }
+        ],
+        "estoque": 3,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 12,
+        "album": "Zelda: Breath of the Wild",
+        "artista": "Koji Kondo",
+        "lancamento": 2017,
+        "edicao": 2017,
+        "peso": "180g Duplo",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Main Theme"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Overworld (Day)"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "The Shrine's Trial"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "The Stables"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Galloping (Day)"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Hateno Village (Day)"
+            },
+            {
+                "lado": "A",
+                "faixa": 7,
+                "nome": "Kakariko Village (Day)"
+            },
+            {
+                "lado": "A",
+                "faixa": 8,
+                "nome": "The Temple of Time"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Overworld (Battle) - Original Soundtrack Ver."
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Battle (Shrine) - Original Soundtrack Ver."
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Stone Talus Battle"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Hinox Battle"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Guardian Battle"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Kass's Theme"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Great Fairy Fountain"
+            },
+            {
+                "lado": "B",
+                "faixa": 8,
+                "nome": "Attendants to the Sacred Springs"
+            },
+            {
+                "lado": "B",
+                "faixa": 9,
+                "nome": "The Lost Woods"
+            },
+            {
+                "lado": "B",
+                "faixa": 10,
+                "nome": "Korok Forest (Day)"
+            },
+            {
+                "lado": "C",
+                "faixa": 1,
+                "nome": "Zora's Domain (Day)"
+            },
+            {
+                "lado": "C",
+                "faixa": 2,
+                "nome": "Battle With Divine Beast Vah Ruta"
+            },
+            {
+                "lado": "C",
+                "faixa": 3,
+                "nome": "Reuniting with Mipha"
+            },
+            {
+                "lado": "C",
+                "faixa": 4,
+                "nome": "Rito Village (Day)"
+            },
+            {
+                "lado": "C",
+                "faixa": 5,
+                "nome": "Battle with Divine Beast Vah Medoh"
+            },
+            {
+                "lado": "C",
+                "faixa": 6,
+                "nome": "Reuniting with Revali"
+            },
+            {
+                "lado": "C",
+                "faixa": 7,
+                "nome": "Gerudo Town (Day)"
+            },
+            {
+                "lado": "C",
+                "faixa": 8,
+                "nome": "Battle with Thunderblight Ganon"
+            },
+            {
+                "lado": "C",
+                "faixa": 9,
+                "nome": "Reuniting with Urbosa"
+            },
+            {
+                "lado": "D",
+                "faixa": 1,
+                "nome": "Goron City (Day)"
+            },
+            {
+                "lado": "D",
+                "faixa": 2,
+                "nome": "Reuniting with Daruk"
+            },
+            {
+                "lado": "D",
+                "faixa": 3,
+                "nome": "Hyrule Castle"
+            },
+            {
+                "lado": "D",
+                "faixa": 4,
+                "nome": "Battle with Calamity Ganon (Second Form)"
+            },
+            {
+                "lado": "D",
+                "faixa": 5,
+                "nome": "Battle with Dark Beast Ganon"
+            },
+            {
+                "lado": "D",
+                "faixa": 6,
+                "nome": "Do You Really Remember Me?"
+            },
+            {
+                "lado": "D",
+                "faixa": 7,
+                "nome": "Epilogue"
+            }
+        ],
+        "pais": "jp",
+        "paisFab": "us",
+        "preco": 375.00,
+        "estilo": [
+            "Trilha Sonora",
+            "Games"
+        ],
+        "resumo": [
+            "Lançada em 2017, esta trilha sonora quebra convenções ao focar no minimalismo e em melodias sutis de piano. A música respira junto com o vasto mundo aberto, criando uma experiência imersiva baseada na contemplação da natureza e no sentimento de descoberta."
+        ],
+        "capa": "../imagens/capas/the-legend-of-zelda-breath-of-the-wild_9jfa.jpg",
+        "galeria": [
+            "../imagens/galeria/zelda_botw/Zelda_BOTW (1).png",
+            "../imagens/galeria/zelda_botw/Zelda_BOTW (2).png",
+            "../imagens/galeria/zelda_botw/Zelda_BOTW (3).png",
+            "../imagens/galeria/zelda_botw/Zelda_BOTW (4).png"
+        ],
+        "tags": [
+            {
+                "nome": "Lacrado",
+                "cor": "prata-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            }
+        ],
+        "estoque": 3,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 13,
+        "album": "Undertale",
+        "artista": "Toby Fox",
+        "lancamento": 2016,
+        "edicao": 2016,
+        "peso": "180g Quíntuplo",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Once Upon a Time"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Start Menu"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Your Best Friend"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Fallen Down"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Ruins"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Uwa!! So Temperate♫"
+            },
+            {
+                "lado": "A",
+                "faixa": 7,
+                "nome": "Anticipation"
+            },
+            {
+                "lado": "A",
+                "faixa": 8,
+                "nome": "Unnecessary Tension"
+            },
+            {
+                "lado": "A",
+                "faixa": 9,
+                "nome": "Enemy Approaching"
+            },
+            {
+                "lado": "A",
+                "faixa": 10,
+                "nome": "Ghost Fight"
+            },
+            {
+                "lado": "A",
+                "faixa": 11,
+                "nome": "Determination"
+            },
+            {
+                "lado": "A",
+                "faixa": 12,
+                "nome": "Home"
+            },
+            {
+                "lado": "A",
+                "faixa": 13,
+                "nome": "Home (Music Box)"
+            },
+            {
+                "lado": "A",
+                "faixa": 14,
+                "nome": "Heartache"
+            },
+            {
+                "lado": "B",
+                "faixa": 15,
+                "nome": "sans."
+            },
+            {
+                "lado": "B",
+                "faixa": 16,
+                "nome": "Nyeh Heh Heh!"
+            },
+            {
+                "lado": "B",
+                "faixa": 17,
+                "nome": "Snowy"
+            },
+            {
+                "lado": "B",
+                "faixa": 18,
+                "nome": "Uwa!! So Holiday♫"
+            },
+            {
+                "lado": "B",
+                "faixa": 19,
+                "nome": "Dogbass"
+            },
+            {
+                "lado": "B",
+                "faixa": 20,
+                "nome": "Mysterious Place"
+            },
+            {
+                "lado": "B",
+                "faixa": 21,
+                "nome": "Dogsong"
+            },
+            {
+                "lado": "B",
+                "faixa": 22,
+                "nome": "Snowdin Town"
+            },
+            {
+                "lado": "B",
+                "faixa": 23,
+                "nome": "Shop"
+            },
+            {
+                "lado": "B",
+                "faixa": 24,
+                "nome": "Bonetrousle"
+            },
+            {
+                "lado": "B",
+                "faixa": 25,
+                "nome": "Dating Start!"
+            },
+            {
+                "lado": "B",
+                "faixa": 26,
+                "nome": "Dating Tense!"
+            },
+            {
+                "lado": "B",
+                "faixa": 27,
+                "nome": "Dating Fight!"
+            },
+            {
+                "lado": "B",
+                "faixa": 28,
+                "nome": "Premonition"
+            },
+            {
+                "lado": "B",
+                "faixa": 29,
+                "nome": "Song That Might Play When You Fight Sans"
+            },
+            {
+                "lado": "C",
+                "faixa": 30,
+                "nome": "Danger Mystery"
+            },
+            {
+                "lado": "C",
+                "faixa": 31,
+                "nome": "Undyne"
+            },
+            {
+                "lado": "C",
+                "faixa": 32,
+                "nome": "Waterfall"
+            },
+            {
+                "lado": "C",
+                "faixa": 33,
+                "nome": "Run!"
+            },
+            {
+                "lado": "C",
+                "faixa": 34,
+                "nome": "Quiet Water"
+            },
+            {
+                "lado": "C",
+                "faixa": 35,
+                "nome": "Memory"
+            },
+            {
+                "lado": "C",
+                "faixa": 36,
+                "nome": "Bird That Carries You Over A Disproportionately Small Gap"
+            },
+            {
+                "lado": "C",
+                "faixa": 37,
+                "nome": "Dummy!"
+            },
+            {
+                "lado": "C",
+                "faixa": 38,
+                "nome": "Pathetic House"
+            },
+            {
+                "lado": "C",
+                "faixa": 39,
+                "nome": "Spooktune"
+            },
+            {
+                "lado": "C",
+                "faixa": 40,
+                "nome": "Spookwave"
+            },
+            {
+                "lado": "C",
+                "faixa": 41,
+                "nome": "Ghouliday"
+            },
+            {
+                "lado": "C",
+                "faixa": 42,
+                "nome": "Chill"
+            },
+            {
+                "lado": "C",
+                "faixa": 43,
+                "nome": "Thundersnail"
+            },
+            {
+                "lado": "C",
+                "faixa": 44,
+                "nome": "Temmie Village"
+            },
+            {
+                "lado": "C",
+                "faixa": 45,
+                "nome": "Tem Shop"
+            },
+            {
+                "lado": "C",
+                "faixa": 46,
+                "nome": "NGAHHH!!"
+            },
+            {
+                "lado": "C",
+                "faixa": 47,
+                "nome": "Spear of Justice"
+            },
+            {
+                "lado": "D",
+                "faixa": 48,
+                "nome": "Ooo"
+            },
+            {
+                "lado": "D",
+                "faixa": 49,
+                "nome": "Alphys"
+            },
+            {
+                "lado": "D",
+                "faixa": 50,
+                "nome": "It's Showtime!"
+            },
+            {
+                "lado": "D",
+                "faixa": 51,
+                "nome": "Metal Crusher"
+            },
+            {
+                "lado": "D",
+                "faixa": 52,
+                "nome": "Another Medium"
+            },
+            {
+                "lado": "D",
+                "faixa": 53,
+                "nome": "Uwa!! So HEATS!!♫"
+            },
+            {
+                "lado": "D",
+                "faixa": 54,
+                "nome": "Stronger Monsters"
+            },
+            {
+                "lado": "D",
+                "faixa": 55,
+                "nome": "Hotel"
+            },
+            {
+                "lado": "D",
+                "faixa": 56,
+                "nome": "Can You Really Call This A Hotel, I Didn't Receive A Mint On My Pillow Or Anything"
+            },
+            {
+                "lado": "D",
+                "faixa": 57,
+                "nome": "Confession"
+            },
+            {
+                "lado": "D",
+                "faixa": 58,
+                "nome": "Live Report"
+            },
+            {
+                "lado": "D",
+                "faixa": 59,
+                "nome": "Death Report"
+            },
+            {
+                "lado": "D",
+                "faixa": 60,
+                "nome": "Spider Dance"
+            },
+            {
+                "lado": "D",
+                "faixa": 61,
+                "nome": "Wrong Enemy !"
+            },
+            {
+                "lado": "D",
+                "faixa": 62,
+                "nome": "Oh! One True Love"
+            },
+            {
+                "lado": "D",
+                "faixa": 63,
+                "nome": "Oh! Dungeon"
+            },
+            {
+                "lado": "E",
+                "faixa": 64,
+                "nome": "It's Raining Somewhere Else"
+            },
+            {
+                "lado": "E",
+                "faixa": 65,
+                "nome": "CORE Approach"
+            },
+            {
+                "lado": "E",
+                "faixa": 66,
+                "nome": "CORE"
+            },
+            {
+                "lado": "E",
+                "faixa": 67,
+                "nome": "Last Episode!"
+            },
+            {
+                "lado": "E",
+                "faixa": 68,
+                "nome": "Oh My..."
+            },
+            {
+                "lado": "E",
+                "faixa": 69,
+                "nome": "Death by Glamour"
+            },
+            {
+                "lado": "E",
+                "faixa": 70,
+                "nome": "For the Fans"
+            },
+            {
+                "lado": "E",
+                "faixa": 71,
+                "nome": "Long Elevator"
+            },
+            {
+                "lado": "F",
+                "faixa": 72,
+                "nome": "Undertale"
+            },
+            {
+                "lado": "F",
+                "faixa": 73,
+                "nome": "The Choice"
+            },
+            {
+                "lado": "F",
+                "faixa": 74,
+                "nome": "Small Shock"
+            },
+            {
+                "lado": "F",
+                "faixa": 75,
+                "nome": "Barrier"
+            },
+            {
+                "lado": "F",
+                "faixa": 76,
+                "nome": "Bergentrückung"
+            },
+            {
+                "lado": "F",
+                "faixa": 77,
+                "nome": "ASGORE"
+            },
+            {
+                "lado": "G",
+                "faixa": 78,
+                "nome": "You Idiot"
+            },
+            {
+                "lado": "G",
+                "faixa": 79,
+                "nome": "Your Best Nightmare"
+            },
+            {
+                "lado": "G",
+                "faixa": 80,
+                "nome": "Finale"
+            },
+            {
+                "lado": "G",
+                "faixa": 81,
+                "nome": "An Ending"
+            },
+            {
+                "lado": "G",
+                "faixa": 82,
+                "nome": "She's Playing Piano"
+            },
+            {
+                "lado": "G",
+                "faixa": 83,
+                "nome": "Here We Are"
+            },
+            {
+                "lado": "G",
+                "faixa": 84,
+                "nome": "Amalgam"
+            },
+            {
+                "lado": "G",
+                "faixa": 85,
+                "nome": "Fallen Down (Reprise)"
+            },
+            {
+                "lado": "H",
+                "faixa": 86,
+                "nome": "Don't Give Up"
+            },
+            {
+                "lado": "H",
+                "faixa": 87,
+                "nome": "Hopes and Dreams"
+            },
+            {
+                "lado": "H",
+                "faixa": 88,
+                "nome": "Burn in Despair!"
+            },
+            {
+                "lado": "H",
+                "faixa": 89,
+                "nome": "SAVE the World"
+            },
+            {
+                "lado": "H",
+                "faixa": 90,
+                "nome": "His Theme"
+            },
+            {
+                "lado": "H",
+                "faixa": 91,
+                "nome": "Final Power"
+            },
+            {
+                "lado": "H",
+                "faixa": 92,
+                "nome": "Reunited"
+            },
+            {
+                "lado": "I",
+                "faixa": 93,
+                "nome": "Respite"
+            },
+            {
+                "lado": "I",
+                "faixa": 94,
+                "nome": "Bring It In, Guys!"
+            },
+            {
+                "lado": "I",
+                "faixa": 95,
+                "nome": "Last Goodbye"
+            },
+            {
+                "lado": "I",
+                "faixa": 96,
+                "nome": "But the Earth Refused to Die"
+            },
+            {
+                "lado": "I",
+                "faixa": 97,
+                "nome": "Battle Against a True Hero"
+            },
+            {
+                "lado": "I",
+                "faixa": 98,
+                "nome": "Power of -NEO-"
+            },
+            {
+                "lado": "I",
+                "faixa": 99,
+                "nome": "MEGALOVANIA"
+            },
+            {
+                "lado": "I",
+                "faixa": 100,
+                "nome": "Good Night"
+            },
+            {
+                "lado": "J",
+                "faixa": 101,
+                "nome": "Menu (Full)"
+            },
+            {
+                "lado": "J",
+                "faixa": 102,
+                "nome": "Mysterious Shrine"
+            },
+            {
+                "lado": "J",
+                "faixa": 103,
+                "nome": "Absolutely Overfamiliar Shrine"
+            },
+            {
+                "lado": "J",
+                "faixa": 104,
+                "nome": "Mad Mew Mew"
+            },
+            {
+                "lado": "J",
+                "faixa": 105,
+                "nome": "Dating Start (FM Version) - Coda"
+            },
+            {
+                "lado": "J",
+                "faixa": 106,
+                "nome": "Bereavement - Flashygoodness"
+            },
+            {
+                "lado": "J",
+                "faixa": 107,
+                "nome": "Bonetrousle (Trailer Version)"
+            },
+            {
+                "lado": "J",
+                "faixa": 108,
+                "nome": "Before the Story"
+            },
+            {
+                "lado": "J",
+                "faixa": 109,
+                "nome": "Dog Dating"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "eu",
+        "preco": 489.00,
+        "estilo": [
+            "Trilha Sonora",
+            "Games"
+        ],
+        "resumo": [
+            "Lançada em 2016, esta trilha tornou-se um fenômeno cultural. Misturando chiptune clássico com estilos modernos, as composições dão vida a personagens memoráveis, alternando entre o humor vibrante e uma melancolia profunda que ressoa intensamente com a narrativa do jogo. Toby Fox é o criador e compositor genial por trás de Undertale. Sua habilidade de tecer música e mecânicas de jogo de forma indissociável o tornou uma das figuras mais respeitadas no cenário independente, sendo aclamado por sua criatividade e sensibilidade melódica."
+        ],
+        "capa": "../imagens/capas/Undertale.jpg",
+        "galeria": [
+            "../imagens/galeria/undertale/Undertale (1).jpg",
+            "../imagens/galeria/undertale/Undertale (2).png",
+            "../imagens/galeria/undertale/Undertale (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Lacrado",
+                "cor": "prata-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            },
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            }
+        ],
+        "estoque": 4,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 14,
+        "album": "Deltarune Chapter 2",
+        "artista": "Toby Fox",
+        "lancamento": 2018,
+        "edicao": 2018,
+        "peso": "180g Duplo",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Faint Glow"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Girl Next Door"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "My Castle Town"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Ohhhhohohoho!"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Queen"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "A CYBER'S WORLD?"
+            },
+            {
+                "lado": "A",
+                "faixa": 7,
+                "nome": "A Simple Diversion"
+            },
+            {
+                "lado": "A",
+                "faixa": 8,
+                "nome": "Almost To The Guys!"
+            },
+            {
+                "lado": "A",
+                "faixa": 9,
+                "nome": "Cool Beat"
+            },
+            {
+                "lado": "A",
+                "faixa": 10,
+                "nome": "When I Get Mad I Dance Like This"
+            },
+            {
+                "lado": "A",
+                "faixa": 11,
+                "nome": "Cyber Battle (Solo)"
+            },
+            {
+                "lado": "A",
+                "faixa": 12,
+                "nome": "When I Get Happy I Dance Like This"
+            },
+            {
+                "lado": "A",
+                "faixa": 13,
+                "nome": "Sound Studio"
+            },
+            {
+                "lado": "A",
+                "faixa": 14,
+                "nome": "Berdly"
+            },
+            {
+                "lado": "A",
+                "faixa": 15,
+                "nome": "Smart Race"
+            },
+            {
+                "lado": "A",
+                "faixa": 16,
+                "nome": "Faint Courage (Game Over)"
+            },
+            {
+                "lado": "B",
+                "faixa": 17,
+                "nome": "WELCOME TO THE CITY"
+            },
+            {
+                "lado": "B",
+                "faixa": 18,
+                "nome": "Mini Studio"
+            },
+            {
+                "lado": "B",
+                "faixa": 19,
+                "nome": "Holiday Studio"
+            },
+            {
+                "lado": "B",
+                "faixa": 20,
+                "nome": "Cool Mixtape"
+            },
+            {
+                "lado": "B",
+                "faixa": 21,
+                "nome": "HEY EVERY !"
+            },
+            {
+                "lado": "B",
+                "faixa": 22,
+                "nome": "Spamton"
+            },
+            {
+                "lado": "B",
+                "faixa": 23,
+                "nome": "NOW'S YOUR CHANCE TO BE A"
+            },
+            {
+                "lado": "B",
+                "faixa": 24,
+                "nome": "Elegant Entrance"
+            },
+            {
+                "lado": "B",
+                "faixa": 25,
+                "nome": "Bluebird of Misfortune"
+            },
+            {
+                "lado": "B",
+                "faixa": 26,
+                "nome": "Pandora Palace"
+            },
+            {
+                "lado": "B",
+                "faixa": 27,
+                "nome": "KEYGEN"
+            },
+            {
+                "lado": "B",
+                "faixa": 28,
+                "nome": "Acid Tunnel of Love"
+            },
+            {
+                "lado": "B",
+                "faixa": 29,
+                "nome": "It's Pronounced \"Rules\""
+            },
+            {
+                "lado": "B",
+                "faixa": 30,
+                "nome": "Lost Girl"
+            },
+            {
+                "lado": "B",
+                "faixa": 31,
+                "nome": "Ferris Wheel"
+            },
+            {
+                "lado": "C",
+                "faixa": 32,
+                "nome": "Attack of the Killer Queen"
+            },
+            {
+                "lado": "C",
+                "faixa": 33,
+                "nome": "Giga Size"
+            },
+            {
+                "lado": "C",
+                "faixa": 34,
+                "nome": "Powers Combined"
+            },
+            {
+                "lado": "C",
+                "faixa": 35,
+                "nome": "Knock You Down !!"
+            },
+            {
+                "lado": "C",
+                "faixa": 36,
+                "nome": "The Dark Truth"
+            },
+            {
+                "lado": "C",
+                "faixa": 37,
+                "nome": "Digital Roots"
+            },
+            {
+                "lado": "C",
+                "faixa": 38,
+                "nome": "Deal Gone Wrong"
+            },
+            {
+                "lado": "C",
+                "faixa": 39,
+                "nome": "BIG SHOT"
+            },
+            {
+                "lado": "C",
+                "faixa": 40,
+                "nome": "A Real Boy"
+            },
+            {
+                "lado": "C",
+                "faixa": 41,
+                "nome": "Dialtone"
+            },
+            {
+                "lado": "C",
+                "faixa": 42,
+                "nome": "sans."
+            },
+            {
+                "lado": "C",
+                "faixa": 43,
+                "nome": "Chill Jailbreak Alarm To Study And Relax To"
+            },
+            {
+                "lado": "C",
+                "faixa": 44,
+                "nome": "You Can Always Come Home"
+            },
+            {
+                "lado": "C",
+                "faixa": 45,
+                "nome": "Until Next Time"
+            },
+            {
+                "lado": "C",
+                "faixa": 46,
+                "nome": "Before The Story"
+            },
+            {
+                "lado": "C",
+                "faixa": 47,
+                "nome": "Berdly (Rejected Concept)"
+            },
+            {
+                "lado": "D",
+                "faixa": 48,
+                "nome": "Dance of Dog"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "eu",
+        "preco": 215.00,
+        "estilo": [
+            "Trilha Sonora",
+            "Games"
+        ],
+        "resumo": [
+            "Lançada em 2018, esta trilha continua a expansão do universo musical iniciado anteriormente. Com temas enérgicos e experimentais, o álbum acompanha a evolução da nova saga, destacando-se pela diversidade de timbres e pela criação de temas de personagens instantaneamente icônicos. Toby Fox consolidou sua marca como um compositor que entende profundamente a relação emocional entre o jogador e a obra. Seu trabalho demonstra uma maturidade musical crescente, mantendo a essência indie enquanto explora novos e complexos horizontes sonoros."
+        ],
+        "capa": "../imagens/capas/Deltarune_ch2.jpg",
+        "galeria": [
+            "../imagens/galeria/deltarune/Deltarune (1).png",
+            "../imagens/galeria/deltarune/Deltarune (2).png",
+            "../imagens/galeria/deltarune/Deltarune (3).png",
+            "../imagens/galeria/deltarune/Deltarune (4).png",
+            "../imagens/galeria/deltarune/Deltarune (5).png"
+        ],
+        "tags": [
+            {
+                "nome": "Lacrado",
+                "cor": "prata-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 15,
+        "album": "Mestres da Música - Ravel",
+        "artista": "Orquestra Sinfônica de Viena",
+        "lancamento": 1980,
+        "edicao": 1980,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Bolero - Orquestra Sinfônica de Viena"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "La Valse - Orquestra Filarmonica de Rochester"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Concerto para a Mão Esquerda em Ré Maior - Orquestra Sinfonica da Radio de Luxemburgo"
+            }
+        ],
+        "pais": "at",
+        "paisFab": "br",
+        "preco": 50.00,
+        "estilo": [
+            "Orquestra"
+        ],
+        "resumo": [
+            "Este disco foca na genialidade do compositor Maurice Ravel, apresentando interpretações magistrais de suas obras orquestrais. A gravação captura a sofisticação harmônica e o uso brilhante de cores instrumentais que definem o impressionismo musical francês, resultando em uma experiência técnica impecável."
+        ],
+        "capa": "../imagens/capas/Ravel.png",
+        "galeria": [
+            "../imagens/galeria/ravel/Ravel (1).png",
+            "../imagens/galeria/ravel/Ravel (2).png",
+            "../imagens/galeria/ravel/Ravel (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": true,
+        "percentualDesconto": 15
+    },
+    {
+        "id": 16,
+        "album": "Phantom of the Opera",
+        "artista": "Original Cast Recording",
+        "lancamento": 1986,
+        "edicao": 1986,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Prologue"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Overture"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Think Of Me"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Angel Of Music"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Little Lotte / The Mirror (Angel Of Music)"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "The Phantom Of The Opera"
+            },
+            {
+                "lado": "A",
+                "faixa": 7,
+                "nome": "The Music Of The Night"
+            },
+            {
+                "lado": "A",
+                "faixa": 8,
+                "nome": "I Remember / Stranger Than You Dreamt It"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Magical Lasso"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Notes / Prima Donna"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Poor Fool, He Makes Me Laugh"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Why Have You Brought Me Here / Raoul, I've Been There"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "All I Ask Of You"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "All I Ask Of You (Reprise)"
+            },
+            {
+                "lado": "C",
+                "faixa": 1,
+                "nome": "Entr'acte"
+            },
+            {
+                "lado": "C",
+                "faixa": 2,
+                "nome": "Masquerade / Why So Silent"
+            },
+            {
+                "lado": "C",
+                "faixa": 3,
+                "nome": "Notes / Twisted Every Way"
+            },
+            {
+                "lado": "C",
+                "faixa": 4,
+                "nome": "Wishing You Were Somehow Here Again"
+            },
+            {
+                "lado": "C",
+                "faixa": 5,
+                "nome": "Wandering Child / Bravo, Monsieur"
+            },
+            {
+                "lado": "D",
+                "faixa": 1,
+                "nome": "The Point Of No Return"
+            },
+            {
+                "lado": "D",
+                "faixa": 2,
+                "nome": "Down Once More / Track Down This Murderer"
+            },
+            {
+                "lado": "D",
+                "faixa": 3,
+                "nome": "Final Lair"
+            }
+        ],
+        "pais": "gb-eng",
+        "paisFab": "gb",
+        "preco": 250.00,
+        "estilo": [
+            "Musical",
+            "Ópera",
+            "Trilha Sonora"
+        ],
+        "resumo": [
+            "A gravação original de 1986 imortaliza o musical de maior sucesso da história. Misturando elementos de ópera com rock e melodias pop, o álbum narra a trágica obsessão do Fantasma, tornando-se um marco absoluto e eterno do teatro musical mundial."
+        ],
+        "capa": "../imagens/capas/phantom.png",
+        "galeria": [
+            "../imagens/galeria/phantom_oto/POTO (1).png",
+            "../imagens/galeria/phantom_oto/POTO (2).png",
+            "../imagens/galeria/phantom_oto/POTO (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Bom Estado",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 15
+    },
+    {
+        "id": 17,
+        "album": "Les Miserables",
+        "artista": "Original London Cast",
+        "lancamento": 1985,
+        "edicao": 1985,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "At The End Of The Day"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "I Dreamed A Dream"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Lovely Ladies"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Who Am I?"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Come To Me"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Confrontation"
+            },
+            {
+                "lado": "A",
+                "faixa": 7,
+                "nome": "Castle On A Cloud"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Master Of The House"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "The Thénardier Waltz Of Treachery"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Look Down"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Stars"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Red And Black"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Do You Hear The People Sing?"
+            },
+            {
+                "lado": "C",
+                "faixa": 1,
+                "nome": "In My Life"
+            },
+            {
+                "lado": "C",
+                "faixa": 2,
+                "nome": "A Heart Full Of Love"
+            },
+            {
+                "lado": "C",
+                "faixa": 3,
+                "nome": "Plumet Attack"
+            },
+            {
+                "lado": "C",
+                "faixa": 4,
+                "nome": "One Day More"
+            },
+            {
+                "lado": "C",
+                "faixa": 5,
+                "nome": "On My Own"
+            },
+            {
+                "lado": "C",
+                "faixa": 6,
+                "nome": "The Attack On Rue Plumet"
+            },
+            {
+                "lado": "D",
+                "faixa": 1,
+                "nome": "A Little Fall Of Rain"
+            },
+            {
+                "lado": "D",
+                "faixa": 2,
+                "nome": "Drink With Me"
+            },
+            {
+                "lado": "D",
+                "faixa": 3,
+                "nome": "Bring Him Home"
+            },
+            {
+                "lado": "D",
+                "faixa": 4,
+                "nome": "Dog Eats Dog"
+            },
+            {
+                "lado": "D",
+                "faixa": 5,
+                "nome": "Javert's Soliloquy"
+            },
+            {
+                "lado": "D",
+                "faixa": 6,
+                "nome": "Empty Chairs At Empty Tables"
+            },
+            {
+                "lado": "D",
+                "faixa": 7,
+                "nome": "Wedding Chorale"
+            },
+            {
+                "lado": "D",
+                "faixa": 8,
+                "nome": "Beggars At The Feast"
+            },
+            {
+                "lado": "D",
+                "faixa": 9,
+                "nome": "Finale"
+            }
+        ],
+        "pais": "gb-eng",
+        "paisFab": "gb",
+        "preco": 289.00,
+        "estilo": [
+            "Musical",
+            "Ópera",
+            "Trilha Sonora"
+        ],
+        "resumo": [
+            "Lançado em 1985, este álbum captura a grandiosidade épica do musical baseado na obra de Victor Hugo. Com hinos de liberdade e canções de profunda redenção, a trilha sonora tornou-se uma das mais queridas de todos os tempos, simbolizando a eterna luta humana."
+        ],
+        "capa": "../imagens/capas/les_mis.jpg",
+        "galeria": [
+            "../imagens/galeria/les_mis/Les_Mis (1).png",
+            "../imagens/galeria/les_mis/Les_Mis (2).png",
+            "../imagens/galeria/les_mis/Les_Mis (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Bom Estado",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            },
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 15
+    },
+    {
+        "id": 18,
+        "album": "Falso Brilhante",
+        "artista": "Elis Regina",
+        "lancamento": 1976,
+        "edicao": 1976,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Como Nossos Pais"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Velha Roupa Colorida"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Los Hermanos"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Um Por Todos"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Fascinação (Fascination)"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Jardins De Infância"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Quero"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Gracias A La Vida"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "O Cavaleiro E Os Moinhos"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Tatuagem"
+            }
+        ],
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 380.90,
+        "estilo": [
+            "MPB"
+        ],
+        "capa": "../imagens/capas/Elis_falso_brilhante.jpg",
+        "resumo": [
+            "Baseado em um dos espetáculos mais importantes da música brasileira, este disco de 1976 é visceral e politizado. Através de arranjos teatrais e interpretações arrebatadoras, a obra reflete as tensões e esperanças do Brasil da época com perfeição técnica."
+        ],
+        "galeria": [
+            "../imagens/galeria/elis_falso_bri/Elis_FB (1).png",
+            "../imagens/galeria/elis_falso_bri/Elis_FB (2).png",
+            "../imagens/galeria/elis_falso_bri/Elis_FB (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Lacrado",
+                "cor": "prata-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
+        "id": 19,
+        "album": "Elis (1972)",
+        "artista": "Elis Regina",
+        "lancamento": 1972,
+        "edicao": 1972,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "20 Anos Blue"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Bala Com Bala"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Nada Será Como Antes"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Mucuripe"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Olhos Abertos"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Me Deixa Em Paz"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Casa No Campo"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Atrás Da Porta"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Cais"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "É Festa"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "O Cantador"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Comunicação"
+            }
+        ],
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 120.50,
+        "estilo": [
+            "MPB"
+        ],
+        "resumo": [
+            "Lançado em 1972, este disco marca a colaboração da artista com a nova geração de músicos brasileiros. Com uma sonoridade sofisticada que funde jazz e MPB, o álbum apresenta interpretações definitivas de clássicos que renovaram a música nacional na década de 70."
+        ],
+        "capa": "../imagens/capas/Elis_1972.png",
+        "galeria": [
+            "../imagens/galeria/elis_1972/Elis_1972 (1).png",
+            "../imagens/galeria/elis_1972/Elis_1972 (2).png",
+            "../imagens/galeria/elis_1972/Elis_1972 (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Excelente Estado",
+                "cor": "turquesa-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
+        "id": 20,
+        "album": "Secos & Molhados (1973)",
+        "artista": "Secos & Molhados",
+        "lancamento": 1973,
+        "edicao": 1973,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Sangue Latino"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "O Vira"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "O Patrão Nosso De Cada Dia"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Amor"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Primavera Nos Dentes"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Assim Assado"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Mulher Urubu"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Rosa De Hiroshima"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Prece Cosmopolita"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Rondó Do Capitão"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "As Andorinhas"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Fala"
+            },
+            {
+                "lado": "B",
+                "faixa": 7,
+                "nome": "Prece Cosmopolita (Reprise)"
+            }
+        ],
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 210.00,
+        "estilo": [
+            "MPB"
+        ],
+        "resumo": [
+            "O grupo Secos & Molhados, liderado pela presença hipnótica de Ney Matogrosso, foi um fenômeno cultural de impacto duradouro. O álbum de estreia de 1973 revolucionou a música nacional ao misturar folk, rock Progressivo e poesia. Com uma estética visual provocativa, o disco desafiou os padrões de comportamento em plena ditadura, tornando-se um sucesso de vendas histórico e disruptivo."
+        ],
+        "capa": "../imagens/capas/Secos_e_molhados.jpg",
+        "galeria": [
+            "../imagens/galeria/secos_e_molhados/S_e_M (1).png",
+            "../imagens/galeria/secos_e_molhados/S_e_M (2).png",
+            "../imagens/galeria/secos_e_molhados/S_e_M (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            },
+            {
+                "nome": "Excelente Estado",
+                "cor": "turquesa-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            }
+        ],
+        "estoque": 3,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
+        "id": 21,
+        "album": "Outer Wilds: Signals",
+        "artista": "Andrew Prahlow",
+        "lancamento": 2020,
+        "edicao": 2020,
+        "peso": "180g Duplo",
+        "tipo": "LP 12\"",
+        "pais": "us",
+        "paisFab": "us",
+        "preco": 489.90,
+        "estilo": [
+            "Trilha Sonora",
+            "Games"
+        ],
+        "resumo": [
+            "Lançada em 2020, esta trilha sonora é o coração emocional de um dos jogos de exploração mais aclamados da década. Utilizando instrumentos acústicos como banjo, a música evoca uma sensação de camaradagem e curiosidade diante do desconhecido espacial. Andrew Prahlow é um compositor que domina a criação de paisagens sonoras narrativas. Seu trabalho é elogiado por transmitir sentimentos complexos de medo cósmico e aceitação, conectando o ouvinte intimamente à jornada de descoberta explorada na obra."
+        ],
+        "capa": "../imagens/capas/Outer_Wilds_1.jpg",
+        "galeria": [
+            "../imagens/galeria/outer_wilds/OW.png",
+            "../imagens/galeria/outer_wilds/OW (1).png",
+            "../imagens/galeria/outer_wilds/OW (2).png"
+        ],
+        "tags": [
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            }
+        ],
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Timber Hearth"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Outer Wilds"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "The Museum"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Space"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Castaways"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Giant's Deep"
+            },
+            {
+                "lado": "A",
+                "faixa": 7,
+                "nome": "End Times"
+            },
+            {
+                "lado": "A",
+                "faixa": 8,
+                "nome": "22 Minutes"
+            },
+            {
+                "lado": "B",
+                "faixa": 9,
+                "nome": "Main Title"
+            },
+            {
+                "lado": "B",
+                "faixa": 10,
+                "nome": "The Nomai"
+            },
+            {
+                "lado": "B",
+                "faixa": 11,
+                "nome": "The Sun Station"
+            },
+            {
+                "lado": "B",
+                "faixa": 12,
+                "nome": "The Search"
+            },
+            {
+                "lado": "B",
+                "faixa": 13,
+                "nome": "Nomai Ruins"
+            },
+            {
+                "lado": "C",
+                "faixa": 14,
+                "nome": "Travelers"
+            },
+            {
+                "lado": "C",
+                "faixa": 15,
+                "nome": "The Ash Twin Project"
+            },
+            {
+                "lado": "C",
+                "faixa": 16,
+                "nome": "The Uncertainty Principle"
+            },
+            {
+                "lado": "C",
+                "faixa": 17,
+                "nome": "Dark Bramble"
+            },
+            {
+                "lado": "C",
+                "faixa": 18,
+                "nome": "The Ancient Glade"
+            },
+            {
+                "lado": "C",
+                "faixa": 19,
+                "nome": "Final Voyage"
+            },
+            {
+                "lado": "D",
+                "faixa": 20,
+                "nome": "Let There Be Light"
+            },
+            {
+                "lado": "D",
+                "faixa": 21,
+                "nome": "14.3 Billion Years"
+            },
+            {
+                "lado": "D",
+                "faixa": 22,
+                "nome": "Morning"
+            },
+            {
+                "lado": "D",
+                "faixa": 23,
+                "nome": "Reprise"
+            },
+            {
+                "lado": "D",
+                "faixa": 24,
+                "nome": "Campfire Song"
+            }
+        ],
+        "estoque": 2,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 22,
+        "album": "Outer Wilds: Secrets",
+        "artista": "Andrew Prahlow",
+        "lancamento": 2021,
+        "edicao": 2021,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "pais": "us",
+        "paisFab": "us",
+        "preco": 512.00,
+        "estilo": [
+            "Trilha Sonora",
+            "Games"
+        ],
+        "resumo": [
+            "Trilha sonora de 2021 para a expansão do jogo Outer Wilds. A obra utiliza banjos e sintetizadores para evocar nostalgia, isolamento e o maravilhamento diante dos mistérios do cosmos de forma imersiva e melancólica. Andrew Prahlow é um compositor especializado em trilhas sonoras narrativas. Seu trabalho é reconhecido pela capacidade de criar paisagens sonoras que definem a identidade emocional de experiências interativas, conectando profundamente o espectador ao universo explorado."
+        ],
+        "capa": "../imagens/capas/Outer_Wilds_EOTE.png",
+        "galeria": [
+            "../imagens/galeria/outer_wilds/OW_EOTE (1).png",
+            "../imagens/galeria/outer_wilds/OW_EOTE (2).jpg",
+            "../imagens/galeria/outer_wilds/OW_EOTE (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            },
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            }
+        ],
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": "01",
+                "nome": "Into Shadow"
+            },
+            {
+                "lado": "A",
+                "faixa": "02",
+                "nome": "The River"
+            },
+            {
+                "lado": "A",
+                "faixa": "03",
+                "nome": "River's End"
+            },
+            {
+                "lado": "A",
+                "faixa": "04",
+                "nome": "The First Seekers"
+            },
+            {
+                "lado": "A",
+                "faixa": "05",
+                "nome": "The Premonition"
+            },
+            {
+                "lado": "A",
+                "faixa": "06",
+                "nome": "Strange Flames"
+            },
+            {
+                "lado": "A",
+                "faixa": "07",
+                "nome": "Dream of Home"
+            },
+            {
+                "lado": "A",
+                "faixa": "08",
+                "nome": "Eternal Halls"
+            },
+            {
+                "lado": "A",
+                "faixa": "09",
+                "nome": "The Forbidden Archives"
+            },
+            {
+                "lado": "A",
+                "faixa": "10",
+                "nome": "Sealed Away"
+            },
+            {
+                "lado": "A",
+                "faixa": "11",
+                "nome": "Fear And Ashes"
+            },
+            {
+                "lado": "B",
+                "faixa": "01",
+                "nome": "Elegy for the Rings"
+            },
+            {
+                "lado": "B",
+                "faixa": "02",
+                "nome": "Test Chamber Three"
+            },
+            {
+                "lado": "B",
+                "faixa": "03",
+                "nome": "The Lost Waltz"
+            },
+            {
+                "lado": "B",
+                "faixa": "04",
+                "nome": "Dark Passage"
+            },
+            {
+                "lado": "B",
+                "faixa": "05",
+                "nome": "Into The Vault"
+            },
+            {
+                "lado": "B",
+                "faixa": "06",
+                "nome": "Secret Ways"
+            },
+            {
+                "lado": "B",
+                "faixa": "07",
+                "nome": "The Sound of Water"
+            },
+            {
+                "lado": "B",
+                "faixa": "08",
+                "nome": "Echoes of the Eye"
+            },
+            {
+                "lado": "B",
+                "faixa": "09",
+                "nome": "Departure"
+            },
+            {
+                "lado": "B",
+                "faixa": "10",
+                "nome": "Travelers' Encore"
+            },
+            {
+                "lado": "B",
+                "faixa": "11",
+                "nome": "End of the Wilds"
+            },
+            {
+                "lado": "B",
+                "faixa": "12",
+                "nome": "Postlude"
+            }
+        ],
+        "estoque": 2,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 23,
+        "album": "Novo Aeon",
+        "artista": "Raul Seixas",
+        "lancamento": 1975,
+        "edicao": 1983,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 200.00,
+        "estilo": [
+            "Rock Nacional",
+            "Rock Psicodélico"
+        ],
+        "resumo": [
+            "Lançado em 1975 após o sucesso de Gita, Novo Aeon é um dos discos mais filosóficos de Raul Seixas. Misturando rock, ritmos brasileiros e letras que exploram o ocultismo e a liberdade individual, o álbum conta com clássicos como 'Tente Outra Vez' e 'A Maçã', sendo indispensável para qualquer colecionador de rock nacional."
+        ],
+        "capa": "../imagens/capas/Raul_seixas_novo_aeon.png",
+        "galeria": [
+            "../imagens/galeria/raul_na/Raul_NA (1).jpeg",
+            "../imagens/galeria/raul_na/Raul_NA (2).jpeg",
+            "../imagens/galeria/raul_na/Raul_NA (3).jpeg"
+        ],
+        "tags": [
+            {
+                "nome": "Bom Estado",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": "01",
+                "nome": "Tente Outra Vez"
+            },
+            {
+                "lado": "A",
+                "faixa": "02",
+                "nome": "Rock do Diabo"
+            },
+            {
+                "lado": "A",
+                "faixa": "03",
+                "nome": "A Maçã"
+            },
+            {
+                "lado": "A",
+                "faixa": "04",
+                "nome": "Eu Sou Egoísta"
+            },
+            {
+                "lado": "A",
+                "faixa": "05",
+                "nome": "Caminhos"
+            },
+            {
+                "lado": "A",
+                "faixa": "06",
+                "nome": "Tu és o MDC da Minha Vida"
+            },
+            {
+                "lado": "B",
+                "faixa": "01",
+                "nome": "A Verdade Sobre a Nostalgia"
+            },
+            {
+                "lado": "B",
+                "faixa": "02",
+                "nome": "Para Nóia"
+            },
+            {
+                "lado": "B",
+                "faixa": "03",
+                "nome": "Peixuxa (O Amiguinho dos Peixes)"
+            },
+            {
+                "lado": "B",
+                "faixa": "04",
+                "nome": "É Fim de Mês"
+            },
+            {
+                "lado": "B",
+                "faixa": "05",
+                "nome": "Sunseed"
+            },
+            {
+                "lado": "B",
+                "faixa": "06",
+                "nome": "Caminhos II"
+            },
+            {
+                "lado": "B",
+                "faixa": "07",
+                "nome": "Novo Aeon"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 20
+    },
+    {
+        "id": 24,
+        "album": "Rumours",
+        "artista": "Fleetwood Mac",
+        "lancamento": 1977,
+        "edicao": 2005,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": "01",
+                "nome": "Second Hand News (2004 Remaster)"
+            },
+            {
+                "lado": "A",
+                "faixa": "02",
+                "nome": "Dreams (2004 Remaster)"
+            },
+            {
+                "lado": "A",
+                "faixa": "03",
+                "nome": "Never Going Back Again (2004 Remaster)"
+            },
+            {
+                "lado": "A",
+                "faixa": "04",
+                "nome": "Don't Stop (2004 Remaster)"
+            },
+            {
+                "lado": "A",
+                "faixa": "05",
+                "nome": "Go Your Own Way (2004 Remaster)"
+            },
+            {
+                "lado": "A",
+                "faixa": "06",
+                "nome": "Songbird (2004 Remaster)"
+            },
+            {
+                "lado": "B",
+                "faixa": "01",
+                "nome": "The Chain (2004 Remaster)"
+            },
+            {
+                "lado": "B",
+                "faixa": "02",
+                "nome": "You Make Loving Fun (2004 Remaster)"
+            },
+            {
+                "lado": "B",
+                "faixa": "03",
+                "nome": "I Don't Want to Know (2004 Remaster)"
+            },
+            {
+                "lado": "B",
+                "faixa": "04",
+                "nome": "Oh Daddy (2004 Remaster)"
+            },
+            {
+                "lado": "B",
+                "faixa": "05",
+                "nome": "Gold Dust Woman (2004 Remaster)"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "eu",
+        "preco": 281.90,
+        "estilo": [
+            "Pop",
+            "Rock Internacional",
+            "Pop Rock"
+        ],
+        "resumo": [
+            "Gravado em meio a intensos conflitos internos e separações entre os membros da banda, Rumours (1977) transcendeu o drama pessoal para se tornar um dos álbuns mais vendidos e aclamados de todos os tempos. Com uma produção impecável e harmonias vocais perfeitas, o disco equilibra a vulnerabilidade emocional com melodias cativantes. É uma obra-prima que define o som do rock californiano dos anos 70, capturando a complexidade dos relacionamentos humanos em faixas que se tornaram hinos imortais da música pop."
+        ],
+        "galeria": [
+            "../imagens/galeria/fleetwood_mac_rumours/FleetwoonMac_Rumours (1).jpg",
+            "../imagens/galeria/fleetwood_mac_rumours/FleetwoonMac_Rumours (2).png",
+            "../imagens/galeria/fleetwood_mac_rumours/FleetwoonMac_Rumours (3).png"
+        ],
+        "capa": "../imagens/capas/FleetwoodMac_rumors_remaster.png",
+        "tags": [
+            {
+                "nome": "Remaster",
+                "cor": "vermelho-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 25,
+        "album": "Exagerado",
+        "artista": "Cazuza",
+        "lancamento": 1985,
+        "edicao": 2025,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": "01",
+                "nome": "Exagerado"
+            },
+            {
+                "lado": "A",
+                "faixa": "02",
+                "nome": "Medieval II"
+            },
+            {
+                "lado": "A",
+                "faixa": "03",
+                "nome": "Cúmplice"
+            },
+            {
+                "lado": "A",
+                "faixa": "04",
+                "nome": "Mal Nenhum"
+            },
+            {
+                "lado": "A",
+                "faixa": "05",
+                "nome": "Balada do Esplanada"
+            },
+            {
+                "lado": "B",
+                "faixa": "01",
+                "nome": "Codinome Beija-Flor"
+            },
+            {
+                "lado": "B",
+                "faixa": "02",
+                "nome": "Desastre Mental"
+            },
+            {
+                "lado": "B",
+                "faixa": "03",
+                "nome": "Boa Vida"
+            },
+            {
+                "lado": "B",
+                "faixa": "04",
+                "nome": "Só as Mães São Felizes"
+            },
+            {
+                "lado": "B",
+                "faixa": "05",
+                "nome": "Rock da Descida"
+            }
+        ],
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 173.00,
+        "estilo": [
+            "Rock Nacional",
+            "Pop Rock",
+            "MPB"
+        ],
+        "resumo": [
+            "Exagerado marca a estreia solo de Cazuza após sua saída do Barão Vermelho, consolidando-o como um dos maiores poetas do rock brasileiro. O álbum é um retrato fiel de sua personalidade intensa, unindo o deboche e a rebeldia a uma sensibilidade lírica profunda. Com sucessos que definiram uma geração, como a faixa-título e a tocante 'Codinome Beija-Flor', Cazuza apresenta um som moderno para a época, equilibrando sintetizadores e guitarras com a crueza de suas composições confessionais sobre amor, excessos e a vida urbana."
+        ],
+        "galeria": [
+            "../imagens/galeria/cazuza_exagerado/cazuza_exagerado (1).jpg",
+            "../imagens/galeria/cazuza_exagerado/cazuza_exagerado (2).jpg",
+            "../imagens/galeria/cazuza_exagerado/cazuza_exagerado (3).jpg"
+        ],
+        "capa": "../imagens/capas/cazuza_exagerado.jpg",
+        "tags": [
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            },
+            {
+                "nome": "Edição Limitada",
+                "cor": "azul-claro-tag"
+            },
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
+        "id": 26,
+        "album": "Let It Be",
+        "artista": "The Beatles",
+        "lancamento": 1970,
+        "edicao": 1970,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": "01",
+                "nome": "Two Of Us"
+            },
+            {
+                "lado": "A",
+                "faixa": "02",
+                "nome": "Dig A Pony"
+            },
+            {
+                "lado": "A",
+                "faixa": "03",
+                "nome": "Across The Universe"
+            },
+            {
+                "lado": "A",
+                "faixa": "04",
+                "nome": "I Me Mine"
+            },
+            {
+                "lado": "A",
+                "faixa": "05",
+                "nome": "Dig It"
+            },
+            {
+                "lado": "A",
+                "faixa": "06",
+                "nome": "Let It Be"
+            },
+            {
+                "lado": "A",
+                "faixa": "07",
+                "nome": "Maggie Mae"
+            },
+            {
+                "lado": "B",
+                "faixa": "01",
+                "nome": "I've Got A Feeling"
+            },
+            {
+                "lado": "B",
+                "faixa": "02",
+                "nome": "One After 909"
+            },
+            {
+                "lado": "B",
+                "faixa": "03",
+                "nome": "The Long And Winding Road"
+            },
+            {
+                "lado": "B",
+                "faixa": "04",
+                "nome": "For You Blue"
+            },
+            {
+                "lado": "B",
+                "faixa": "05",
+                "nome": "Get Back"
+            }
+        ],
+        "pais": "gb",
+        "paisFab": "eu",
+        "preco": 320.50,
+        "estilo": [
+            "Rock Internacional",
+            "Pop Rock"
+        ],
+        "resumo": [
+            "O último álbum lançado pelos Beatles, Let It Be (1970), é o testamento final da maior banda da história. Originalmente concebido sob o título Get Back, o projeto visava um retorno às raízes do rock and roll, sem overdubs complexos. O resultado é um disco cru e honesto, que transita entre momentos de brilho coletivo e a melancolia da despedida. Com a produção final de Phil Spector, o álbum imortalizou hinos como a faixa-título e 'The Long And Winding Road', capturando a essência de um grupo que, mesmo em seus momentos finais, continuava a redefinir os limites da música popular."
+        ],
+        "galeria": [
+            "../imagens/galeria/beatles_let_it_be/beatles_let_it_be (1).jpg",
+            "../imagens/galeria/beatles_let_it_be/beatles_let_it_be (2).jpg",
+            "../imagens/galeria/beatles_let_it_be/beatles_let_it_be (3).jpg",
+            "../imagens/galeria/beatles_let_it_be/beatles_let_it_be (4).jpg",
+            "../imagens/galeria/beatles_let_it_be/beatles_let_it_be (5).jpg"
+        ],
+        "capa": "../imagens/capas/beatles_let_it_be.jpg",
+        "tags": [
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            }
+        ],
+        "estoque": 0,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 27,
+        "album": "O Lago dos Cisnes",
+        "artista": "Pyotr Ilyich Tchaikovsky",
+        "lancamento": 1877,
+        "edicao": 2020,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Act I: No. 2 Valse (Corps de Ballet)"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Act II: No. 10 Scène (Moderato)"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Act II: No. 13 Dances of the Swans: IV. Allegro moderato (Dance of the Little Swans)"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Act II: No. 13 Dances of the Swans: V. Pas d'action (Odette and the Prince)"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Act III: No. 20 Danse Hongroise (Czárdás)"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Act III: No. 21 Danse Espagnole"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Act III: No. 22 Danse Napolitaine"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Act IV: No. 29 Scène Finale"
+            }
+        ],
+        "pais": "ru",
+        "paisFab": "eu",
+        "preco": 244.80,
+        "estilo": [
+            "Clássico",
+            "Balé"
+        ],
+        "resumo": [
+            "O Lago dos Cisnes é a obra-prima definitiva do ballet romântico. Esta edição foca-se nos momentos mais emocionantes e tecnicamente brilhantes da composição de Tchaikovsky."
+        ],
+        "capa": "../imagens/capas/thchaikovski_lago_cisnes.jpg",
+        "galeria": [
+            "../imagens/galeria/tchaikovsky_lago_cisnes/tchaik_lago_cisnes (1).jpg",
+            "../imagens/galeria/tchaikovsky_lago_cisnes/tchaik_lago_cisnes (2).jpg",
+            "../imagens/galeria/tchaikovsky_lago_cisnes/tchaik_lago_cisnes (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Remaster",
+                "cor": "vermelho-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 15
+    },
+    {
+        "id": 28,
+        "album": "Voyage",
+        "artista": "ABBA",
+        "lancamento": 2021,
+        "edicao": 2021,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "I Still Have Faith in You"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "When You Danced with Me"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Little Things"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Don't Shut Me Down"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Just a Notion"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "I Can Be That Woman"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Keep an Eye on Dan"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Bumblebee"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "No Doubt About It"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Ode to Freedom"
+            }
+        ],
+        "pais": "se",
+        "paisFab": "eu",
+        "preco": 275.90,
+        "estilo": [
+            "Pop",
+            "Disco Music"
+        ],
+        "resumo": [
+            "Quarenta anos após sua última gravação, o ABBA retorna com uma obra emocionante que une a nostalgia do pop sueco à tecnologia moderna. Voyage é uma celebração da longevidade artística do grupo, equilibrando baladas orquestrais profundas com o brilho clássico das pistas de dança, reafirmando seu lugar como arquitetos da melodia perfeita."
+        ],
+        "capa": "../imagens/capas/Abba_voyage.jpg",
+        "galeria": [
+            "../imagens/galeria/abba-voyage/Abba_voyage (1).jpg",
+            "../imagens/galeria/abba-voyage/Abba_voyage (2).jpg",
+            "../imagens/galeria/abba-voyage/Abba_voyage (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            }
+        ],
+        "estoque": 3,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 29,
+        "album": "Waterloo",
+        "artista": "ABBA",
+        "lancamento": 1974,
+        "edicao": 2020,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Waterloo"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Sitting in the Palmtree"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "King Kong Song"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Hasta Mañana"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "My Mama Said"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Dance (While the Music Still Goes On)"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Honey, Honey"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Watch Out"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "What About Livingstone?"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Gonna Sing You My Lovesong"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Suzy-Hang-Around"
+            }
+        ],
+        "pais": "se",
+        "paisFab": "eu",
+        "preco": 210.00,
+        "estilo": [
+            "Pop Rock",
+            "Glam Rock",
+            "Disco Music"
+        ],
+        "resumo": [
+            "O álbum que apresentou o ABBA ao mundo através do palco do Eurovision. Waterloo é uma mistura vibrante de Glam Rock e Pop Europeu dos anos 70. Com sua energia contagiante e harmonias vocais inovadoras, este disco marcou o início de uma dinastia musical, transformando quatro suecos em ícones globais da cultura pop."
+        ],
+        "capa": "../imagens/capas/Abba_waterloo.jpg",
+        "galeria": [
+            "../imagens/galeria/abba_waterloo/abba_waterloo (1).jpg",
+            "../imagens/galeria/abba_waterloo/abba_waterloo (2).jpg",
+            "../imagens/galeria/abba_waterloo/abba_waterloo (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 30,
+        "album": "ABBA (1975)",
+        "artista": "ABBA",
+        "lancamento": 1975,
+        "edicao": 2019,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Mamma Mia"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Hey, Hey Helen"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Tropical Loveland"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "SOS"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Man in the Middle"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Bang-A-Boomerang"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "I Do, I Do, I Do, I Do, I Do"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Rock Me"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Intermezzo No. 1"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "I've Been Waiting for You"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "So Long"
+            }
+        ],
+        "pais": "se",
+        "paisFab": "eu",
+        "preco": 225.00,
+        "estilo": [
+            "Pop",
+            "Euro-Pop",
+            "Disco Music"
+        ],
+        "resumo": [
+            "Lançado em 1975, este álbum homônimo é o pilar que consolidou a 'fórmula ABBA' de sucessos. Abriga hinos imortais como 'Mamma Mia' e 'SOS', demonstrando uma sofisticação na produção de estúdio e uma sensibilidade lírica que elevaram o pop comercial ao status de arte atemporal e irresistível."
+        ],
+        "capa": "../imagens/capas/abba_1975.jpg",
+        "galeria": [
+            "../imagens/galeria/abba_1975/abba_1975 (1).jpg",
+            "../imagens/galeria/abba_1975/abba_1975 (2).jpg",
+            "../imagens/galeria/abba_1975/abba_1975 (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Lacrado",
+                "cor": "prata-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            }
+        ],
+        "estoque": 4,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 31,
+        "album": "Voulez-Vous",
+        "artista": "ABBA",
+        "lancamento": 1979,
+        "edicao": 2022,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "As Good as New"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Voulez-Vous"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "I Have a Dream"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Angeleyes"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "The King Has Lost His Crown"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Does Your Mother Know"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "If It It Wasn't for the Nights"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Chiquitita"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Lovers (Live a Little Longer)"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Kisses of Fire"
+            }
+        ],
+        "pais": "se",
+        "paisFab": "eu",
+        "preco": 245.400,
+        "estilo": [
+            "Disco Music",
+            "Pop"
+        ],
+        "resumo": [
+            "Gravado em parte no lendário Criteria Studios em Miami, Voulez-Vous é a resposta do ABBA à explosão da Era Disco. O álbum exala sofisticação rítmica, combinando sintetizadores pulsantes com o drama das baladas sentimentais, resultando em um disco essencial que captura a euforia e a melancolia das noites de 1979."
+        ],
+        "capa": "../imagens/capas/abba_voulez_vous.jpg",
+        "galeria": [
+            "../imagens/galeria//abba_voulez_vouz/abba_voulez_vous (1).jpg",
+            "../imagens/galeria//abba_voulez_vouz/abba_voulez_vous (2).jpg",
+            "../imagens/galeria//abba_voulez_vouz/abba_voulez_vous (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Remaster",
+                "cor": "vermelho-tag"
+            }
+        ],
+        "estoque": 5,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 32,
+        "album": "A Night at the Opera",
+        "artista": "Queen",
+        "lancamento": 1975,
+        "edicao": 2021,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Death on Two Legs (Dedicated to...)"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Lazing on a Sunday Afternoon"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "I'm in Love with My Car"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "You're My Best Friend"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "'39"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Sweet Lady"
+            },
+            {
+                "lado": "A",
+                "faixa": 7,
+                "nome": "Seaside Rendezvous"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "The Prophet's Song"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Love of My Life"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Good Company"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Bohemian Rhapsody"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "God Save the Queen"
+            }
+        ],
+        "pais": "gb",
+        "paisFab": "eu",
+        "preco": 510.00,
+        "estilo": [
+            "Rock Progressivo",
+            "Rock Internacional"
+        ],
+        "resumo": [
+            "Considerada a magnum opus do Queen, esta obra-prima de 1975 desafiou as fronteiras da produção musical. Combinando elementos de ópera, rock pesado e baladas delicadas, o álbum abriga a monumental 'Bohemian Rhapsody'. É um testamento da ambição artística de Freddie Mercury e cia, sendo um dos discos mais influentes e tecnicamente complexos da história do rock."
+        ],
+        "capa": "../imagens/capas/queen_a_night_at_the_opera.jpg",
+        "galeria": [
+            "../imagens/galeria/queen_a_night_at_the_opera/queen_a_night_at_the_opera (1).jpg",
+            "../imagens/galeria/queen_a_night_at_the_opera/queen_a_night_at_the_opera (2).jpg",
+            "../imagens/galeria/queen_a_night_at_the_opera/queen_a_night_at_the_opera (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 5
+    },
+    {
+        "id": 33,
+        "album": "Sheer Heart Attack",
+        "artista": "Queen",
+        "lancamento": 1974,
+        "edicao": 2019,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Brighton Rock"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Killer Queen"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Tenement Funster"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Flick of the Wrist"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Lily of the Valley"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Now I'm Here"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "In the Lap of the Gods"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Stone Cold Crazy"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Dear Friends"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Misfire"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Bring Back That Leroy Brown"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "She Makes Me (Stormtrooper in Stilettos)"
+            },
+            {
+                "lado": "B",
+                "faixa": 7,
+                "nome": "In the Lap of the Gods... Revisited"
+            }
+        ],
+        "pais": "gb",
+        "paisFab": "eu",
+        "preco": 265.99,
+        "estilo": [
+            "Rock Internacional",
+            "Glam Rock"
+        ],
+        "resumo": [
+            "Sheer Heart Attack marcou a transição da banda para o sucesso comercial definitivo. Com o hit 'Killer Queen', o álbum exibe uma produção luxuosa e camadas de vozes que se tornariam a assinatura do grupo. Transita com maestria entre o proto-thrash de 'Stone Cold Crazy' e baladas barrocas, revelando uma banda atingindo sua plena maturidade criativa."
+        ],
+        "capa": "../imagens/capas/queen_sheer_heart_attack.jpg",
+        "galeria": [
+            "../imagens/galeria/queen_sheer_heart_attack/queen_sheer_heart_attack (1).jpg",
+            "../imagens/galeria/queen_sheer_heart_attack/queen_sheer_heart_attack (2).jpg",
+            "../imagens/galeria/queen_sheer_heart_attack/queen_sheer_heart_attack (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Excelente Estado",
+                "cor": "turquesa-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 3,
+        "oferta": true,
+        "percentualDesconto": 5
+    },
+    {
+        "id": 34,
+        "album": "Saturday Night Fever (The Original Movie Sound Track)",
+        "artista": "Bee Gees",
+        "lancamento": 1977,
+        "edicao": 1977,
+        "peso": "180g Duplo",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Stayin' Alive - Bee Gees"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "How Deep Is Your Love - Bee Gees"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Night Fever - Bee Gees"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "More Than A Woman - Bee Gees"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "If I Can't Have You - Yvonne Elliman"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "A Fifth Of Beethoven - Walter Murphy"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "More Than A Woman - Tavares"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Manhattan Skyline - David Shire"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Night On Disco Mountain - David Shire"
+            },
+            {
+                "lado": "C",
+                "faixa": 1,
+                "nome": "Open Sesame - Kool & The Gang"
+            },
+            {
+                "lado": "C",
+                "faixa": 2,
+                "nome": "Jive Talkin' - Bee Gees"
+            },
+            {
+                "lado": "C",
+                "faixa": 3,
+                "nome": "You Should Be Dancing - Bee Gees"
+            },
+            {
+                "lado": "C",
+                "faixa": 4,
+                "nome": "Boogie Shoes - KC And The Sunshine Band"
+            },
+            {
+                "lado": "D",
+                "faixa": 1,
+                "nome": "Salsation - David Shire"
+            },
+            {
+                "lado": "D",
+                "faixa": 2,
+                "nome": "K-Jee - M.F.S.B."
+            },
+            {
+                "lado": "D",
+                "faixa": 3,
+                "nome": "Disco Inferno - The Trammps"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "br",
+        "preco": 320.00,
+        "estilo": [
+            "Disco Music",
+            "Trilha Sonora",
+            "Pop"
+        ],
+        "resumo": [
+            "Saturday Night Fever é um dos álbuns mais vendidos de todos os tempos e o pilar do fenômeno cultural Disco dos anos 70. Dominado pelas harmonias vocais e falsetes icônicos dos Bee Gees, a trilha sonora capturou a energia das pistas de dança de Nova York. Um álbum duplo essencial que definiu uma era e transformou a música pop para sempre."
+        ],
+        "capa": "../imagens/capas/bee_gees_saturday_night_fever.jpg",
+        "galeria": [
+            "../imagens/galeria/bee_geez_saturday_night_fever/bee_gees_saturday_night_fever (1).jpg",
+            "../imagens/galeria/bee_geez_saturday_night_fever/bee_gees_saturday_night_fever (2).jpg",
+            "../imagens/galeria/bee_geez_saturday_night_fever/bee_gees_saturday_night_fever (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Clássico",
+                "cor": "destaque-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 35,
+        "album": "Labyrinth (From The Original Soundtrack of the Jim Henson Film)",
+        "artista": "David Bowie / Trevor Jones",
+        "lancamento": 1986,
+        "edicao": 2017,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Opening Titles Including Underground"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Into The Labyrinth"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Magic Dance"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Sarah"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Chilly Down"
+            },
+            {
+                "lado": "A",
+                "faixa": 6,
+                "nome": "Hallucination"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "As The World Falls Down"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "The Goblin Battle"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Within You"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "Thirteen O'Clock"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Home At Last"
+            },
+            {
+                "lado": "B",
+                "faixa": 6,
+                "nome": "Underground"
+            }
+        ],
+        "pais": "gb",
+        "paisFab": "eu",
+        "preco": 289.00,
+        "estilo": [
+            "Trilha Sonora",
+            "Pop Rock",
+            "Electronic"
+        ],
+        "resumo": [
+            "A trilha sonora de Labyrinth é uma colaboração mágica entre o gênio camaleônico David Bowie e o compositor Trevor Jones. O álbum equilibra perfeitamente as canções pop compostas e interpretadas por Bowie, como 'Magic Dance' e a belíssima balada 'As The World Falls Down', com as passagens instrumentais atmosféricas que dão vida ao mundo fantástico de Jim Henson."
+        ],
+        "capa": "../imagens/capas/labyrinth.jpg",
+        "galeria": [
+            "../imagens/galeria/david_bowie_labirynth/labyrinth (1).jpg",
+            "../imagens/galeria/david_bowie_labirynth/labyrinth (2).jpg",
+            "../imagens/galeria/david_bowie_labirynth/labyrinth (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Remaster",
+                "cor": "vermelho-tag"
+            },
+            {
+                "nome": "Cult",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 15
+    },
+    {
+        "id": 36,
+        "album": "Mestres da Música - Strauss",
+        "artista": "Richard Strauss",
+        "lancamento": 1982,
+        "edicao": 1982,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Assim Falava Zaratustra, Op. 30 (Início)"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Don Juan, Op. 20"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Till Eulenspiegel, Op. 28"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Dança dos Sete Véus (De 'Salomé', Op. 54)"
+            }
+        ],
+        "pais": "de",
+        "paisFab": "br",
+        "preco": 65.00,
+        "estilo": [
+            "Orquestra"
+        ],
+        "resumo": [
+            "Este volume da prestigiosa coleção Mestres da Música é dedicado a Richard Strauss, mestre do poema sinfônico. O destaque absoluto é a abertura de 'Assim Falava Zaratustra', famosa mundialmente pelo filme 2001: Uma Odisseia no Espaço. O disco apresenta a grandiosidade da orquestração de Strauss, capturando o drama e a técnica refinada de suas composições mais célebres."
+        ],
+        "capa": "../imagens/capas/richard_strauss.png",
+        "galeria": [
+            "../imagens/galeria/richard_strauss/richard_strauss (1).png",
+            "../imagens/galeria/richard_strauss/richard_strauss (2).png",
+            "../imagens/galeria/richard_strauss/richard_strauss (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Novo",
+                "cor": "verde-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": true,
+        "percentualDesconto": 15
+    }
+]

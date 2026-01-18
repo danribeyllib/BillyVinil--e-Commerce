@@ -1,0 +1,12 @@
+.destacar {
+    color: rgb(79, 79, 245);
+    font-weight: bold !important;
+}
+
+.estoque-positivo {
+    color: rgb(2, 178, 2) !important;
+}
+
+.estoque-zerado {
+    color: rgb(203, 45, 45) !important;
+}

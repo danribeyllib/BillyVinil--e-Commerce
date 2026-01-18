@@ -1,0 +1,9 @@
+# Arquivos de Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Segurança
+.env
+*.env
+senhas.txt

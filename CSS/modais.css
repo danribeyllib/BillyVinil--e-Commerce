@@ -1,0 +1,324 @@
+/* --- Carrinho  --- */
+#modal-carrinho .modal-card {
+    background: rgba(91, 68, 96, 0.156);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+#modal-carrinho .modal-card-head,
+#modal-carrinho .modal-card-foot {
+    background: rgba(123, 59, 129, 0.427) !important;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+#modal-carrinho .modal-card-body {
+    background: transparent !important;
+    color: white;
+}
+
+#modal-carrinho .input {
+    background: transparent !important;
+    border: none !important;
+    color: white;
+}
+
+#modal-carrinho .input:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+#modal-carrinho .title,
+#modal-carrinho .subtitle {
+    color: white !important;
+}
+
+/* Setas  */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-control-vertical {
+    display: flex;
+    align-items: center;
+    background: rgba(144, 171, 149, 0.484);
+    border: 1px solid rgba(150, 111, 166, 0.53);
+    border-radius: 25px;
+    padding: 2px 3px 2px 10px;
+    width: 100px;
+}
+
+.quantity-control-vertical .input[readonly] {
+    border: none !important;
+    background-color: rgba(161, 41, 179, 0) !important;
+    cursor: default;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #3eefe6;
+
+}
+
+#cart-qtd {
+    background: transparent !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: none !important;
+    width: 50px !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.spin-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-right: 4px;
+}
+
+.spin-btn {
+    border: none;
+    color: white;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 0.7rem;
+}
+
+.spin-btn.up {
+    border-radius: 10px 10px 2px 2px;
+}
+
+.spin-btn.down {
+    border-radius: 2px 2px 10px 10px;
+}
+
+.spin-btn:hover {
+    background: #55067c;
+    box-shadow: 0 0 8px rgba(155, 89, 182, 0.8);
+}
+
+.spin-btn:active {
+    transform: scale(0.95);
+}
+
+/* --- Sucesso  --- */
+#modal-carrinho-add-sucesso .modal-card,
+#modal-newsletter-sucesso .modal-card {
+    background: rgba(68, 96, 71, 0.156);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(215, 255, 182, 0.27);
+    border-radius: 15px;
+}
+
+#modal-carrinho-add-sucesso .modal-card-head,
+#modal-carrinho-add-sucesso .modal-card-foot,
+#modal-newsletter-sucesso .modal-card-head,
+#modal-newsletter-sucesso .modal-card-foot {
+    background: rgba(139, 222, 97, 0.458) !important;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+#modal-carrinho-add-sucesso .modal-card-body,
+#modal-newsletter-sucesso .modal-card-body {
+    background: transparent !important;
+    color: white;
+}
+
+#modal-carrinho-add-sucesso .input,
+#modal-newsletter-sucesso .input {
+    background: transparent !important;
+    border: none !important;
+    color: white;
+}
+
+#modal-carrinho-ad-sucesso .input:focus,
+#modal-newsletter-sucesso .input:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+#modal-carrinho-add-sucesso .title,
+#modal-carrinho-add-sucesso .subtitle,
+#modal-newsletter-sucesso .title,
+#modal-newsletter-sucesso .subtitle {
+    color: white !important;
+}
+
+/* --- Erro  --- */
+#modal-carrinho-erro .modal-card,
+#modal-compra-erro .modal-card {
+    background: rgba(96, 68, 75, 0.156);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 125, 125, 0.347);
+    border-radius: 15px;
+}
+
+#modal-carrinho-erro .modal-card-head,
+#modal-carrinho-erro .modal-card-foot,
+#modal-compra-erro .modal-card-head,
+#modal-compra-erro .modal-card-foot {
+    background: rgba(217, 61, 97, 0.514) !important;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+#modal-carrinho-erro .modal-card-body,
+#modal-compra-erro .modal-card-body {
+    background: transparent !important;
+    color: white;
+}
+
+#modal-carrinho-erro .input,
+#modal-compra-erro .input {
+    background: transparent !important;
+    border: none !important;
+    color: white;
+}
+
+#modal-carrinho-ad-sucesso .input:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+#modal-carrinho-erro .title,
+#modal-carrinho-erro .subtitle,
+#modal-compra-erro .title,
+#modal-compra-erro .subtitle {
+    color: white !important;
+}
+
+/* Confirmação */
+#modal-carrinho-confirmacao .modal-card {
+    background: rgba(68, 80, 96, 0.156);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 125, 125, 0.347);
+    border-radius: 15px;
+}
+
+#modal-carrinho-confirmacao .modal-card-head,
+#modal-carrinho-confirmacao .modal-card-foot {
+    background: rgba(217, 61, 97, 0.514) !important;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+#modal-carrinho-confirmacao .modal-card-body {
+    background: transparent !important;
+    color: white;
+}
+
+#modal-carrinho-confirmacao .input {
+    background: transparent !important;
+    border: none !important;
+    color: white;
+}
+
+#modal-carrinho-ad-sucesso .input:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+#modal-carrinho-confirmacao .title,
+#modal-carrinho-confirmacao .subtitle {
+    color: white !important;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-card {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        width: calc(100% - 30px) !important;
+    }
+
+    .modal-card-body {
+        padding: 20px 15px !important;
+    }
+
+    #modal-carrinho-confirmacao img,
+    #modal-carrinho-erro img,
+    #modal-carrinho-add-sucesso img,
+    #modal-compra-erro img {
+        max-width: 80px !important;
+        margin-bottom: 10px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #modal-carrinho .modal-card {
+        background: rgba(108, 75, 115, 0.348);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.426);
+        border-radius: 15px;
+    }
+
+    .modal-card-title {
+        color: white !important;
+    }
+
+    #modal-carrinho .modal-card-head,
+    #modal-carrinho .modal-card-foot {
+        background: rgba(176, 88, 184, 0.603) !important;
+        padding: 10px 20px;
+        border: none;
+        font-weight: 500;
+    }
+
+    #modal-carrinho-add-sucesso .modal-card {
+        background: rgba(114, 145, 116, 0.403);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(215, 255, 182, 0.27);
+        border-radius: 15px;
+    }
+
+    #modal-carrinho-add-sucesso .modal-card-head,
+    #modal-carrinho-add-sucesso .modal-card-foot {
+        background: rgba(171, 243, 135, 0.492) !important;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-weight: 500;
+    }
+
+    #modal-carrinho-erro .modal-card,
+    #modal-carrinho-confirmacao .modal-card,
+    #modal-compra-erro .modal-card {
+        background: rgba(158, 114, 125, 0.444);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 125, 125, 0.347);
+        border-radius: 15px;
+    }
+
+    #modal-carrinho-erro .modal-card-head,
+    #modal-carrinho-erro .modal-card-foot,
+    #modal-carrinho-confirmacao .modal-card-head,
+    #modal-carrinho-confirmacao .modal-card-foot,
+    #modal-compra-erro .modal-card-head,
+    #modal-compra-erro .modal-card-head,
+    #modal-compra-erro .modal-card-foot {
+        background: rgba(232, 52, 94, 0.634) !important;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-weight: 500;
+    }
+}

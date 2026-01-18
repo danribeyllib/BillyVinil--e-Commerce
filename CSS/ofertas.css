@@ -1,0 +1,544 @@
+/* Banner Topo */
+.fundo-hero-topo-ofertas {
+    box-shadow: 0 10px 30px rgba(72, 72, 72, 0.5), 0 15px 40px rgba(183, 19, 96, 0.448);
+    background: linear-gradient(90deg, rgba(2, 5, 81, 0.792) 0%, rgba(183, 19, 96, 0.633) 100%),
+        url("../imagens/fundo/novo\ 2.jpg");
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    background-size: cover;
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+}
+
+.hero-ancoras-oferta {
+    border-radius: 20px;
+    background: #bf50f3a1;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid #9d76a784;
+    color: #a3eaff;
+    text-align: center;
+    box-shadow: -2px 2px #9d76a784;
+    padding: 15px;
+}
+
+/* Botão para Ver Ofertas */
+.toggle-ofertas {
+    background-color: #3d3d3d67 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 8px #b096b4, inset 0 0 5px #ad72c6;
+    text-shadow: 0 0 5px #ac89bb;
+}
+
+.toggle-ofertas:hover {
+    box-shadow: 0 0 8px #b7b7b7,
+        0 0 20px #b9b9b9,
+        0 0 30px #c4c4c4;
+    text-shadow: none;
+}
+
+/* Banners Geral */
+.banner-oferta {
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+}
+
+/* Selo Desconto */
+.selo-desconto {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 20px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.204);
+}
+
+.banner-ver-ofertas {
+    width: 30% !important;
+    height: 95px !important;
+    border-radius: 30px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 2px solid rgba(255, 255, 255, 0.326) !important;
+    display: flex;
+    align-self: last baseline !important;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-ver-ofertas {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;  
+    text-align: center !important;
+    padding: 10px !important;
+  }
+
+  .banner-ver-ofertas p.title {
+    font-size: 0.8rem !important;     
+    display: inline-block !important;       
+    margin-bottom: 4px !important;    
+    white-space: normal !important;    
+    margin-top: 18px;
+  }
+
+  .banner-ver-ofertas .toggle-ofertas {
+    margin: 0 auto !important;        
+    max-width: 50% !important;
+  }
+}
+
+/* --- Seção Raul --- */
+.titulo-sessao-raul {
+    backdrop-filter: blur(17px) saturate(156%);
+    -webkit-backdrop-filter: blur(17px) saturate(156%);
+    background-image: linear-gradient(to right, #ff004450, #fe00553a, #ff00ae5e, #b700ff54, #ff00804f);
+    box-shadow: 0 0 18px 4px rgba(216, 75, 255, 0.466);
+}
+
+.raul-fundo {
+    background: rgba(186, 78, 99, 0.273);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+}
+
+.banner-oferta.raul-glass {
+    background: linear-gradient(135deg, rgba(54, 1, 66, 0.8), rgba(139, 0, 49, 0.6)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.raul-glass .column.is-7 {
+    padding-left: 110px !important;
+}
+
+.raul-glass .selo-desconto {
+    border: 3px dashed #ff38e8;
+    color: #fa0fa8;
+    left: 20px;
+    right: auto;
+    transform: rotate(-15deg);
+    text-shadow:
+        0 0 10px #535353d2,
+        0 0 15px #9a30c1,
+        0 0 35px #6f47df;
+}
+
+.btn-raul {
+    background-color: #ff386084 !important;
+    border-color: transparent;
+    color: #fff !important;
+    border-radius: 50px !important;
+}
+
+.img-neon-raul,
+.img-neon-red {
+    width: 300px !important;
+    height: 300px !important;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px #fff, 0 0 25px #ff00dd, 0 0 50px #8b004cde;
+    display: inline-block;
+}
+
+#section-discos-raul {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.9s ease-in-out;
+}
+
+#section-discos-raul.is-visible {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#toggle-ofertas-raul {
+    display: none;
+}
+
+.toggle-ofertas-raul i {
+    transition: transform 0.3s ease;
+}
+
+.toggle-active i {
+    transform: rotate(180deg);
+}
+
+/* --- Seção MPB  --- */
+.titulo-sessao-mpb {
+    backdrop-filter: blur(17px) saturate(156%);
+    -webkit-backdrop-filter: blur(17px) saturate(156%);
+    background-image: linear-gradient(to right, #ffd50050, #00fe0d3a, #33ff005e, #00ffbf54, #0022ff4f);
+    box-shadow: 0 0 18px 4px rgba(216, 75, 255, 0.466);
+}
+
+.section-discos-mpb {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.9s ease-in-out;
+}
+
+.section-discos-mpb.is-visible {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#toggle-ofertas-mpb {
+    display: none;
+}
+
+.toggle-ofertas-mpb i {
+    transition: transform 0.3s ease;
+}
+
+.mpb-fundo {
+    background: rgba(29, 159, 79, 0.36);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+}
+
+.banner-oferta.mpb-glass {
+    background: linear-gradient(135deg, rgba(12, 175, 0, 0.436), rgba(17, 99, 114, 0.632)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mpb-glass .selo-desconto {
+    border: 3px dashed #ffdd57;
+    color: #ffdd57;
+    right: 20px;
+    left: auto;
+    transform: rotate(15deg);
+    text-shadow:
+        0 0 10px #3fbd05d2,
+        0 0 15px #00e660,
+        0 0 35px #82e600;
+}
+
+.btn-mpb {
+    background-color: #4bda3e61 !important;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.img-neon-mpb {
+    width: 300px !important;
+    height: 300px !important;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px #f7ef5d, 0 0 25px #32ff7e, 0 0 50px #ffdd57bd;
+    display: inline-block;
+}
+
+/* --- Seção Queen --- */
+.titulo-sessao-queen {
+    backdrop-filter: blur(17px) saturate(156%);
+    -webkit-backdrop-filter: blur(17px) saturate(156%);
+    background-image: linear-gradient(to right, #ae00ff50, #f600fe3a, #8400ff5e, #b700ff54, #5100ff4f);
+    box-shadow: 0 0 18px 4px rgba(216, 75, 255, 0.466);
+}
+
+#section-discos-queen {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.9s ease-in-out;
+}
+
+#section-discos-queen.is-visible {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#toggle-ofertas-queen {
+    display: none;
+}
+
+.toggle-ofertas-queen i {
+    transition: transform 0.3s ease;
+}
+
+.queen-fundo {
+    background: rgba(101, 29, 159, 0.36);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+}
+
+.banner-oferta.queen-glass {
+    background: linear-gradient(135deg, rgba(38, 12, 61, 0.334), rgba(76, 0, 130, 0.367)) !important;
+    border: 1px solid rgba(200, 150, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.queen-glass .column.is-7 {
+    padding-left: 110px !important;
+}
+
+.queen-glass .selo-desconto {
+    border: 3px dashed #d000ff;
+    background-color: #00aeff3e;
+    color: #d000ff;
+    left: 20px;
+    right: auto;
+    transform: rotate(-15deg);
+    text-shadow:
+        0 0 10px #2d05bdd2,
+        0 0 15px #0073e6,
+        0 0 35px #0073e6;
+}
+
+.btn-queen {
+    background-color: #892be27d;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.img-neon-queen,
+.img-neon {
+    width: 320px !important;
+    height: 320px !important;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 3px solid #f3e5f5;
+    box-shadow: 0 0 10px #fff, 0 0 25px #d000ff, 0 0 50px #6f00ff9d;
+    display: inline-block;
+}
+
+
+/* --- Seção Orquestra --- */
+.titulo-sessao-orquestra {
+    backdrop-filter: blur(17px) saturate(156%);
+    -webkit-backdrop-filter: blur(17px) saturate(156%);
+    background-image: linear-gradient(to right, #00aaff50, #004cfe3a, #00d5ff5e, #1100ff54, #0022ff4f);
+    box-shadow: 0 0 18px 4px rgba(216, 75, 255, 0.466);
+}
+
+#section-discos-orquestra {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.9s ease-in-out;
+}
+
+#section-discos-orquestra.is-visible {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#toggle-ofertas-orquestra {
+    display: none;
+}
+
+.toggle-ofertas-orquestra i {
+    transition: transform 0.3s ease;
+}
+
+.orquestra-fundo {
+    background: rgba(31, 20, 179, 0.36);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+}
+
+.banner-oferta.classica-glass {
+    background: linear-gradient(135deg, rgba(0, 15, 35, 0.315), rgba(17, 17, 114, 0.222)) !important;
+    border: 1px solid rgba(100, 200, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.classica-glass .selo-desconto {
+    border: 3px dashed #00b0ff;
+    color: #00b0ff;
+    right: 20px;
+    left: auto;
+    transform: rotate(15deg);
+    text-shadow:
+        0 0 10px #045b8eb5,
+        0 0 15px #9082f8,
+        0 0 35px #00c7e6;
+}
+
+.btn-orquestra {
+    background-color: #00aeff83 !important;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.img-neon-classica,
+.img-neon-blue {
+    width: 320px !important;
+    height: 320px !important;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 3px solid #b3e5fc;
+    box-shadow: 0 0 10px #fff, 0 0 25px #00b0ff, 0 0 50px #01589bc0;
+    display: inline-block;
+}
+
+/* --- Seção Cyndi --- */
+.titulo-sessao-cyndi {
+    backdrop-filter: blur(17px) saturate(156%);
+    -webkit-backdrop-filter: blur(17px) saturate(156%);
+    background-image: linear-gradient(to right, #ff00e150, #f32cb43a, #ff00b75e, #ff006a54, #e423c04f);
+    box-shadow: 0 0 18px 4px rgba(246, 30, 124, 0.466);
+}
+
+#section-discos-cyndi {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.9s ease-in-out;
+}
+
+#section-discos-cyndi.is-visible {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#toggle-ofertas-cyndi {
+    display: none;
+}
+
+.toggle-ofertas-cyndi i {
+    transition: transform 0.3s ease;
+}
+
+.cyndi-fundo {
+    background: rgba(215, 29, 153, 0.292);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+}
+
+.banner-oferta.cyndi-glass {
+    background: linear-gradient(135deg, rgba(162, 27, 138, 0.334), rgba(235, 9, 103, 0.367)) !important;
+    border: 1px solid rgba(200, 150, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cyndi-glass .column.is-7 {
+    padding-left: 110px !important;
+}
+
+.cyndi-glass .selo-desconto {
+    border: 3px dashed #ff0099;
+    background-color: #9efaff25;
+    color: #f84868;
+    left: 20px;
+    right: auto;
+    transform: rotate(-15deg);
+    text-shadow:
+        0 0 10px #f9719a96,
+        0 0 15px #633c68,
+        0 0 20px #623662;
+}
+
+.btn-cyndi {
+    background-color: #e22b86a1 !important;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.img-neon-cyndi,
+.img-neon {
+    width: 320px !important;
+    height: 320px !important;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 3px solid #f3e5f5;
+    box-shadow: 0 0 10px #fff, 0 0 25px #d000ff, 0 0 50px #6f00ff9d;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    .banner-oferta {
+        position: relative;
+        min-height: auto !important;
+        padding: 60px 20px 30px 20px !important;
+        flex-direction: column !important;
+        overflow: visible;
+    }
+
+    .raul-glass .column.is-7,
+    .queen-glass .column.is-7,
+    .cyndi-glass .column.is-7 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        text-align: center;
+    }
+
+    .banner-oferta .columns {
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-neon-raul,
+    .img-neon-red,
+    .img-neon-queen,
+    .img-neon,
+    .img-neon-mpb,
+    .img-neon-classica,
+    .img-neon-blue,
+    .img-neon-cyndi {
+        width: 200px !important;
+        height: 200px !important;
+        max-width: 80vw;
+        margin: 20px auto !important;
+    }
+
+    .selo-desconto {
+        width: 90px !important;
+        height: 90px !important;
+        left: 20% !important;
+        right: auto !important;
+        margin-left: -45px;
+        transform: rotate(-5deg) !important;
+        position: absolute;
+    }
+
+    .banner-oferta .button {
+        width: 100% !important;
+        max-width: 280px;
+        margin: 10px auto !important;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .img-neon-raul,
+    .img-neon-queen,
+    .img-neon-cyndi {
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+    .selo-desconto {
+        width: 75px !important;
+        height: 75px !important;
+        margin-left: -37px;
+    }
+}
