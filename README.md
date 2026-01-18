@@ -9,7 +9,7 @@ Esta é uma página de e-commerce de discos de vinil desenvolvida para um curso 
 - **Carrinho**: Simulação do carinho de compras com cálculo de estoque e descontos usando o LocalStrorage.
 - **Página de favoritos**: Salvos no LocalStorage.
 - **JSON**: Simulação de um banco de dados paea o estoque de discos usando um arquivo JSON extentro.
--**Controle de Estoque**: Tabela de controle de estoque com as informações dos discos armazenados. 
+- **Controle de Estoque**: Tabela de controle de estoque com as informações dos discos armazenados. 
 
 ## Tecnologias Utilizadas
 - HTML5
