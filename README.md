@@ -30,10 +30,13 @@ O projeto busca reforçar a importância de preservar as mídias clássicas, a c
 - JavaScript (ES6+)
 - JSON (Armazenamento local de dados)
 - [Bulma CSS](https://bulma.io/) (Framework CSS)
+- Git e Gihub para controle de versão
 
-## Como Executar
 1. **Clone o repositório:**
    ```bash
    git clone [https://github.com/danribeyllib/BillyVinil--e-Commerce]
 2. Utilize a extensão Live Server do VS Code ou servidor local de sua preferência.
 3. Abra apágina utilizando o servidor local. 
+
+**Opção 2**
+1. **Netlifi**: Clique no link - (https://billyvinil.netlify.app/)
