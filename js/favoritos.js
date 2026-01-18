@@ -77,7 +77,7 @@ async function renderizarFavoritos() {
             return;
         }
 
-        ////       Estrutura do Card       /////
+        ////      Estrutura do Card      /////
         container.innerHTML = discosFavoritados.map(disco => {
             const paisCodigo = disco.pais ? disco.pais.toLowerCase() : "br";
             const paisNome = disco.pais ? disco.pais.toUpperCase() : "BR";

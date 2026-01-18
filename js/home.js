@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//  Cálculo Descontos  //
 function calcularDadosPreco(disco) {
 
     const precoNormal = Number(disco.preco);
@@ -108,7 +109,6 @@ async function carregarDados() {
             showSlides(slideIndex);
         }
 
-
         // --- Cards Verticais - Topo --- //
         const containerVertical = document.getElementById("lista-vertical");
 
@@ -116,14 +116,12 @@ async function carregarDados() {
             disco.tags.some(t => t.nome.toLowerCase().includes("destaque"))
         );
 
-
         // --- Cards Horizontais - Novidades --- //
         const containerNovidades = document.getElementById("lista-novidades");
 
         const discosNovos = todosOsDiscos.filter(disco =>
             disco.tags.some(t => t.nome.toLowerCase() === "novo")
         );
-
 
         // --- Cards Horizontais - Ofertas --- //
         const containerOfertas = document.getElementById("lista-ofertas");

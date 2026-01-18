@@ -4,16 +4,17 @@
 
 ---    VISUAL E DE FUNCIONALIDADES   ----
 
-Paleta de cores: https://bulma.io/documentation/helpers/palette-helpers/
+- Paleta de cores: https://bulma.io/documentation/helpers/palette-helpers/
 
-Sombras: https://getcssscan.com/css-box-shadow-examples
+- Sombras: https://getcssscan.com/css-box-shadow-examples
     
-Efeito Glass:https://css.glass/
+- Efeito Glass:https://css.glass/
 
-Slideshow:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_multiple
-          https://codepen.io/Forte_high/pen/RNRNzPQ
+- Slideshow:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_multiple
+            https://codepen.io/Forte_high/pen/RNRNzPQ
           
-Tutoriais: https://www.youtube.com/playlist?list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a
+- Tutorial: https://www.youtube.com/playlist?list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a
+
 
 ------       SITES      ----- 
 
@@ -24,4 +25,4 @@ https://mundovinyl.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=1780709
 https://loja.bileskydiscos.com.br/discos-de-vinil-e-lps?srsltid=AfmBOopN89Ee8xQvCGrBK_mijBMSnH0gRMjuvAtgGtz7YIbcSgbpY3zh
 
 --  Vale Vinil   --
-https://valevinil.com.br/disco-de-vinil---queen-hot-space/p
+https://valevinil.com.br

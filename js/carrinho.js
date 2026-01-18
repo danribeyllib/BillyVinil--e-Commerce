@@ -41,7 +41,7 @@ async function renderizarCarrinho() {
         return;
     }
 
-    //  --  Dados JSON Externo  --  //
+    //  --  Dados  --  //
     const response = await fetch("../data/catalogo_discos.json");
     const produtosJSON = await response.json();
 
@@ -169,7 +169,6 @@ function atualizarResumo(subtotalSem, subtotalCom, desconto) {
 
 
 ///      MODAIS     ///
-
 function fecharModalCarrinhoSucesso() {
     document.getElementById("modal-carrinho-add-sucesso").classList.remove("is-active");
 };
@@ -264,7 +263,7 @@ document.getElementById("btnFrete").addEventListener("click", function (e) {
 
     const prazo = document.getElementById("prazo-entrega");
     const valor = document.getElementById("valor-entrega");
-    const resumoEntrega = document.getElementById("resumo-entrega"); // Nova referência
+    const resumoEntrega = document.getElementById("resumo-entrega");
 
     //  --  CEP  --  //
     const cep = document.getElementById("cepInput");

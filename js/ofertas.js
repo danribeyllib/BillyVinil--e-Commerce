@@ -182,6 +182,7 @@ async function renderizarDiscosPorId(idsSelecionados, idContainerDestino) {
 window.abrirModalCarrinho = function (id) {
     const disco = todosDiscos.find(d => Number(d.id) === Number(id));
     if (!disco) return;
+
     itemAtualCarrinho = disco;
 
     document.getElementById("cart-qtd").value = 1;

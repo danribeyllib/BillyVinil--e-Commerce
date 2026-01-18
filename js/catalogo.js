@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (botaoMobile && menuNavegacao) {
     botaoMobile.addEventListener("click", (e) => {
       e.stopPropagation();
+     
       botaoMobile.classList.toggle("is-active");
       menuNavegacao.classList.toggle("is-active");
 
@@ -268,6 +269,7 @@ window.ordenar = function (campo, direcao) {
 window.executarBusca = function () {
   const input = document.getElementById("inputBusca");
   const termo = input.value.toLowerCase().trim();
+ 
   const normalizar = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   const termoNormalizado = normalizar(termo);
 
@@ -375,11 +377,12 @@ window.confirmarAdicao = function () {
   document.getElementById("modal-carrinho-add-sucesso").classList.add("is-active");
 }
 
-////          FAVORITOS           /////                         /////////////////////////////
+////          FAVORITOS           /////                        
 window.alternarFavorito = function (id) {
   const numId = Number(id);
   const index = favoritos.indexOf(numId);
-
+  
+  //  --  Botão  --  //
   const btn = document.getElementById(`fav-btn-${id}`);
   const icone = btn ? btn.querySelector("i") : null;
 
