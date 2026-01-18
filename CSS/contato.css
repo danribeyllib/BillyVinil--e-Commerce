@@ -1,48 +1,4 @@
-.section-about-vinyl {
-    background: linear-gradient(135deg, rgba(48, 25, 72, 0.95) 0%, rgba(75, 35, 105, 0.9) 50%, rgba(48, 25, 72, 0.95) 100%);
-    backdrop-filter: blur(10px);
-}
-
-.text-accent-vinyl {
-    color: #d4a5ff;
-}
-
-.btn-primary-vinyl {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-}
-
-.btn-secondary-vinyl {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-}
-
-.img-hero-vinyl {
-    height: 450px;
-    border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-}
-
-.section-story-vinyl {
-    background: linear-gradient(180deg, rgba(48, 25, 72, 0.95) 0%, rgba(30, 15, 45, 0.98) 100%);
-}
-
-.story-text-max {
-    max-width: 600px;
-}
-
-.img-story-vinyl {
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.stat-card-vinyl {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.contact-form-card {
+.contato-form-card {
     padding: 15px !important;
     background: rgba(143, 45, 158, 0.38);
     border-radius: 16px;
@@ -53,4 +9,9 @@
 
 .input-contato {
     background-color: rgba(29, 0, 32, 0.697) !important;
+    color: rgb(247, 240, 255);
+}
+
+.input-contato::placeholder {
+color: rgb(102, 102, 102) !important;
 }

@@ -312,7 +312,7 @@ async function carregarDiscosIDJson(idDesejado) {
                                 <img class="is-cover capa-detalhes" 
                                     src="${disco.capa}" 
                                     alt="Capa" 
-                                    onclick='abrirImagemModal('${disco.capa}')' />
+                                    onclick="abrirImagemModal('${disco.capa}')" />
                             </div>
                             <div class="is-flex mt-4">${galeriaHtml}</div>
                         </div>

@@ -1053,7 +1053,7 @@
                 "cor": "oferta-tag"
             }
         ],
-        "estoque": 2,
+        "estoque": 0,
         "oferta": true,
         "percentualDesconto": 10
     },
@@ -3093,6 +3093,10 @@
             {
                 "nome": "Oferta",
                 "cor": "oferta-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
             }
         ],
         "estoque": 1,
@@ -4189,10 +4193,6 @@
                 "cor": "importado-tag"
             },
             {
-                "nome": "Destaque",
-                "cor": "destaque-tag"
-            },
-            {
                 "nome": "Novo",
                 "cor": "verde-tag"
             }
@@ -4271,6 +4271,7 @@
         "preco": 210.00,
         "estilo": [
             "Pop Rock",
+            "Rock Internacional",
             "Glam Rock",
             "Disco Music"
         ],
@@ -4289,8 +4290,8 @@
                 "cor": "gold-tag"
             },
             {
-                "nome": "Destaque",
-                "cor": "destaque-tag"
+                "nome": "Importado",
+                "cor": "importado-tag"
             }
         ],
         "estoque": 2,
@@ -4387,6 +4388,10 @@
             {
                 "nome": "Importado",
                 "cor": "importado-tag"
+            },
+                        {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
             }
         ],
         "estoque": 4,
@@ -4678,10 +4683,6 @@
             {
                 "nome": "Excelente Estado",
                 "cor": "turquesa-tag"
-            },
-            {
-                "nome": "Destaque",
-                "cor": "destaque-tag"
             },
             {
                 "nome": "Oferta",
@@ -4976,5 +4977,414 @@
         "estoque": 1,
         "oferta": true,
         "percentualDesconto": 15
+    },
+    {
+        "id": 37,
+        "album": "Californication",
+        "artista": "Red Hot Chili Peppers",
+        "lancamento": 1999,
+        "edicao": 2012,
+        "peso": "180g Duplo",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Around the World"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Parallel Universe"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Scar Tissue"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Otherside"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Get on Top"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Californication"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Easily"
+            },
+            {
+                "lado": "C",
+                "faixa": 1,
+                "nome": "Porcelain"
+            },
+            {
+                "lado": "C",
+                "faixa": 2,
+                "nome": "Emit Remmus"
+            },
+            {
+                "lado": "C",
+                "faixa": 3,
+                "nome": "I Like Dirt"
+            },
+            {
+                "lado": "C",
+                "faixa": 4,
+                "nome": "This Velvet Glove"
+            },
+            {
+                "lado": "D",
+                "faixa": 1,
+                "nome": "Savior"
+            },
+            {
+                "lado": "D",
+                "faixa": 2,
+                "nome": "Purple Stain"
+            },
+            {
+                "lado": "D",
+                "faixa": 3,
+                "nome": "Right on Time"
+            },
+            {
+                "lado": "D",
+                "faixa": 4,
+                "nome": "Road Trippin'"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "us",
+        "preco": 330.00,
+        "estilo": [
+            "Rock",
+           "Rock Internacional",
+            "Funk Rock"
+        ],
+        "resumo": [
+            "Californication é o sétimo álbum de estúdio dos Red Hot Chili Peppers e marca o retorno triunfal do guitarrista John Frusciante. Com hits mundiais como 'Scar Tissue', 'Otherside' e a faixa-título, o álbum equilibra a energia explosiva do funk rock com melodias introspectivas e letras que exploram temas de redenção e a cultura da Califórnia. É considerado um dos pilares do rock alternativo dos anos 90."
+        ],
+        "capa": "../imagens/capas/rhcp_californication.jpg",
+        "galeria": [
+            "../imagens/galeria/rhcp_californication/californication (1).jpg",
+            "../imagens/galeria/rhcp_californication/californication (2).jpg",
+            "../imagens/galeria/rhcp_californication/californication (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Remaster",
+                "cor": "vermelho-tag"
+            }
+        ],
+        "estoque": 3,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 38,
+        "album": "American Idiot - 20th Anniversary Edition",
+        "artista": "Green Day",
+        "lancamento": 2004,
+        "edicao": 2024,
+        "peso": "180g Duplo",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "American Idiot"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Jesus of Suburbia"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Holiday"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Boulevard of Broken Dreams"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Are We the Waiting"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "St. Jimmy"
+            },
+            {
+                "lado": "C",
+                "faixa": 1,
+                "nome": "Give Me Novacaine"
+            },
+            {
+                "lado": "C",
+                "faixa": 2,
+                "nome": "She's a Rebel"
+            },
+            {
+                "lado": "C",
+                "faixa": 3,
+                "nome": "Extraordinary Girl"
+            },
+            {
+                "lado": "C",
+                "faixa": 4,
+                "nome": "Letterbomb"
+            },
+            {
+                "lado": "C",
+                "faixa": 5,
+                "nome": "Wake Me Up When September Ends"
+            },
+            {
+                "lado": "D",
+                "faixa": 1,
+                "nome": "Homecoming"
+            },
+            {
+                "lado": "D",
+                "faixa": 2,
+                "nome": "Whatsername"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "us",
+        "preco": 450.00,
+        "estilo": [
+            "Rock",
+            "Rock Internacional",
+            "Punk Rock",
+            "Pop Punk"
+        ],
+        "resumo": [
+            "A edição de 20º aniversário de American Idiot celebra a ópera punk rock definitiva que definiu uma geração. Lançado originalmente em 2004, o álbum narra a jornada de Jesus of Suburbia em uma América pós-11 de setembro. Esta reedição comemorativa traz o som remasterizado em vinil de alta gramatura, preservando a energia agressiva e as melodias épicas de hits como 'Holiday' e 'Wake Me Up When September Ends'. Um item indispensável para colecionadores."
+        ],
+        "capa": "../imagens/capas/gd_american_idiot.jpg",
+        "galeria": [
+            "../imagens/galeria/gd_american_idiot/gd_american_idiot (1).jpg",
+            "../imagens/galeria/gd_american_idiot/gd_american_idiot (2).jpg",
+            "../imagens/galeria/gd_american_idiot/gd_american_idiot (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 39,
+        "album": "True Colors",
+        "artista": "Cyndi Lauper",
+        "lancamento": 1986,
+        "edicao": 1986,
+        "peso": "140g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Change of Heart"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Maybe He'll Know"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Boy Blue"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "True Colors"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Calm Inside the Storm"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "What's Going On"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Iko Iko"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "The Faraway Nearby"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "911"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "One Track Mind"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "br",
+        "preco": 125.95,
+        "estilo": [
+            "Pop",
+            "Synth-pop"
+        ],
+        "resumo": [
+            "True Colors é o segundo álbum de estúdio da ícone pop Cyndi Lauper. Lançado em 1986, o disco consolidou sua carreira com uma sonoridade mais madura e emocional. A faixa-título tornou-se um hino global de aceitação e individualidade. O álbum também apresenta colaborações notáveis e versões memoráveis, como a releitura de 'What's Going On', misturando ritmos vibrantes com baladas poderosas que definiram o pop da década de 80."
+        ],
+        "capa": "../imagens/capas/cyndi_true_colors.jpg",
+        "galeria": [
+            "../imagens/galeria/cyndi_true_colors/cyndi_true_colors (1).jpg",
+            "../imagens/galeria/cyndi_true_colors/cyndi_true_colors (2).jpg",
+            "../imagens/galeria/cyndi_true_colors/cyndi_true_colors (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            },
+            {
+                "nome": "Bom Estado",
+                "cor": "verde-tag"
+            }
+        ],
+        "estoque": 2,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
+        "id": 40,
+        "album": "Aladdin Sane",
+        "artista": "David Bowie",
+        "lancamento": 1973,
+        "edicao": 2013,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Watch That Man"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Aladdin Sane (1913-1938-197?)"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Drive-In Saturday"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Panic in Detroit"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Cracked Actor"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Time"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "The Prettiest Star"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Let's Spend the Night Together"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "The Jean Genie"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Lady Grinning Soul"
+            }
+        ],
+        "pais": "gb",
+        "paisFab": "gb",
+        "preco": 310.20,
+        "estilo": [
+            "Rock",
+            "Rock Internacional",
+            "Glam Rock",
+            "Art Rock"
+        ],
+        "resumo": [
+            "Descrito pelo próprio Bowie como 'Ziggy vai para a América', Aladdin Sane é uma das obras mais icônicas do Camaleão do Rock. Lançado em 1973, o álbum apresenta uma sonoridade mais densa e vanguardista que seu antecessor, destacando-se pelo piano jazzístico de Mike Garson e a icônica capa com o raio no rosto. Com sucessos como 'The Jean Genie' e 'Drive-In Saturday', o disco captura a decadência e o brilho do rock dos anos 70 em sua forma mais pura."
+        ],
+        "capa": "../imagens/capas/db_aladdin_sane.jpg",
+        "galeria": [
+            "../imagens/galeria/db_aladdin_sane/db_aladdin_sane (1).jpg",
+            "../imagens/galeria/db_aladdin_sane/db_aladdin_sane (2).jpg",
+            "../imagens/galeria/db_aladdin_sane/db_aladdin_sane (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            },
+            {
+                "nome": "Remaster",
+                "cor": "vermelho-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": false,
+        "percentualDesconto": 0
     }
 ]

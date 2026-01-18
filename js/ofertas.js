@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     //////////////// ORQUESTRA 
     renderizarDiscosPorId([15, 16, 17, 27, 36], "section-discos-orquestra");
     /////////////////// CYNDI 
-    renderizarDiscosPorId([2, 6], "section-discos-cyndi");
+    renderizarDiscosPorId([2, 6, 39], "section-discos-cyndi");
 
     //  --  Botão Ver Ofertas (checkbox)  -- //
     configurarToggle("toggle-ofertas-raul", "section-discos-raul", ".toggle-ofertas-raul");

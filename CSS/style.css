@@ -6,7 +6,7 @@ html {
   overflow-x: hidden;
   width: 100%;
   position: relative;
-  margin: 0 !important; 
+  margin: 0 !important;
 }
 
 body {
@@ -23,7 +23,7 @@ h2,
 .subtitle,
 .subtitulo-detalhes {
   text-shadow: -1px 1px rgba(25, 0, 31, 0.53) !important;
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -58,105 +58,50 @@ hr {
   --bulma-burger-h: 272deg;
 }
 
-/* Nav Tema Escuro */
-@media (prefers-color-scheme: dark) {
-
-  .navbar-topo,
-  .footer-geral {
-    background-color: rgba(44, 20, 68, 0.851) !important;
-    border-bottom-color: rgba(155, 89, 182, 0.3);
-    backdrop-filter: blur(10px);
-  }
-
-  .navbar-topo,
-  .navbar-item,
-  .nav-itens,
-  .navbar-link {
-    color: #f5f5f5 !important;
-  }
-
-  .nav-itens:hover,
-  .navbar-link:hover,
-  .nav-itens:visited {
-    background-color: rgba(61, 27, 94, 0.736) !important;
-  }
-
-  .nav-itens-sec:hover {
-    background-color: rgba(61, 27, 94, 0.736) !important;
-  }
-}
-
-
-/* Navnar Tema Claro */
-@media (prefers-color-scheme: light) {
-
-  .navbar-topo,
-  .footer-geral {
-    background-color: rgba(194, 94, 237, 0.779) !important;
-    backdrop-filter: blur(10px);
-  }
-
-  /* Seta */
-  .navbar-topo,
-  .footer-geral {
-    --bulma-navbar-dropdown-arrow: #4065c3;
-  }
-
-  .navbar-topo,
-  .navbar-item,
-  .nav-itens,
-  .navbar-link {
-    color: #222222 !important;
-  }
-
-  .nav-itens:hover,
-  .navbar-link:hover,
-  .nav-itens:visited {
-    background-color: rgba(203, 147, 232, 0.779) !important;
-  }
-
-  .nav-itens-sec:hover {
-    background-color: rgba(203, 147, 232, 0.779) !important;
-  }
-
-  .sociais-footer {
-    color: #511e54 !important;
-  }
-
-  .social-icon:hover {
-    filter: drop-shadow(0 0 12px rgba(225, 132, 238, 0.793)) !important;
-    transition: filter 0.2s ease;
-    transform: translateY(-2px);
-  }
-
-  .disco-descricao {
-    color: #eafbff !important;
-  }
-
-  .newsletter-input::placeholder,
-  .input-contato::placeholder {
-    color: #8676a1d7 !important;
-    opacity: 1;
-  }
-
-  .newsletter-input::-webkit-input-placeholder {
-    color: #8676a1d7;
-  }
-
-  .newsletter-input::-moz-placeholder {
-    color: #8676a1d7;
-  }
-
-  .newsletter-input:-ms-input-placeholder {
-    color: #8676a1d7;
-  }
-
-  .newsletter-input::placeholder {
-    color: #8676a1d7;
-  }
-}
-
 /*  Navbar  */
+.navbar-topo,
+.footer-geral {
+  background-color: rgba(44, 20, 68, 0.851) !important;
+  backdrop-filter: blur(10px);
+  --bulma-navbar-dropdown-arrow: #f5f5f5;
+}
+
+.navbar-topo .navbar-item,
+.navbar-topo .nav-itens,
+.navbar-topo .navbar-link,
+.footer-geral p,
+.footer-geral b {
+  color: #ffffff !important;
+}
+
+.nav-itens,
+.navbar-start .navbar-item,
+.navbar-dropdown {
+  background-color: rgba(44, 20, 68, 0.851) !important;
+}
+
+.navbar-burger {
+  color: #f5f5f5 !important;
+}
+
+.nav-itens:hover,
+.navbar-link:hover,
+.nav-itens-sec:hover,
+.navbar-start .navbar-item:hover {
+  background-color: rgba(61, 27, 94, 0.8) !important;
+  color: #ffffff !important;
+}
+
+.social-icon:hover {
+  filter: drop-shadow(0 0 12px rgba(155, 89, 182, 0.8)) !important;
+  transition: filter 0.2s ease;
+  transform: translateY(-2px);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(245, 245, 245, 0.6) !important;
+}
+
 .navbar-item-logo {
   background: url("../imagens/logos/BilliVinil_logo_lateral.png") no-repeat center center;
   background-size: cover;
@@ -515,7 +460,7 @@ hr {
 }
 
 .preco-detalhes .desconto {
-    color: #16ff77 !important;
+  color: #16ff77 !important;
 }
 
 /* Card horizontal */
@@ -560,7 +505,8 @@ hr {
 .disco-descricao {
   font-size: 0.90rem;
   margin-bottom: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
+  color: rgb(222, 202, 223) !important;
 }
 
 .disco-footer {
@@ -864,10 +810,14 @@ hr {
 /* Navbar Filtros */
 .filtros-nav,
 .catalogo-titulo {
-  background: #7f267a66 !important;
+  background: rgba(44, 20, 68, 0.851) !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
+}
+
+.navbar-item {
+  color: white !important;
 }
 
 .catalogo-titulo {
@@ -965,7 +915,8 @@ hr {
 }
 
 /* Desconto */
-.preco-normal, .preco-normal-modal {
+.preco-normal,
+.preco-normal-modal {
   text-decoration: line-through;
   text-decoration-color: #ce46f7;
   text-decoration-thickness: 1px;
@@ -974,7 +925,8 @@ hr {
   color: #c6c6c6ad !important;
 }
 
-.preco-desconto, .preco-desconto-modal {
+.preco-desconto,
+.preco-desconto-modal {
   color: #16ff77;
   font-weight: bold;
   font-size: 1.25rem;

@@ -21,6 +21,6 @@ Esta é uma página de e-commerce de discos de vinil desenvolvida para um curso 
 ## Como Executar
 1. **Clone o repositório:**
    ```bash
-   git clone [LINK_REPOSITORIO]
+   git clone [https://github.com/danribeyllib/BillyVinil--e-Commerce]
 2. Utilize a extensão Live Server do VS Code ou servidor local de sua preferência.
 3. Abra apágina utilizando o servidor local. 
