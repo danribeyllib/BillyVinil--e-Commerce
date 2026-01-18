@@ -1,16 +1,21 @@
+///   --  Dados  --   //
 async function carregarRelatorio() {
     try {
         const resposta = await fetch("catalogo_discos.json");
         const discos = await resposta.json();
 
+        discos.sort((a, b) => a.id - b.id);
+        todosOsDiscos = discos;
+
         const container = document.getElementById("tabela-discos-teste");
-       
+
         gerarTabela(discos, container);
     } catch (erro) {
         console.error("Erro ao carregar dados:", erro);
     }
 }
 
+///   ---  Tabela   ---   ///   
 function gerarTabela(discos, container) {
     let html = `
     <div class="table-container">
@@ -42,6 +47,7 @@ function gerarTabela(discos, container) {
                 ${tag.nome}
             </span>
         `).join("");
+     
         html += `
        
             <tr>
@@ -88,5 +94,65 @@ function gerarTabela(discos, container) {
     html += `</tbody></table></div>`;
     container.innerHTML = html;
 }
+ //  -- Nomes dos Países p/ filtrar  --  //
+const nomesPaises = {
+    "br": "Brasil",
+    "us": "Estados Unidos (EUA)",
+    "gb": "Reino Unido",
+    "eu": "Europa",
+    "jp": "Japão",
+    "fr": "França",
+    "de": "Alemanha",
+    "it": "Itália",
+    "at": "Áustria",
+    "EU": "Europa",
+    "se": "Suécia",
+    "ru": "Rússia",
+    "gb-eng": "Inglaterra"
+};
+
+function nomePais(codigo) {
+    if (!codigo) return "";
+    return nomesPaises[codigo.toLowerCase()] || "";
+}
+
+//  --  Filtro de Busca  --  //
+let todosOsDiscos = [];
+
+function filtrarDiscos(termo) {
+    termo = termo.toLowerCase();
+    const filtrados = todosOsDiscos.filter(disco => {
+
+        const termoFiltrar = `
+      ${disco.id}
+            ${disco.album}
+            ${disco.artista}
+            ${disco.lancamento}
+            ${disco.edicao}
+            ${disco.peso}
+            ${disco.tipo}
+            ${nomePais(disco.pais)}
+            ${nomePais(disco.paisFab)}
+            ${Array.isArray(disco.estilo) ? disco.estilo.join(" ") : ""}
+            ${Array.isArray(disco.tags) ? disco.tags.map(t => t.nome).join(" ") : ""}
+        `.toLowerCase();
+
+        return termoFiltrar.includes(termo);
+    });
+
+    const container = document.getElementById("tabela-discos-teste");
+    gerarTabela(filtrados, container);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    const inputBusca = document.getElementById("busca-tabela-estoque")
+
+    if (!inputBusca) return;
+
+    inputBusca.addEventListener("input", (e) => {
+        filtrarDiscos(e.target.value);
+    })
+});
+
 
 carregarRelatorio();

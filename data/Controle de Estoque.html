@@ -21,6 +21,31 @@
 </head>
 
 <body>
+<!--NAV-->
+  <nav class="navbar navbar-topo pt-2" role="navigation" aria-label="main navigation">
+    <a id="navbarIconeSanduiche" role="button" class="navbar-burger navbar-start mx-2" aria-label="menu"
+      aria-expanded="false" data-target="navbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
+    <div class="navbar-start px-4 py-2">
+      <div class="field has-addons">
+        <p class="control">
+          <input id="busca-tabela-estoque" class="input" type="text" placeholder="Buscar..." />
+        </p>
+        <p class="control">
+          <button class="button is-link is-light is-inverted"><span><i
+                class="icon has-text fa-solid fa-magnifying-glass"></i></span></button>
+        </p>
+      </div>
+    </div>
+  </nav>
+
+<!--MAIN-->
+  <main>
 
     <section class="section">
         <div class="container">
@@ -32,6 +57,7 @@
     
     </section>
 
+</main>
 <script src="controleEstoque.js"></script>
 </body>
 </html>

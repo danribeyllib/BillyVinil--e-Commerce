@@ -7,9 +7,20 @@ let favoritos = (JSON.parse(localStorage.getItem("favoritos")) || [])
 
 //  --  Nomes dos Países para o menu do filtro  --  //
 const nomesPaises = {
-  "br": "Brasil", "us": "Estados Unidos", "uk": "Reino Unido",
-  "eu": "Europa", "jp": "Japão", "fr": "França",
-  "de": "Alemanha", "it": "Itália", "at": "Áustria", "EU": "Europa", "se": "Suécia", "ru": "Rússia"
+  "br": "Brasil (Brazil)",
+  "us": "Estados Unidos (EUA)",
+  "gb": "Reino Unido (Grã Bretanha",
+  "eu": "Europa",
+  "jp": "Japão",
+  "fr": "França",
+  "de": "Alemanha",
+  "it": "Itália",
+  "at": "Áustria",
+  "EU": "Europa",
+  "se": "Suécia",
+  "ru": "Rússia",
+  "gb-eng": "Inglaterra"
+
 };
 
 // ---   CARRINHO  ---   ///
@@ -201,7 +212,7 @@ function preencherMenuDecadas(idContainer, lista) {
 
   if (!container) return;
   container.innerHTML += lista.map(anoBase => {
-   
+
     let label = anoBase >= 2000 ? `Anos ${anoBase}` : `Anos ${anoBase.toString().substring(2)}`;
     return `
     <a class="navbar-item" onclick="aplicarFiltro('decada', ${anoBase})">${label}</a>`;

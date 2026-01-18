@@ -857,6 +857,220 @@
         "percentualDesconto": 20
     },
     {
+        "id": 41,
+        "album": "Demon Days",
+        "artista": "Gorillaz",
+        "lancamento": 2005,
+        "edicao": 2025,
+        "peso": "180g Duplo",
+        "tipo": "2LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Intro"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Last Living Souls"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Kids With Guns"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "O Green World"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Dirty Harry"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Feel Good Inc."
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "El Mañana"
+            },
+            {
+                "lado": "C",
+                "faixa": 1,
+                "nome": "Every Planet We Reach Is Dead"
+            },
+            {
+                "lado": "C",
+                "faixa": 2,
+                "nome": "November Has Come"
+            },
+            {
+                "lado": "C",
+                "faixa": 3,
+                "nome": "All Alone"
+            },
+            {
+                "lado": "C",
+                "faixa": 4,
+                "nome": "White Light"
+            },
+            {
+                "lado": "D",
+                "faixa": 1,
+                "nome": "DARE"
+            },
+            {
+                "lado": "D",
+                "faixa": 2,
+                "nome": "Fire Coming Out Of The Monkey's Head"
+            },
+            {
+                "lado": "D",
+                "faixa": 3,
+                "nome": "Don't Get Lost In Heaven"
+            },
+            {
+                "lado": "D",
+                "faixa": 4,
+                "nome": "Demon Days"
+            }
+        ],
+        "pais": "us",
+        "paisFab": "us",
+        "preco": 589.90,
+        "estilo": [
+            "Electronic",
+            "Hip Hop",
+            "Alternative Rock",
+            "Rock",
+            "Pop"
+        ],
+        "resumo": [
+            "Edição exclusiva da Urban Outfitters para a coleção Y2K, este prensagem limitada em vinil duplo na cor Orchid (Orquídea) celebra o segundo álbum de estúdio do Gorillaz. Produzido por Danger Mouse, Demon Days é uma obra-prima conceitual que transita entre o hip hop, eletrônico e rock alternativo. O álbum conta com colaborações lendárias como MF DOOM, De La Soul e Dennis Hopper, consolidando a banda virtual de Damon Albarn como um dos maiores fenômenos culturais do século XXI."
+        ],
+        "capa": "../imagens/capas/gorillaz_demon_days.jpg",
+        "galeria": [
+            "../imagens/galeria/gorillaz_demon_days/gorillaz_demon_days (1).jpg",
+            "../imagens/galeria/gorillaz_demon_days/gorillaz_demon_days (2).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Edição Limitada",
+                "cor": "azul-claro-tag"
+            },
+            {
+                "nome": "Lacrado",
+                "cor": "prata-tag"
+            },
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": false,
+        "percentualDesconto": 0
+    },
+    {
+        "id": 18,
+        "album": "Falso Brilhante",
+        "artista": "Elis Regina",
+        "lancamento": 1976,
+        "edicao": 1976,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": 1,
+                "nome": "Como Nossos Pais"
+            },
+            {
+                "lado": "A",
+                "faixa": 2,
+                "nome": "Velha Roupa Colorida"
+            },
+            {
+                "lado": "A",
+                "faixa": 3,
+                "nome": "Los Hermanos"
+            },
+            {
+                "lado": "A",
+                "faixa": 4,
+                "nome": "Um Por Todos"
+            },
+            {
+                "lado": "A",
+                "faixa": 5,
+                "nome": "Fascinação (Fascination)"
+            },
+            {
+                "lado": "B",
+                "faixa": 1,
+                "nome": "Jardins De Infância"
+            },
+            {
+                "lado": "B",
+                "faixa": 2,
+                "nome": "Quero"
+            },
+            {
+                "lado": "B",
+                "faixa": 3,
+                "nome": "Gracias A La Vida"
+            },
+            {
+                "lado": "B",
+                "faixa": 4,
+                "nome": "O Cavaleiro E Os Moinhos"
+            },
+            {
+                "lado": "B",
+                "faixa": 5,
+                "nome": "Tatuagem"
+            }
+        ],
+        "pais": "br",
+        "paisFab": "br",
+        "preco": 380.90,
+        "estilo": [
+            "MPB"
+        ],
+        "capa": "../imagens/capas/Elis_falso_brilhante.jpg",
+        "resumo": [
+            "Baseado em um dos espetáculos mais importantes da música brasileira, este disco de 1976 é visceral e politizado. Através de arranjos teatrais e interpretações arrebatadoras, a obra reflete as tensões e esperanças do Brasil da época com perfeição técnica."
+        ],
+        "galeria": [
+            "../imagens/galeria/elis_falso_bri/Elis_FB (1).png",
+            "../imagens/galeria/elis_falso_bri/Elis_FB (2).png",
+            "../imagens/galeria/elis_falso_bri/Elis_FB (3).png"
+        ],
+        "tags": [
+            {
+                "nome": "Lacrado",
+                "cor": "prata-tag"
+            },
+            {
+                "nome": "Oferta",
+                "cor": "oferta-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            }
+        ],
+        "estoque": 1,
+        "oferta": true,
+        "percentualDesconto": 10
+    },
+    {
         "id": 9,
         "album": "Titãs (1984)",
         "artista": "Titãs",
@@ -1056,6 +1270,165 @@
         "estoque": 0,
         "oferta": true,
         "percentualDesconto": 10
+    },
+    {
+        "id": 22,
+        "album": "Outer Wilds: Secrets",
+        "artista": "Andrew Prahlow",
+        "lancamento": 2021,
+        "edicao": 2021,
+        "peso": "180g",
+        "tipo": "LP 12\"",
+        "pais": "us",
+        "paisFab": "us",
+        "preco": 512.00,
+        "estilo": [
+            "Trilha Sonora",
+            "Games"
+        ],
+        "resumo": [
+            "Trilha sonora de 2021 para a expansão do jogo Outer Wilds. A obra utiliza banjos e sintetizadores para evocar nostalgia, isolamento e o maravilhamento diante dos mistérios do cosmos de forma imersiva e melancólica. Andrew Prahlow é um compositor especializado em trilhas sonoras narrativas. Seu trabalho é reconhecido pela capacidade de criar paisagens sonoras que definem a identidade emocional de experiências interativas, conectando profundamente o espectador ao universo explorado."
+        ],
+        "capa": "../imagens/capas/Outer_Wilds_EOTE.png",
+        "galeria": [
+            "../imagens/galeria/outer_wilds/OW_EOTE (1).png",
+            "../imagens/galeria/outer_wilds/OW_EOTE (2).jpg",
+            "../imagens/galeria/outer_wilds/OW_EOTE (3).jpg"
+        ],
+        "tags": [
+            {
+                "nome": "Importado",
+                "cor": "importado-tag"
+            },
+            {
+                "nome": "Raro",
+                "cor": "gold-tag"
+            },
+            {
+                "nome": "Destaque",
+                "cor": "destaque-tag"
+            }
+        ],
+        "musicas": [
+            {
+                "lado": "A",
+                "faixa": "01",
+                "nome": "Into Shadow"
+            },
+            {
+                "lado": "A",
+                "faixa": "02",
+                "nome": "The River"
+            },
+            {
+                "lado": "A",
+                "faixa": "03",
+                "nome": "River's End"
+            },
+            {
+                "lado": "A",
+                "faixa": "04",
+                "nome": "The First Seekers"
+            },
+            {
+                "lado": "A",
+                "faixa": "05",
+                "nome": "The Premonition"
+            },
+            {
+                "lado": "A",
+                "faixa": "06",
+                "nome": "Strange Flames"
+            },
+            {
+                "lado": "A",
+                "faixa": "07",
+                "nome": "Dream of Home"
+            },
+            {
+                "lado": "A",
+                "faixa": "08",
+                "nome": "Eternal Halls"
+            },
+            {
+                "lado": "A",
+                "faixa": "09",
+                "nome": "The Forbidden Archives"
+            },
+            {
+                "lado": "A",
+                "faixa": "10",
+                "nome": "Sealed Away"
+            },
+            {
+                "lado": "A",
+                "faixa": "11",
+                "nome": "Fear And Ashes"
+            },
+            {
+                "lado": "B",
+                "faixa": "01",
+                "nome": "Elegy for the Rings"
+            },
+            {
+                "lado": "B",
+                "faixa": "02",
+                "nome": "Test Chamber Three"
+            },
+            {
+                "lado": "B",
+                "faixa": "03",
+                "nome": "The Lost Waltz"
+            },
+            {
+                "lado": "B",
+                "faixa": "04",
+                "nome": "Dark Passage"
+            },
+            {
+                "lado": "B",
+                "faixa": "05",
+                "nome": "Into The Vault"
+            },
+            {
+                "lado": "B",
+                "faixa": "06",
+                "nome": "Secret Ways"
+            },
+            {
+                "lado": "B",
+                "faixa": "07",
+                "nome": "The Sound of Water"
+            },
+            {
+                "lado": "B",
+                "faixa": "08",
+                "nome": "Echoes of the Eye"
+            },
+            {
+                "lado": "B",
+                "faixa": "09",
+                "nome": "Departure"
+            },
+            {
+                "lado": "B",
+                "faixa": "10",
+                "nome": "Travelers' Encore"
+            },
+            {
+                "lado": "B",
+                "faixa": "11",
+                "nome": "End of the Wilds"
+            },
+            {
+                "lado": "B",
+                "faixa": "12",
+                "nome": "Postlude"
+            }
+        ],
+        "estoque": 2,
+        "oferta": false,
+        "percentualDesconto": 0
     },
     {
         "id": 11,
@@ -3011,99 +3384,6 @@
         "percentualDesconto": 15
     },
     {
-        "id": 18,
-        "album": "Falso Brilhante",
-        "artista": "Elis Regina",
-        "lancamento": 1976,
-        "edicao": 1976,
-        "peso": "180g",
-        "tipo": "LP 12\"",
-        "musicas": [
-            {
-                "lado": "A",
-                "faixa": 1,
-                "nome": "Como Nossos Pais"
-            },
-            {
-                "lado": "A",
-                "faixa": 2,
-                "nome": "Velha Roupa Colorida"
-            },
-            {
-                "lado": "A",
-                "faixa": 3,
-                "nome": "Los Hermanos"
-            },
-            {
-                "lado": "A",
-                "faixa": 4,
-                "nome": "Um Por Todos"
-            },
-            {
-                "lado": "A",
-                "faixa": 5,
-                "nome": "Fascinação (Fascination)"
-            },
-            {
-                "lado": "B",
-                "faixa": 1,
-                "nome": "Jardins De Infância"
-            },
-            {
-                "lado": "B",
-                "faixa": 2,
-                "nome": "Quero"
-            },
-            {
-                "lado": "B",
-                "faixa": 3,
-                "nome": "Gracias A La Vida"
-            },
-            {
-                "lado": "B",
-                "faixa": 4,
-                "nome": "O Cavaleiro E Os Moinhos"
-            },
-            {
-                "lado": "B",
-                "faixa": 5,
-                "nome": "Tatuagem"
-            }
-        ],
-        "pais": "br",
-        "paisFab": "br",
-        "preco": 380.90,
-        "estilo": [
-            "MPB"
-        ],
-        "capa": "../imagens/capas/Elis_falso_brilhante.jpg",
-        "resumo": [
-            "Baseado em um dos espetáculos mais importantes da música brasileira, este disco de 1976 é visceral e politizado. Através de arranjos teatrais e interpretações arrebatadoras, a obra reflete as tensões e esperanças do Brasil da época com perfeição técnica."
-        ],
-        "galeria": [
-            "../imagens/galeria/elis_falso_bri/Elis_FB (1).png",
-            "../imagens/galeria/elis_falso_bri/Elis_FB (2).png",
-            "../imagens/galeria/elis_falso_bri/Elis_FB (3).png"
-        ],
-        "tags": [
-            {
-                "nome": "Lacrado",
-                "cor": "prata-tag"
-            },
-            {
-                "nome": "Oferta",
-                "cor": "oferta-tag"
-            },
-            {
-                "nome": "Destaque",
-                "cor": "destaque-tag"
-            }
-        ],
-        "estoque": 1,
-        "oferta": true,
-        "percentualDesconto": 10
-    },
-    {
         "id": 19,
         "album": "Elis (1972)",
         "artista": "Elis Regina",
@@ -3460,165 +3740,6 @@
                 "lado": "D",
                 "faixa": 24,
                 "nome": "Campfire Song"
-            }
-        ],
-        "estoque": 2,
-        "oferta": false,
-        "percentualDesconto": 0
-    },
-    {
-        "id": 22,
-        "album": "Outer Wilds: Secrets",
-        "artista": "Andrew Prahlow",
-        "lancamento": 2021,
-        "edicao": 2021,
-        "peso": "180g",
-        "tipo": "LP 12\"",
-        "pais": "us",
-        "paisFab": "us",
-        "preco": 512.00,
-        "estilo": [
-            "Trilha Sonora",
-            "Games"
-        ],
-        "resumo": [
-            "Trilha sonora de 2021 para a expansão do jogo Outer Wilds. A obra utiliza banjos e sintetizadores para evocar nostalgia, isolamento e o maravilhamento diante dos mistérios do cosmos de forma imersiva e melancólica. Andrew Prahlow é um compositor especializado em trilhas sonoras narrativas. Seu trabalho é reconhecido pela capacidade de criar paisagens sonoras que definem a identidade emocional de experiências interativas, conectando profundamente o espectador ao universo explorado."
-        ],
-        "capa": "../imagens/capas/Outer_Wilds_EOTE.png",
-        "galeria": [
-            "../imagens/galeria/outer_wilds/OW_EOTE (1).png",
-            "../imagens/galeria/outer_wilds/OW_EOTE (2).jpg",
-            "../imagens/galeria/outer_wilds/OW_EOTE (3).jpg"
-        ],
-        "tags": [
-            {
-                "nome": "Importado",
-                "cor": "importado-tag"
-            },
-            {
-                "nome": "Raro",
-                "cor": "gold-tag"
-            },
-            {
-                "nome": "Destaque",
-                "cor": "destaque-tag"
-            }
-        ],
-        "musicas": [
-            {
-                "lado": "A",
-                "faixa": "01",
-                "nome": "Into Shadow"
-            },
-            {
-                "lado": "A",
-                "faixa": "02",
-                "nome": "The River"
-            },
-            {
-                "lado": "A",
-                "faixa": "03",
-                "nome": "River's End"
-            },
-            {
-                "lado": "A",
-                "faixa": "04",
-                "nome": "The First Seekers"
-            },
-            {
-                "lado": "A",
-                "faixa": "05",
-                "nome": "The Premonition"
-            },
-            {
-                "lado": "A",
-                "faixa": "06",
-                "nome": "Strange Flames"
-            },
-            {
-                "lado": "A",
-                "faixa": "07",
-                "nome": "Dream of Home"
-            },
-            {
-                "lado": "A",
-                "faixa": "08",
-                "nome": "Eternal Halls"
-            },
-            {
-                "lado": "A",
-                "faixa": "09",
-                "nome": "The Forbidden Archives"
-            },
-            {
-                "lado": "A",
-                "faixa": "10",
-                "nome": "Sealed Away"
-            },
-            {
-                "lado": "A",
-                "faixa": "11",
-                "nome": "Fear And Ashes"
-            },
-            {
-                "lado": "B",
-                "faixa": "01",
-                "nome": "Elegy for the Rings"
-            },
-            {
-                "lado": "B",
-                "faixa": "02",
-                "nome": "Test Chamber Three"
-            },
-            {
-                "lado": "B",
-                "faixa": "03",
-                "nome": "The Lost Waltz"
-            },
-            {
-                "lado": "B",
-                "faixa": "04",
-                "nome": "Dark Passage"
-            },
-            {
-                "lado": "B",
-                "faixa": "05",
-                "nome": "Into The Vault"
-            },
-            {
-                "lado": "B",
-                "faixa": "06",
-                "nome": "Secret Ways"
-            },
-            {
-                "lado": "B",
-                "faixa": "07",
-                "nome": "The Sound of Water"
-            },
-            {
-                "lado": "B",
-                "faixa": "08",
-                "nome": "Echoes of the Eye"
-            },
-            {
-                "lado": "B",
-                "faixa": "09",
-                "nome": "Departure"
-            },
-            {
-                "lado": "B",
-                "faixa": "10",
-                "nome": "Travelers' Encore"
-            },
-            {
-                "lado": "B",
-                "faixa": "11",
-                "nome": "End of the Wilds"
-            },
-            {
-                "lado": "B",
-                "faixa": "12",
-                "nome": "Postlude"
             }
         ],
         "estoque": 2,
@@ -4389,7 +4510,7 @@
                 "nome": "Importado",
                 "cor": "importado-tag"
             },
-                        {
+            {
                 "nome": "Destaque",
                 "cor": "destaque-tag"
             }
@@ -5068,7 +5189,7 @@
         "preco": 330.00,
         "estilo": [
             "Rock",
-           "Rock Internacional",
+            "Rock Internacional",
             "Funk Rock"
         ],
         "resumo": [

@@ -176,6 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarCarrosselPorTag("MPB", "section-carrossel-mpb");
     renderizarCarrosselPorTag("Disco Music", "section-carrossel-discoteca");
     renderizarCarrosselPorTag(["Ópera", "Musical", "Clássico", "Orquestra"], "section-carrossel-orquestra");
-    renderizarCarrosselPorTag(["Games", "Trilha Sonora"], "section-carrossel-games");
+    renderizarCarrosselPorTag("Trilha Sonora", "section-carrossel-trlhas");
 });
 
