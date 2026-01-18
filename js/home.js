@@ -4,24 +4,6 @@ let favoritos = (JSON.parse(localStorage.getItem("favoritos")) || [])
     .map(f => typeof f === "object" ? Number(f.id) : Number(f));
 let itemAtualCarrinho = null; 
 
-///   MENÚ SANDUÍCHE - Bulma CSS   ///
-document.addEventListener('DOMContentLoaded', () => {
-
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-    $navbarBurgers.forEach(el => {
-        el.addEventListener('click', () => {
-
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-
-        });
-    });
-});
-
 //  Cálculo Descontos  //
 function calcularDadosPreco(disco) {
 
@@ -77,8 +59,6 @@ window.fecharModalErroEstoque = function () {
     ; document.getElementById("modal-carrinho-erro").classList.remove("is-active");
 }
 
-
-
 ///    LOCALSTOGAGE - JSON    ///
 function atualizarContadorCarrinho() {
     const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -90,7 +70,6 @@ function atualizarContadorCarrinho() {
         contadorCarrinho.style.display = totalItens > 0 ? "inline-block" : "none";
     }
 };
-
 
 ////     CARREGAMENTO DE DADOS - Arquivo JSON      ////
 async function carregarDados() {
@@ -136,7 +115,6 @@ async function carregarDados() {
         console.error("Erro ao carregar discos");
     }
 }
-
 
 ////    CARROSSEL - Sessão Destaques      ////
 // -- Var Globais -- //
@@ -320,7 +298,6 @@ function renderizarHorizontal(discos, container, isReversed = false) {
     }).join("");
 }
 
-
 ////     CARDS VERTICAIS     ////
 window.renderizarVertical = function (discos, containerAlvo = null) {
 
@@ -398,7 +375,6 @@ window.renderizarVertical = function (discos, containerAlvo = null) {
     }).join("");
 }
 
-
 ////     BOTÃO DETALHES    ////
 document.addEventListener("click", function (e) {
     const botao = e.target.closest(".button.is-small");
@@ -473,7 +449,7 @@ window.validarNewsletter = function () {
 
 function limparFormulario() {
     ["nomeNewsletter", "emailNewsletter"].forEach(id => {
-        const inputNL = document.getinputNLementById(id);
+        const inputNL = document.getElementById(id);
         if (inputNL) {
             inputNL.value = "";
             inputNL.classList.remove("is-success", "is-danger");
@@ -617,7 +593,6 @@ toggle.addEventListener("change", () => {
     }
 })
 
-
 ////     SELO DESCONTO     ////
 function gerarSeloDesconto(disco) {
     if (!disco.oferta || !disco.percentualDesconto) return "";
@@ -645,7 +620,6 @@ function gerarSeloDesconto(disco) {
     `;
 };
 
-
 ///   --- CÁLCULO DE DESCONTO ---   ///
 function calcularPrecoComDesconto(disco) {
     if (!disco.oferta || !disco.percentualDesconto) {
@@ -655,7 +629,6 @@ function calcularPrecoComDesconto(disco) {
     const desconto = disco.preco * (disco.percentualDesconto / 100);
     return +(disco.preco - desconto).toFixed(2);
 }
-
 
 /////           BUSCA              //////
 window.executarBuscaHome = function (termo) {
@@ -734,5 +707,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     carregarDados();
     atualizarContadorCarrinho();
-
 });

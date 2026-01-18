@@ -38,15 +38,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     //  --  Renderizar seções por ID  --  //                 
-    /////////////// RAUL
+    ///-------------------- RAUL
     renderizarDiscosPorId([7, 8, 23], "section-discos-raul");
-    ////////////////// MPB
+    ///-------------------- MPB
     renderizarDiscosPorId([9, 10, 18, 19, 20, 25], "section-discos-mpb");
-    ////////////////// QUEEN 
+    ///-------------------- QUEEN 
     renderizarDiscosPorId([3, 4, 32, 33], "section-discos-queen");
-    //////////////// ORQUESTRA 
+    ///-------------------- ORQUESTRA 
     renderizarDiscosPorId([15, 16, 17, 27, 36], "section-discos-orquestra");
-    /////////////////// CYNDI 
+    ///-------------------- CYNDI 
     renderizarDiscosPorId([2, 6, 39], "section-discos-cyndi");
 
     //  --  Botão Ver Ofertas (checkbox)  -- //
@@ -103,10 +103,7 @@ async function renderizarDiscosPorId(idsSelecionados, idContainerDestino) {
 
     const container = section.querySelector(".container");
     const discosFiltrados = todosDiscos.filter(disco => idsSelecionados.includes(disco.id));
-
-    // Mantém a ordem exata dos IDs passados no array
-    discosFiltrados.sort((a, b) => idsSelecionados.indexOf(a.id) - idsSelecionados.indexOf(b.id));
-
+    
     container.innerHTML = '<div class="columns is-multiline"></div>';
     const colunas = container.querySelector(".columns");
 
@@ -189,7 +186,30 @@ window.abrirModalCarrinho = function (id) {
     document.getElementById("carrinho-capa").src = itemAtualCarrinho.capa;
     document.getElementById("cart-album").innerText = itemAtualCarrinho.album;
     document.querySelectorAll("#cart-artista").forEach(el => el.innerText = itemAtualCarrinho.artista);
-    document.getElementById("cart-preco").innerText = `R$ ${itemAtualCarrinho.preco.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}`;
+
+    const precoNormal = Number(itemAtualCarrinho.preco);
+    const precoComDesconto = calcularPrecoComDesconto(itemAtualCarrinho);
+
+    let precoHTML = `
+        <span class="preco-modal is-size-5 has-text-weight-bold">
+            R$ ${precoNormal.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+        </span>
+    `;
+
+    if (itemAtualCarrinho.oferta && itemAtualCarrinho.percentualDesconto) {
+        precoHTML = `
+            <div class="precos-verticais-modal">
+                <span class="preco-normal">
+                    R$ ${precoNormal.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+                </span>
+                <span class="preco-desconto is-size-5 has-text-weight-bold">
+                    R$ ${precoComDesconto.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+                </span>
+            </div>
+        `;
+        };
+
+    document.getElementById("cart-preco").innerHTML = precoHTML;
 
     document.getElementById("modal-carrinho").classList.add("is-active");
 }

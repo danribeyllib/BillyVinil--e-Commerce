@@ -28,7 +28,6 @@ function calculoPrecoFinal(disco) {
     };
 }
 
-
 ///   MENU SANDUÍCHE - Bulma CSS   ///
 document.addEventListener('DOMContentLoaded', () => {
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -80,7 +79,6 @@ window.fecharModalErroEstoque = function () {
 
     if (modal) modal.classList.remove("is-active");
 }
-
 
 ////  --   Modal Zoom Imagens  --  ////
 function abrirImagemModal(src) {
@@ -180,7 +178,7 @@ window.confirmarAdicao = function () {
             album: discoAtual.album,
             artista: discoAtual.artista,
             capa: discoAtual.capa,
-            preco: discoAtual.preco,  
+            preco: discoAtual.preco,
             quantidade: qtd
         });
     }
@@ -233,9 +231,9 @@ async function carregarDiscosIDJson(idDesejado) {
         }
 
         discoAtual = disco;
-        const estaFavoritado = favoritos.some(f => (typeof f === "object" ? f.id : f) === disco.id);
+        const estaFavoritado = favoritos.includes(Number(disco.id));
 
-        const container = document.getElementById("render-detalhes");
+       const container = document.getElementById("render-detalhes");
 
         const tagsHtml = disco.tags.map(tag =>
             `<span class="tag ${tag.cor} mx-1">${tag.nome}</span>`
@@ -267,7 +265,7 @@ async function carregarDiscosIDJson(idDesejado) {
                 </tbody>
             </table>
         </div>`).join("");
-        
+
         //  --  Preço  --  //
         const dadosPreco = calculoPrecoFinal(disco);
 

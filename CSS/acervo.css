@@ -22,13 +22,6 @@
 }
 
 /* Banners Geral */
-.banner-acervo {
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    display: flex;
-    align-items: center;
-}
-
 .titulo-sessao-acervo {
     background: linear-gradient(135deg, #000000, #0000003d);
     backdrop-filter: blur(5px) saturate(100%);

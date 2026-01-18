@@ -1060,10 +1060,6 @@
             {
                 "nome": "Oferta",
                 "cor": "oferta-tag"
-            },
-            {
-                "nome": "Destaque",
-                "cor": "destaque-tag"
             }
         ],
         "estoque": 1,
@@ -3190,8 +3186,8 @@
                 "cor": "verde-tag"
             },
             {
-                "nome": "Destaque",
-                "cor": "destaque-tag"
+                "nome": "Raro",
+                "cor": "gold-tag"
             }
         ],
         "estoque": 2,

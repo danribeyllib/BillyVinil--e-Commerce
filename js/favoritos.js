@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 ////     VERIFICAÇÃO DO LOCALSTORAGE    ///
-window.addEventListener('storage', (event) => {
+window.addEventListener("storage", (event) => {
    
-    if (event.key === 'favoritos') {
+    if (event.key === "favoritos") {
         renderizarFavoritos();
     }
 });
@@ -169,7 +169,6 @@ function gerarSeloDesconto(disco) {
       </div>
     `;
 };
-
 
 // --- MODAIS ---  //
 window.fecharModalConfirmacao = () => document.getElementById("modal-carrinho-confirmacao").classList.remove("is-active");

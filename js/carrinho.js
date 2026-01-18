@@ -21,6 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarCarrinho();
 });
 
+////     VERIFICAÇÃO DO LOCALSTORAGE    ///
+window.addEventListener("storage", (event) => {
+   
+    if (event.key === "carrinho") {
+        renderizarFavoritos();
+    }
+});
+
 let confirmacao = null;
 
 ////    DADOS   ////
@@ -103,7 +111,7 @@ async function renderizarCarrinho() {
                         </div>
                     </div>
 
-                        <p class="has-text-white has-text-weight-bold is-size-5 mr-5">
+                        <p class="has-text-primary has-text-weight-bold is-size-5 mr-5">
                             ${dadosJSON.oferta ? `
                                 <span class="preco-normal-carrinho">
                                     R$ ${totalSemDesconto.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
@@ -118,8 +126,7 @@ async function renderizarCarrinho() {
 
                     <button class="button is-danger is-dark is-inverted is-small cart-remove remove-button" 
                             onclick="confirmarRemocaoItem(${item.id}, '${item.album.replace(/'/g, "\\'")}')">
-                        <span class="mr-2"><i class="fa-solid fa-trash-can"></i></span>
-                        <span>Excluir</span>
+                        <span><i class="fa-solid fa-trash-can"></i></span>
                     </button>
                 </div>
             </div>
@@ -256,7 +263,6 @@ window.removerItemCarrinho = function (id) {
     renderizarCarrinho();
 }
 
-
 ///      CÁLCULO FRETE      ///
 document.getElementById("btnFrete").addEventListener("click", function (e) {
     e.preventDefault();
@@ -326,7 +332,6 @@ function calcularPrecoComDesconto(produto) {
     return produto.preco - desconto;
 }
 
-
 //   Botão Concluir Compra (erro -  somente para demonstração)
 const botao = document.getElementById("btn-concluir-compra");
 const textoOriginal = botao.textContent;
@@ -363,7 +368,3 @@ function fecharModalErroCompra() {
     const modal = document.getElementById("modal-compra-erro");
     modal.classList.remove("is-active");
 }
-
-
-
-

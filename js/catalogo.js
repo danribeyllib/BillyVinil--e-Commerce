@@ -1,9 +1,7 @@
 ///   VAR GLOBAIS   ///
 let todosDiscos = [];
 let itemAtualCarrinho = null;
-let favoritos = (JSON.parse(localStorage.getItem("favoritos")) || [])
-  .map(f => typeof f === "object" ? Number(f.id) : Number(f));
-
+let favoritos = (JSON.parse(localStorage.getItem("favoritos")) || []).map(f => typeof f === "object" ? Number(f.id) : Number(f));
 
 //  --  Nomes dos Países para o menu do filtro  --  //
 const nomesPaises = {
@@ -60,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (botaoMobile && menuNavegacao) {
     botaoMobile.addEventListener("click", (e) => {
       e.stopPropagation();
-     
+
       botaoMobile.classList.toggle("is-active");
       menuNavegacao.classList.toggle("is-active");
 
@@ -139,7 +137,6 @@ async function carregarDados() {
   }
 }
 
-
 function configurarFiltrosDinamicos(discos) {
   let artistas = [];
   let albuns = [];
@@ -193,7 +190,6 @@ function configurarFiltrosDinamicos(discos) {
   preencherMenuPais("filtro-pais", paises);
   preencherMenuDecadas("filtro-ano", decadas);
 }
-
 
 //  --  Países e Bandeiras  --  //
 function preencherMenuPais(idContainer, lista) {
@@ -269,7 +265,7 @@ window.ordenar = function (campo, direcao) {
 window.executarBusca = function () {
   const input = document.getElementById("inputBusca");
   const termo = input.value.toLowerCase().trim();
- 
+
   const normalizar = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   const termoNormalizado = normalizar(termo);
 
@@ -381,7 +377,7 @@ window.confirmarAdicao = function () {
 window.alternarFavorito = function (id) {
   const numId = Number(id);
   const index = favoritos.indexOf(numId);
-  
+
   //  --  Botão  --  //
   const btn = document.getElementById(`fav-btn-${id}`);
   const icone = btn ? btn.querySelector("i") : null;
@@ -453,7 +449,7 @@ window.renderizarVertical = function (discos) {
 
     ///   ---  Tags e Favoritar  ---  ///
     const criarTags = disco.tags ? disco.tags.map(t => `<span class="tag ${t.cor} is-small">${t.nome}</span>`).join(" ") : "";
-    const estaFavoritado = favoritos.some(f => Number(f.id) === Number(disco.id));
+    const estaFavoritado = favoritos.includes(Number(disco.id));
 
     return `
     <div class="column is-3-desktop is-4-tablet is-12-mobile">

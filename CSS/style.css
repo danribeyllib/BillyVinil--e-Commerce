@@ -74,9 +74,7 @@ hr {
   color: #ffffff !important;
 }
 
-.nav-itens,
-.navbar-start .navbar-item,
-.navbar-dropdown {
+.navbar-dropdown, .navbar-dropdown .navbar-item {
   background-color: rgba(44, 20, 68, 0.851) !important;
 }
 
@@ -118,7 +116,7 @@ hr {
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 /*  Botões  */
@@ -595,7 +593,6 @@ hr {
 
 .toggle-todos-destaques.aberto {
   max-height: 1000px;
-  /**/
   opacity: 1;
 }
 

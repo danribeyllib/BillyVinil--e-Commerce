@@ -4,8 +4,6 @@
 
 ---    VISUAL E DE FUNCIONALIDADES   ----
 
-- Paleta de cores: https://bulma.io/documentation/helpers/palette-helpers/
-
 - Sombras: https://getcssscan.com/css-box-shadow-examples
     
 - Efeito Glass:https://css.glass/
