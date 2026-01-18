@@ -210,7 +210,6 @@ window.abrirModalCarrinho = function (id) {
         };
 
     document.getElementById("cart-preco").innerHTML = precoHTML;
-
     document.getElementById("modal-carrinho").classList.add("is-active");
 }
 
@@ -222,6 +221,7 @@ window.alterarQtd = function (valor) {
     }
 }
 
+//  --  Adicionar item no carrinho  --  //
 window.confirmarAdicao = function () {
     if (!itemAtualCarrinho) return;
     const qtdDesejada = parseInt(document.getElementById("cart-qtd").value);

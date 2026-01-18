@@ -174,7 +174,6 @@ function atualizarResumo(subtotalSem, subtotalCom, desconto) {
     if (typeof atualizarContadorCarrinho === "function") atualizarContadorCarrinho();
 }
 
-
 ///      MODAIS     ///
 function fecharModalCarrinhoSucesso() {
     document.getElementById("modal-carrinho-add-sucesso").classList.remove("is-active");
@@ -264,6 +263,7 @@ window.removerItemCarrinho = function (id) {
 }
 
 ///      CÁLCULO FRETE      ///
+// Obs: sempre será R$ 0,00 e data aleatória - Somente demonstração  //
 document.getElementById("btnFrete").addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -359,6 +359,7 @@ botao.addEventListener("click", () => {
     }, 1500);
 });
 
+//  --  Modais Erro  --  //
 function abrirModalErroCompra() {
     const modal = document.getElementById("modal-compra-erro");
     modal.classList.add("is-active");
