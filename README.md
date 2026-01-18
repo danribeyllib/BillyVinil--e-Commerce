@@ -39,4 +39,4 @@ O projeto busca reforçar a importância de preservar as mídias clássicas, a c
 3. Abra apágina utilizando o servidor local. 
 
 **Opção 2**
-1. **Netlifi**: Clique no link - (https://billyvinil.netlify.app/)
+1. **Netlifi**: Clique no link - https://billyvinil.netlify.app/
