@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ////     VERIFICAÇÃO DO LOCALSTORAGE    ///
 window.addEventListener("storage", (event) => {
-   
+
     if (event.key === "carrinho") {
         renderizarFavoritos();
     }
@@ -68,8 +68,9 @@ async function renderizarCarrinho() {
         const precoNormal = Number(dadosJSON.preco || item.preco || 0);
         const precoFinal = calcularPrecoComDesconto(dadosJSON);
 
-        const totalSemDesconto = precoNormal * (item.quantidade || 1);
-        const totalComDesconto = precoFinal * (item.quantidade || 1);
+        // Casas decimais //
+        const totalSemDesconto = parseFloat((precoNormal * (item.quantidade || 1)).toFixed(2));
+        const totalComDesconto = parseFloat((precoFinal * (item.quantidade || 1)).toFixed(2));
 
         subtotalSemDesconto += totalSemDesconto;
         subtotalComDesconto += totalComDesconto;
