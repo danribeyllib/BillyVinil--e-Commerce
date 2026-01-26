@@ -1,5 +1,7 @@
 # BillyVinil: Página de e-commerce de Discos de Vinil
 
+![Logo BillyVinil](./imagens/logos/Billy_logo_gato_contorno_lateral.png)
+
 Esta é uma página de e-commerce de discos de vinil desenvolvida para um curso de formação continuada em desenvolvimento front-end. Tem como objetivo aplicar os conhecimentos desenvolvidos ao longo do curso em HTML, CSS e JavaScript.
 
 | Aspecto        | Descrição |
