@@ -112,67 +112,105 @@
     <!--MAIN-->
     <main>
 
-<section class="fundo py-5">
-    <div class="container py-4">
-        <h1 class="display-5 text-white fw-bold mb-5">
-            <span class="text-primary">CARRINHO</span> 
-            <span class="text-primary"><i class="fa-solid fa-cart-shopping"></i></span>
-        </h1>
+        <section class="section destaques-fundo">
 
-        <div class="row">
-            <div class="col-lg-8">
+            <div class="container mx-auto px-8 py-12">
+                <h1 class="title is-size-2 has-text-white has-text-weight-bold mb-8">
+                    <span class="has-text-primary-45">CARRINHO</span> <span class="has-text-primary-45"><i class="fa-solid fa-cart-shopping"></i></span>
+                </h1>
 
-                <div id="lista-carrinho">
+                <!--Carrinho-->
+                <div class="columns">
+                    <div class="column is-8">
+
+                        <!--JS-->
+                        <div id="lista-carrinho">
+                        </div>
+
+                        <hr>
+
+                        <button class="button is-danger is-dark mb-4" onclick="limparCarrinhoCompleto()">
+                            <span class="mr-2"><i class="fa-regular fa-trash-can"></i></span>
+                            <span>Limpar Carrinho</span>
+                        </button>
+                    </div>
+
+                    <div class="column is-4">
+
+                        <!--Frete-->
+                        <div class="p-6 resumo-disco mb-4">
+                            <h3 class="has-text-white has-text-weight-bold is-size-4 mb-6">Calcular Frete</h3>
+
+                            <div class="field has-addons mb-4">
+                                <div class="control is-expanded">
+                                    <input class="input" type="text" id="cepInput" placeholder="00000-000" maxlength="9"
+                                        placeholder="Digite seu CEP">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-primary" id="btnFrete">Calcular Frete</button>
+                                    <p class="help is-danger is-hidden" id="erro-cep">Digite um CEP válido.</p>
+                                </div>
+                            </div>
+
+                            <div class="is-flex is-justify-content-space-between mb-4">
+                                <span class="has-text-info">Valor do Frete</span>
+                                <span id="valor-frete" class="has-text-success-70 has-text-weight-bold">
+                                    <p id="valor-entrega"></p>
+                                </span>
+                            </div>
+
+                            <div class="is-flex is-justify-content-space-between mb-4">
+                                <span class="has-text-info">Estimativa de Entrega</span>
+                                <span class="has-text-white has-text-weight-semibold">
+                                    <p id="prazo-entrega"></p>
+                                </span>
+                            </div>
+
+                            <p class="has-text-success-70">* Frete Grátis para primeira compra</p>
+
+                        </div>
+
+                        <!--Resumo-->
+                        <div class="p-6 resumo-disco">
+                            <h3 class="has-text-white has-text-weight-bold is-size-4 mb-6">Resumo da Compra</h3>
+                            <div class="is-flex is-justify-content-space-between mb-4">
+                                <span class="has-text-info">Subtotal</span>
+                                <span id="resumo-subtotal" class="has-text-white has-text-weight-semibold">
+                                    <!--Subtotal-->
+                                </span>
+                            </div>
+
+                            <div class="is-flex is-justify-content-space-between mb-4">
+                                <span class="has-text-info">Frete</span>
+                                <span id="resumo-entrega" class="has-text-white has-text-weight-semibold">
+                                    <!--Frete-->
+                                </span>
+                            </div>
+
+                            <div class="is-flex is-justify-content-space-between mb-4">
+                                <span class="has-text-info">Desconto</span>
+                                <span id="resumo-desconto" class="has-text-white has-text-weight-semibold">
+                                    <!--Desconto-->
+                                </span>
+                            </div>
+
+                            <div class="is-flex is-justify-content-space-between mb-6">
+                                <span class="has-text-white has-text-weight-bold is-size-5">Total</span>
+                                <span id="resumo-total" class="has-text-weight-bold has-text-primary-60 is-size-4">
+                                    <!--Total-->
+                                </span>
+                            </div>
+
+                            <button id="btn-concluir-compra"
+                                class="button is-primary is-dark is-inverted is-fullwidth concluir-compra-btn mb-4">
+                                <span>Concluir Compra</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-
-                <hr class="text-white">
-
-                <button class="btn btn-outline-danger mb-4" onclick="limparCarrinhoCompleto()">
-                    <span class="me-2"><i class="fa-regular fa-trash-can"></i></span>
-                    <span>Limpar Carrinho</span>
-                </button>
             </div>
+        </section>
 
-            <div class="col-lg-4">
-                <div class="p-4 bg-dark text-white rounded shadow-sm resumo-disco">
-                    <h3 class="fw-bold fs-4 mb-4">Resumo do Pedido</h3>
-                    
-                    <div class="d-flex justify-content-between mb-3">
-                        <span class="text-info">Subtotal</span>
-                        <span id="resumo-subtotal" class="fw-semibold">
-                            </span>
-                    </div>
-
-                    <div class="d-flex justify-content-between mb-3">
-                        <span class="text-info">Taxa de Serviço</span>
-                        <span id="resumo-entrega" class="fw-semibold">
-                            </span>
-                    </div>
-
-                    <div class="d-flex justify-content-between mb-3">
-                        <span class="text-info">Desconto</span>
-                        <span id="resumo-desconto" class="fw-semibold">
-                            </span>
-                    </div>
-
-                    <hr>
-
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <span class="fw-bold fs-5">Total</span>
-                        <span id="resumo-total" class="fw-bold text-primary fs-3">
-                            </span>
-                    </div>
-
-                    <button id="btn-concluir-compra" class="btn btn-primary btn-lg w-100 fw-bold">
-                        <span>Finalizar Pagamento</span>
-                    </button>
-                    
-                    <p class="text-success mt-3 small text-center">* Ingressos digitais sem taxa de envio</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
     </main>
     <!--/MAIN/-->
 
