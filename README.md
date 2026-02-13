@@ -38,7 +38,7 @@ O projeto busca reforçar a importância de preservar as mídias clássicas, a c
    ```bash
    git clone [https://github.com/danribeyllib/BillyVinil--e-Commerce]
 2. Utilize a extensão Live Server do VS Code ou servidor local de sua preferência.
-3. Abra apágina utilizando o servidor local. 
+3. Abra apágina index.html utilizando o servidor local (ex.: Open with Live Server). 
 
 **Opção 2**
 1. **Netlify**: Clique no link - https://billyvinil.netlify.app/
