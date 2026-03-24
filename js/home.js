@@ -257,6 +257,7 @@ function renderizarHorizontal(discos, container, isReversed = false) {
         return `
         <div class="column is-12"> 
             <div class="card disco-card-horizontal ${cardReverso}"> 
+             <a href="./detalhes.html?id=${disco.id}" target="_blank">
                 <div class="columns">
                     <div class="column is-4-tablet is-12-mobile">
                     

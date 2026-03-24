@@ -4,24 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Bulma-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-  <!--Font Awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-*" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!--Bandeiras-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
-  <!--CSS-->
   <link rel="stylesheet" href="../CSS/style.css" />
   <link rel="stylesheet" href="../CSS/controleEstoque.CSS" />
-  <!--Ícone-->
   <link rel="icon" type="image/png" href="../imagens/logos/icone_disco2.png" sizes="64x64" />
-  <title>Controle de estoque</title>
+  <title>Controle de Estoque</title>
 </head>
 
 <body>
-<!--NAV-->
   <nav class="navbar navbar-topo pt-2" role="navigation" aria-label="main navigation">
     <a id="navbarIconeSanduiche" role="button" class="navbar-burger navbar-start mx-2" aria-label="menu"
       aria-expanded="false" data-target="navbar">
@@ -34,30 +26,123 @@
     <div class="navbar-start px-4 py-2">
       <div class="field has-addons">
         <p class="control">
-          <input id="busca-tabela-estoque" class="input" type="text" placeholder="Buscar..." />
+          <input id="busca-tabela-estoque" class="input" type="text" placeholder="Buscar por Álbum ou Artista..." />
         </p>
         <p class="control">
-          <button class="button is-link is-light is-inverted"><span><i
-                class="icon has-text fa-solid fa-magnifying-glass"></i></span></button>
+          <button class="button is-link is-light is-inverted">
+            <span><i class="icon fa-solid fa-magnifying-glass"></i></span>
+          </button>
         </p>
       </div>
     </div>
   </nav>
 
-<!--MAIN-->
   <main>
-
     <section class="section">
-        <div class="container">
-            <h1 class="title">Controle de Estoque</h1>
+      <div class="container is-fluid">
+        <h1 class="title">Controle de Estoque</h1>
+
+        <div class="box">
+          <div class="columns is-multiline">
             
-            <div id="tabela-discos-teste">
-
+            <div class="column is-3">
+              <label class="label is-small">Artista</label>
+              <div class="select is-fullwidth is-small">
+                <select id="filtro-artista"><option value="">Todos</option></select>
+              </div>
             </div>
-    
-    </section>
 
-</main>
-<script src="controleEstoque.js"></script>
+            <div class="column is-2">
+              <label class="label is-small">Lançamento (De - Até)</label>
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input id="lanc-de" class="input is-small" type="number" placeholder="De">
+                </p>
+                <p class="control is-expanded">
+                  <input id="lanc-ate" class="input is-small" type="number" placeholder="Até">
+                </p>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <label class="label is-small">Edição (De - Até)</label>
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input id="edic-de" class="input is-small" type="number" placeholder="De">
+                </p>
+                <p class="control is-expanded">
+                  <input id="edic-ate" class="input is-small" type="number" placeholder="Até">
+                </p>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <label class="label is-small">Estilo Musical</label>
+              <div class="select is-fullwidth is-small">
+                <select id="filtro-estilo"><option value="">Todos</option></select>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <label class="label is-small">País Origem</label>
+              <div class="select is-fullwidth is-small">
+                <select id="filtro-pais-origem"><option value="">Todos</option></select>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <label class="label is-small">Tamanho (Ex: 12")</label>
+              <div class="select is-fullwidth is-small">
+                <select id="filtro-tamanho"><option value="">Todos</option></select>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <label class="label is-small">Peso (Ex: 180g)</label>
+              <div class="select is-fullwidth is-small">
+                <select id="filtro-peso"><option value="">Todos</option></select>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <label class="label is-small">Qtd. Discos (Ex: Duplo)</label>
+              <div class="select is-fullwidth is-small">
+                <select id="filtro-quantidade"><option value="">Todos</option></select>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <label class="label is-small">País Fabricação</label>
+              <div class="select is-fullwidth is-small">
+                <select id="filtro-pais-fab"><option value="">Todos</option></select>
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <label class="label is-small">Selo</label>
+              <div class="select is-fullwidth is-small">
+                <select id="filtro-estado"><option value="">Todos</option></select>
+              </div>
+            </div>
+
+            <div class="column is-2 is-flex is-align-items-flex-end">
+              <button class="button is-danger is-small is-fullwidth" onclick="limparTodosFiltros()">
+                <span class="icon is-small"><i class="fa-solid fa-trash-can"></i></span>
+                <span>Limpar Filtros</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="tabela-discos-teste">
+          </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="controleEstoque.js"></script>
 </body>
+
 </html>
