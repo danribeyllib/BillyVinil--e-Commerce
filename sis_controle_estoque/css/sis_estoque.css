@@ -53,7 +53,7 @@
     -webkit-backdrop-filter: blur(8px);
 }
 
-/* Cartão do Alerta (Baseado no modal-carrinho) */
+/* Card */
 .alerta-cartao {
     position: relative;
     width: 100%;
@@ -68,7 +68,7 @@
     animation: entrada-suave 0.3s ease-out;
 }
 
-/* Cabeçalho do Alerta */
+/* Cabeçalho */
 .alerta-topo {
     background: rgba(123, 59, 129, 0.427) !important;
     padding: 10px 20px;
@@ -79,7 +79,7 @@
     color: white;
 }
 
-/* Conteúdo Central */
+/* Conteúdo */
 .alerta-corpo {
     padding: 20px;
     background: transparent !important;

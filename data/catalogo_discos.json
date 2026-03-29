@@ -90,107 +90,107 @@
         "oferta": false,
         "percentualDesconto": 0
     },
-    {
-        "id": 1774493496957,
-        "album": "A Night To Remember",
-        "artista": "Cyndi Lauper",
-        "lancamento": 1989,
-        "edicao": 1989,
-        "peso": "140g",
-        "tipo": "LP 12\"",
-        "musicas": [
-            {
-                "lado": "A",
-                "faixa": 1,
-                "nome": "Intro"
-            },
-            {
-                "lado": "A",
-                "faixa": 2,
-                "nome": "I Drove All Night"
-            },
-            {
-                "lado": "A",
-                "faixa": 3,
-                "nome": "Primitive"
-            },
-            {
-                "lado": "A",
-                "faixa": 4,
-                "nome": "My First Night Without You"
-            },
-            {
-                "lado": "A",
-                "faixa": 5,
-                "nome": "Like A Cat"
-            },
-            {
-                "lado": "A",
-                "faixa": 6,
-                "nome": "Heading West"
-            },
-            {
-                "lado": "B",
-                "faixa": 1,
-                "nome": "A Night To Remember"
-            },
-            {
-                "lado": "B",
-                "faixa": 2,
-                "nome": "Unconditional Love"
-            },
-            {
-                "lado": "B",
-                "faixa": 3,
-                "nome": "Insecurious"
-            },
-            {
-                "lado": "B",
-                "faixa": 4,
-                "nome": "Dancing With A Stranger"
-            },
-            {
-                "lado": "B",
-                "faixa": 5,
-                "nome": "I Don't Want To Be Your Friend"
-            },
-            {
-                "lado": "B",
-                "faixa": 6,
-                "nome": "Kindred Spirit"
-            }
-        ],
-        "pais": "us",
-        "paisFab": "br",
-        "preco": 189.90,
-        "estilo": [
-            "Pop",
-            "Synth-pop"
-        ],
-        "resumo": [
-            "Lançado em 1989, este quarto disco de estúdio apresenta um som pop rock mais maduro e polido. O álbum destaca-se pela poderosa balada I Drove All Night e por letras que exploram temas de amor e autorreflexão, consolidando a transição da artista para uma sonoridade mais adulta no final da década."
-        ],
-        "capa": "../imagens/capas/CyndiLauper_ANighttoRemember.jpg",
-        "galeria": [
-            "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (1).jpg",
-            "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (2).jpg",
-            "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (3).jpg"
-        ],
-        "tags": [
-            {
-                "nome": "Bom Estado",
-                "cor": "verde-tag"
-            },
-            {
-                "nome": "Oferta",
-                "cor": "oferta-tag"
-            }
-        ],
-        "estoque": 1,
-        "oferta": true,
-        "percentualDesconto": 10
-    },
-{
+  {
+    "id": 1774493496957,
+    "album": "A Night To Remember",
+    "artista": "Cyndi Lauper",
+    "lancamento": 1989,
+    "edicao": 1989,
+    "peso": "140g",
+    "tipo": "LP 12\"",
+    "musicas": [
+      {
+        "lado": "A",
+        "faixa": 1,
+        "nome": "Intro"
+      },
+      {
+        "lado": "A",
+        "faixa": 2,
+        "nome": "I Drove All Night"
+      },
+      {
+        "lado": "A",
+        "faixa": 3,
+        "nome": "Primitive"
+      },
+      {
+        "lado": "A",
+        "faixa": 4,
+        "nome": "My First Night Without You"
+      },
+      {
+        "lado": "A",
+        "faixa": 5,
+        "nome": "Like A Cat"
+      },
+      {
+        "lado": "A",
+        "faixa": 6,
+        "nome": "Heading West"
+      },
+      {
+        "lado": "B",
+        "faixa": 1,
+        "nome": "A Night To Remember"
+      },
+      {
+        "lado": "B",
+        "faixa": 2,
+        "nome": "Unconditional Love"
+      },
+      {
+        "lado": "B",
+        "faixa": 3,
+        "nome": "Insecurious"
+      },
+      {
+        "lado": "B",
+        "faixa": 4,
+        "nome": "Dancing With A Stranger"
+      },
+      {
+        "lado": "B",
+        "faixa": 5,
+        "nome": "I Don't Want To Be Your Friend"
+      },
+      {
+        "lado": "B",
+        "faixa": 6,
+        "nome": "Kindred Spirit"
+      }
+    ],
+    "pais": "us",
+    "paisFab": "br",
+    "preco": 189.9,
+    "estilo": [
+      "Pop",
+      "Synth-pop"
+    ],
+    "resumo": [
+      "Lançado em 1989, este quarto disco de estúdio apresenta um som pop rock mais maduro e polido. O álbum destaca-se pela poderosa balada I Drove All Night e por letras que exploram temas de amor e autorreflexão, consolidando a transição da artista para uma sonoridade mais adulta no final da década."
+    ],
+    "capa": "../imagens/capas/CyndiLauper_ANighttoRemember.jpg",
+    "galeria": [
+      "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (1).jpg",
+      "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (2).jpg",
+      "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (3).jpg"
+    ],
+    "tags": [
+      {
+        "nome": "Bom Estado",
+        "cor": "verde-tag"
+      },
+      {
+        "nome": "Oferta",
+        "cor": "oferta-tag"
+      }
+    ],
+    "estoque": 1,
+    "oferta": true,
+    "percentualDesconto": 10
+  },
+  {
     "id": "1774493496958",
     "album": "Hot Space",
     "artista": "Queen",

@@ -91,17 +91,19 @@ function confirmarExclusao(id) {
             
             <div class="alerta-cartao">
                 <div class="alerta-topo">
-                    <span style="font-weight: 500;">Confirmação</span>
+                    <span style="font-weight: 500;">Confirmar exclusão</span>
                     <button class="delete" onclick="fecharModal()"></button>
                 </div>
 
                 <div class="alerta-corpo has-text-centered">
-                    <p class="title is-5" style="color: white !important;">
-                        Deseja realmente excluir este disco?
+                    <p class="subtitle is-5" style="color: white !important;">
+
+                        Essa ação irá excluir completamente esse disco do catálogo. Deseja continuar?
+
                     </p>
                     <div class="buttons is-centered mt-5">
-                        <button class="button is-danger" onclick="excluirDiscos('${id}')">Sim, Excluir</button>
-                        <button class="button is-light" onclick="fecharModal()">Cancelar</button>
+                        <button class="button is-danger" onclick="excluirDiscos('${id}')">Sim, excluir</button>
+                        <button class="button is-info" onclick="fecharModal()">Cancelar</button>
                     </div>
                 </div>
             </div>
