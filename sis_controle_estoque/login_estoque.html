@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bumla-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-*" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bandeiras-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/login_estoque.css" />
+    <!--Ícone-->
+    <link rel="icon" type="image/png" href="../imagens/logos/Billy_logo_somente_gato.png" sizes="64x64" />
+    <title>Login - Controle de Estoque BillyVinil</title>
+</head>
+
+<body>
+    <div class="card login-card has-background-grey-darker">
+        <div class="card-content">
+            <div class="card-content">
+                <div class="has-text-centered mb-5 is-flex is-flex-direction-column is-align-items-center">
+
+                    <figure class="image mb-2" style="width: 160px;">
+                        <img src="../imagens/logos/Billy_logo_gato_contorno_lateral.png" alt="BillyVinil Logo">
+                    </figure>
+                </div>
+
+                <h1 class="title is-4 mt-2 has-text-centered has-text-white">Acesso ao Estoque</h1>
+            </div>
+
+            <form id="form-login">
+                <div class="field">
+                    <label class="label has-text-grey-light">Usuário</label>
+                    <div class="control has-icons-left">
+                        <input class="input has-background-dark has-text-white is-borderless-bottom" type="text"
+                            id="usuario" placeholder="Admin" required>
+                        <span class="icon is-small is-left has-text-grey"><i class="fas fa-user"></i></span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label has-text-grey-light">Senha</label>
+                    <div class="control has-icons-left">
+                        <input class="input has-background-dark has-text-white is-borderless-bottom" type="password"
+                            id="senha" placeholder="****" required>
+                        <span class="icon is-small is-left has-text-grey"><i class="fas fa-lock"></i></span>
+                    </div>
+                </div>
+
+                <div class="field mt-5">
+                    <button type="submit" class="button is-link is-fullwidth has-text-weight-bold">
+                        <span>Entrar</span>
+                    </button>
+                </div>
+
+                <p id="msg-erro" class="has-text-danger is-size-7 mt-3 has-text-centered" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i> Usuário ou senha incorretos.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/login_estoque.js"></script>
+</body>
+
+</html>

@@ -223,7 +223,7 @@ async function carregarDiscosIDJson(idDesejado) {
     try {
         const response = await fetch("./data/catalogo_discos.json");
         const dados = await response.json();
-        const disco = dados.find(d => d.id === idDesejado);
+        const disco = dados.find(d => String(d.id) === String(idDesejado));
 
         if (!disco) {
             console.error("Disco não encontrado");
@@ -231,9 +231,9 @@ async function carregarDiscosIDJson(idDesejado) {
         }
 
         discoAtual = disco;
-        const estaFavoritado = favoritos.includes(Number(disco.id));
+        const estaFavoritado = favoritos.includes(disco.id);
 
-       const container = document.getElementById("render-detalhes");
+        const container = document.getElementById("render-detalhes");
 
         const tagsHtml = disco.tags.map(tag =>
             `<span class="tag ${tag.cor} mx-1">${tag.nome}</span>`
@@ -435,6 +435,7 @@ function gerarSeloDesconto(disco) {
 };
 
 //    URL - pela id    //  
+// Localize no final do seu arquivo e altere para: //
 const urlParams = new URLSearchParams(window.location.search);
-const idUrl = parseInt(urlParams.get("id"));
+const idUrl = urlParams.get("id");
 if (idUrl) carregarDiscosIDJson(idUrl);

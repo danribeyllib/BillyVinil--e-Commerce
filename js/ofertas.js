@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
-    //  --  Renderizar seções por ID  --  //                 
+    //  --  Renderizar seções por ID  --  //                                     //////// >>>> MODIFICAR <<<<  ////////
     ///-------------------- RAUL
     renderizarDiscosPorId([7, 8, 23], "section-discos-raul");
     ///-------------------- MPB

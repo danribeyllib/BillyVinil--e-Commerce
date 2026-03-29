@@ -1,0 +1,97 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+.section-fundo-estoque {
+    background: rgba(1, 1, 1, 0.252);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+}
+
+:root {
+    --bulma-primary-h: 176deg;
+    --bulma-primary-s: 94%;
+    --bulma-primary-l: 46%;
+    --bulma-link-h: 274deg;
+    --bulma-info-h: 208deg;
+    --bulma-info-s: 93%;
+    --bulma-info-l: 81%;
+    --bulma-success-h: 140deg;
+    --bulma-success-s: 61%;
+    --bulma-success-l: 59%;
+    --bulma-danger-l: 61%;
+    --bulma-burger-h: 272deg;
+}
+
+/* Modal */
+/* Container Principal */
+.modal-alerta {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal-alerta.is-active {
+    display: flex;
+}
+
+/* Fundo do Modal */
+.modal-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Cartão do Alerta (Baseado no modal-carrinho) */
+.alerta-cartao {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    background: rgba(91, 68, 96, 0.156);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    animation: entrada-suave 0.3s ease-out;
+}
+
+/* Cabeçalho do Alerta */
+.alerta-topo {
+    background: rgba(123, 59, 129, 0.427) !important;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    color: white;
+}
+
+/* Conteúdo Central */
+.alerta-corpo {
+    padding: 20px;
+    background: transparent !important;
+    color: white;
+}
+
+.alerta-corpo .title, 
+.alerta-corpo .subtitle {
+    color: white !important;
+}
+
+@keyframes entrada-suave {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}

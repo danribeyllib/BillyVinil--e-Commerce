@@ -1,0 +1,28 @@
+{
+  "name": "marketplace---billyvinil",
+  "version": "1.0.0",
+  "description": "![Logo BillyVinil](./imagens/logos/Billy_logo_gato_contorno_lateral.png)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danribeyllib/BillyVinil--e-Commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danribeyllib/BillyVinil--e-Commerce/issues"
+  },
+  "homepage": "https://github.com/danribeyllib/BillyVinil--e-Commerce#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "multer": "^2.1.1"
+  }
+}

@@ -1,0 +1,87 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+body {
+    min-height: 100vh;
+    background-image: url("/imagens/fundo/3265419.jpg") !important;
+    background-repeat: repeat;
+    background-size: fill;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'BlinkMacSystemFont', -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+:root {
+    --bulma-primary-h: 176deg;
+    --bulma-primary-s: 94%;
+    --bulma-primary-l: 46%;
+    --bulma-link-h: 274deg;
+    --bulma-info-h: 208deg;
+    --bulma-info-s: 93%;
+    --bulma-info-l: 81%;
+    --bulma-success-h: 140deg;
+    --bulma-success-s: 61%;
+    --bulma-success-l: 59%;
+    --bulma-danger-l: 61%;
+    --bulma-burger-h: 272deg;
+}
+
+.login-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    background: rgba(50, 0, 54, 0.499) !important;
+    border-radius: 16px;
+    backdrop-filter: blur(10.2px) !important;
+    -webkit-backdrop-filter: blur(10.2px) !important;
+}
+
+.login-header {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.fa-compact-disc {
+    filter: drop-shadow(0 0 10px rgba(72, 95, 199, 0.4));
+}
+
+.label {
+    color: #b5b5b5 !important;
+    font-weight: 500;
+}
+
+.input {
+    background-color: #2b2b2b;
+    border-color: #444;
+    color: #fff;
+}
+
+.input:focus {
+    box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+}
+
+.input::placeholder {
+    color: #666;
+}
+
+.button.is-link {
+    transition: transform 0.2s;
+}
+
+.button.is-link:hover {
+    transform: translateY(-2px);
+}
+
+.msg-erro {
+    background-color: rgba(255, 56, 96, 0.1);
+    color: #ff3860;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    text-align: center;
+    display: none;
+    border: 1px solid rgba(255, 56, 96, 0.2);
+}

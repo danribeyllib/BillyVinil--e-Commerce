@@ -268,12 +268,15 @@ function renderizarHorizontal(discos, container, isReversed = false) {
                                 <img src="${disco.capa}" alt="${disco.album}">
                             </figure>
                         </div>
+                        </a>
                         
                     </div>
 
                     <div class="column">
                         <div class="card-content">
+                                          <a href="./detalhes.html?id=${disco.id}" target="_blank">
                             <h4 class="title is-4 mb-1 has-text-link has-text-weight-bold">${disco.album}</h4>
+                            </a>
                             <p class="subtitle is-6 mb-2 has-text-danger has-text-weight-bold">${disco.artista}</p>
                             <div class="tags mb-2">${criarTags}</div>
                             <p class="disco-descricao">
@@ -342,7 +345,6 @@ window.renderizarVertical = function (discos, containerAlvo = null) {
         
         <div class="card disco-card">
               <a href="./detalhes.html?id=${disco.id}" target="_blank">
-
                 <div class="card-image">
                     <figure class="image disco-imagem">
                         ${gerarSeloDesconto(disco)}
@@ -353,7 +355,9 @@ window.renderizarVertical = function (discos, containerAlvo = null) {
               </a>
                
               <div class="card-content">
+                                  <a href="./detalhes.html?id=${disco.id}" target="_blank">
                     <h4 class="title is-5 has-text-link">${disco.album}</h4>
+                    </a>
                     <p class="subtitle is-6 has-text-danger has-text-weight-bold">${disco.artista}</p>
                     <div class="disco-tags mb-4">${criarTags}</div>
                     <p class="disco-descricao">
