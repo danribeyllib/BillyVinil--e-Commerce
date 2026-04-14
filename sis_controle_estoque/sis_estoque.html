@@ -4,13 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Bumla-->
+  <!--Bulma-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!--Font Awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-*" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!--Bandeiras-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
   <!--CSS-->
@@ -22,20 +19,40 @@
 
 <body>
 
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <span class="navbar-item has-text-weight-bold">
+          <i class="fa-solid fa-cat fa-xl has-text-link"></i>
+          <h1 class="title mt-1 ml-3 is-5 has-text-warning">Cadastro e Estoque</h1>
+        </span>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <button id="btn-logout" class="button is-danger is-outlined">
+              <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+              <span>Sair</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <section class="section-fundo-estoque section">
     <div class="container">
-      <h1 class="title is-4 mb-5 has-text-link">Sistema de Cadastro e Estoque</h1>
 
-      <!--Álbum-->
       <form id="form-cadastro-completo" class="box">
+
         <div class="columns">
-          <div class="column is-4">
+          <div class="column is-3">
             <label class="label">Álbum</label>
             <input class="input" type="text" id="id-album" required>
           </div>
 
           <!--Artista-->
-          <div class="column is-4">
+          <div class="column is-3">
             <label class="label">Artista</label>
             <input class="input" type="text" id="id-artista" required>
           </div>
@@ -44,6 +61,12 @@
           <div class="column is-2">
             <label class="label">Ano Lançamento</label>
             <input class="input" type="number" id="id-lancamento">
+          </div>
+
+          <!--Ano Edição-->
+          <div class="column is-2">
+            <label class="label">Ano Edição</label>
+            <input class="input" type="number" id="id-edicao">
           </div>
 
           <!--Qtd Estoque-->
@@ -59,14 +82,13 @@
           </div>
         </div>
 
-        <!--Descrição-->
         <div class="columns">
           <div class="column is-3">
             <label class="label">Peso e Qtd (ex: 180g Duplo)</label>
             <input class="input" type="text" id="id-descricao">
           </div>
 
-          <!--Descrição-->
+          <!--Tipo-->
           <div class="column is-3">
             <label class="label">Tipo (ex: LP 12")</label>
             <input class="input" type="text" id="id-tipo">
@@ -91,7 +113,6 @@
           </div>
         </div>
 
-        <!--Capa-->
         <div class="columns">
           <div class="column is-6">
             <label class="label">Capa do Álbum</label>
@@ -105,6 +126,11 @@
                 <span class="file-name has-text-grey" id="id-nome-arq-capa">Nenhum arquivo...</span>
               </label>
             </div>
+
+            <!--Preview-->
+            <figure class="image mt-3" style="max-width: 200px;">
+              <img id="preview-capa" src="" style="display: none; border-radius: 8px;">
+            </figure>
           </div>
 
           <!--Galeria-->
@@ -121,30 +147,41 @@
               </label>
             </div>
           </div>
-
-          <!--Edição-->
-          <div class="column is-2">
-            <label class="label">Ano Edição</label>
-            <input class="input" type="number" id="id-edicao">
-          </div>
         </div>
 
-        <!--Faixas-->
         <div class="columns">
           <div class="column is-6">
             <label class="label">Músicas</label>
-            <textarea class="textarea" id="id-musicas" placeholder='Faixas por lado' rows="8"></textarea>
+            <textarea class="textarea has-fixed-size" id="id-musicas" rows="8" placeholder="Lado A:
+1. Música...
+2. Música...
+
+Lado B:
+1. Música..."></textarea>
           </div>
 
           <!--Resumo-->
           <div class="column is-6">
             <label class="label">Resumo</label>
-            <textarea class="textarea" id="id-resumo" placeholder="Breve descrição do álbum..." rows="8"></textarea>
+            <textarea class="textarea has-fixed-size" id="id-resumo" rows="8"
+              placeholder="Breve descrição do álbum..."></textarea>
           </div>
         </div>
 
         <!--Salvar-->
-        <button type="submit" class="button is-link is-medium mt-4">Salvar Disco</button>
+        <div class="has-text-centered mt-5">
+          <div class="buttons is-centered">
+            <button type="submit" class="button is-link">
+              Salvar Disco
+            </button>
+
+            <!--Cancelar-->
+            <button type="button" class="button is-danger">
+              Cancelar
+            </button>
+          </div>
+        </div>
+
       </form>
 
       <div class="box mt-6">
@@ -164,19 +201,17 @@
               </tr>
             </thead>
 
-            <tbody id="id-lista-estoque">
-            </tbody>
+            <tbody id="id-lista-estoque"></tbody>
 
           </table>
-
         </div>
       </div>
-    </div>
 
+    </div>
   </section>
 
-
   <div id="id-container-modais"></div>
+
   <script src="./js/sis_estoque.js"></script>
 </body>
 

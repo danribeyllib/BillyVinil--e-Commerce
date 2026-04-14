@@ -193,5 +193,37 @@ function fecharModal() {
     if (container) container.innerHTML = "";
 }
 
+///   Logout   ///
+(function verificarAcesso() {
+    const sessao = sessionStorage.getItem("billyvinil_sessao");
+    const persistente = localStorage.getItem("billyvinil_login_persistente");
+
+
+    if (!sessao && persistente) {
+        sessionStorage.setItem("billyvinil_sessao", persistente);
+    } 
+
+    else if (!sessao && !persistente) {
+        console.warn("Acesso negado. Redirecionando para login...");
+        window.location.href = "login_estoque.html";
+    }
+})();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnLogout = document.getElementById("btn-logout");
+    
+    if (btnLogout) {
+        btnLogout.addEventListener("click", () => {
+            console.log("Encerrando sessao do usuario...");
+            
+            sessionStorage.removeItem("billyvinil_sessao");
+            localStorage.removeItem("billyvinil_login_persistente");
+            
+            // Retornar para login //
+            window.location.href = "login_estoque.html";
+        });
+    }
+})
+
 // Inicialização //
 window.onload = carregarTabela;

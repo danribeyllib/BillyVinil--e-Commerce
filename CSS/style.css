@@ -127,7 +127,7 @@ hr {
 
 .button:hover {
   transform: translateY(-1px);
-  box-shadow: rgba(243, 214, 223, 0.36) 0px 5px 15px, rgba(98, 41, 102, 0.377) 0px 5px 5px;
+  box-shadow: rgba(70, 61, 64, 0.36) 0px 5px 15px, rgba(98, 41, 102, 0.377) 0px 5px 5px;
   cursor: pointer;
 }
 
