@@ -210,20 +210,50 @@ function fecharModal() {
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-    const btnLogout = document.getElementById("btn-logout");
     
+    const btnAbrir = document.getElementById("btn-abrir-formulario");
+    const btnCancelar = document.getElementById("btn-cancelar");
+    const containerForm = document.getElementById("container-formulario");
+    const formCadastro = document.getElementById("form-cadastro-completo");
+
+    // Toggle //
+    if (btnAbrir && containerForm) {
+        const toggleForm = () => {
+            const estaEscondido = containerForm.classList.toggle("is-hidden");
+            
+            if (!estaEscondido) {
+                btnAbrir.innerHTML = '<span class="icon"><i class="fas fa-times"></i></span><span>Fechar formulário</span>';
+                btnAbrir.classList.replace("is-link", "is-danger");
+            } else {
+                btnAbrir.innerHTML = '<span class="icon"><i class="fas fa-plus"></i></span><span>Adicionar novo disco</span>';
+                btnAbrir.classList.replace("is-danger", "is-link");
+            }
+        };
+
+        btnAbrir.addEventListener("click", toggleForm);
+        
+        if (btnCancelar) {
+            btnCancelar.addEventListener("click", toggleForm);
+        }
+
+        // Esconder formulário após submit //
+        formCadastro.addEventListener("submit", async (e) => {
+        });
+    }
+
+   // Logout //
+    const btnLogout = document.getElementById("btn-logout");
     if (btnLogout) {
         btnLogout.addEventListener("click", () => {
             console.log("Encerrando sessao do usuario...");
-            
             sessionStorage.removeItem("billyvinil_sessao");
             localStorage.removeItem("billyvinil_login_persistente");
-            
-            // Retornar para login //
             window.location.href = "login_estoque.html";
         });
     }
-})
+
+    carregarTabela();
+});
 
 // Inicialização //
 window.onload = carregarTabela;

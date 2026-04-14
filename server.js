@@ -10,6 +10,8 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname)));
+app.use('/sis_controle_estoque', express.static(path.join(__dirname)));
 
 //logs//
 app.use((req, res, next) => {

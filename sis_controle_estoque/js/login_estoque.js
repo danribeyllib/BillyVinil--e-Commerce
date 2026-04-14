@@ -32,7 +32,7 @@ document.getElementById("form-login").onsubmit = function (e) {
 
         console.log("Login realizado com sucesso.");
         
-        window.location.href = "estoque.html"; 
+        window.location.href = "sis_estoque.html"; 
     } else {
         console.error("Falha no login: Credenciais invalidas.");
         msgErro.style.display = "block";

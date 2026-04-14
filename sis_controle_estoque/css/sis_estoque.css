@@ -99,3 +99,30 @@ backdrop-filter: blur(14px);
 -webkit-backdrop-filter: blur(14px);
 }
 
+/* formulário */
+#container-formulario {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    max-height: 2000px; /* Valor alto para permitir expansão */
+    overflow: hidden;
+}
+
+#container-formulario.is-hidden {
+display: block !important;
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+    margin-bottom: 0 !important;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 
+        opacity 0.3s ease-in-out, 
+        transform 0.3s ease-in, 
+        max-height 0.4s cubic-bezier(1, 0, 1, 0),
+        visibility 0s 0.4s;
+}
+
+#btn-abrir-formulario {
+    transition: all 0.3s ease;
+}
