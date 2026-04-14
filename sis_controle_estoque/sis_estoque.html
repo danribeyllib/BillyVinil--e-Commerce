@@ -90,28 +90,100 @@
             </div>
           </div>
 
+          <!--Peso-->
           <div class="columns">
-            <div class="column is-3">
-              <label class="label">Peso e Qtd (ex: 180g Duplo)</label>
-              <input class="input" type="text" id="id-descricao">
+            <div class="column is-2">
+              <label class="label">Peso</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="id-peso">
+                    <option value="120g">120g</option>
+                    <option value="140g">140g</option>
+                    <option value="150g">150g</option>
+                    <option value="180g" selected>180g</option>
+                    <option value="200g">200g</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
-            <!--Tipo-->
-            <div class="column is-3">
-              <label class="label">Tipo (ex: LP 12")</label>
-              <input class="input" type="text" id="id-tipo">
+            <!--Qte-->
+            <div class="column is-2">
+              <label class="label">Qtd Discos</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="id-qtd-discos">
+                    <option value="Simples">Simples</option>
+                    <option value="Duplo">Duplo</option>
+                    <option value="Triplo">Triplo</option>
+                    <option value="Quádruplo">Quádruplo</option>
+                    <option value="Quintuplo+">Quintuplo+</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!--Tipo/Tamanho-->
+            <div class="column is-2">
+              <label class="label">Tamanho / Formato</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="id-tipo">
+                    <option value='LP 12"'>LP 12"</option>
+                    <option value='Single 7"'>Single 7"</option>
+                    <option value='Compacto 7"'>Compacto 7"</option>
+                    <option value='EP 10"'>EP 10"</option>
+                    <option value='Maxi Single 12"'>Maxi Single 12"</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
             <!--País Origem-->
             <div class="column is-2">
               <label class="label">País Origem</label>
-              <input class="input" type="text" id="id-pais-origem">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="id-pais-origem">
+                    <option value="br">Brasil (Brazil)</option>
+                    <option value="us">Estados Unidos (EUA)</option>
+                    <option value="gb">Reino Unido (Grã Bretanha)</option>
+                    <option value="gb-eng">Inglaterra</option>
+                    <option value="eu">Europa</option>
+                    <option value="jp">Japão</option>
+                    <option value="fr">França</option>
+                    <option value="de">Alemanha</option>
+                    <option value="it">Itália</option>
+                    <option value="at">Áustria</option>
+                    <option value="se">Suécia</option>
+                    <option value="ru">Rússia</option>
+                    <option value="ot">Outro</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
-            <!--País Fab-->
             <div class="column is-2">
               <label class="label">País Fabr.</label>
-              <input class="input" type="text" id="id-pais-fabricacao">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="id-pais-fabricacao">
+                    <option value="br">Brasil (Brazil)</option>
+                    <option value="us">Estados Unidos (EUA)</option>
+                    <option value="gb">Reino Unido (Grã Bretanha)</option>
+                    <option value="gb-eng">Inglaterra</option>
+                    <option value="eu">Europa</option>
+                    <option value="jp">Japão</option>
+                    <option value="fr">França</option>
+                    <option value="de">Alemanha</option>
+                    <option value="it">Itália</option>
+                    <option value="at">Áustria</option>
+                    <option value="se">Suécia</option>
+                    <option value="ru">Rússia</option>
+                    <option value="ot">Outro</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
             <!--Preço-->
@@ -178,7 +250,7 @@ Lado B:
           </div>
 
           <div class="column is-12">
-            <label class="label">Selos/Tags: </label>
+            <label class="label">Selecione as Tags: </label>
             <div id="tag-toggle-container" class="disco-tags">
               <span class="tag is-clickable toggle-tag verde-tag" data-value="Bom estado">Bom estado</span>
               <span class="tag is-clickable toggle-tag azul-claro-tag" data-value="Clássico">Clássico</span>

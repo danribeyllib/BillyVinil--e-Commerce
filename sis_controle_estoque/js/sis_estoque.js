@@ -24,6 +24,22 @@ document.getElementById("id-arquivo-galeria").onchange = function (e) {
     }
 };
 
+const nomesPaises = { 
+    "br": "Brasil", 
+    "us": "EUA", 
+    "gb": "Reino Unido", 
+    "gb-eng": "Inglaterra",
+    "eu": "Europa", 
+    "jp": "Japão", 
+    "fr": "França", 
+    "de": "Alemanha", 
+    "it": "Itália",
+    "at": "Áustria",
+    "se": "Suécia",
+    "ru": "Rússia",
+    "ot": "Outro"
+};
+
 // Salvar o disco e enviar para o Express //
 document.getElementById("form-cadastro-completo").onsubmit = async function (e) {
     e.preventDefault();
@@ -36,7 +52,8 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("lancamento", document.getElementById("id-lancamento").value);
     formData.append("estoque", document.getElementById("id-estoque").value);
     formData.append("desconto", document.getElementById("id-desconto").value);
-    formData.append("descricao", document.getElementById("id-descricao").value);
+    formData.append("peso", document.getElementById("id-peso").value);
+    formData.append("qtdDiscos", document.getElementById("id-qtd-discos").value);
     formData.append("tipo", document.getElementById("id-tipo").value);
     formData.append("paisOrigem", document.getElementById("id-pais-origem").value);
     formData.append("paisFab", document.getElementById("id-pais-fabricacao").value);
