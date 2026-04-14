@@ -43,6 +43,11 @@ function gerarTabela(discos, container) {
     `;
 
     discos.forEach(disco => {
+        const linhaPrincipal = `
+    <tr onclick="toggleDetalhes('${detalheId}', this)" class="linha-disco">
+        <td>${disco.id}</td>
+        ...
+`;
         const numeroEstq = disco.estoque > 0 ? "estoque-positivo" : "estoque-zerado";
         const precoVirgula = disco.preco.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         
@@ -144,6 +149,8 @@ function configurarFiltrosDinamicos(discos) {
         if (!encontrouEspecial) {
             filtros["filtro-quantidade"].add("1- Simples");
         }
+
+        
     });
 
     for (const id in filtros) {

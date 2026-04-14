@@ -194,7 +194,7 @@
           </div>
 
           <div class="columns">
-            <div class="column is-6">
+            <div class="column is-4">
               <label class="label">Capa do Álbum</label>
               <div class="file has-name is-fullwidth">
                 <label class="file-label">
@@ -227,10 +227,26 @@
                 </label>
               </div>
             </div>
+
+                        <!--Gênero-->
+            <div class="column is-3">
+              <label class="label">Gênero / Estilo Musical</label>
+              <div class="field has-addons">
+                <div class="control is-expanded">
+                  <input class="input" type="text" id="id-input-estilo" placeholder="Ex: Rock, Jazz, MPB...">
+                </div>
+                <div class="control">
+                  <button type="button" class="button is-info has-addons" id="btn-add-estilo">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div id="container-estilos-adicionados" class="tags mt-2"></div>
+            </div>
+
           </div>
 
           <div class="columns">
-
             <div class="column is-6">
               <label class="label">Músicas</label>
               <textarea class="textarea has-fixed-size" id="id-musicas" rows="8" placeholder="Lado A:

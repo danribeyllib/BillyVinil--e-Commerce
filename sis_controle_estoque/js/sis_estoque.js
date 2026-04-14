@@ -3,14 +3,12 @@ const API_URL = "http://localhost:3000/discos";
 
 // Atualizar nome do arquivo de capa ao selecionar //
 document.getElementById("id-arquivo-capa").onchange = function () {
-
     const nomeArquivo = this.files[0] ? this.files[0].name : "Nenhum arquivo...";
     document.getElementById("id-nome-arq-capa").innerText = nomeArquivo;
 };
 
 // Galeria para (máx. 10 fotos) //
 document.getElementById("id-arquivo-galeria").onchange = function (e) {
-
     const limiteMaximo = 10;
     const arquivos = e.target.files;
     const campoNome = document.getElementById("id-nome-arq-galeria");
@@ -129,9 +127,7 @@ function confirmarExclusao(id) {
 
                 <div class="alerta-corpo has-text-centered">
                     <p class="subtitle is-5" style="color: white !important;">
-
                         Essa ação irá excluir completamente esse disco do catálogo. Deseja continuar?
-
                     </p>
                     <div class="buttons is-centered mt-5">
                         <button class="button is-danger" onclick="excluirDiscos('${id}')">Sim, excluir</button>
@@ -164,30 +160,106 @@ async function carregarTabela() {
         const discos = await resposta.json();
         const bodyTabela = document.getElementById("id-lista-estoque");
 
+        if (!bodyTabela) return;
         bodyTabela.innerHTML = "";
 
         discos.forEach(disco => {
-            const linha = `
-                <tr>
+            const detalheId = `detalhe-${disco.id}`;
+            
+            const tagsHtml = disco.tags ? disco.tags.map(t => 
+                `<span class="tag is-small ${t.classe || t.cor}">${t.nome}</span>`
+            ).join(" ") : "";
+
+            const linhaPrincipal = `
+                <tr onclick="toggleDetalhes('${detalheId}', this)" class="linha-disco has-text-white">
                     <td>${disco.id}</td>
-                    <td>${disco.album}</td>
+                    <td><strong>${disco.album}</strong></td>
                     <td>${disco.artista}</td>
                     <td>R$ ${parseFloat(disco.preco).toFixed(2)}</td>
                     <td>${disco.desconto}%</td>
                     <td>${disco.estoque}</td>
                     <td>
-                        <button class="button is-small is-danger" onclick="excluirDisco('${disco.id}')">
+                        <button class="button is-small is-danger" onclick="event.stopPropagation(); excluirDisco('${disco.id}')">
                             <i class="fas fa-trash"></i>
                         </button>
                     </td>
                 </tr>
+                <tr id="${detalheId}" class="is-hidden has-background-dark">
+                    <td colspan="7">
+                        <div class="p-4 content is-small has-text-white">
+                            <div class="columns is-variable is-4">
+                                <div class="column is-2 has-text-centered">
+                                    <img src="${disco.capa}" class="detalhe-capa">
+                                    <div class="mt-3 tags is-centered">${tagsHtml}</div>
+                                </div>
+                                <div class="column is-4 coluna-info">
+                                    <p class="mb-1 has-text-info"><strong>Lançamento:</strong> ${disco.lancamento} | <strong>Edição:</strong> ${disco.edicao}</p>
+                                    <p class="mb-1 has-text-info"><strong>Especificações:</strong> ${disco.peso} - ${disco.tipo}</p>
+                                    <p class="mb-1 has-text-info"><strong>Origem:</strong> ${nomePais(disco.paisOrigem || disco.pais)} | <strong>Fabricação:</strong> ${nomePais(disco.paisFab)}</p>
+                                    <p class="mb-2 has-text-info"><strong>Estilos:</strong> ${Array.isArray(disco.estilo) ? disco.estilo.join(", ") : (disco.estilo || "-")}</p>
+                                    <hr class="divisor-detalhe">
+                                    <p><strong>Resumo:</strong><br><span class="texto-resumo">${disco.resumo || "Sem descrição."}</span></p>
+                                </div>
+                                <div class="column is-6">
+                                    <p class="has-text-weight-bold is-size-6 mb-2">Lista de Faixas</p>
+                                    <div class="container-tracklist">
+                                        ${gerarTracklist(disco.musicas)}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
             `;
-            bodyTabela.innerHTML += linha;
+            bodyTabela.innerHTML += linhaPrincipal;
         });
     } catch (erro) {
         console.error("Erro ao carregar dados:", erro);
     }
-};
+}
+
+// Aplicar ccor de seleção //
+function toggleDetalhes(id, linha) {
+    const elemento = document.getElementById(id);
+    if (!elemento) return;
+    
+    elemento.classList.toggle("is-hidden");
+    if (linha) {
+        linha.classList.toggle("is-selected");
+    }
+}
+
+// Gerar tracklist por Lado //
+function gerarTracklist(musicas) {
+    if (!musicas || musicas.length === 0) return "Nenhuma música cadastrada.";
+    if (typeof musicas === 'string') return musicas.replace(/\n/g, '<br>');
+
+    const grupos = musicas.reduce((acc, m) => {
+        const lado = m.lado || "Único";
+        if (!acc[lado]) acc[lado] = [];
+        acc[lado].push(m);
+        return acc;
+    }, {});
+
+    return Object.keys(grupos).map(lado => `
+        <div class="mb-3">
+            <div class="has-text-weight-bold has-text-warning track-header-lado">
+                LADO ${lado}
+            </div>
+            ${grupos[lado].map(m => `
+                <div class="track-item">
+                    <small class="has-text-white">${m.faixa}.</small> ${m.nome}
+                </div>
+            `).join("")}
+        </div>
+    `).join("");
+}
+
+//códigos de país //
+function nomePais(codigo) {
+    if (!codigo) return "-";
+    return nomesPaises[codigo.toLowerCase()] || codigo;
+}
 
 // Modal //
 function exibirModal(tipo, mensagem) {
@@ -230,11 +302,9 @@ function fecharModal() {
     const sessao = sessionStorage.getItem("billyvinil_sessao");
     const persistente = localStorage.getItem("billyvinil_login_persistente");
 
-
     if (!sessao && persistente) {
         sessionStorage.setItem("billyvinil_sessao", persistente);
     }
-
     else if (!sessao && !persistente) {
         console.warn("Acesso negado. Redirecionando para login...");
         window.location.href = "login_estoque.html";
@@ -242,13 +312,53 @@ function fecharModal() {
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-
     const btnAbrir = document.getElementById("btn-abrir-formulario");
     const btnCancelar = document.getElementById("btn-cancelar");
     const containerForm = document.getElementById("container-formulario");
     const formCadastro = document.getElementById("form-cadastro-completo");
 
-    // Toggle //
+    const inputEstilo = document.getElementById("id-input-estilo");
+const btnAddEstilo = document.getElementById("btn-add-estilo");
+const containerEstilos = document.getElementById("container-estilos-adicionados");
+let listaEstilos = [];
+
+// Função para renderizar as tags na tela
+function renderizarEstilos() {
+    containerEstilos.innerHTML = "";
+    listaEstilos.forEach((estilo, index) => {
+        containerEstilos.innerHTML += `
+            <span class="tag is-dark">
+                ${estilo}
+                <button type="button" class="delete is-small" onclick="removerEstilo(${index})"></button>
+            </span>
+        `;
+    });
+}
+
+// Função para adicionar estilo
+const adicionarEstilo = () => {
+    const valor = inputEstilo.value.trim();
+    if (valor && !listaEstilos.includes(valor)) {
+        listaEstilos.push(valor);
+        inputEstilo.value = "";
+        renderizarEstilos();
+    }
+};
+
+btnAddEstilo.addEventListener("click", adicionarEstilo);
+inputEstilo.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        adicionarEstilo();
+    }
+});
+
+window.removerEstilo = (index) => {
+    listaEstilos.splice(index, 1);
+    renderizarEstilos();
+};
+
+    // Toggle Formulário //
     if (btnAbrir && containerForm) {
         const toggleForm = () => {
             const estaEscondido = containerForm.classList.toggle("is-hidden");
@@ -267,10 +377,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (btnCancelar) {
             btnCancelar.addEventListener("click", toggleForm);
         }
-
-        // Esconder formulário após submit //
-        formCadastro.addEventListener("submit", async (e) => {
-        });
     }
 
     // Logout //
@@ -284,15 +390,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Lógica dos Toggles de Tag
+    // Toggles de Tags no formulário //
     const toggles = document.querySelectorAll(".toggle-tag");
-
     toggles.forEach(tag => {
         tag.addEventListener("click", () => {
-            // Alterna a classe ativa
             tag.classList.toggle("is-active");
-
-            // Aplica a classe de cor original apenas se estiver ativa
             const classeCor = tag.getAttribute("data-class");
             if (tag.classList.contains("is-active")) {
                 tag.classList.add(classeCor);
