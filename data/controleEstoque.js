@@ -248,4 +248,21 @@ document.addEventListener("DOMContentLoaded", () => {
             el.addEventListener(evento, filtrarRelatorio);
         }
     });
+
+    // Lógica dos Toggles de Tag
+const toggles = document.querySelectorAll(".toggle-tag");
+
+toggles.forEach(tag => {
+    tag.addEventListener("click", () => {
+
+        tag.classList.toggle("is-active");
+        
+        const classeCor = tag.getAttribute("data-class");
+        if (tag.classList.contains("is-active")) {
+            tag.classList.add(classeCor);
+        } else {
+            tag.classList.remove(classeCor);
+        }
+    });
+});
 });

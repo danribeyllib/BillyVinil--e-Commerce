@@ -3,14 +3,14 @@ const API_URL = "http://localhost:3000/discos";
 
 // Atualizar nome do arquivo de capa ao selecionar //
 document.getElementById("id-arquivo-capa").onchange = function () {
-    
+
     const nomeArquivo = this.files[0] ? this.files[0].name : "Nenhum arquivo...";
     document.getElementById("id-nome-arq-capa").innerText = nomeArquivo;
 };
 
 // Galeria para (máx. 10 fotos) //
 document.getElementById("id-arquivo-galeria").onchange = function (e) {
-    
+
     const limiteMaximo = 10;
     const arquivos = e.target.files;
     const campoNome = document.getElementById("id-nome-arq-galeria");
@@ -45,6 +45,21 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("musicas", document.getElementById("id-musicas").value);
     formData.append("resumo", document.getElementById("id-resumo").value);
 
+    // tags //
+    const tagsAtivas = [];
+    document.querySelectorAll(".toggle-tag.is-active").forEach(tag => {
+        tagsAtivas.push({
+            nome: tag.getAttribute("data-value"),
+            classe: tag.getAttribute("data-class")
+        });
+    });
+
+    formData.append("tags", JSON.stringify(tagsAtivas));
+
+    document.querySelectorAll(".toggle-tag").forEach(tag => {
+        tag.classList.remove("is-active", tag.getAttribute("data-class"));
+    });
+
     const arquivoCapa = document.getElementById("id-arquivo-capa").files[0];
     if (arquivoCapa) formData.append("capa", arquivoCapa);
 
@@ -61,12 +76,12 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
 
         if (resposta.ok) {
             exibirModal("sucesso", "Disco salvo com sucesso!");
-          
+
             this.reset();
-           
+
             document.getElementById("id-nome-arq-capa").innerText = "Nenhum arquivo...";
             document.getElementById("id-nome-arq-galeria").innerText = "0 fotos";
-           
+
             carregarTabela();
         } else {
             exibirModal("erro", "Erro ao salvar o disco.");
@@ -201,7 +216,7 @@ function fecharModal() {
 
     if (!sessao && persistente) {
         sessionStorage.setItem("billyvinil_sessao", persistente);
-    } 
+    }
 
     else if (!sessao && !persistente) {
         console.warn("Acesso negado. Redirecionando para login...");
@@ -210,7 +225,7 @@ function fecharModal() {
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     const btnAbrir = document.getElementById("btn-abrir-formulario");
     const btnCancelar = document.getElementById("btn-cancelar");
     const containerForm = document.getElementById("container-formulario");
@@ -220,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnAbrir && containerForm) {
         const toggleForm = () => {
             const estaEscondido = containerForm.classList.toggle("is-hidden");
-            
+
             if (!estaEscondido) {
                 btnAbrir.innerHTML = '<span class="icon"><i class="fas fa-times"></i></span><span>Fechar formulário</span>';
                 btnAbrir.classList.replace("is-link", "is-danger");
@@ -231,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         btnAbrir.addEventListener("click", toggleForm);
-        
+
         if (btnCancelar) {
             btnCancelar.addEventListener("click", toggleForm);
         }
@@ -241,7 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-   // Logout //
+    // Logout //
     const btnLogout = document.getElementById("btn-logout");
     if (btnLogout) {
         btnLogout.addEventListener("click", () => {
@@ -251,6 +266,24 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "login_estoque.html";
         });
     }
+
+    // Lógica dos Toggles de Tag
+    const toggles = document.querySelectorAll(".toggle-tag");
+
+    toggles.forEach(tag => {
+        tag.addEventListener("click", () => {
+            // Alterna a classe ativa
+            tag.classList.toggle("is-active");
+
+            // Aplica a classe de cor original apenas se estiver ativa
+            const classeCor = tag.getAttribute("data-class");
+            if (tag.classList.contains("is-active")) {
+                tag.classList.add(classeCor);
+            } else {
+                tag.classList.remove(classeCor);
+            }
+        });
+    });
 
     carregarTabela();
 });
