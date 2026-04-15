@@ -44,10 +44,10 @@ document.getElementById("form-login").onsubmit = function (e) {
 ///   Verificação de Sessão  ///
 window.onload = function() {
 
-    const sessaoAtiva = sessionStorage.getItem("billyvinil_sessao") || localStorage.getItem("billyvinil_login_persistente");
+   /* const sessaoAtiva = sessionStorage.getItem("billyvinil_sessao") || localStorage.getItem("billyvinil_login_persistente");
 
     if (sessaoAtiva) {
         console.log("Sessao encontrada. Usuario ja autenticado.");
         window.location.href = "sis_estoque.html";
-    }
+    }*/
 };

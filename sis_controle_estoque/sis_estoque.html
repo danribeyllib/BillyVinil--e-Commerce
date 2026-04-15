@@ -53,249 +53,198 @@
       <div id="container-formulario" class="is-hidden">
         <form id="form-cadastro-completo" class="box">
 
-          <div class="columns">
-            <div class="column is-3">
+          <div class="columns is-multiline">
+            <div class="column is-4">
               <label class="label">Álbum</label>
               <input class="input" type="text" id="id-album" required>
             </div>
-
-            <!--Artista-->
-            <div class="column is-3">
+            <div class="column is-4">
               <label class="label">Artista</label>
               <input class="input" type="text" id="id-artista" required>
             </div>
-
-            <!--Ano Lan-->
             <div class="column is-2">
               <label class="label">Ano Lançamento</label>
               <input class="input" type="number" id="id-lancamento">
             </div>
-
-            <!--Ano Edição-->
             <div class="column is-2">
               <label class="label">Ano Edição</label>
               <input class="input" type="number" id="id-edicao">
             </div>
+          </div>
 
-            <!--Qtd Estoque-->
-            <div class="column is-1">
-              <label class="label">Estoque</label>
-              <input class="input" type="number" id="id-estoque" required>
+          <div class="columns is-multiline">
+            <div class="column is-2">
+              <label class="label">Tamanho / Formato</label>
+              <div class="select is-fullwidth">
+                <select id="id-tipo">
+                  <option value='LP 12"'>LP 12"</option>
+                  <option value='Single 7"'>Single 7"</option>
+                  <option value='Compacto 7"'>Compacto 7"</option>
+                  <option value='EP 10"'>EP 10"</option>
+                  <option value='Maxi Single 12"'>Maxi Single 12"</option>
+                </select>
+              </div>
             </div>
-
-            <!--Desconto-->
-            <div class="column is-1">
-              <label class="label">Desc(%)</label>
-              <input class="input" type="number" id="id-desconto" value="0">
+            <div class="column is-2">
+              <label class="label">Qtd Discos</label>
+              <div class="select is-fullwidth">
+                <select id="id-qtd-discos">
+                  <option value="Simples">Simples</option>
+                  <option value="Duplo">Duplo</option>
+                  <option value="Triplo">Triplo</option>
+                  <option value="Quádruplo">Quádruplo</option>
+                </select>
+              </div>
+            </div>
+            <div class="column is-2">
+              <label class="label">Peso</label>
+              <div class="select is-fullwidth">
+                <select id="id-peso">
+                  <option value="120g">120g</option>
+                  <option value="180g" selected>180g</option>
+                  <option value="200g">200g</option>
+                </select>
+              </div>
+            </div>
+            <div class="column is-3">
+              <label class="label">País Origem</label>
+              <div class="select is-fullwidth">
+                <select id="id-pais-origem">
+                  <option value="br">Brasil</option>
+                  <option value="us">EUA</option>
+                  <option value="gb">Reino Unido</option>
+                  <option value="jp">Japão</option>
+                  <option value="ot">Outro</option>
+                </select>
+              </div>
+            </div>
+            <div class="column is-3">
+              <label class="label">País Fabr.</label>
+              <div class="select is-fullwidth">
+                <select id="id-pais-fabricacao">
+                  <option value="br">Brasil</option>
+                  <option value="us">EUA</option>
+                  <option value="gb">Reino Unido</option>
+                  <option value="jp">Japão</option>
+                  <option value="ot">Outro</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <!--Peso-->
-          <div class="columns">
-            <div class="column is-2">
-              <label class="label">Peso</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select id="id-peso">
-                    <option value="120g">120g</option>
-                    <option value="140g">140g</option>
-                    <option value="150g">150g</option>
-                    <option value="180g" selected>180g</option>
-                    <option value="200g">200g</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+          <div class="columns is-vcentered">
 
-            <!--Qte-->
-            <div class="column is-2">
-              <label class="label">Qtd Discos</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select id="id-qtd-discos">
-                    <option value="Simples">Simples</option>
-                    <option value="Duplo">Duplo</option>
-                    <option value="Triplo">Triplo</option>
-                    <option value="Quádruplo">Quádruplo</option>
-                    <option value="Quintuplo+">Quintuplo+</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!--Tipo/Tamanho-->
-            <div class="column is-2">
-              <label class="label">Tamanho / Formato</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select id="id-tipo">
-                    <option value='LP 12"'>LP 12"</option>
-                    <option value='Single 7"'>Single 7"</option>
-                    <option value='Compacto 7"'>Compacto 7"</option>
-                    <option value='EP 10"'>EP 10"</option>
-                    <option value='Maxi Single 12"'>Maxi Single 12"</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!--País Origem-->
-            <div class="column is-2">
-              <label class="label">País Origem</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select id="id-pais-origem">
-                    <option value="br">Brasil (Brazil)</option>
-                    <option value="us">Estados Unidos (EUA)</option>
-                    <option value="gb">Reino Unido (Grã Bretanha)</option>
-                    <option value="gb-eng">Inglaterra</option>
-                    <option value="eu">Europa</option>
-                    <option value="jp">Japão</option>
-                    <option value="fr">França</option>
-                    <option value="de">Alemanha</option>
-                    <option value="it">Itália</option>
-                    <option value="at">Áustria</option>
-                    <option value="se">Suécia</option>
-                    <option value="ru">Rússia</option>
-                    <option value="ot">Outro</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-2">
-              <label class="label">País Fabr.</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select id="id-pais-fabricacao">
-                    <option value="br">Brasil (Brazil)</option>
-                    <option value="us">Estados Unidos (EUA)</option>
-                    <option value="gb">Reino Unido (Grã Bretanha)</option>
-                    <option value="gb-eng">Inglaterra</option>
-                    <option value="eu">Europa</option>
-                    <option value="jp">Japão</option>
-                    <option value="fr">França</option>
-                    <option value="de">Alemanha</option>
-                    <option value="it">Itália</option>
-                    <option value="at">Áustria</option>
-                    <option value="se">Suécia</option>
-                    <option value="ru">Rússia</option>
-                    <option value="ot">Outro</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!--Preço-->
-            <div class="column is-2">
+            <div class="column is-3">
               <label class="label">Preço (R$)</label>
               <input class="input" type="number" step="0.01" id="id-preco" required>
             </div>
+
+            <div class="column is-2">
+              <label class="label">Quantidade</label>
+              <input class="input" type="number" id="id-estoque" required>
+            </div>
+
+            <div class="column is-3">
+              <label class="label">Em Oferta?</label>
+              <div class="field is-grouped is-grouped-multiline" style="align-items: center;">
+                <input id="id-switch-desconto" type="checkbox" class="switch is-rounded is-info">
+                <label for="id-switch-desconto" class="has-text-grey ml-2">Não</label>
+              </div>
+            </div>
+
+            <div class="column is-4">
+              <div id="container-select-desconto" class="is-hidden">
+                <label class="label">Porcentagem</label>
+                <div class="control has-icons-left">
+                  <div class="select is-fullwidth is-info">
+                    <select id="id-desconto-valor"></select>
+                  </div>
+                  <span class="icon is-left"><i class="fas fa-percent"></i></span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="columns">
+          <div class="columns mt-4">
             <div class="column is-4">
-              <label class="label">Capa do Álbum</label>
+              <label class="label">Capa</label>
               <div class="file has-name is-fullwidth">
                 <label class="file-label">
                   <input class="file-input" type="file" id="id-arquivo-capa" accept="image/*">
                   <span class="file-cta">
                     <span class="file-icon"><i class="fas fa-upload"></i></span>
-                    <span class="file-label">Escolher capa...</span>
+                    <span class="file-label">Capa...</span>
                   </span>
-                  <span class="file-name has-text-grey" id="id-nome-arq-capa">Nenhum arquivo...</span>
+                  <span class="file-name" id="id-nome-arq-capa">Nenhum arquivo...</span>
                 </label>
               </div>
-
-              <!--Preview-->
-              <figure class="image mt-3" style="max-width: 200px;">
-                <img id="preview-capa" src="" style="display: none; border-radius: 8px;">
-              </figure>
             </div>
-
-            <!--Galeria-->
             <div class="column is-4">
-              <label class="label">Galeria de Fotos (Máx. 10)</label>
+              <label class="label">Galeria (Máx 10)</label>
               <div class="file has-name is-fullwidth">
                 <label class="file-label">
-                  <input class="file-input" type="file" id="id-arquivo-galeria" accept="image/*" multiple>
+                  <input class="file-input" type="file" id="id-arquivo-galeria" multiple>
                   <span class="file-cta">
                     <span class="file-icon"><i class="fas fa-images"></i></span>
-                    <span class="file-label">Escolher fotos...</span>
+                    <span class="file-label">Fotos...</span>
                   </span>
-                  <span class="file-name has-text-grey" id="id-nome-arq-galeria">0 fotos</span>
+                  <span class="file-name" id="id-nome-arq-galeria">0 fotos</span>
                 </label>
               </div>
             </div>
-
-                        <!--Gênero-->
-            <div class="column is-3">
-              <label class="label">Gênero / Estilo Musical</label>
+            <div class="column is-4">
+              <label class="label">Gênero / Estilo</label>
               <div class="field has-addons">
                 <div class="control is-expanded">
-                  <input class="input" type="text" id="id-input-estilo" placeholder="Ex: Rock, Jazz, MPB...">
+                  <input class="input" type="text" id="id-input-estilo" placeholder="Ex: Rock">
                 </div>
                 <div class="control">
-                  <button type="button" class="button is-info has-addons" id="btn-add-estilo">
+                  <button type="button" class="button is-info" id="btn-add-estilo">
                     <i class="fas fa-plus"></i>
                   </button>
                 </div>
               </div>
               <div id="container-estilos-adicionados" class="tags mt-2"></div>
             </div>
-
           </div>
 
           <div class="columns">
             <div class="column is-6">
               <label class="label">Músicas</label>
-              <textarea class="textarea has-fixed-size" id="id-musicas" rows="8" placeholder="Lado A:
-1. Música...
-2. Música...
-
-Lado B:
-1. Música..."></textarea>
+              <textarea class="textarea" id="id-musicas" rows="5"></textarea>
             </div>
-
-            <!--Resumo-->
             <div class="column is-6">
               <label class="label">Resumo</label>
-              <textarea class="textarea has-fixed-size" id="id-resumo" rows="8"
-                placeholder="Breve descrição do álbum..."></textarea>
+              <textarea class="textarea" id="id-resumo" rows="5"></textarea>
             </div>
           </div>
 
-          <div class="column is-12">
-            <label class="label">Selecione as Tags: </label>
-            <div id="tag-toggle-container" class="disco-tags">
-              <span class="tag is-clickable toggle-tag verde-tag" data-value="Bom estado">Bom estado</span>
-              <span class="tag is-clickable toggle-tag azul-claro-tag" data-value="Clássico">Clássico</span>
-              <span class="tag is-clickable toggle-tag importado-tag" data-value="Cult">Cult</span>
-              <span class="tag is-clickable toggle-tag destaque-tag" data-value="Destaque">Destaque</span>
-              <span class="tag is-clickable toggle-tag azul-claro-tag" data-value="Edição Limitada">Edição
-                Limitada</span>
-              <span class="tag is-clickable toggle-tag turquesa-tag" data-value="Excelente estado">Excelente
-                estado</span>
-              <span class="tag is-clickable toggle-tag importado-tag" data-value="Importado">Importado</span>
-              <span class="tag is-clickable toggle-tag prata-tag" data-value="Lacrado">Lacrado</span>
-              <span class="tag is-clickable toggle-tag verde-tag" data-value="Novo">Novo</span>
-              <span class="tag is-clickable toggle-tag oferta-tag" data-value="Oferta">Oferta</span>
-              <span class="tag is-clickable toggle-tag gold-tag" data-value="Raro">Raro</span>
-              <span class="tag is-clickable toggle-tag vermelho-tag" data-value="Remaster">Remaster</span>
+          <div class="columns">
+            <div class="column is-12">
+              <label class="label">Selecione as Tags: </label>
+              <div id="tag-toggle-container" class="disco-tags">
+                <span class="tag is-clickable toggle-tag verde-tag" data-value="Bom estado">Bom estado</span>
+                <span class="tag is-clickable toggle-tag azul-claro-tag" data-value="Clássico">Clássico</span>
+                <span class="tag is-clickable toggle-tag importado-tag" data-value="Cult">Cult</span>
+                <span class="tag is-clickable toggle-tag destaque-tag" data-value="Destaque">Destaque</span>
+                <span class="tag is-clickable toggle-tag azul-claro-tag" data-value="Edição Limitada">Edição
+                  Limitada</span>
+                <span class="tag is-clickable toggle-tag turquesa-tag" data-value="Excelente estado">Excelente
+                  estado</span>
+                <span class="tag is-clickable toggle-tag importado-tag" data-value="Importado">Importado</span>
+                <span class="tag is-clickable toggle-tag prata-tag" data-value="Lacrado">Lacrado</span>
+                <span class="tag is-clickable toggle-tag verde-tag" data-value="Novo">Novo</span>
+                <span class="tag is-clickable toggle-tag oferta-tag" data-value="Oferta">Oferta</span>
+                <span class="tag is-clickable toggle-tag gold-tag" data-value="Raro">Raro</span>
+                <span class="tag is-clickable toggle-tag vermelho-tag" data-value="Remaster">Remaster</span>
+              </div>
             </div>
           </div>
 
-          <!--Salvar-->
           <div class="has-text-centered mt-5">
             <div class="buttons is-centered">
-              <button type="submit" class="button is-link">
-                Salvar Disco
-              </button>
-
-              <!--Cancelar-->
-              <button type="button" class="button is-danger">
-                Cancelar
-              </button>
+              <button type="submit" class="button is-link is-medium">Salvar Disco</button>
+              <button type="button" class="button is-danger is-medium" id="btn-cancelar">Cancelar</button>
             </div>
           </div>
 
@@ -313,9 +262,9 @@ Lado B:
                 <th>Álbum</th>
                 <th>Artista</th>
                 <th>Preço</th>
-                <th>Desc%</th>
+                <th>Desc</th>
                 <th>Estoque</th>
-                <th>Editar</th>
+                <th>Detalhes</th>
               </tr>
             </thead>
 

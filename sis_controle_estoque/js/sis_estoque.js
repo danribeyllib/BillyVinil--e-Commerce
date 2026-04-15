@@ -22,15 +22,15 @@ document.getElementById("id-arquivo-galeria").onchange = function (e) {
     }
 };
 
-const nomesPaises = { 
-    "br": "Brasil", 
-    "us": "EUA", 
-    "gb": "Reino Unido", 
+const nomesPaises = {
+    "br": "Brasil",
+    "us": "EUA",
+    "gb": "Reino Unido",
     "gb-eng": "Inglaterra",
-    "eu": "Europa", 
-    "jp": "Japão", 
-    "fr": "França", 
-    "de": "Alemanha", 
+    "eu": "Europa",
+    "jp": "Japão",
+    "fr": "França",
+    "de": "Alemanha",
     "it": "Itália",
     "at": "Áustria",
     "se": "Suécia",
@@ -38,18 +38,25 @@ const nomesPaises = {
     "ot": "Outro"
 };
 
+// Variável global para controle de estilos no formulário //
+let listaEstilos = [];
+
 // Salvar o disco e enviar para o Express //
 document.getElementById("form-cadastro-completo").onsubmit = async function (e) {
     e.preventDefault();
 
     const formData = new FormData();
 
+    const isOferta = document.getElementById("id-switch-desconto").checked;
+    const porcentagemDesc = isOferta ? document.getElementById("id-desconto-valor").value : 0;
+
     // Pega valores pela id //
     formData.append("album", document.getElementById("id-album").value);
     formData.append("artista", document.getElementById("id-artista").value);
     formData.append("lancamento", document.getElementById("id-lancamento").value);
     formData.append("estoque", document.getElementById("id-estoque").value);
-    formData.append("desconto", document.getElementById("id-desconto").value);
+    formData.append("desconto", porcentagemDesc); // Valor numérico
+    formData.append("temDesconto", isOferta);     // Booleano true/false
     formData.append("peso", document.getElementById("id-peso").value);
     formData.append("qtdDiscos", document.getElementById("id-qtd-discos").value);
     formData.append("tipo", document.getElementById("id-tipo").value);
@@ -59,6 +66,8 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("edicao", document.getElementById("id-edicao").value);
     formData.append("musicas", document.getElementById("id-musicas").value);
     formData.append("resumo", document.getElementById("id-resumo").value);
+
+    formData.append("estilo", JSON.stringify(listaEstilos));
 
     // tags //
     const tagsAtivas = [];
@@ -70,10 +79,6 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     });
 
     formData.append("tags", JSON.stringify(tagsAtivas));
-
-    document.querySelectorAll(".toggle-tag").forEach(tag => {
-        tag.classList.remove("is-active", tag.getAttribute("data-class"));
-    });
 
     const arquivoCapa = document.getElementById("id-arquivo-capa").files[0];
     if (arquivoCapa) formData.append("capa", arquivoCapa);
@@ -93,9 +98,22 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
             exibirModal("sucesso", "Disco salvo com sucesso!");
 
             this.reset();
-
+            listaEstilos = [];
+            
+            const containerEstilos = document.getElementById("container-estilos-adicionados");
+            if (containerEstilos) containerEstilos.innerHTML = "";
+            
+            document.getElementById("container-select-desconto").classList.add("is-hidden");
             document.getElementById("id-nome-arq-capa").innerText = "Nenhum arquivo...";
             document.getElementById("id-nome-arq-galeria").innerText = "0 fotos";
+
+            const labelSwitch = document.querySelector('label[for="id-switch-desconto"]');
+            if (labelSwitch) labelSwitch.innerText = "Não";
+
+
+            document.querySelectorAll(".toggle-tag").forEach(tag => {
+                tag.classList.remove("is-active", tag.getAttribute("data-class"));
+            });
 
             carregarTabela();
         } else {
@@ -153,6 +171,52 @@ async function excluirDiscos(id) {
     }
 }
 
+// Preparar edição de dados //
+async function prepararEdicao(id) {
+    try {
+        const resposta = await fetch(`${API_URL}/${id}`);
+        const disco = await resposta.json();
+
+        const containerForm = document.getElementById("container-formulario");
+        if (containerForm.classList.contains("is-hidden")) {
+            document.getElementById("btn-abrir-formulario").click();
+        }
+
+        document.getElementById("id-album").value = disco.album;
+        document.getElementById("id-artista").value = disco.artista;
+        document.getElementById("id-lancamento").value = disco.lancamento;
+        document.getElementById("id-estoque").value = disco.estoque;
+        document.getElementById("id-preco").value = disco.preco;
+        document.getElementById("id-edicao").value = disco.edicao;
+        document.getElementById("id-weight").value = disco.peso; // nota: verifique se id-weight ou id-peso
+        document.getElementById("id-tipo").value = disco.tipo;
+        document.getElementById("id-pais-origem").value = disco.paisOrigem;
+        document.getElementById("id-pais-fabricacao").value = disco.paisFab;
+        document.getElementById("id-musicas").value = disco.musicas;
+        document.getElementById("id-resumo").value = disco.resumo;
+
+        const switchEdicao = document.getElementById("id-switch-desconto");
+        const containerEdicao = document.getElementById("container-select-desconto");
+        const labelSwitch = document.querySelector('label[for="id-switch-desconto"]');
+        const temDesc = disco.temDesconto === true || disco.temDesconto === "true";
+
+        switchEdicao.checked = temDesc;
+        if (labelSwitch) labelSwitch.innerText = temDesc ? "Sim" : "Não";
+
+        if (temDesc) {
+            containerEdicao.classList.remove("is-hidden");
+            document.getElementById("id-desconto-valor").value = disco.desconto;
+        } else {
+            containerEdicao.classList.add("is-hidden");
+        }
+
+        containerForm.scrollIntoView({ behavior: 'smooth' });
+        exibirModal("aviso", "Dados carregados para edição.");
+    } catch (erro) {
+        exibirModal("erro", "Erro ao carregar dados.");
+    }
+}
+
 // Carregar tabela JSON //
 async function carregarTabela() {
     try {
@@ -165,23 +229,24 @@ async function carregarTabela() {
 
         discos.forEach(disco => {
             const detalheId = `detalhe-${disco.id}`;
-            
-            const tagsHtml = disco.tags ? disco.tags.map(t => 
+
+            const pDesconto = disco.percentualDesconto || 0;
+            const descontoTabela = pDesconto > 0 ? `${pDesconto}%` : "Não";
+
+            const tagsHtml = disco.tags ? disco.tags.map(t =>
                 `<span class="tag is-small ${t.classe || t.cor}">${t.nome}</span>`
             ).join(" ") : "";
 
             const linhaPrincipal = `
-                <tr onclick="toggleDetalhes('${detalheId}', this)" class="linha-disco has-text-white">
+                <tr onclick="toggleDetalhes('${detalheId}', this)" class="linha-disco has-text-white" style="cursor: pointer;">
                     <td>${disco.id}</td>
                     <td><strong>${disco.album}</strong></td>
                     <td>${disco.artista}</td>
                     <td>R$ ${parseFloat(disco.preco).toFixed(2)}</td>
-                    <td>${disco.desconto}%</td>
+                    <td>${descontoTabela}</td>
                     <td>${disco.estoque}</td>
-                    <td>
-                        <button class="button is-small is-danger" onclick="event.stopPropagation(); excluirDisco('${disco.id}')">
-                            <i class="fas fa-trash"></i>
-                        </button>
+                    <td class="has-text-centered">
+                        <i class="fas fa-chevron-down is-size-7"></i>
                     </td>
                 </tr>
                 <tr id="${detalheId}" class="is-hidden has-background-dark">
@@ -198,7 +263,18 @@ async function carregarTabela() {
                                     <p class="mb-1 has-text-info"><strong>Origem:</strong> ${nomePais(disco.paisOrigem || disco.pais)} | <strong>Fabricação:</strong> ${nomePais(disco.paisFab)}</p>
                                     <p class="mb-2 has-text-info"><strong>Estilos:</strong> ${Array.isArray(disco.estilo) ? disco.estilo.join(", ") : (disco.estilo || "-")}</p>
                                     <hr class="divisor-detalhe">
-                                    <p><strong>Resumo:</strong><br><span class="texto-resumo">${disco.resumo || "Sem descrição."}</span></p>
+                                    <p><strong>Resumo:</strong><br><span class="texto-resumo">${Array.isArray(disco.resumo) ? disco.resumo[0] : (disco.resumo || "Sem descrição.")}</span></p>
+                                    
+                                    <div class="buttons mt-4">
+                                        <button class="button is-link is-small" onclick="prepararEdicao('${disco.id}')">
+                                            <span class="icon"><i class="fas fa-edit"></i></span>
+                                            <span>Editar Dados</span>
+                                        </button>
+                                        <button class="button is-danger is-small" onclick="excluirDisco('${disco.id}')">
+                                            <span class="icon"><i class="fas fa-trash"></i></span>
+                                            <span>Excluir Disco</span>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="column is-6">
                                     <p class="has-text-weight-bold is-size-6 mb-2">Lista de Faixas</p>
@@ -218,18 +294,65 @@ async function carregarTabela() {
     }
 }
 
+async function prepararEdicao(id) {
+    try {
+        const resposta = await fetch(`${API_URL}/${id}`);
+        const disco = await resposta.json();
+
+        const containerForm = document.getElementById("container-formulario");
+        if (containerForm.classList.contains("is-hidden")) {
+            document.getElementById("btn-abrir-formulario").click();
+        }
+
+        document.getElementById("id-album").value = disco.album;
+        document.getElementById("id-artista").value = disco.artista;
+        document.getElementById("id-lancamento").value = disco.lancamento;
+        document.getElementById("id-estoque").value = disco.estoque;
+        document.getElementById("id-preco").value = disco.preco;
+        document.getElementById("id-edicao").value = disco.edicao;
+        document.getElementById("id-peso").value = disco.peso; 
+        document.getElementById("id-tipo").value = disco.tipo;
+        document.getElementById("id-pais-origem").value = disco.paisOrigem || disco.pais;
+        document.getElementById("id-pais-fabricacao").value = disco.paisFab;
+        document.getElementById("id-musicas").value = typeof disco.musicas === 'string' ? disco.musicas : JSON.stringify(disco.musicas);
+        document.getElementById("id-resumo").value = Array.isArray(disco.resumo) ? disco.resumo[0] : disco.resumo;
+
+
+        const switchEdicao = document.getElementById("id-switch-desconto");
+        const containerEdicao = document.getElementById("container-select-desconto");
+        const labelSwitch = document.querySelector('label[for="id-switch-desconto"]');
+        
+        const temDesc = disco.oferta === true || disco.oferta === "true";
+
+        switchEdicao.checked = temDesc;
+        if (labelSwitch) labelSwitch.innerText = temDesc ? "Sim" : "Não";
+
+        if (temDesc) {
+            containerEdicao.classList.remove("is-hidden");
+            document.getElementById("id-desconto-valor").value = disco.percentualDesconto;
+        } else {
+            containerEdicao.classList.add("is-hidden");
+        }
+
+        containerForm.scrollIntoView({ behavior: 'smooth' });
+        exibirModal("aviso", "Dados carregados para edição.");
+    } catch (erro) {
+        exibirModal("erro", "Erro ao carregar dados.");
+    }
+}
+
 // Aplicar ccor de seleção //
 function toggleDetalhes(id, linha) {
     const elemento = document.getElementById(id);
     if (!elemento) return;
-    
+
     elemento.classList.toggle("is-hidden");
     if (linha) {
         linha.classList.toggle("is-selected");
     }
 }
 
-// Gerar tracklist por Lado //
+// Gerar lista de faixas por Lado //
 function gerarTracklist(musicas) {
     if (!musicas || musicas.length === 0) return "Nenhuma música cadastrada.";
     if (typeof musicas === 'string') return musicas.replace(/\n/g, '<br>');
@@ -255,7 +378,7 @@ function gerarTracklist(musicas) {
     `).join("");
 }
 
-//códigos de país //
+// códigos de país //
 function nomePais(codigo) {
     if (!codigo) return "-";
     return nomesPaises[codigo.toLowerCase()] || codigo;
@@ -315,48 +438,80 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnAbrir = document.getElementById("btn-abrir-formulario");
     const btnCancelar = document.getElementById("btn-cancelar");
     const containerForm = document.getElementById("container-formulario");
-    const formCadastro = document.getElementById("form-cadastro-completo");
 
     const inputEstilo = document.getElementById("id-input-estilo");
-const btnAddEstilo = document.getElementById("btn-add-estilo");
-const containerEstilos = document.getElementById("container-estilos-adicionados");
-let listaEstilos = [];
+    const btnAddEstilo = document.getElementById("btn-add-estilo");
+    const containerEstilos = document.getElementById("container-estilos-adicionados");
 
-// Função para renderizar as tags na tela
-function renderizarEstilos() {
-    containerEstilos.innerHTML = "";
-    listaEstilos.forEach((estilo, index) => {
-        containerEstilos.innerHTML += `
+    const switchDesconto = document.getElementById("id-switch-desconto");
+    const containerSelect = document.getElementById("container-select-desconto");
+    const selectDesconto = document.getElementById("id-desconto-valor");
+    const labelSwitch = document.querySelector('label[for="id-switch-desconto"]');
+
+    if (selectDesconto) {
+        for (let i = 5; i <= 70; i += 5) {
+            let opt = document.createElement("option");
+            opt.value = i;
+            opt.innerHTML = `${i}%`;
+            selectDesconto.appendChild(opt);
+        }
+    }
+
+    // Toggle (switch) //
+    if (switchDesconto) {
+        switchDesconto.addEventListener("change", function() {
+            if (this.checked) {
+                containerSelect.classList.remove("is-hidden");
+                if (labelSwitch) labelSwitch.innerText = "Sim";
+            } else {
+                containerSelect.classList.add("is-hidden");
+                if (labelSwitch) labelSwitch.innerText = "Não";
+            }
+        });
+    }
+
+    // Renderizar as tags //
+    const renderizarEstilos = () => {
+        if (!containerEstilos) return;
+        containerEstilos.innerHTML = "";
+        listaEstilos.forEach((estilo, index) => {
+            containerEstilos.innerHTML += `
             <span class="tag is-dark">
                 ${estilo}
                 <button type="button" class="delete is-small" onclick="removerEstilo(${index})"></button>
             </span>
         `;
-    });
-}
+        });
+    }
 
-// Função para adicionar estilo
-const adicionarEstilo = () => {
-    const valor = inputEstilo.value.trim();
-    if (valor && !listaEstilos.includes(valor)) {
-        listaEstilos.push(valor);
-        inputEstilo.value = "";
+    const adicionarEstilo = () => {
+        let valor = inputEstilo.value.trim();
+        if (valor) {
+
+            valor = valor.charAt(0).toUpperCase() + valor.slice(1).toLowerCase();
+            
+            if (!listaEstilos.includes(valor)) {
+                listaEstilos.push(valor);
+                inputEstilo.value = "";
+                renderizarEstilos();
+            }
+        }
+    };
+
+    if (btnAddEstilo) btnAddEstilo.addEventListener("click", adicionarEstilo);
+    if (inputEstilo) {
+        inputEstilo.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                adicionarEstilo();
+            }
+        });
+    }
+
+    window.removerEstilo = (index) => {
+        listaEstilos.splice(index, 1);
         renderizarEstilos();
-    }
-};
-
-btnAddEstilo.addEventListener("click", adicionarEstilo);
-inputEstilo.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-        e.preventDefault();
-        adicionarEstilo();
-    }
-});
-
-window.removerEstilo = (index) => {
-    listaEstilos.splice(index, 1);
-    renderizarEstilos();
-};
+    };
 
     // Toggle Formulário //
     if (btnAbrir && containerForm) {

@@ -1,7 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
 .section-fundo-estoque {
-    background: rgba(1, 1, 1, 0.252);
+    background: rgba(1, 1, 1, 0.381);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.3px);
     -webkit-backdrop-filter: blur(9.3px);
@@ -241,4 +241,46 @@ display: block !important;
 
 .linha-disco {
     transition: background-color 0.3s ease;
+}
+
+/* Switch */
+.field .switch {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 2.8rem;
+  height: 1.5rem;
+  background-color: #4a4a4a;
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.field .switch::before {
+  content: "";
+  position: absolute;
+  top: 0.15rem;
+  left: 0.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.field .switch:checked {
+    background-color: #209cee; /* Cor is-info do Bulma */
+}
+
+.field .switch:checked::before {
+  transform: translateX(1.2rem);
+}
+
+.field {
+    display: flex;
+    align-items: center;
 }
