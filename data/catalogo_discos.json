@@ -1,95 +1,99 @@
 [
+  {
+    "album": "Dark Side of the Moon",
+    "artista": "Pink Floyd",
+    "lancamento": "1973",
+    "estoque": "1",
+    "desconto": "0",
+    "temDesconto": "false",
+    "peso": "180g",
+    "qtdDiscos": "",
+    "tipo": "LP 12\"",
+    "paisOrigem": "gb",
+    "paisFab": "br",
+    "preco": "279.9",
+    "edicao": "1985",
+    "resumo": [
+      "Lançado em 1973, é um marco do rock Progressivo e um dos discos mais vendidos da história. Explora temas complexos como o tempo, a ganância, o conflito e a saúde mental através de uma produção sonora inovadora para a época, com uso pioneiro de sintetizadores e efeitos de estúdio."],
+    "musicas": [
       {
-        "id": 1774493496956,
-        "album": "Dark Side of the Moon",
-        "artista": "Pink Floyd",
-        "lancamento": 1973,
-        "edicao": 1985,
-        "peso": "180g",
-        "tipo": "LP 12\"",
-        "musicas": [
-            {
-                "lado": "A",
-                "faixa": 1,
-                "nome": "Speak to Me"
-            },
-            {
-                "lado": "A",
-                "faixa": 2,
-                "nome": "Breathe (In the Air)"
-            },
-            {
-                "lado": "A",
-                "faixa": 3,
-                "nome": "On the Run"
-            },
-            {
-                "lado": "A",
-                "faixa": 4,
-                "nome": "Time"
-            },
-            {
-                "lado": "A",
-                "faixa": 5,
-                "nome": "The Great Gig in the Sky"
-            },
-            {
-                "lado": "B",
-                "faixa": 1,
-                "nome": "Money"
-            },
-            {
-                "lado": "B",
-                "faixa": 2,
-                "nome": "Us and Them"
-            },
-            {
-                "lado": "B",
-                "faixa": 3,
-                "nome": "Any Colour You Like"
-            },
-            {
-                "lado": "B",
-                "faixa": 4,
-                "nome": "Brain Damage"
-            },
-            {
-                "lado": "B",
-                "faixa": 5,
-                "nome": "Eclipse"
-            }
-        ],
-        "pais": "gb",
-        "paisFab": "br",
-        "preco": 279.90,
-        "estilo": [
-            "Rock Internacional",
-            "Rock Psicodélico",
-            "Rock Progressivo"
-        ],
-        "resumo": [
-            "Lançado em 1973, é um marco do rock Progressivo e um dos discos mais vendidos da história. Explora temas complexos como o tempo, a ganância, o conflito e a saúde mental através de uma produção sonora inovadora para a época, com uso pioneiro de sintetizadores e efeitos de estúdio."
-        ],
-        "galeria": [
-            "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (1).jpeg",
-            "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (2).jpeg",
-            "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (3).jpeg"
-        ],
-        "capa": "../imagens/capas/pink_floyd_dark_side_of_the_moon.jpg",
-        "tags": [
-            {
-                "nome": "Raro",
-                "cor": "gold-tag"
-            },
-            {
-                "nome": "Destaque",
-                "cor": "destaque-tag"
-            }
-        ],
-        "estoque": 1,
-        "oferta": false,
-        "percentualDesconto": 0
-    },
+        "lado": "A",
+        "faixa": 1,
+        "nome": "Speak to Me"
+      },
+      {
+        "lado": "A",
+        "faixa": 2,
+        "nome": "Breathe (In the Air)"
+      },
+      {
+        "lado": "A",
+        "faixa": 3,
+        "nome": "On the Run"
+      },
+      {
+        "lado": "A",
+        "faixa": 4,
+        "nome": "Time"
+      },
+      {
+        "lado": "A",
+        "faixa": 5,
+        "nome": "The Great Gig in the Sky"
+      },
+      {
+        "lado": "B",
+        "faixa": 1,
+        "nome": "Money"
+      },
+      {
+        "lado": "B",
+        "faixa": 2,
+        "nome": "Us and Them"
+      },
+      {
+        "lado": "B",
+        "faixa": 3,
+        "nome": "Any Colour You Like"
+      },
+      {
+        "lado": "B",
+        "faixa": 4,
+        "nome": "Brain Damage"
+      },
+      {
+        "lado": "B",
+        "faixa": 5,
+        "nome": "Eclipse"
+      }
+    ],
+    "estilo": [
+      "Rock Internacional",
+      "Rock Psicodélico",
+      "Rock Progressivo"
+    ],
+    "tags": [
+      {
+        "nome": "Cult",
+        "classe": null
+      },
+      {
+        "nome": "Destaque",
+        "classe": null
+      },
+      {
+        "nome": "Raro",
+        "classe": null
+      }
+    ],
+    "id": "1774493496956",
+    "capa": "../imagens/capas/pink_floyd_dark_side_of_the_moon.jpg",
+    "galeria": [
+      "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (1).jpeg",
+      "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (2).jpeg",
+      "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (3).jpeg"
+    ]
+  },
   {
     "id": 1774493496957,
     "album": "A Night To Remember",

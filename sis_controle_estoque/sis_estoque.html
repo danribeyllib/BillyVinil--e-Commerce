@@ -53,30 +53,39 @@
       <div id="container-formulario" class="is-hidden">
         <form id="form-cadastro-completo" class="box">
 
+          <!--Álbum-->
           <div class="columns is-multiline">
             <div class="column is-4">
               <label class="label">Álbum</label>
               <input class="input" type="text" id="id-album" required>
             </div>
+
+            <!--Artista-->
             <div class="column is-4">
               <label class="label">Artista</label>
               <input class="input" type="text" id="id-artista" required>
             </div>
+
+            <!--Lan-->
             <div class="column is-2">
               <label class="label">Ano Lançamento</label>
               <input class="input" type="number" id="id-lancamento">
             </div>
+
+            <!--Edição-->
             <div class="column is-2">
               <label class="label">Ano Edição</label>
               <input class="input" type="number" id="id-edicao">
             </div>
           </div>
 
+          <!--Formato-->
           <div class="columns is-multiline">
             <div class="column is-2">
               <label class="label">Tamanho / Formato</label>
               <div class="select is-fullwidth">
                 <select id="id-tipo">
+                  <option value="" disabled selected>Selecione</option>
                   <option value='LP 12"'>LP 12"</option>
                   <option value='Single 7"'>Single 7"</option>
                   <option value='Compacto 7"'>Compacto 7"</option>
@@ -85,10 +94,13 @@
                 </select>
               </div>
             </div>
+
+            <!--Qdt-->
             <div class="column is-2">
               <label class="label">Qtd Discos</label>
               <div class="select is-fullwidth">
                 <select id="id-qtd-discos">
+                  <option value="" disabled selected>Selecione</option>
                   <option value="Simples">Simples</option>
                   <option value="Duplo">Duplo</option>
                   <option value="Triplo">Triplo</option>
@@ -96,36 +108,73 @@
                 </select>
               </div>
             </div>
+
+            <!--Peso-->
             <div class="column is-2">
               <label class="label">Peso</label>
               <div class="select is-fullwidth">
                 <select id="id-peso">
+                  <option value="" disabled selected>Selecione</option>
                   <option value="120g">120g</option>
-                  <option value="180g" selected>180g</option>
+                  <option value="180g">180g</option>
                   <option value="200g">200g</option>
                 </select>
               </div>
             </div>
+
+            <!--Origem-->
             <div class="column is-3">
               <label class="label">País Origem</label>
               <div class="select is-fullwidth">
                 <select id="id-pais-origem">
+                  <option value="" disabled selected>Selecione</option>
                   <option value="br">Brasil</option>
                   <option value="us">EUA</option>
                   <option value="gb">Reino Unido</option>
+                  <option value="gb-eng">Inglaterra</option>
+                  <option value="eu">Europa</option>
                   <option value="jp">Japão</option>
+                  <option value="fr">França</option>
+                  <option value="de">Alemanha</option>
+                  <option value="it">Itália</option>
+                  <option value="at">Áustria</option>
+                  <option value="se">Suécia</option>
+                  <option value="ru">Rússia</option>
+                  <option value="nl">Holanda</option>
+                  <option value="ca">Canadá</option>
+                  <option value="au">Austrália</option>
+                  <option value="ar">Argentina</option>
+                  <option value="cl">Chile</option>
+                  <option value="uy">Uruguai</option>
                   <option value="ot">Outro</option>
                 </select>
               </div>
             </div>
+
+            <!--Fab-->
             <div class="column is-3">
               <label class="label">País Fabr.</label>
               <div class="select is-fullwidth">
                 <select id="id-pais-fabricacao">
+                  <option value="" disabled selected>Selecione</option>
                   <option value="br">Brasil</option>
                   <option value="us">EUA</option>
                   <option value="gb">Reino Unido</option>
+                  <option value="gb-eng">Inglaterra</option>
+                  <option value="eu">Europa</option>
                   <option value="jp">Japão</option>
+                  <option value="fr">França</option>
+                  <option value="de">Alemanha</option>
+                  <option value="it">Itália</option>
+                  <option value="at">Áustria</option>
+                  <option value="se">Suécia</option>
+                  <option value="ru">Rússia</option>
+                  <option value="nl">Holanda</option>
+                  <option value="ca">Canadá</option>
+                  <option value="au">Austrália</option>
+                  <option value="ar">Argentina</option>
+                  <option value="cl">Chile</option>
+                  <option value="uy">Uruguai</option>
                   <option value="ot">Outro</option>
                 </select>
               </div>
@@ -134,16 +183,19 @@
 
           <div class="columns is-vcentered">
 
+            <!--Preço-->
             <div class="column is-3">
               <label class="label">Preço (R$)</label>
               <input class="input" type="number" step="0.01" id="id-preco" required>
             </div>
 
+            <!--Quantidade-->
             <div class="column is-2">
               <label class="label">Quantidade</label>
               <input class="input" type="number" id="id-estoque" required>
             </div>
 
+            <!--Desconto-->
             <div class="column is-3">
               <label class="label">Em Oferta?</label>
               <div class="field is-grouped is-grouped-multiline" style="align-items: center;">
@@ -152,6 +204,7 @@
               </div>
             </div>
 
+            <!--%-->
             <div class="column is-4">
               <div id="container-select-desconto" class="is-hidden">
                 <label class="label">Porcentagem</label>
@@ -165,6 +218,7 @@
             </div>
           </div>
 
+          <!--Capa-->
           <div class="columns mt-4">
             <div class="column is-4">
               <label class="label">Capa</label>
@@ -179,6 +233,8 @@
                 </label>
               </div>
             </div>
+
+            <!--Galeria-->
             <div class="column is-4">
               <label class="label">Galeria (Máx 10)</label>
               <div class="file has-name is-fullwidth">
@@ -192,6 +248,8 @@
                 </label>
               </div>
             </div>
+
+            <!--Gênero-->
             <div class="column is-4">
               <label class="label">Gênero / Estilo</label>
               <div class="field has-addons">
@@ -208,18 +266,25 @@
             </div>
           </div>
 
+          <!--Faixas-->
           <div class="columns">
-            <div class="column is-6">
-              <label class="label">Músicas</label>
-              <textarea class="textarea" id="id-musicas" rows="5"></textarea>
-            </div>
-            <div class="column is-6">
-              <label class="label">Resumo</label>
-              <textarea class="textarea" id="id-resumo" rows="5"></textarea>
+            <div class="field mt-4">
+              <label class="label">Lista de Faixas (Músicas)</label>
+              <div id="container-lados-dinamicos">
+              </div>
+
+              <div class="control mt-3">
+                <button type="button" class="ml-2 button is-info" id="btn-add-lado">
+                  <span class="icon"><i class="fas fa-plus-circle"></i></span>
+                  <span>Adicionar Lado (A, B, C...)</span>
+                </button>
+              </div>
             </div>
           </div>
 
           <div class="columns">
+
+            <!--Tags-->
             <div class="column is-12">
               <label class="label">Selecione as Tags: </label>
               <div id="tag-toggle-container" class="disco-tags">
@@ -240,6 +305,18 @@
               </div>
             </div>
           </div>
+
+            <!--Resumo-->
+            <div class="columns">
+              <div class="column is-12">
+                <label class="label">Resumo / Descrição do Álbum</label>
+                <div class="control">
+                  <textarea class="textarea" id="id-resumo"
+                    placeholder="Escreva um breve resumo sobre o álbum, estado de conservação, etc..."
+                    rows="3"></textarea>
+                </div>
+              </div>
+            </div>
 
           <div class="has-text-centered mt-5">
             <div class="buttons is-centered">
