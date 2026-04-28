@@ -83,12 +83,21 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("musicas", JSON.stringify(musicasData));
     formData.append("estilo", JSON.stringify(listaEstilos));
 
+    // Tags
     const tagsAtivas = [];
-    document.querySelectorAll(".toggle-tag.is-active").forEach(tag => {
-        tagsAtivas.push({
-            nome: tag.getAttribute("data-value"),
-            classe: tag.getAttribute("data-class")
+
+    document.querySelectorAll(".toggle-tag").forEach(tag => {
+
+        const classeCor = tag.getAttribute("data-class");
+
+        if (classeCor) {
+            tag.classList.add(classeCor);
+        }
+
+        tag.addEventListener("click", () => {
+            tag.classList.toggle("is-active");
         });
+
     });
     formData.append("tags", JSON.stringify(tagsAtivas));
 
@@ -128,7 +137,7 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
 
             document.querySelectorAll(".toggle-tag").forEach(tag => {
                 tag.classList.remove("is-active");
-                const classeCor = tag.getAttribute("data-class");
+                const classeCor = tag.getAttribute("data-class") || Array.from(tag.classList).find(c => c.endsWith("-tag"));
                 if (classeCor) tag.classList.remove(classeCor);
             });
 
@@ -145,7 +154,6 @@ async function excluirDisco(id) {
     confirmarExclusao(id);
 }
 
-// Confirmar exclusão
 function confirmarExclusao(id) {
     const container = document.getElementById("id-container-modais");
     container.innerHTML = `
@@ -179,11 +187,10 @@ async function excluirDiscos(id) {
             carregarTabela();
         }
     } catch (erro) {
-        exibirModal("erro", "Erro ao tentar excluir o item.");
+        exibirModal("erro", "Erro ao tentar excluir the item.");
     }
 }
 
-// carregar a tabela //
 async function carregarTabela() {
     try {
         const resposta = await fetch(API_URL);
@@ -198,7 +205,6 @@ async function carregarTabela() {
             const pDesconto = disco.desconto || 0;
             const descontoTabela = pDesconto > 0 ? `${pDesconto}%` : "Não";
 
-            // Cores tags //
             let tagsArray = [];
             if (disco.tags) {
                 try {
@@ -208,7 +214,6 @@ async function carregarTabela() {
 
             const tagsHtml = tagsArray.map(t => {
                 let classeCor = t.classe || "";
-
                 if (!classeCor) {
                     const mapaCores = {
                         "Bom Estado": "verde-tag",
@@ -216,7 +221,7 @@ async function carregarTabela() {
                         "Cult": "importado-tag",
                         "Destaque": "destaque-tag",
                         "Edição Limitada": "azul-claro-tag",
-                        "Excelente estado": "turquesa-tag",
+                        "Excelente Estado": "turquesa-tag",
                         "Importado": "importado-tag",
                         "Lacrado": "prata-tag",
                         "Novo": "verde-tag",
@@ -224,7 +229,7 @@ async function carregarTabela() {
                         "Raro": "gold-tag",
                         "Remaster": "vermelho-tag"
                     };
-                    classeCor = mapaCores[t.nome];
+                    classeCor = mapaCores[t.nome] || "";
                 }
                 return `<span class="tag is-small ${classeCor}">${t.nome}</span>`;
             }).join(" ");
@@ -340,18 +345,28 @@ async function prepararEdicao(id) {
         listaEstilos = Array.isArray(disco.estilo) ? disco.estilo : [];
         renderizarEstilosVisual();
 
+
+        let tagsSalvas = [];
+        if (disco.tags) {
+            try {
+                tagsSalvas = typeof disco.tags === 'string' ? JSON.parse(disco.tags) : disco.tags;
+            } catch (e) { tagsSalvas = []; }
+        }
+
         document.querySelectorAll(".toggle-tag").forEach(tag => {
             const valorTag = tag.getAttribute("data-value");
             const classeCor = tag.getAttribute("data-class");
-            let tagsSalvas = [];
-            if (disco.tags) {
-                try { tagsSalvas = typeof disco.tags === 'string' ? JSON.parse(disco.tags) : disco.tags; }
-                catch (e) { tagsSalvas = []; }
-            }
-            const ativa = tagsSalvas.some(t => t.nome === valorTag);
-            tag.classList.toggle("is-active", ativa);
-            if (classeCor) {
-                if (ativa) tag.classList.add(classeCor); else tag.classList.remove(classeCor);
+
+            const tagNoBanco = tagsSalvas.find(t => t.nome === valorTag);
+
+            tag.classList.remove("is-active");
+            if (classeCor) tag.classList.remove(classeCor);
+
+            if (tagNoBanco) {
+                tag.classList.add("is-active");
+                if (classeCor) {
+                    tag.classList.add(classeCor);
+                }
             }
         });
 
@@ -373,7 +388,9 @@ async function prepararEdicao(id) {
         }
 
         if (containerForm) containerForm.scrollIntoView({ behavior: 'smooth' });
-    } catch (erro) { console.error("Erro na edição:", erro); }
+    } catch (erro) {
+        console.error("Erro na edição:", erro);
+    }
 }
 
 function toggleDetalhes(id, linha) {
@@ -515,17 +532,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.querySelectorAll(".toggle-tag").forEach(tag => {
+
+        const classeCor = tag.getAttribute("data-class");
+
+        if (classeCor) {
+            tag.classList.add(classeCor);
+        }
+
         tag.addEventListener("click", () => {
             tag.classList.toggle("is-active");
-            const classeCor = tag.getAttribute("data-class");
-            if (tag.classList.contains("is-active")) {
-                if (classeCor) tag.classList.add(classeCor);
-            } else {
-                if (classeCor) tag.classList.remove(classeCor);
-            }
         });
-    });
 
+    });
     carregarTabela();
 });
 

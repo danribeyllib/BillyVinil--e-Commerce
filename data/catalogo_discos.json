@@ -13,8 +13,7 @@
     "paisFab": "br",
     "preco": "279.9",
     "edicao": "1985",
-    "resumo": [
-      "Lançado em 1973, é um marco do rock Progressivo e um dos discos mais vendidos da história. Explora temas complexos como o tempo, a ganância, o conflito e a saúde mental através de uma produção sonora inovadora para a época, com uso pioneiro de sintetizadores e efeitos de estúdio."],
+    "resumo": "Lançado em 1973, é um marco do rock Progressivo e um dos discos mais vendidos da história. Explora temas complexos como o tempo, a ganância, o conflito e a saúde mental através de uma produção sonora inovadora para a época, com uso pioneiro de sintetizadores e efeitos de estúdio.",
     "musicas": [
       {
         "lado": "A",
@@ -75,15 +74,15 @@
     "tags": [
       {
         "nome": "Cult",
-        "classe": null
+        "classe": "importado-tag"
       },
       {
         "nome": "Destaque",
-        "classe": null
+        "classe": "destaque-tag"
       },
       {
         "nome": "Raro",
-        "classe": null
+        "classe": "gold-tag"
       }
     ],
     "id": "1774493496956",
