@@ -7,14 +7,15 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
-// Configurações básicas
+// Configurações
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname)));
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// Logs
+app.use(express.static(path.join(__dirname)));
+app.use("/imagens", express.static(path.join(__dirname, "imagens")));
+
 app.use((req, res, next) => {
     console.log(`[${new Date().toLocaleTimeString()}] ${req.method} ${req.url}`);
     next();
@@ -22,21 +23,14 @@ app.use((req, res, next) => {
 
 const caminhoArquivo = path.join(__dirname, "data", "catalogo_discos.json");
 
-// Configuração do Multer
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        const dir = "./uploads";
-        if (!fs.existsSync(dir)) fs.mkdirSync(dir);
-        cb(null, dir);
-    },
+// Funções auxiliares
 
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + "-" + file.originalname);
-    }
-});
-
-const upload = multer({ storage });
-
+function limparNome(nome) {
+    return nome
+        .trim()
+        .replace(/[<>:"/\\|?*]+/g, "")
+        .replace(/\s+/g, "_");
+}
 
 function lerBanco() {
     if (!fs.existsSync(caminhoArquivo)) return [];
@@ -66,51 +60,105 @@ function paraArrayJSON(valor) {
     }
 }
 
+function caminhoPublico(caminhoArquivo) {
+    return caminhoArquivo
+        .replace(__dirname, "")
+        .replace(/\\/g, "/");
+}
+
+// Upload imagens
+
+const storage = multer.diskStorage({
+
+    destination: (req, file, cb) => {
+
+        const album = limparNome(req.body.album || "sem_album");
+
+        let pastaDestino;
+
+        if (file.fieldname === "capa") {
+            pastaDestino = path.join(__dirname, "imagens", "capas");
+        } else {
+            pastaDestino = path.join(__dirname, "imagens", "galeria", album);
+        }
+
+        fs.mkdirSync(pastaDestino, { recursive: true });
+
+        cb(null, pastaDestino);
+    },
+
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
+
+const upload = multer({ storage });
+
+// Tags
+
+const mapaTags = {
+    "Bom Estado": "verde-tag",
+    "Clássico": "azul-claro-tag",
+    "Cult": "importado-tag",
+    "Destaque": "destaque-tag",
+    "Edição Limitada": "azul-claro-tag",
+    "Excelente Estado": "turquesa-tag",
+    "Importado": "importado-tag",
+    "Lacrado": "prata-tag",
+    "Novo": "verde-tag",
+    "Oferta": "oferta-tag",
+    "Raro": "gold-tag",
+    "Remaster": "vermelho-tag"
+};
+
+// Montar disco
+
 function montarDisco(req, id, antigo = {}) {
+
     return {
         id: id,
 
         album: req.body.album || "",
         artista: req.body.artista || "",
 
-        preco: paraNumero(req.body.preco),
-        estoque: paraNumero(req.body.estoque),
         lancamento: paraNumero(req.body.lancamento),
-        desconto: paraNumero(req.body.desconto),
-
-        temDesconto: paraBoolean(req.body.temDesconto),
+        edicao: req.body.edicao || "",
 
         peso: req.body.peso || "",
-        qtdDiscos: req.body.qtdDiscos || "",
         tipo: req.body.tipo || "",
 
-        paisOrigem: req.body.paisOrigem || "",
-        paisFab: req.body.paisFab || "",
-
-        edicao: req.body.edicao || "",
-        resumo: req.body.resumo || "",
-
         musicas: paraArrayJSON(req.body.musicas),
+
+        pais: req.body.pais || antigo.pais || "",
+        paisFab: req.body.paisFab || antigo.paisFab || "",
+
+        preco: paraNumero(req.body.preco),
+
         estilo: paraArrayJSON(req.body.estilo),
 
-        tags: paraArrayJSON(req.body.tags)
-            .filter(tag => tag.nome)
-            .map(tag => ({
-                nome: tag.nome,
-                classe: mapaTags[tag.nome] || ""
-            })),
+        resumo: [req.body.resumo || ""],
 
         capa: req.files?.capa
-            ? req.files.capa[0].path.replace(/\\/g, "/")
+            ? caminhoPublico(req.files.capa[0].path)
             : antigo.capa || null,
 
         galeria: req.files?.galeria
-            ? req.files.galeria.map(img => img.path.replace(/\\/g, "/"))
-            : antigo.galeria || []
+            ? req.files.galeria.map(img => caminhoPublico(img.path))
+            : antigo.galeria || [],
+
+        tags: paraArrayJSON(req.body.tags).map(tag => ({
+            nome: tag.nome,
+            cor: mapaTags[tag.nome] || ""
+        })),
+
+        estoque: paraNumero(req.body.estoque),
+
+        oferta: paraBoolean(req.body.oferta),
+        percentualDesconto: paraNumero(req.body.percentualDesconto)
     };
 }
 
-// Buscar todos os Discos
+// Listar discos
 
 app.get("/discos", (req, res) => {
     try {
@@ -120,9 +168,10 @@ app.get("/discos", (req, res) => {
     }
 });
 
-// Buscar disco por ID
+// Buscar por ID
 
 app.get("/discos/:id", (req, res) => {
+
     const discos = lerBanco();
 
     const disco = discos.find(d =>
@@ -136,31 +185,19 @@ app.get("/discos/:id", (req, res) => {
     res.json(disco);
 });
 
-// Salvar Novo Disco
+// Criar disco
 
 app.post("/discos",
+
     upload.fields([
         { name: "capa", maxCount: 1 },
         { name: "galeria", maxCount: 10 }
     ]),
+
     (req, res) => {
         try {
-            const discos = lerBanco();
 
-            const mapaTags = {
-                "Bom Estado": "verde-tag",
-                "Clássico": "azul-claro-tag",
-                "Cult": "importado-tag",
-                "Destaque": "destaque-tag",
-                "Edição Limitada": "azul-claro-tag",
-                "Excelente Estado": "turquesa-tag",
-                "Importado": "importado-tag",
-                "Lacrado": "prata-tag",
-                "Novo": "verde-tag",
-                "Oferta": "oferta-tag",
-                "Raro": "gold-tag",
-                "Remaster": "vermelho-tag"
-            };
+            const discos = lerBanco();
 
             const novoDisco = montarDisco(
                 req,
@@ -176,20 +213,25 @@ app.post("/discos",
                 disco: novoDisco
             });
 
-        } catch {
+        } catch (erro) {
+            console.log(erro);
             res.status(500).send("Erro ao salvar disco.");
         }
-    });
+    }
+);
 
-// Atualizar disco
+// Editar disco
 
 app.put("/discos/:id",
+
     upload.fields([
         { name: "capa", maxCount: 1 },
         { name: "galeria", maxCount: 10 }
     ]),
+
     (req, res) => {
         try {
+
             const discos = lerBanco();
 
             const index = discos.findIndex(d =>
@@ -212,15 +254,18 @@ app.put("/discos/:id",
                 mensagem: "Disco atualizado com sucesso!"
             });
 
-        } catch {
+        } catch (erro) {
+            console.log(erro);
             res.status(500).send("Erro ao atualizar disco.");
         }
-    });
+    }
+);
 
 // Excluir disco
 
 app.delete("/discos/:id", (req, res) => {
     try {
+
         const discos = lerBanco();
 
         const novaLista = discos.filter(d =>

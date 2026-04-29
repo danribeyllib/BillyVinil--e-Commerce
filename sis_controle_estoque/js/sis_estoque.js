@@ -4,6 +4,11 @@ const API_URL = "http://localhost:3000/discos";
 // Controle de edição //
 let idDiscoEmEdicao = null;
 
+function obterValor(id) {
+    const el = document.getElementById(id);
+    return el ? el.value : "";
+}
+
 // Atualizar nome do arquivo de capa ao selecionar //
 document.getElementById("id-arquivo-capa").onchange = function () {
     const nomeArquivo = this.files[0] ? this.files[0].name : "Nenhum arquivo...";
@@ -54,11 +59,6 @@ let listaEstilos = [];
 document.getElementById("form-cadastro-completo").onsubmit = async function (e) {
     e.preventDefault();
 
-    const obterValor = (id) => {
-        const el = document.getElementById(id);
-        return el ? el.value : "";
-    };
-
     const campoDesc = document.getElementById("id-desconto-valor");
     const isOferta = document.getElementById("id-switch-desconto")?.checked || false;
     const porcentagemDesc = (isOferta && campoDesc) ? campoDesc.value : 0;
@@ -68,8 +68,8 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("artista", obterValor("id-artista"));
     formData.append("lancamento", Number(obterValor("id-lancamento")));
     formData.append("estoque", Number(obterValor("id-estoque")));
-    formData.append("desconto", Number(porcentagemDesc));
-    formData.append("temDesconto", isOferta);
+    formData.append("percentualDesconto", Number(porcentagemDesc));
+    formData.append("oferta", isOferta);
 
     //  Peso e Qtd Unificados
     const pesoBase = obterValor("id-peso");
@@ -80,7 +80,7 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("qtdDiscos", qtdTexto);
 
     formData.append("tipo", obterValor("id-tipo"));
-    formData.append("paisOrigem", obterValor("id-pais-origem"));
+    formData.append("pais", obterValor("id-pais-origem"));
     formData.append("paisFab", obterValor("id-pais-fabricacao"));
 
     formData.append("preco", Number(obterValor("id-preco")));
@@ -146,14 +146,17 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
             exibirModal("erro", "Erro ao processar.");
         }
     } catch (erro) {
-        exibirModal("erro", "Não foi possível conectar ao servidor.");
+        exibirModal("erro", "Não foi possível conectar ao servidor.", erro);
     }
 };
 
+
+// Eclusão de Dicos
 async function excluirDisco(id) {
     confirmarExclusao(id);
 }
 
+// Modal confimação exclusão
 function confirmarExclusao(id) {
     const container = document.getElementById("id-container-modais");
     container.innerHTML = `
@@ -191,6 +194,7 @@ async function excluirDiscos(id) {
     }
 }
 
+// Carregar a Tabela //
 async function carregarTabela() {
     try {
         const resposta = await fetch(API_URL);
@@ -202,7 +206,7 @@ async function carregarTabela() {
 
         discos.forEach(disco => {
             const detalheId = `detalhe-${disco.id}`;
-            const pDesconto = disco.desconto || 0;
+            const pDesconto = disco.percentualDesconto || 0;
             const descontoTabela = pDesconto > 0 ? `${pDesconto}%` : "Não";
 
             let tagsArray = [];
@@ -273,7 +277,11 @@ async function carregarTabela() {
     } catch (erro) { console.error("Erro ao carregar dados:", erro); }
 }
 
+// Preparar a Edição //
 async function prepararEdicao(id) {
+
+    console.log("ÁLBUM:", obterValor("id-album"));
+
     try {
         const resposta = await fetch(`${API_URL}/${id}`);
         if (!resposta.ok) throw new Error("Disco não encontrado.");
@@ -370,7 +378,7 @@ async function prepararEdicao(id) {
         const switchDesc = document.getElementById("id-switch-desconto");
         const containerDesc = document.getElementById("container-select-desconto");
         const labelSwitch = document.querySelector('label[for="id-switch-desconto"]');
-        const temDesc = disco.oferta === true || disco.temDesconto === true || (disco.desconto > 0);
+        const temDesc = disco.oferta === true || (disco.percentualDesconto > 0);
 
         if (switchDesc) {
             switchDesc.checked = temDesc;
@@ -378,7 +386,7 @@ async function prepararEdicao(id) {
             if (temDesc && containerDesc) {
                 containerDesc.classList.remove("is-hidden");
                 const campoValor = document.getElementById("id-desconto-valor");
-                if (campoValor) campoValor.value = disco.percentualDesconto || disco.desconto || "";
+                if (campoValor) campoValor.value = disco.percentualDesconto || "";
             } else if (containerDesc) {
                 containerDesc.classList.add("is-hidden");
             }
@@ -389,6 +397,7 @@ async function prepararEdicao(id) {
     } catch (erro) { console.error("Erro detalhado na edição:", erro); }
 }
 
+// Toggle detalhes tabela
 function toggleDetalhes(id, linha) {
     const elemento = document.getElementById(id);
     if (!elemento) return;
@@ -396,6 +405,7 @@ function toggleDetalhes(id, linha) {
     if (linha) linha.classList.toggle("is-selected");
 }
 
+// Geração da lista de faixas
 function gerarTracklist(musicas) {
     if (!musicas || musicas.length === 0) return "Nenhuma música cadastrada.";
     if (typeof musicas === 'string') return musicas.replace(/\n/g, '<br>');
@@ -412,11 +422,13 @@ function gerarTracklist(musicas) {
         </div>`).join("");
 }
 
+// Formatação do nome país
 function nomePais(codigo) {
     if (!codigo) return "-";
     return nomesPaises[codigo.toLowerCase()] || codigo;
 }
 
+// Modal
 function exibirModal(tipo, mensagem) {
     const container = document.getElementById("id-container-modais");
     if (!container) return;
@@ -438,6 +450,7 @@ function fecharModal() {
     if (container) container.innerHTML = "";
 }
 
+// Login
 (function verificarAcesso() {
     const sessao = sessionStorage.getItem("billyvinil_sessao");
     const persistente = localStorage.getItem("billyvinil_login_persistente");
@@ -445,11 +458,23 @@ function fecharModal() {
     else if (!sessao && !persistente) window.location.href = "login_estoque.html";
 })();
 
+// Form
 document.addEventListener("DOMContentLoaded", () => {
     const btnAbrir = document.getElementById("btn-abrir-formulario");
     const btnCancelar = document.getElementById("btn-cancelar");
     const containerForm = document.getElementById("container-formulario");
     const selectDesconto = document.getElementById("id-desconto-valor");
+
+    const formulario = document.getElementById("form-cadastro-completo");
+
+
+    if (formulario) {
+        formulario.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" && e.target.tagName !== "TEXTAREA") {
+                e.preventDefault();
+            }
+        });
+    }
 
     if (selectDesconto) {
         for (let i = 5; i <= 70; i += 5) {
@@ -482,7 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const adicionarEstilo = () => {
         let valor = inputEstilo.value.trim();
         if (valor) {
-            valor = valor.charAt(0).toUpperCase() + valor.slice(1).toLowerCase();
+            valor = valor.toLowerCase().split(" ").map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1)).join(" ");
             if (!listaEstilos.includes(valor)) {
                 listaEstilos.push(valor);
                 inputEstilo.value = "";
@@ -550,6 +575,7 @@ function renderizarEstilosVisual() {
     `).join("");
 }
 
+// Lados das faixas
 function criarEstruturaLado(letraLado) {
     const divLado = document.createElement("div");
     divLado.className = "box has-background-black-ter mb-4 div-lado-musical";
@@ -571,13 +597,30 @@ function criarEstruturaLado(letraLado) {
     return divLado;
 }
 
+// Campos para as faixas
 function adicionarCampoFaixa(container, numero) {
     const divFaixa = document.createElement("div");
     divFaixa.className = "field has-addons mb-2";
     divFaixa.innerHTML = `
         <p class="control"><a class="button is-static is-small">${numero}</a></p>
-        <p class="control is-expanded"><input class="input is-small input-nome-faixa" type="text" placeholder="Nome da música"></p>
+       <p class="control is-expanded">
+        <input class="input is-small input-nome-faixa" type="text" placeholder="Nome da música">
+        </p>
         <p class="control"><button type="button" class="button is-danger is-small btn-remover-faixa"><i class="fas fa-trash"></i></button></p>`;
+
+    const inputFaixa = divFaixa.querySelector(".input-nome-faixa");
+
+    inputFaixa.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+
+            adicionarCampoFaixa(container, container.children.length + 1);
+
+            const inputs = container.querySelectorAll(".input-nome-faixa");
+            inputs[inputs.length - 1].focus();
+        }
+    });
+
     divFaixa.querySelector(".btn-remover-faixa").onclick = () => { divFaixa.remove(); atualizarNumeracao(container); };
     container.appendChild(divFaixa);
 }
@@ -593,6 +636,7 @@ document.getElementById("btn-add-lado").onclick = () => {
     containerPrincipal.appendChild(criarEstruturaLado(proximoLado));
 };
 
+// Transformar faixas para json
 function coletarMusicasParaJSON() {
     const listaFinal = [];
     document.querySelectorAll(".div-lado-musical").forEach(divLado => {

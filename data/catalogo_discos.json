@@ -5514,5 +5514,83 @@
     "estoque": 1,
     "oferta": false,
     "percentualDesconto": 0
+  },
+  {
+    "id": "1777490524044",
+    "album": "BillyVinil",
+    "artista": "Billy",
+    "lancamento": 2024,
+    "edicao": "2026",
+    "peso": "180g",
+    "tipo": "LP 12\"",
+    "musicas": [
+      {
+        "lado": "A",
+        "faixa": 1,
+        "nome": "Faixa 1"
+      },
+      {
+        "lado": "A",
+        "faixa": 2,
+        "nome": "Faixa 2"
+      },
+      {
+        "lado": "A",
+        "faixa": 3,
+        "nome": "Faixa 3"
+      },
+      {
+        "lado": "B",
+        "faixa": 1,
+        "nome": "Faixa 4"
+      },
+      {
+        "lado": "B",
+        "faixa": 2,
+        "nome": "Faixa 5"
+      },
+      {
+        "lado": "B",
+        "faixa": 3,
+        "nome": "Faixa 6"
+      }
+    ],
+    "pais": "br",
+    "paisFab": "br",
+    "preco": 250,
+    "estilo": [
+      "Rock",
+      "Rock Felino"
+    ],
+    "resumo": [
+      "Resumo do álbum..."
+    ],
+    "capa": "/imagens/capas/1777490523983.jpg",
+    "galeria": [
+      "/imagens/galeria/BillyVinil/1777490524000.jpg",
+      "/imagens/galeria/BillyVinil/1777490524001.jpg",
+      "/imagens/galeria/BillyVinil/1777490524022.jpg"
+    ],
+    "tags": [
+      {
+        "nome": "Cult",
+        "cor": "importado-tag"
+      },
+      {
+        "nome": "Destaque",
+        "cor": "destaque-tag"
+      },
+      {
+        "nome": "Edição Limitada",
+        "cor": "azul-claro-tag"
+      },
+      {
+        "nome": "Excelente Estado",
+        "cor": "turquesa-tag"
+      }
+    ],
+    "estoque": 3,
+    "oferta": true,
+    "percentualDesconto": 10
   }
 ]

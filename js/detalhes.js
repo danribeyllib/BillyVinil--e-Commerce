@@ -326,7 +326,9 @@ async function carregarDiscosIDJson(idDesejado) {
 
                         
                         <div class="mb-6 px-4">
-                            <p class="has-text-white mb-4">${disco.resumo.join(' ')}</p>
+                            <p class="has-text-white mb-4">
+                            ${Array.isArray(disco.resumo) ? disco.resumo.join(' ') : disco.resumo}
+                            </p>
                         </div>
 
                         <div class="mb-6 px-4">
@@ -347,7 +349,10 @@ async function carregarDiscosIDJson(idDesejado) {
                                         <td class="is-size-6 tabela-icon"><i class="fa-regular fa-calendar-days"></i></td>
                                         <td class="is-size-6">${disco.lancamento}</td>
                                         <td class="is-size-6 tabela-icon"><i class="fa-solid fa-earth-americas"></i></td>
-                                        <td class="is-size-6"> <span class="fi fi-${disco.pais.toLowerCase()}"></span> <span>${disco.pais.toUpperCase()}</span></td>
+                                        <td class="is-size-6">
+                                            <span class="fi fi-${(disco.pais || disco.paisOrigem || "").toLowerCase()}"></span>
+                                            <span>${(disco.pais || disco.paisOrigem || "").toUpperCase()}</span>
+                                            </td>
                                     </tr>
                                     <tr>
                                         <td class="is-size-6 tabela-icon"><i class="fa-solid fa-stamp"></i></td>
