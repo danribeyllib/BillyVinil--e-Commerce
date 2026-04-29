@@ -66,23 +66,25 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     const formData = new FormData();
     formData.append("album", obterValor("id-album"));
     formData.append("artista", obterValor("id-artista"));
-    formData.append("lancamento", obterValor("id-lancamento"));
-    formData.append("estoque", obterValor("id-estoque"));
-    formData.append("desconto", porcentagemDesc);
+    formData.append("lancamento", Number(obterValor("id-lancamento")));
+    formData.append("estoque", Number(obterValor("id-estoque")));
+    formData.append("desconto", Number(porcentagemDesc));
     formData.append("temDesconto", isOferta);
-    
+
     //  Peso e Qtd Unificados
     const pesoBase = obterValor("id-peso");
     const qtdTexto = obterValor("id-qtd-discos");
     const pesoFinal = (qtdTexto === "Simples" || !qtdTexto) ? pesoBase : `${pesoBase} ${qtdTexto}`;
-    
+
     formData.append("peso", pesoFinal);
     formData.append("qtdDiscos", qtdTexto);
-    
+
     formData.append("tipo", obterValor("id-tipo"));
     formData.append("paisOrigem", obterValor("id-pais-origem"));
     formData.append("paisFab", obterValor("id-pais-fabricacao"));
-    formData.append("preco", obterValor("id-preco"));
+
+    formData.append("preco", Number(obterValor("id-preco")));
+
     formData.append("edicao", obterValor("id-edicao"));
     formData.append("resumo", obterValor("id-resumo"));
 
@@ -285,12 +287,13 @@ async function prepararEdicao(id) {
             if (btnAbrir) btnAbrir.click();
         }
 
-/// Selects (Peso e Qtd)
-        const pesoBruto = String(disco.weight || disco.peso || ""); 
+        /// Selects (Peso e Qtd)
+        const pesoBruto = String(disco.weight || disco.peso || "");
         let pesoDetectado = "";
         let qtdDetectada = "Simples";
 
         if (pesoBruto.includes("120g")) pesoDetectado = "120g";
+        else if (pesoBruto.includes("140g")) pesoDetectado = "140g";
         else if (pesoBruto.includes("180g")) pesoDetectado = "180g";
         else if (pesoBruto.includes("200g")) pesoDetectado = "200g";
 

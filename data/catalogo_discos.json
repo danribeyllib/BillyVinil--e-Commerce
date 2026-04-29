@@ -1,17 +1,18 @@
 [
   {
+    "id": "1774493496956",
     "album": "Dark Side of the Moon",
     "artista": "Pink Floyd",
-    "lancamento": "1973",
-    "estoque": "1",
-    "desconto": "0",
-    "temDesconto": "false",
+    "lancamento": 1973,
+    "estoque": 1,
+    "desconto": 0,
+    "preco": 279.99,
+    "temDesconto": false,
     "peso": "180g",
-    "qtdDiscos": "",
+    "qtdDiscos": "Simples",
     "tipo": "LP 12\"",
     "paisOrigem": "gb",
     "paisFab": "br",
-    "preco": 279.9,
     "edicao": "1985",
     "resumo": "Lançado em 1973, é um marco do rock Progressivo e um dos discos mais vendidos da história. Explora temas complexos como o tempo, a ganância, o conflito e a saúde mental através de uma produção sonora inovadora para a época, com uso pioneiro de sintetizadores e efeitos de estúdio.",
     "musicas": [
@@ -73,19 +74,22 @@
     ],
     "tags": [
       {
+        "nome": "Clássico",
+        "classe": "azul-claro-tag"
+      },
+      {
         "nome": "Cult",
         "classe": "importado-tag"
       },
       {
-        "nome": "Destaque",
-        "classe": "destaque-tag"
+        "nome": "Excelente Estado",
+        "classe": "turquesa-tag"
       },
       {
         "nome": "Raro",
         "classe": "gold-tag"
       }
     ],
-    "id": "1774493496956",
     "capa": "../imagens/capas/pink_floyd_dark_side_of_the_moon.jpg",
     "galeria": [
       "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (1).jpeg",
@@ -94,13 +98,21 @@
     ]
   },
   {
-    "id": 1774493496957,
+    "id": "1774493496957",
     "album": "A Night To Remember",
     "artista": "Cyndi Lauper",
     "lancamento": 1989,
-    "edicao": 1989,
+    "estoque": 2,
+    "desconto": 10,
+    "preco": 189.9,
+    "temDesconto": true,
     "peso": "140g",
+    "qtdDiscos": "Simples",
     "tipo": "LP 12\"",
+    "paisOrigem": "us",
+    "paisFab": "br",
+    "edicao": "1989",
+    "resumo": "Lançado em 1989, este quarto disco de estúdio apresenta um som pop rock mais maduro e polido. O álbum destaca-se pela poderosa balada I Drove All Night e por letras que exploram temas de amor e autorreflexão, consolidando a transição da artista para uma sonoridade mais adulta no final da década.",
     "musicas": [
       {
         "lado": "A",
@@ -163,35 +175,31 @@
         "nome": "Kindred Spirit"
       }
     ],
-    "pais": "us",
-    "paisFab": "br",
-    "preco": 189.9,
     "estilo": [
       "Pop",
-      "Synth-pop"
+      "Synth-pop",
+      "Pop rock"
     ],
-    "resumo": [
-      "Lançado em 1989, este quarto disco de estúdio apresenta um som pop rock mais maduro e polido. O álbum destaca-se pela poderosa balada I Drove All Night e por letras que exploram temas de amor e autorreflexão, consolidando a transição da artista para uma sonoridade mais adulta no final da década."
+    "tags": [
+      {
+        "nome": "Bom Estado",
+        "classe": "verde-tag"
+      },
+      {
+        "nome": "Edição Limitada",
+        "classe": "azul-claro-tag"
+      },
+      {
+        "nome": "Oferta",
+        "classe": "oferta-tag"
+      }
     ],
     "capa": "../imagens/capas/CyndiLauper_ANighttoRemember.jpg",
     "galeria": [
       "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (1).jpg",
       "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (2).jpg",
       "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (3).jpg"
-    ],
-    "tags": [
-      {
-        "nome": "Bom Estado",
-        "cor": "verde-tag"
-      },
-      {
-        "nome": "Oferta",
-        "cor": "oferta-tag"
-      }
-    ],
-    "estoque": 1,
-    "oferta": true,
-    "percentualDesconto": 10
+    ]
   },
   {
     "id": "1774493496958",

@@ -605,27 +605,26 @@ function gerarSeloDesconto(disco) {
     if (!disco.oferta || !disco.percentualDesconto) return "";
 
     let classe = "";
+    const desconto = Number(disco.percentualDesconto);
 
-    if (disco.percentualDesconto === 20) {
+    if (desconto >= 20) {
         classe = "selo-desconto-20";
-    } else if (disco.percentualDesconto === 15) {
+    } else if (desconto === 15) {
         classe = "selo-desconto-15";
-    } else if (disco.percentualDesconto === 10) {
+    } else if (desconto === 10) {
         classe = "selo-desconto-10";
-    } else if (disco.percentualDesconto === 5) {
+    } else if (desconto === 5) {
         classe = "selo-desconto-05";
-    } else {
-        classe = "";
     }
 
-    //  -- Estrutura do selo --  //
+    // Estrutura do selo
     return `
       <div class="selo-porcentagem selo-desconto ${classe}">
-        <span class="porcentagem">${disco.percentualDesconto}%</span>
+        <span class="porcentagem">${desconto}%</span>
         <span class="texto-off">OFF</span>
       </div>
     `;
-};
+}
 
 ///   --- CÁLCULO DE DESCONTO ---   ///
 function calcularPrecoComDesconto(disco) {

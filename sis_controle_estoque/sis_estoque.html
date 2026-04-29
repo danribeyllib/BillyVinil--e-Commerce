@@ -116,6 +116,7 @@
                 <select id="id-peso">
                   <option value="" disabled selected>Selecione</option>
                   <option value="120g">120g</option>
+                  <option value="140g">140g</option>
                   <option value="180g">180g</option>
                   <option value="200g">200g</option>
                 </select>
@@ -288,35 +289,43 @@
             <div class="column is-12">
               <label class="label">Selecione as Tags: </label>
               <div id="tag-toggle-container" class="disco-tags">
-                <span class="tag is-clickable toggle-tag verde-tag" data-value="Bom estado">Bom estado</span>
-                <span class="tag is-clickable toggle-tag azul-claro-tag" data-value="Clássico">Clássico</span>
-                <span class="tag is-clickable toggle-tag importado-tag" data-value="Cult">Cult</span>
-                <span class="tag is-clickable toggle-tag destaque-tag" data-value="Destaque">Destaque</span>
-                <span class="tag is-clickable toggle-tag azul-claro-tag" data-value="Edição Limitada">Edição
-                  Limitada</span>
-                <span class="tag is-clickable toggle-tag turquesa-tag" data-value="Excelente estado">Excelente
-                  estado</span>
-                <span class="tag is-clickable toggle-tag importado-tag" data-value="Importado">Importado</span>
-                <span class="tag is-clickable toggle-tag prata-tag" data-value="Lacrado">Lacrado</span>
-                <span class="tag is-clickable toggle-tag verde-tag" data-value="Novo">Novo</span>
-                <span class="tag is-clickable toggle-tag oferta-tag" data-value="Oferta">Oferta</span>
-                <span class="tag is-clickable toggle-tag gold-tag" data-value="Raro">Raro</span>
-                <span class="tag is-clickable toggle-tag vermelho-tag" data-value="Remaster">Remaster</span>
+                <span class="tag is-clickable toggle-tag verde-tag" data-value="Bom Estado" data-class="verde-tag">Bom
+                  Estado</span>
+                <span class="tag is-clickable toggle-tag azul-claro-tag" data-value="Clássico"
+                  data-class="azul-claro-tag">Clássico</span>
+                <span class="tag is-clickable toggle-tag importado-tag" data-value="Cult"
+                  data-class="importado-tag">Cult</span>
+                <span class="tag is-clickable toggle-tag destaque-tag" data-value="Destaque"
+                  data-class="destaque-tag">Destaque</span>
+                <span class="tag is-clickable toggle-tag azul-claro-tag" data-value="Edição Limitada"
+                  data-class="azul-claro-tag">Edição Limitada</span>
+                <span class="tag is-clickable toggle-tag turquesa-tag" data-value="Excelente Estado"
+                  data-class="turquesa-tag">Excelente Estado</span>
+                <span class="tag is-clickable toggle-tag importado-tag" data-value="Importado"
+                  data-class="importado-tag">Importado</span>
+                <span class="tag is-clickable toggle-tag prata-tag" data-value="Lacrado"
+                  data-class="prata-tag">Lacrado</span>
+                <span class="tag is-clickable toggle-tag verde-tag" data-value="Novo" data-class="verde-tag">Novo</span>
+                <span class="tag is-clickable toggle-tag oferta-tag" data-value="Oferta"
+                  data-class="oferta-tag">Oferta</span>
+                <span class="tag is-clickable toggle-tag gold-tag" data-value="Raro" data-class="gold-tag">Raro</span>
+                <span class="tag is-clickable toggle-tag vermelho-tag" data-value="Remaster"
+                  data-class="vermelho-tag">Remaster</span>
               </div>
             </div>
           </div>
 
-            <!--Resumo-->
-            <div class="columns">
-              <div class="column is-12">
-                <label class="label">Resumo / Descrição do Álbum</label>
-                <div class="control">
-                  <textarea class="textarea" id="id-resumo"
-                    placeholder="Escreva um breve resumo sobre o álbum, estado de conservação, etc..."
-                    rows="3"></textarea>
-                </div>
+          <!--Resumo-->
+          <div class="columns">
+            <div class="column is-12">
+              <label class="label">Resumo / Descrição do Álbum</label>
+              <div class="control">
+                <textarea class="textarea" id="id-resumo"
+                  placeholder="Escreva um breve resumo sobre o álbum, estado de conservação, etc..."
+                  rows="3"></textarea>
               </div>
             </div>
+          </div>
 
           <div class="has-text-centered mt-5">
             <div class="buttons is-centered">
