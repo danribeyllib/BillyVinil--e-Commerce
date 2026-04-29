@@ -7,7 +7,7 @@ let favoritos = (JSON.parse(localStorage.getItem("favoritos")) || []).map(f => t
 const nomesPaises = {
   "br": "Brasil (Brazil)",
   "us": "Estados Unidos (EUA)",
-  "gb": "Reino Unido (Grã Bretanha",
+  "gb": "Reino Unido (Grã Bretanha)",
   "eu": "Europa",
   "jp": "Japão",
   "fr": "França",
@@ -157,7 +157,7 @@ function configurarFiltrosDinamicos(discos) {
     }
 
     //  --  PAÍSES  --  //
-    if (!paises.includes(disco.pais)) {
+    if (disco.pais && !paises.includes(disco.pais)) {
       paises.push(disco.pais);
     }
 
@@ -196,11 +196,17 @@ function preencherMenuPais(idContainer, lista) {
   const container = document.getElementById(idContainer);
 
   if (!container) return;
-  container.innerHTML += lista.map(codigo => `
-        <a class="navbar-item" onclick="aplicarFiltro('pais', '${codigo}')">
-            <span class="icon is-small mr-3"><span class="fi fi-${codigo}"></span></span>
-            <span>${nomesPaises[codigo] || codigo.toUpperCase()}</span>
-        </a>`).join("");
+
+  container.innerHTML += lista
+    .filter(codigo => codigo)
+    .map(codigo => `
+      <a class="navbar-item" onclick="aplicarFiltro('pais', '${codigo}')">
+        <span class="icon is-small mr-3">
+          <span class="fi fi-${codigo.toLowerCase()}"></span>
+        </span>
+        <span>${nomesPaises[codigo] || codigo.toUpperCase()}</span>
+      </a>
+    `).join("");
 }
 
 //  --  Menu Décadas  --  //
@@ -465,9 +471,9 @@ window.renderizarVertical = function (discos) {
                 <p class="subtitle is-6 mb-2 has-text-danger has-text-weight-bold">${disco.artista}</p>
                 <div class="disco-tags mb-3">${criarTags}</div>
                 <p class="disco-descricao">
-                    ${disco.edicao} · ${disco.pais.toUpperCase()} 
-                    <span class="fi fi-${disco.pais.toLowerCase()}"></span>
-                </p>
+                  ${disco.edicao} · ${(disco.pais || "N/A").toUpperCase()}
+                  ${disco.pais ? `<span class="fi fi-${disco.pais.toLowerCase()}"></span>` : ""}
+              </p>
                 <div class="disco-footer mt-4">
                     ${precoHTML}
                     <div class="buttons has-addons">

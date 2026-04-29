@@ -112,7 +112,7 @@ async function carregarDados() {
         if (containerOfertas) renderizarHorizontal(discosOfertas, containerOfertas, false);
 
     } catch (erro) {
-        console.error("Erro ao carregar discos");
+        console.error("Erro ao carregar discos", erro);
     }
 }
 
@@ -279,9 +279,10 @@ function renderizarHorizontal(discos, container, isReversed = false) {
                             </a>
                             <p class="subtitle is-6 mb-2 has-text-danger has-text-weight-bold">${disco.artista}</p>
                             <div class="tags mb-2">${criarTags}</div>
-                            <p class="disco-descricao">
-                                ${disco.edicao} · ${disco.pais.toUpperCase()} <span class="fi fi-${disco.pais.toLowerCase()}"></span>
-                            </p>
+                                <p class="disco-descricao">
+                                ${disco.edicao} · ${(disco.pais || "---").toUpperCase()}
+                                <span class="fi fi-${(disco.pais || "xx").toLowerCase()}"></span>
+                                </p>
                             <div class="disco-footer mt-1">
                                 ${precoHTML}
                                 <div class="buttons has-addons">
@@ -361,7 +362,8 @@ window.renderizarVertical = function (discos, containerAlvo = null) {
                     <p class="subtitle is-6 has-text-danger has-text-weight-bold">${disco.artista}</p>
                     <div class="disco-tags mb-4">${criarTags}</div>
                     <p class="disco-descricao">
-                        ${disco.edicao} · ${disco.pais.toUpperCase()} <span class="fi fi-${disco.pais.toLowerCase()}"></span>
+                    ${disco.edicao} · ${(disco.pais || "---").toUpperCase()}
+                    <span class="fi fi-${(disco.pais || "xx").toLowerCase()}"></span>
                     </p>
                    
                     <div class="disco-footer">
@@ -627,12 +629,12 @@ function gerarSeloDesconto(disco) {
 
 ///   --- CÁLCULO DE DESCONTO ---   ///
 function calcularPrecoComDesconto(disco) {
+    const precoBase = Number(disco.preco) || 0;
     if (!disco.oferta || !disco.percentualDesconto) {
-        return disco.preco;
+        return precoBase;
     }
-
-    const desconto = disco.preco * (disco.percentualDesconto / 100);
-    return +(disco.preco - desconto).toFixed(2);
+    const desconto = precoBase * (Number(disco.percentualDesconto) / 100);
+    return +(precoBase - desconto).toFixed(2);
 }
 
 /////           BUSCA              //////

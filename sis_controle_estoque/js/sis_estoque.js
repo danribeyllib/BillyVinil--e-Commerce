@@ -70,8 +70,15 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("estoque", obterValor("id-estoque"));
     formData.append("desconto", porcentagemDesc);
     formData.append("temDesconto", isOferta);
-    formData.append("peso", obterValor("id-peso"));
-    formData.append("qtdDiscos", obterValor("id-qtd-discos"));
+    
+    //  Peso e Qtd Unificados
+    const pesoBase = obterValor("id-peso");
+    const qtdTexto = obterValor("id-qtd-discos");
+    const pesoFinal = (qtdTexto === "Simples" || !qtdTexto) ? pesoBase : `${pesoBase} ${qtdTexto}`;
+    
+    formData.append("peso", pesoFinal);
+    formData.append("qtdDiscos", qtdTexto);
+    
     formData.append("tipo", obterValor("id-tipo"));
     formData.append("paisOrigem", obterValor("id-pais-origem"));
     formData.append("paisFab", obterValor("id-pais-fabricacao"));
@@ -83,21 +90,12 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("musicas", JSON.stringify(musicasData));
     formData.append("estilo", JSON.stringify(listaEstilos));
 
-    // Tags
     const tagsAtivas = [];
-
-    document.querySelectorAll(".toggle-tag").forEach(tag => {
-
-        const classeCor = tag.getAttribute("data-class");
-
-        if (classeCor) {
-            tag.classList.add(classeCor);
-        }
-
-        tag.addEventListener("click", () => {
-            tag.classList.toggle("is-active");
+    document.querySelectorAll(".toggle-tag.is-active").forEach(tag => {
+        tagsAtivas.push({
+            nome: tag.getAttribute("data-value"),
+            classe: tag.getAttribute("data-class")
         });
-
     });
     formData.append("tags", JSON.stringify(tagsAtivas));
 
@@ -137,7 +135,7 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
 
             document.querySelectorAll(".toggle-tag").forEach(tag => {
                 tag.classList.remove("is-active");
-                const classeCor = tag.getAttribute("data-class") || Array.from(tag.classList).find(c => c.endsWith("-tag"));
+                const classeCor = tag.getAttribute("data-class");
                 if (classeCor) tag.classList.remove(classeCor);
             });
 
@@ -187,7 +185,7 @@ async function excluirDiscos(id) {
             carregarTabela();
         }
     } catch (erro) {
-        exibirModal("erro", "Erro ao tentar excluir the item.");
+        exibirModal("erro", "Erro ao tentar excluir o item.");
     }
 }
 
@@ -216,18 +214,10 @@ async function carregarTabela() {
                 let classeCor = t.classe || "";
                 if (!classeCor) {
                     const mapaCores = {
-                        "Bom Estado": "verde-tag",
-                        "Clássico": "azul-claro-tag",
-                        "Cult": "importado-tag",
-                        "Destaque": "destaque-tag",
-                        "Edição Limitada": "azul-claro-tag",
-                        "Excelente Estado": "turquesa-tag",
-                        "Importado": "importado-tag",
-                        "Lacrado": "prata-tag",
-                        "Novo": "verde-tag",
-                        "Oferta": "oferta-tag",
-                        "Raro": "gold-tag",
-                        "Remaster": "vermelho-tag"
+                        "Bom Estado": "verde-tag", "Clássico": "azul-claro-tag", "Cult": "importado-tag",
+                        "Destaque": "destaque-tag", "Edição Limitada": "azul-claro-tag", "Excelente Estado": "turquesa-tag",
+                        "Importado": "importado-tag", "Lacrado": "prata-tag", "Novo": "verde-tag",
+                        "Oferta": "oferta-tag", "Raro": "gold-tag", "Remaster": "vermelho-tag"
                     };
                     classeCor = mapaCores[t.nome] || "";
                 }
@@ -242,9 +232,7 @@ async function carregarTabela() {
                     <td>R$ ${parseFloat(disco.preco).toFixed(2)}</td>
                     <td>${descontoTabela}</td>
                     <td>${disco.estoque}</td>
-                    <td class="has-text-centered">
-                        <i class="fas fa-chevron-down is-size-7"></i>
-                    </td>
+                    <td class="has-text-centered"><i class="fas fa-chevron-down is-size-7"></i></td>
                 </tr>
                 <tr id="${detalheId}" class="is-hidden has-background-dark">
                     <td colspan="7">
@@ -263,12 +251,10 @@ async function carregarTabela() {
                                     <p><strong>Resumo:</strong><br><span class="texto-resumo">${disco.resumo || "Sem descrição."}</span></p>
                                     <div class="buttons mt-4">
                                         <button class="button is-link is-small" onclick="event.stopPropagation(); prepararEdicao('${disco.id}')">
-                                            <span class="icon"><i class="fas fa-edit"></i></span>
-                                            <span>Editar Dados</span>
+                                            <span class="icon"><i class="fas fa-edit"></i></span><span>Editar Dados</span>
                                         </button>
                                         <button class="button is-danger is-small" onclick="event.stopPropagation(); excluirDisco('${disco.id}')">
-                                            <span class="icon"><i class="fas fa-trash"></i></span>
-                                            <span>Excluir Disco</span>
+                                            <span class="icon"><i class="fas fa-trash"></i></span><span>Excluir Disco</span>
                                         </button>
                                     </div>
                                 </div>
@@ -299,6 +285,20 @@ async function prepararEdicao(id) {
             if (btnAbrir) btnAbrir.click();
         }
 
+/// Selects (Peso e Qtd)
+        const pesoBruto = String(disco.weight || disco.peso || ""); 
+        let pesoDetectado = "";
+        let qtdDetectada = "Simples";
+
+        if (pesoBruto.includes("120g")) pesoDetectado = "120g";
+        else if (pesoBruto.includes("180g")) pesoDetectado = "180g";
+        else if (pesoBruto.includes("200g")) pesoDetectado = "200g";
+
+        if (pesoBruto.includes("Duplo")) qtdDetectada = "Duplo";
+        else if (pesoBruto.includes("Triplo")) qtdDetectada = "Triplo";
+        else if (pesoBruto.includes("Quádruplo")) qtdDetectada = "Quádruplo";
+        else if (disco.qtdDiscos) qtdDetectada = disco.qtdDiscos;
+
         const campos = {
             "id-album": disco.album,
             "id-artista": disco.artista,
@@ -306,26 +306,28 @@ async function prepararEdicao(id) {
             "id-estoque": disco.estoque,
             "id-preco": disco.preco,
             "id-edicao": disco.edicao,
-            "id-peso": disco.peso,
+            "id-peso": pesoDetectado,
+            "id-qtd-discos": qtdDetectada,
             "id-tipo": disco.tipo,
-            "id-pais-origem": disco.paisOrigem || disco.pais,
+            "id-pais-origem": disco.pais || disco.paisOrigem,
             "id-pais-fabricacao": disco.paisFab,
-            "id-resumo": disco.resumo,
-            "id-qtd-discos": disco.qtdDiscos || 1
+            "id-resumo": Array.isArray(disco.resumo) ? disco.resumo[0] : disco.resumo
         };
 
-        for (const [idCampo, valor] of Object.entries(campos)) {
+        Object.entries(campos).forEach(([idCampo, valor]) => {
             const el = document.getElementById(idCampo);
-            if (el) el.value = valor || "";
-        }
+            if (el) el.value = (valor !== undefined && valor !== null) ? valor : "";
+        });
 
+        // Lados e Faixas
         const containerLados = document.getElementById("container-lados-dinamicos");
         if (containerLados) {
             containerLados.innerHTML = "";
             if (disco.musicas && Array.isArray(disco.musicas)) {
                 const musicasAgrupadas = disco.musicas.reduce((acc, m) => {
-                    if (!acc[m.lado]) acc[m.lado] = [];
-                    acc[m.lado].push(m);
+                    const lado = m.lado || "A";
+                    if (!acc[lado]) acc[lado] = [];
+                    acc[lado].push(m);
                     return acc;
                 }, {});
 
@@ -345,52 +347,43 @@ async function prepararEdicao(id) {
         listaEstilos = Array.isArray(disco.estilo) ? disco.estilo : [];
         renderizarEstilosVisual();
 
-
         let tagsSalvas = [];
-        if (disco.tags) {
-            try {
-                tagsSalvas = typeof disco.tags === 'string' ? JSON.parse(disco.tags) : disco.tags;
-            } catch (e) { tagsSalvas = []; }
-        }
+        try {
+            tagsSalvas = typeof disco.tags === 'string' ? JSON.parse(disco.tags) : (disco.tags || []);
+        } catch (e) { tagsSalvas = []; }
 
         document.querySelectorAll(".toggle-tag").forEach(tag => {
             const valorTag = tag.getAttribute("data-value");
             const classeCor = tag.getAttribute("data-class");
-
-            const tagNoBanco = tagsSalvas.find(t => t.nome === valorTag);
-
+            const temTag = tagsSalvas.find(t => t.nome === valorTag);
             tag.classList.remove("is-active");
             if (classeCor) tag.classList.remove(classeCor);
-
-            if (tagNoBanco) {
+            if (temTag) {
                 tag.classList.add("is-active");
-                if (classeCor) {
-                    tag.classList.add(classeCor);
-                }
+                if (classeCor) tag.classList.add(classeCor);
             }
         });
 
-        const switchEdicao = document.getElementById("id-switch-desconto");
-        const containerEdicao = document.getElementById("container-select-desconto");
+        const switchDesc = document.getElementById("id-switch-desconto");
+        const containerDesc = document.getElementById("container-select-desconto");
         const labelSwitch = document.querySelector('label[for="id-switch-desconto"]');
-        const temDesc = disco.temDesconto === true || disco.temDesconto === "true" || (disco.desconto > 0);
+        const temDesc = disco.oferta === true || disco.temDesconto === true || (disco.desconto > 0);
 
-        if (switchEdicao) {
-            switchEdicao.checked = temDesc;
+        if (switchDesc) {
+            switchDesc.checked = temDesc;
             if (labelSwitch) labelSwitch.innerText = temDesc ? "Sim" : "Não";
-            if (temDesc && containerEdicao) {
-                containerEdicao.classList.remove("is-hidden");
-                const campoValorDesc = document.getElementById("id-desconto-valor");
-                if (campoValorDesc) campoValorDesc.value = disco.desconto || "";
-            } else if (containerEdicao) {
-                containerEdicao.classList.add("is-hidden");
+            if (temDesc && containerDesc) {
+                containerDesc.classList.remove("is-hidden");
+                const campoValor = document.getElementById("id-desconto-valor");
+                if (campoValor) campoValor.value = disco.percentualDesconto || disco.desconto || "";
+            } else if (containerDesc) {
+                containerDesc.classList.add("is-hidden");
             }
         }
 
         if (containerForm) containerForm.scrollIntoView({ behavior: 'smooth' });
-    } catch (erro) {
-        console.error("Erro na edição:", erro);
-    }
+
+    } catch (erro) { console.error("Erro detalhado na edição:", erro); }
 }
 
 function toggleDetalhes(id, linha) {
@@ -531,19 +524,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Tags
     document.querySelectorAll(".toggle-tag").forEach(tag => {
-
         const classeCor = tag.getAttribute("data-class");
-
-        if (classeCor) {
-            tag.classList.add(classeCor);
-        }
-
         tag.addEventListener("click", () => {
-            tag.classList.toggle("is-active");
+            const ativa = tag.classList.toggle("is-active");
+            if (classeCor) {
+                if (ativa) tag.classList.add(classeCor);
+                else tag.classList.remove(classeCor);
+            }
         });
-
     });
+
     carregarTabela();
 });
 
