@@ -3,6 +3,8 @@ const API_URL = "http://localhost:3000/discos";
 
 // Controle de edição //
 let idDiscoEmEdicao = null;
+let novaCapaSelecionada = false;
+let novaGaleriaSelecionada = false;
 
 function obterValor(id) {
     const el = document.getElementById(id);
@@ -11,12 +13,16 @@ function obterValor(id) {
 
 // Atualizar nome do arquivo de capa ao selecionar //
 document.getElementById("id-arquivo-capa").onchange = function () {
+    novaCapaSelecionada = true;
+
     const nomeArquivo = this.files[0] ? this.files[0].name : "Nenhum arquivo...";
     document.getElementById("id-nome-arq-capa").innerText = nomeArquivo;
 };
 
 // Galeria para (máx. 10 fotos) //
 document.getElementById("id-arquivo-galeria").onchange = function (e) {
+    novaGaleriaSelecionada = true;
+
     const limiteMaximo = 10;
     const arquivos = e.target.files;
     const campoNome = document.getElementById("id-nome-arq-galeria");
@@ -102,11 +108,15 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("tags", JSON.stringify(tagsAtivas));
 
     const arquivoCapa = document.getElementById("id-arquivo-capa").files[0];
-    if (arquivoCapa) formData.append("capa", arquivoCapa);
+    if (novaCapaSelecionada && arquivoCapa) {
+        formData.append("capa", arquivoCapa);
+    }
 
     const arquivosGaleria = document.getElementById("id-arquivo-galeria").files;
-    for (let i = 0; i < arquivosGaleria.length; i++) {
-        formData.append("galeria", arquivosGaleria[i]);
+    if (novaGaleriaSelecionada && arquivosGaleria.length > 0) {
+        for (let i = 0; i < arquivosGaleria.length; i++) {
+            formData.append("galeria", arquivosGaleria[i]);
+        }
     }
 
     const urlFinal = idDiscoEmEdicao ? `${API_URL}/${idDiscoEmEdicao}` : API_URL;
@@ -121,6 +131,10 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
         if (resposta.ok) {
             exibirModal("sucesso", idDiscoEmEdicao ? "Disco atualizado com sucesso!" : "Disco salvo com sucesso!");
             this.reset();
+
+            novaCapaSelecionada = false;
+            novaGaleriaSelecionada = false;
+
             idDiscoEmEdicao = null;
             listaEstilos = [];
 

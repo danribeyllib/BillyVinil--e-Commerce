@@ -5585,8 +5585,8 @@
         "cor": "azul-claro-tag"
       },
       {
-        "nome": "Excelente Estado",
-        "cor": "turquesa-tag"
+        "nome": "Importado",
+        "cor": "importado-tag"
       }
     ],
     "estoque": 3,
