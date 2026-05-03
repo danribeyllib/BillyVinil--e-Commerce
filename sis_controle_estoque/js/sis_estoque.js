@@ -213,7 +213,10 @@ async function carregarTabela() {
     try {
         const resposta = await fetch(API_URL);
         const discos = await resposta.json();
+        montarTabela(discos);
+        return;
         const bodyTabela = document.getElementById("id-lista-estoque");
+
 
         if (!bodyTabela) return;
         bodyTabela.innerHTML = "";
@@ -290,6 +293,496 @@ async function carregarTabela() {
         });
     } catch (erro) { console.error("Erro ao carregar dados:", erro); }
 }
+
+// Filtro de Busca
+async function aplicarFiltros() {
+    try {
+        const resposta = await fetch(API_URL);
+        const discos = await resposta.json();
+
+        const busca = document.getElementById("filtro-busca")?.value.toLowerCase().trim() || "";
+        const artista = document.getElementById("filtro-artista")?.value || "";
+        const estilo = document.getElementById("filtro-estilo")?.value || "";
+        const paisFab = document.getElementById("filtro-pais-fab")?.value || "";
+        const paisOrigem = document.getElementById("filtro-pais-origem")?.value || "";
+        const tag = document.getElementById("filtro-tag")?.value || "";
+
+        const oferta = document.getElementById("filtro-oferta")?.value || "";
+        const desconto = document.getElementById("filtro-desconto")?.value || "";
+
+        const filtrados = discos.filter(disco => {
+
+            const textoBusca = `
+                ${disco.album || ""}
+                ${disco.artista || ""}
+                ${disco.edicao || ""}`.toLowerCase();
+
+            const passouBusca =
+                busca === "" || textoBusca.includes(busca);
+
+            const passouArtista =
+                artista === "" || disco.artista === artista;
+
+            // estilos
+            let estilos = [];
+
+            if (Array.isArray(disco.estilo)) {
+                estilos = disco.estilo;
+
+            } else if (typeof disco.estilo === "string") {
+
+                try {
+                    const convertido = JSON.parse(disco.estilo);
+
+                    estilos = Array.isArray(convertido)
+                        ? convertido
+                        : [convertido];
+
+                } catch {
+                    estilos = disco.estilo
+                        .split(",")
+                        .map(item => item.trim());
+                }
+            }
+
+            const passouEstilo =
+                estilo === "" ||
+                estilos.some(item =>
+                    item.toLowerCase().trim() === estilo.toLowerCase().trim()
+                );
+
+            // tags
+            let tags = [];
+
+            if (disco.tags) {
+                try {
+                    tags = typeof disco.tags === "string"
+                        ? JSON.parse(disco.tags)
+                        : disco.tags;
+                } catch {
+                    tags = [];
+                }
+            }
+
+            const nomesTags = tags.map(t => t.nome);
+
+            const passouTag =
+                tag === "" || nomesTags.includes(tag);
+
+            const passouPaisFab =
+                paisFab === "" || disco.paisFab === paisFab;
+
+            const passouPaisOrigem =
+                paisOrigem === "" ||
+                disco.pais === paisOrigem ||
+                disco.paisOrigem === paisOrigem;
+
+            // Oferta
+            let passouOferta = true;
+
+            if (oferta === "sim") {
+                passouOferta = Number(disco.percentualDesconto) > 0;
+            }
+
+            if (oferta === "nao") {
+                passouOferta = Number(disco.percentualDesconto) === 0;
+            }
+
+            // %
+            const passouDesconto =
+                desconto === "" ||
+                Number(disco.percentualDesconto) === Number(desconto);
+
+            return (
+                passouBusca &&
+                passouArtista &&
+                passouEstilo &&
+                passouPaisFab &&
+                passouPaisOrigem &&
+                passouTag &&
+                passouOferta &&
+                passouDesconto
+            );
+        });
+
+        montarTabela(filtrados);
+
+    } catch (erro) {
+        console.error("Erro filtro:", erro);
+    }
+}
+
+function montarTabela(discos) {
+    const bodyTabela = document.getElementById("id-lista-estoque");
+    if (!bodyTabela) return;
+
+    bodyTabela.innerHTML = "";
+    let totalEstoque = 0;
+
+    discos.forEach(disco => {
+
+        const detalheId = `detalhe-${disco.id}`;
+        const pDesconto = disco.percentualDesconto || 0;
+        const descontoTabela = pDesconto > 0 ? `${pDesconto}%` : "Não";
+        totalEstoque += Number(disco.estoque || 0);
+
+        let tagsArray = [];
+        if (disco.tags) {
+            try {
+                tagsArray = typeof disco.tags === "string"
+                    ? JSON.parse(disco.tags)
+                    : disco.tags;
+            } catch {
+                tagsArray = [];
+            }
+        }
+
+        const tagsHtml = tagsArray.map(t => {
+            let classeCor = t.classe || "";
+
+            if (!classeCor) {
+                const mapaCores = {
+                    "Bom Estado": "verde-tag",
+                    "Clássico": "azul-claro-tag",
+                    "Cult": "importado-tag",
+                    "Destaque": "destaque-tag",
+                    "Edição Limitada": "azul-claro-tag",
+                    "Excelente Estado": "turquesa-tag",
+                    "Importado": "importado-tag",
+                    "Lacrado": "prata-tag",
+                    "Novo": "verde-tag",
+                    "Oferta": "oferta-tag",
+                    "Raro": "gold-tag",
+                    "Remaster": "vermelho-tag"
+                };
+
+                classeCor = mapaCores[t.nome] || "";
+            }
+
+            return `<span class="tag is-small ${classeCor}">${t.nome}</span>`;
+        }).join(" ");
+
+        // Estilos/generos
+        let estilosTexto = "-";
+
+        if (Array.isArray(disco.estilo)) {
+            estilosTexto = disco.estilo.join(", ");
+        } else if (typeof disco.estilo === "string") {
+            try {
+                const estilosParse = JSON.parse(disco.estilo);
+                estilosTexto = Array.isArray(estilosParse)
+                    ? estilosParse.join(", ")
+                    : disco.estilo;
+            } catch {
+                estilosTexto = disco.estilo;
+            }
+        }
+
+        bodyTabela.innerHTML += `
+        <tr onclick="toggleDetalhes('${detalheId}', this)"
+            class="linha-disco has-text-white"
+            style="cursor:pointer;">
+
+            <td>${disco.id}</td>
+            <td><strong>${disco.album}</strong></td>
+            <td>${disco.artista}</td>
+            <td>R$ ${parseFloat(disco.preco).toFixed(2)}</td>
+            <td>${descontoTabela}</td>
+            <td>${disco.estoque}</td>
+            <td class="has-text-centered">
+                <i class="fas fa-chevron-down is-size-7"></i>
+            </td>
+        </tr>
+
+        <tr id="${detalheId}" class="is-hidden has-background-dark">
+            <td colspan="7">
+
+                <div class="p-4 content is-small has-text-white">
+
+                    <div class="columns is-variable is-4">
+
+                        <!-- CAPA -->
+                        <div class="column is-2 has-text-centered">
+                            <img src="${disco.capa}" class="detalhe-capa">
+
+                            <div class="mt-3 tags is-centered">
+                                ${tagsHtml}
+                            </div>
+                        </div>
+
+                        <!-- INFO -->
+                        <div class="column is-4 coluna-info">
+
+                            <p class="mb-1 has-text-info">
+                                <strong>Lançamento:</strong> ${disco.lancamento}
+                                |
+                                <strong>Edição:</strong> ${disco.edicao}
+                            </p>
+
+                            <p class="mb-1 has-text-info">
+                                <strong>Especificações:</strong>
+                                ${disco.peso} - ${disco.tipo}
+                            </p>
+
+                            <p class="mb-1 has-text-info">
+                                <strong>Origem:</strong>
+                                ${nomePais(disco.paisOrigem || disco.pais)}
+                                |
+                                <strong>Fabricação:</strong>
+                                ${nomePais(disco.paisFab)}
+                            </p>
+
+                            <p class="mb-2 has-text-info">
+                                <strong>Estilos:</strong>
+                                ${estilosTexto}
+                            </p>
+
+                            <hr class="divisor-detalhe">
+
+                            <p>
+                                <strong>Resumo:</strong><br>
+                                <span class="texto-resumo">
+                                    ${disco.resumo || "Sem descrição."}
+                                </span>
+                            </p>
+
+                            <div class="buttons mt-4">
+
+                                <button class="button is-link is-small"
+                                    onclick="event.stopPropagation(); prepararEdicao('${disco.id}')">
+
+                                    <span class="icon">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+
+                                    <span>Editar Dados</span>
+                                </button>
+
+                                <button class="button is-danger is-small"
+                                    onclick="event.stopPropagation(); excluirDisco('${disco.id}')">
+
+                                    <span class="icon">
+                                        <i class="fas fa-trash"></i>
+                                    </span>
+
+                                    <span>Excluir Disco</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- TRACKLIST -->
+                        <div class="column is-6">
+
+                            <p class="has-text-weight-bold is-size-6 mb-2">
+                                Lista de Faixas
+                            </p>
+
+                            <div class="container-tracklist">
+                                ${gerarTracklist(disco.musicas)}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </td>
+        </tr>
+        `;
+    });
+
+    atualizarDashboard(discos);
+}
+
+// Dash
+async function atualizarDashboard(discosFiltrados) {
+
+    const dashboard = document.getElementById("dashboard-estoque");
+    if (!dashboard) return;
+
+    // Total Fintro
+    let totalFiltrado = 0;
+
+    discosFiltrados.forEach(d => {
+        totalFiltrado += Number(d.estoque || 0);
+    });
+
+    // Total em Estoque
+    const resposta = await fetch(API_URL);
+    const todos = await resposta.json();
+
+    let totalGeral = 0;
+
+    todos.forEach(d => {
+        totalGeral += Number(d.estoque || 0);
+    });
+
+    dashboard.innerHTML = `
+        <div class="columns is-mobile m-0">
+
+            <div class="column is-6">
+                <div class="has-text-white">
+                    <p class="heading has-text-link-light">
+                        Total de Discos em Estoque
+                    </p>
+
+                    <p class="is-size-4 has-text-info">
+                        ${totalGeral}
+                    </p>
+                </div>
+            </div>
+
+            <div class="column is-6">
+                <div class="has-text-white">
+                    <p class="heading has-text-link-light">
+                        Total em Estoque Conforme Filtro Aplicado
+                    </p>
+
+                    <p class="is-size-4 has-text-warning">
+                        ${totalFiltrado}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    `;
+}
+
+// Filtros
+async function carregarFiltros() {
+    try {
+        const resposta = await fetch(API_URL);
+        const discos = await resposta.json();
+
+        preencherSelect("filtro-artista",
+            [...new Set(discos.map(d => d.artista))]);
+
+        preencherSelect("filtro-pais-fab",
+            [...new Set(discos.map(d => d.paisFab))]);
+
+        preencherSelect("filtro-pais-origem",
+            [...new Set(discos.map(d => d.pais || d.paisOrigem))]);
+
+        // estilos
+        let estilos = [];
+
+        discos.forEach(d => {
+            if (Array.isArray(d.estilo)) {
+                estilos.push(...d.estilo);
+            }
+        });
+
+        preencherSelect("filtro-estilo",
+            [...new Set(estilos)]);
+
+        // tags
+        let tags = [];
+
+        discos.forEach(d => {
+            if (d.tags) {
+                let lista = typeof d.tags === "string"
+                    ? JSON.parse(d.tags)
+                    : d.tags;
+
+                lista.forEach(t => tags.push(t.nome));
+            }
+        });
+
+        preencherSelect("filtro-tag",
+            [...new Set(tags)]);
+
+        // Desconto
+        preencherSelect("filtro-desconto",
+            [...new Set(
+                discos
+                    .map(d => d.percentualDesconto)
+                    .filter(v => Number(v) > 0)
+            )]);
+
+    } catch (erro) {
+        console.error("Erro filtros:", erro);
+    }
+}
+
+// Selects
+function preencherSelect(id, lista) {
+
+    const select = document.getElementById(id);
+    if (!select) return;
+
+    select.innerHTML = `<option value="">Todos</option>`;
+
+    lista
+        .filter(item => item)
+        .sort()
+        .forEach(item => {
+
+            let texto = item;
+
+            // Select de país
+            if (
+                id === "filtro-pais-fab" ||
+                id === "filtro-pais-origem"
+            ) {
+                texto = nomesPaises[item.toLowerCase()] || item;
+            }
+
+            select.innerHTML += `
+                <option value="${item}">
+                    ${texto}
+                </option>
+            `;
+        });
+}
+
+//Limpar Filtros
+function limparTodosFiltros() {
+
+    const ids = [
+        "filtro-busca",
+        "filtro-artista",
+        "filtro-estilo",
+        "filtro-pais-fab",
+        "filtro-pais-origem",
+        "filtro-tag",
+        "filtro-oferta",
+        "filtro-desconto"
+    ];
+
+    ids.forEach(id => {
+        const campo = document.getElementById(id);
+        if (campo) campo.value = "";
+    });
+
+    carregarTabela();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const filtros = [
+        "filtro-busca",
+        "filtro-artista",
+        "filtro-estilo",
+        "filtro-pais-fab",
+        "filtro-pais-origem",
+        "filtro-tag",
+        "filtro-oferta",
+        "filtro-desconto"
+    ];
+
+    filtros.forEach(id => {
+        const campo = document.getElementById(id);
+
+        if (campo) {
+            campo.addEventListener("input", aplicarFiltros);
+            campo.addEventListener("change", aplicarFiltros);
+        }
+    });
+
+});
 
 // Preparar a Edição //
 async function prepararEdicao(id) {
@@ -579,6 +1072,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     carregarTabela();
+    carregarFiltros();
 });
 
 function renderizarEstilosVisual() {
