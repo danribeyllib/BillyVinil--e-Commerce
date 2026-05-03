@@ -307,6 +307,13 @@ async function aplicarFiltros() {
         const paisOrigem = document.getElementById("filtro-pais-origem")?.value || "";
         const tag = document.getElementById("filtro-tag")?.value || "";
 
+        const lancDe = Number(document.getElementById("lanc-de")?.value || 0);
+        const lancAte = Number(document.getElementById("lanc-ate")?.value || 9999);
+
+        const edicDe = Number(document.getElementById("edic-de")?.value || 0);
+        const edicAte = Number(document.getElementById("edic-ate")?.value || 9999);
+
+
         const oferta = document.getElementById("filtro-oferta")?.value || "";
         const desconto = document.getElementById("filtro-desconto")?.value || "";
 
@@ -322,6 +329,21 @@ async function aplicarFiltros() {
 
             const passouArtista =
                 artista === "" || disco.artista === artista;
+
+            // lançamento
+            const anoLanc = Number(disco.lancamento || 0);
+
+            const passouLancamento =
+                anoLanc >= lancDe &&
+                anoLanc <= lancAte;
+
+
+            // edição
+            const anoEdic = Number(disco.edicao || 0);
+
+            const passouEdicao =
+                anoEdic >= edicDe &&
+                anoEdic <= edicAte;
 
             // estilos
             let estilos = [];
@@ -401,7 +423,9 @@ async function aplicarFiltros() {
                 passouPaisOrigem &&
                 passouTag &&
                 passouOferta &&
-                passouDesconto
+                passouDesconto &&
+                passouLancamento &&
+                passouEdicao
             );
         });
 
@@ -749,7 +773,11 @@ function limparTodosFiltros() {
         "filtro-pais-origem",
         "filtro-tag",
         "filtro-oferta",
-        "filtro-desconto"
+        "filtro-desconto",
+        "lanc-de",
+        "lanc-ate",
+        "edic-de",
+        "edic-ate"
     ];
 
     ids.forEach(id => {
