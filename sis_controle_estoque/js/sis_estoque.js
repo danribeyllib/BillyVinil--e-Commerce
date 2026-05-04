@@ -808,6 +808,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    const selectOferta = document.getElementById("filtro-oferta");
+    const selectDesconto = document.getElementById("filtro-desconto");
+
+    function controlarCampoDesconto() {
+        if (selectOferta.value === "sim") {
+            selectDesconto.disabled = false;
+        } else {
+            selectDesconto.disabled = true;
+            selectDesconto.value = "";
+        }
+    }
+
+    selectOferta.addEventListener("change", controlarCampoDesconto);
+
+    controlarCampoDesconto();
+
 });
 
 // Preparar a Edição //
@@ -1021,6 +1037,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const switchDesconto = document.getElementById("id-switch-desconto");
     const containerSelect = document.getElementById("container-select-desconto");
     const labelSwitch = document.querySelector('label[for="id-switch-desconto"]');
+
+
 
     if (switchDesconto) {
         switchDesconto.addEventListener("change", function () {
