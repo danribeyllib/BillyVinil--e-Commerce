@@ -24,7 +24,7 @@
       <div class="navbar-brand">
         <span class="navbar-item has-text-weight-bold">
           <i class="fa-solid fa-cat fa-xl has-text-link"></i>
-          <h1 class="title mt-1 ml-3 is-5 has-text-warning">Cadastro e Estoque</h1>
+          <h1 class="subtitle is-3 mt-1 ml-3 is-5 has-text-warning">Cadastro e Estoque</h1>
         </span>
       </div>
       <div class="navbar-menu">
@@ -46,7 +46,7 @@
       <div class="mb-5">
         <button id="btn-abrir-formulario" class="button is-link">
           <span class="icon"><i class="fas fa-plus"></i></span>
-          <span>Adicionar novo disco</span>
+          <span>Cadastrar novo disco</span>
         </button>
       </div>
 
@@ -320,27 +320,29 @@
             <div class="column is-12">
               <label class="label">Resumo / Descrição do Álbum</label>
               <div class="control">
-                <textarea class="textarea" id="id-resumo" placeholder="Escreva um breve resumo sobre o álbum"
-                  rows="3"></textarea>
+                <textarea class="textarea" id="id-resumo" placeholder="Escreva um breve resumo sobre o álbum (máx 700 caracteres)"
+                  rows="3" maxlength="700"></textarea>
               </div>
             </div>
           </div>
 
           <div class="has-text-centered mt-5">
             <div class="buttons is-centered">
-              <button type="submit" class="button is-link is-medium">Salvar Disco</button>
-              <button type="button" class="button is-danger is-medium" id="btn-cancelar">Cancelar</button>
+              <button type="submit" class="button is-link">Salvar Disco</button>
+              <button type="button" class="button is-danger" id="btn-cancelar">Cancelar</button>
             </div>
           </div>
 
         </form>
       </div>
 
-      <!--Filtros e Busca-->
-      <h1 class="title">Controle de Estoque</h1>
+      <hr>
 
-      <div class="box">
+      <!--Filtros e Busca-->
+    <div class="box">
         <div class="columns is-multiline">
+
+                <h2 class="subtitle m-4 has-text-warning"><span class="mx-2 has-text-link"><i class="fa-solid fa-magnifying-glass"></i></span>Buscar Disco</h2>
 
           <div class="column is-12">
             <label class="label">Busca</label>
@@ -469,9 +471,11 @@
         </div>
       </div>
 
+      <hr>
+
       <!--Tabela-->
       <div class="box mt-6">
-        <h2 class="subtitle is-5">Inventário de Discos</h2>
+        <h2 class="subtitle is-5 has-text-warning"><span class="m-2 has-text-link"><i class="fa-solid fa-record-vinyl"></i></span>Inventário de Discos</h2>
         <div class="table-container">
           <table class="table is-fullwidth is-striped">
 

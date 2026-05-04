@@ -254,7 +254,7 @@ async function carregarTabela() {
                     <td>${disco.artista}</td>
                     <td>R$ ${parseFloat(disco.preco).toFixed(2)}</td>
                     <td>${descontoTabela}</td>
-                    <td>${disco.estoque}</td>
+                   <td class="${Number(disco.estoque) === 0 ? 'has-text-danger has-text-weight-bold' : ''}">${disco.estoque}</td>
                     <td class="has-text-centered"><i class="fas fa-chevron-down is-size-7"></i></td>
                 </tr>
                 <tr id="${detalheId}" class="is-hidden has-background-dark">
@@ -503,16 +503,14 @@ function montarTabela(discos) {
         }
 
         bodyTabela.innerHTML += `
-        <tr onclick="toggleDetalhes('${detalheId}', this)"
-            class="linha-disco has-text-white"
-            style="cursor:pointer;">
+        <tr onclick="toggleDetalhes('${detalheId}', this)" class="linha-disco has-text-white" style="cursor:pointer;">
 
-            <td>${disco.id}</td>
+            <td class="has-text-info-light">${disco.id}</td>
             <td><strong>${disco.album}</strong></td>
             <td>${disco.artista}</td>
             <td>R$ ${parseFloat(disco.preco).toFixed(2)}</td>
             <td>${descontoTabela}</td>
-            <td>${disco.estoque}</td>
+            <td class="${Number(disco.estoque) === 0 ? 'has-text-danger has-text-weight-bold' : 'has-text-success-light has-text-weight-semibold'}">${disco.estoque}</td>
             <td class="has-text-centered">
                 <i class="fas fa-chevron-down is-size-7"></i>
             </td>
@@ -649,11 +647,11 @@ async function atualizarDashboard(discosFiltrados) {
 
             <div class="column is-6">
                 <div class="has-text-white">
-                    <p class="heading has-text-link-light">
+                    <p class="heading has-text-link-light has-text-centered">
                         Total de Discos em Estoque
                     </p>
 
-                    <p class="is-size-4 has-text-info">
+                    <p class="is-size-4 has-text-info has-text-centered">
                         ${totalGeral}
                     </p>
                 </div>
@@ -661,11 +659,11 @@ async function atualizarDashboard(discosFiltrados) {
 
             <div class="column is-6">
                 <div class="has-text-white">
-                    <p class="heading has-text-link-light">
+                    <p class="heading has-text-link-light has-text-centered">
                         Total em Estoque Conforme Filtro Aplicado
                     </p>
 
-                    <p class="is-size-4 has-text-warning">
+                    <p class="is-size-4 has-text-warning has-text-centered">
                         ${totalFiltrado}
                     </p>
                 </div>
@@ -1114,11 +1112,11 @@ function renderizarEstilosVisual() {
 // Lados das faixas
 function criarEstruturaLado(letraLado) {
     const divLado = document.createElement("div");
-    divLado.className = "box has-background-black-ter mb-4 div-lado-musical";
+    divLado.className = "box has-background-black-ter mb-4 div-lado-musical m-2";
     divLado.dataset.lado = letraLado;
     divLado.innerHTML = `
         <div class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-            <h6 class="title is-6 has-text-warning mb-0">LADO ${letraLado}</h6>
+            <h6 class="subtitle is-5 has-text-warning mb-0">LADO ${letraLado}</h6>
             <button type="button" class="delete is-small btn-remover-lado"></button>
         </div>
         <div class="container-faixas"></div>

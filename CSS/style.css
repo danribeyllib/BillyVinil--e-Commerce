@@ -39,7 +39,7 @@ hr {
   background-color: #f988ff1e !important;
   height: 2px;
   width: 90%;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto !important;
 }
 
 /* Cores Personalizadas */
