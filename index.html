@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html data-theme="dark" lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-*" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Ícones Neon-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yefferking/IconsNeon@main/neon-icons.css">
+  <!--Ícones Neon-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yefferking/IconsNeon@main/neon-icons.css">
   <!--Bandeiras-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
   <!--CSS-->
@@ -143,7 +143,7 @@
             <div class="column is-5">
               <div class="container mb-5">
                 <h1 class="title is-1 mb-8 has-text-centered">
-                  <span class="has-text-white">Dos clássicos aos atuais.</span>
+                  <span class="has-text-warning">Dos clássicos aos atuais.</span>
                   <span class="has-text-link has-text-weight-semibold mb-4">Descubra novos ritmos.</span>
                 </h1>
 
@@ -195,9 +195,9 @@
     </section>
 
     <!--Destaues-->
-    <section class="hero titulo-sessao has-text-white mt-0 mb-0">
+    <section class="hero titulo-sessao has-text-white">
       <div class="hero-body has-text-centered">
-        <p class="title is-2 has-text-white">Destaques da Semana</p>
+        <p class="title is-2 has-text-warning">Destaques da Semana</p>
       </div>
     </section>
 
@@ -208,8 +208,8 @@
 
     <!--Destaques Toggle-->
     <section id="section-destaques" class="hero has-text-white mx-6 mt-5 mb-2">
-      <div class="hero-body has-text-centered titulo-destaques">
-        <p class="title is-2 has-text-white">Ver Todos os Destaques <span>
+      <div class="hero-body has-text-centered titulo-sessao">
+        <p class="title is-2 has-text-warning">Ver Todos os Destaques <span>
             <input type="checkbox" id="toggle-destaques" class="toggle-checkbox">
             <label for="toggle-destaques" class="toggle-destaques button is-link is-dark is-inverted mt-2">
               <i class="fa-solid fa-angles-down"></i>
@@ -229,24 +229,20 @@
       </div>
     </section>
 
-    <!--Novidades & Ofertas-->
-    <section id="section-novidades-ofertas" class="hero titulo-sessao-nov has-text-white mb-0 pb-0">
-      <div class="hero-body has-text-centered">
-        <p class="title has-text-white is-3">Novidades e Ofertas</p>
-      </div>
-    </section>
+    <hr>
 
+    <!--Novidades & Ofertas-->
     <section class="section">
       <div class="columns ofertas-novidades-container">
 
         <div class="ofertas-fundo column is-6">
-          <h2 class="title has-text-danger is-2 has-text-centered">Ofertas</h2>
+          <h2 class="title has-text-danger is-2 has-text-centered py-5">Ofertas</h2>
           <div id="lista-ofertas" class="columns is-multiline">
           </div>
         </div>
 
         <div class="novidades-fundo column is-6">
-          <h2 class="title has-text-info-50 is-2 has-text-centered">Novidades</h2>
+          <h2 class="title has-text-info-50 is-2 has-text-centered py-5">Novidades</h2>
           <div id="lista-novidades" class="columns is-multiline">
           </div>
         </div>
@@ -254,15 +250,16 @@
       </div>
     </section>
 
-    <!--Newsletter-->
-    <section id="section-newsletter" class="hero titulo-sessao-newsletter has-text-white mb-0 mt-0">
-      <div class="hero-body has-text-centered">
-        <p class="title is-2 has-text-white">Newsletter</p>
-      </div>
-    </section>
+    <hr>
 
+    <!--Newsletter-->
     <section class="section newsletter-fundo">
       <div class="container">
+
+        <div class="hero-body has-text-centered">
+          <p class="title is-2 has-text-warning py-5">Newsletter</p>
+        </div>
+
         <div class="columns is-vcentered">
 
           <div class="column is-6 div-form-newsletter">
@@ -307,7 +304,7 @@
             <h3 class="title is-3 has-text-danger">Não perca o próximo giro!</h3>
 
             <p class="subtitle has-text-white is-5 mt-4">
-              Sua coleção merece o melhor. Assine nossa newsletter, entre para o clube e receba dicas, ofertas
+              Assine nossa newsletter, entre para o clube e receba dicas, ofertas
               exclusivas e novidades.
             </p>
           </div>
@@ -542,7 +539,8 @@
 
             <div class="column">
               <p id="carrinho-artista" class="subtitle is-6 mb-2"></p>
-              <p id="carrinho-preco" class="has-text-white is-size-5">Agora você receberá dicas, ofertas e novidades em seu
+              <p id="carrinho-preco" class="has-text-white is-size-5">Agora você receberá dicas, ofertas e novidades em
+                seu
                 e-mail.</p>
             </div>
           </div>

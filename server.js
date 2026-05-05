@@ -88,7 +88,24 @@ const storage = multer.diskStorage({
     },
 
     filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname));
+
+        const album = limparNome(req.body.album || "album");
+        const artista = limparNome(req.body.artista || "artista");
+        const ano = limparNome(req.body.lancamento || "0000");
+        const id = req.params.id || Date.now();
+
+        const extensao = path.extname(file.originalname);
+
+        const baseNome = `${album}_${artista}_${ano}_${id}`;
+
+        if (file.fieldname === "capa") {
+            return cb(null, `${baseNome}_capa${extensao}`);
+        }
+
+        if (!req.contadorGaleria) req.contadorGaleria = 1;
+
+        const numero = req.contadorGaleria++;
+        cb(null, `${baseNome}_${numero}${extensao}`);
     }
 });
 
@@ -140,11 +157,33 @@ function montarDisco(req, id, antigo = {}) {
 
         capa: req.files?.capa
             ? caminhoPublico(req.files.capa[0].path)
-            : antigo.capa || null,
+            : (req.body.removerCapa === "true"
+                ? null
+                : antigo.capa || null),
 
-        galeria: req.files?.galeria
-            ? req.files.galeria.map(img => caminhoPublico(img.path))
-            : antigo.galeria || [],
+        galeria: (() => {
+
+            let galeriaAtual = antigo.galeria || [];
+
+            const removidas = paraArrayJSON(req.body.galeriaRemovida);
+
+            if (removidas.length > 0) {
+                galeriaAtual = galeriaAtual.filter((img, index) =>
+                    !removidas.includes(index)
+                );
+            }
+
+            if (req.files?.galeria) {
+                const novas = req.files.galeria.map(img =>
+                    caminhoPublico(img.path)
+                );
+
+                galeriaAtual = [...galeriaAtual, ...novas];
+            }
+
+            return galeriaAtual;
+
+        })(),
 
         tags: paraArrayJSON(req.body.tags).map(tag => ({
             nome: tag.nome,

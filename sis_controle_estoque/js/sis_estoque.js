@@ -5,6 +5,8 @@ const API_URL = "http://localhost:3000/discos";
 let idDiscoEmEdicao = null;
 let novaCapaSelecionada = false;
 let novaGaleriaSelecionada = false;
+let removerCapa = false;
+let galeriaRemovida = [];
 
 function obterValor(id) {
     const el = document.getElementById(id);
@@ -94,6 +96,9 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     formData.append("edicao", obterValor("id-edicao"));
     formData.append("resumo", obterValor("id-resumo"));
 
+    formData.append("removerCapa", removerCapa);
+    formData.append("galeriaRemovida", JSON.stringify(galeriaRemovida));
+
     const musicasData = coletarMusicasParaJSON();
     formData.append("musicas", JSON.stringify(musicasData));
     formData.append("estilo", JSON.stringify(listaEstilos));
@@ -135,8 +140,14 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
             novaCapaSelecionada = false;
             novaGaleriaSelecionada = false;
 
+            removerCapa = false;
+            galeriaRemovida = [];
+
             idDiscoEmEdicao = null;
             listaEstilos = [];
+
+            document.getElementById("preview-capa-edicao").innerHTML = "";
+            document.getElementById("preview-galeria-edicao").innerHTML = "";
 
             const containerEstilos = document.getElementById("container-estilos-adicionados");
             if (containerEstilos) containerEstilos.innerHTML = "";
@@ -224,7 +235,7 @@ async function carregarTabela() {
         discos.forEach(disco => {
             const detalheId = `detalhe-${disco.id}`;
             const pDesconto = disco.percentualDesconto || 0;
-            const descontoTabela = pDesconto > 0 ? `${pDesconto}%` : "Não";
+            const descontoTabela = pDesconto > 0 ? `${pDesconto}%` : `<span class="has-text-danger-80">Não</span>`;
 
             let tagsArray = [];
             if (disco.tags) {
@@ -447,7 +458,7 @@ function montarTabela(discos) {
 
         const detalheId = `detalhe-${disco.id}`;
         const pDesconto = disco.percentualDesconto || 0;
-        const descontoTabela = pDesconto > 0 ? `${pDesconto}%` : "Não";
+        const descontoTabela = pDesconto > 0 ? `<span class="has-text-link-90">${pDesconto}%</span>` : `<span class="has-text-danger-80">Não</span>`;
         totalEstoque += Number(disco.estoque || 0);
 
         let tagsArray = [];
@@ -505,8 +516,8 @@ function montarTabela(discos) {
         bodyTabela.innerHTML += `
         <tr onclick="toggleDetalhes('${detalheId}', this)" class="linha-disco has-text-white" style="cursor:pointer;">
 
-            <td class="has-text-info-light">${disco.id}</td>
-            <td><strong>${disco.album}</strong></td>
+            <td class="has-text-info-80">${disco.id}</td>
+            <td class="has-text-link-90"><b>${disco.album}</b></td>
             <td>${disco.artista}</td>
             <td>R$ ${parseFloat(disco.preco).toFixed(2)}</td>
             <td>${descontoTabela}</td>
@@ -829,8 +840,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // Preparar a Edição //
 async function prepararEdicao(id) {
 
-    console.log("ÁLBUM:", obterValor("id-album"));
-
     try {
         const resposta = await fetch(`${API_URL}/${id}`);
         if (!resposta.ok) throw new Error("Disco não encontrado.");
@@ -844,8 +853,47 @@ async function prepararEdicao(id) {
             if (btnAbrir) btnAbrir.click();
         }
 
+        // imagens
+        const previewCapa = document.getElementById("preview-capa-edicao");
+
+        if (previewCapa && disco.capa) {
+            previewCapa.innerHTML = `
+        <img src="${disco.capa}" style="max-width:180px; border-radius:8px;">
+        <button type="button"
+            class="button is-danger is-small mt-2"
+            onclick="removerCapaAtual()">
+            Excluir capa
+        </button>
+    `;
+        }
+
+        const previewGaleria = document.getElementById("preview-galeria-edicao");
+
+        if (previewGaleria) {
+            previewGaleria.innerHTML = "";
+
+            if (disco.galeria && disco.galeria.length > 0) {
+
+                disco.galeria.forEach((img, index) => {
+
+                    previewGaleria.innerHTML += `
+                <div class="box p-2 mb-2">
+                    <img src="${img}" style="max-width:120px;">
+                    <br>
+
+                    <button type="button"
+                        class="button is-danger is-small mt-2"
+                        onclick="removerImagemGaleria(${index})">
+                        Excluir
+                    </button>
+                </div>
+            `;
+                });
+            }
+        }
+
         /// Selects (Peso e Qtd)
-        const pesoBruto = String(disco.weight || disco.peso || "");
+        const pesoBruto = String(disco.peso || "");
         let pesoDetectado = "";
         let qtdDetectada = "Simples";
 
@@ -878,6 +926,8 @@ async function prepararEdicao(id) {
             const el = document.getElementById(idCampo);
             if (el) el.value = (valor !== undefined && valor !== null) ? valor : "";
         });
+
+        console.log("ÁLBUM:", obterValor("id-album"));
 
         // Lados e Faixas
         const containerLados = document.getElementById("container-lados-dinamicos");
@@ -964,6 +1014,7 @@ function gerarTracklist(musicas) {
         acc[lado].push(m);
         return acc;
     }, {});
+
     return Object.keys(grupos).sort().map(lado => `
         <div class="mb-3">
             <div class="has-text-weight-bold has-text-warning track-header-lado">LADO ${lado}</div>
@@ -1082,18 +1133,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 btnAbrir.innerHTML = '<span class="icon"><i class="fas fa-times"></i></span><span>Fechar formulário</span>';
                 btnAbrir.classList.replace("is-link", "is-danger");
             } else {
-                btnAbrir.innerHTML = '<span class="icon"><i class="fas fa-plus"></i></span><span>Adicionar novo disco</span>';
+                btnAbrir.innerHTML =
+                    '<span class="icon"><i class="fas fa-plus"></i></span><span>Adicionar novo disco</span>';
+
                 btnAbrir.classList.replace("is-danger", "is-link");
+
                 idDiscoEmEdicao = null;
+
                 document.getElementById("form-cadastro-completo").reset();
+
                 document.getElementById("container-lados-dinamicos").innerHTML = "";
+
                 document.getElementById("id-nome-arq-capa").innerText = "Nenhum arquivo...";
+                document.getElementById("id-nome-arq-galeria").innerText = "0 fotos";
+
+                document.getElementById("preview-capa-edicao").innerHTML = "";
+                document.getElementById("preview-galeria-edicao").innerHTML = "";
+
+                novaCapaSelecionada = false;
+                novaGaleriaSelecionada = false;
+                removerCapa = false;
+                galeriaRemovida = [];
+
+                listaEstilos = [];
+                renderizarEstilosVisual();
             }
         };
         btnAbrir.addEventListener("click", toggleForm);
         if (btnCancelar) btnCancelar.addEventListener("click", toggleForm);
     }
 
+    // LogOut
     const btnLogout = document.getElementById("btn-logout");
     if (btnLogout) {
         btnLogout.addEventListener("click", () => {
@@ -1199,6 +1269,20 @@ function coletarMusicasParaJSON() {
         });
     });
     return listaFinal;
+}
+
+// ALteração de imagens
+function removerCapaAtual() {
+    removerCapa = true;
+    document.getElementById("preview-capa-edicao").innerHTML =
+        "<p class='has-text-danger'>Capa será removida ao salvar.</p>";
+}
+
+function removerImagemGaleria(index) {
+    galeriaRemovida.push(index);
+
+    const item = document.querySelectorAll("#preview-galeria-edicao .box")[index];
+    if (item) item.remove();
 }
 
 window.onload = carregarTabela;

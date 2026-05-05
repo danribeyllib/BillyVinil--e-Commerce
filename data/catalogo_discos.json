@@ -4,17 +4,9 @@
     "album": "Dark Side of the Moon",
     "artista": "Pink Floyd",
     "lancamento": 1973,
-    "estoque": 1,
-    "desconto": 0,
-    "preco": 279.99,
-    "temDesconto": false,
-    "peso": "180g",
-    "qtdDiscos": "Simples",
-    "tipo": "LP 12\"",
-    "paisOrigem": "gb",
-    "paisFab": "br",
     "edicao": "1985",
-    "resumo": "Lançado em 1973, é um marco do rock Progressivo e um dos discos mais vendidos da história. Explora temas complexos como o tempo, a ganância, o conflito e a saúde mental através de uma produção sonora inovadora para a época, com uso pioneiro de sintetizadores e efeitos de estúdio.",
+    "peso": "180g",
+    "tipo": "LP 12\"",
     "musicas": [
       {
         "lado": "A",
@@ -67,52 +59,49 @@
         "nome": "Eclipse"
       }
     ],
+    "pais": "gb",
+    "paisFab": "br",
+    "preco": 279.99,
     "estilo": [
       "Rock Internacional",
       "Rock Psicodélico",
       "Rock Progressivo"
     ],
-    "tags": [
-      {
-        "nome": "Clássico",
-        "classe": "azul-claro-tag"
-      },
-      {
-        "nome": "Cult",
-        "classe": "importado-tag"
-      },
-      {
-        "nome": "Excelente Estado",
-        "classe": "turquesa-tag"
-      },
-      {
-        "nome": "Raro",
-        "classe": "gold-tag"
-      }
+    "resumo": [
+      "Lançado em 1973, é um marco do rock Progressivo e um dos discos mais vendidos da história. Explora temas complexos como o tempo, a ganância, o conflito e a saúde mental através de uma produção sonora inovadora para a época, com uso pioneiro de sintetizadores e efeitos de estúdio."
     ],
     "capa": "../imagens/capas/pink_floyd_dark_side_of_the_moon.jpg",
     "galeria": [
       "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (1).jpeg",
       "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (2).jpeg",
       "../imagens/galeria/pink_floyd_dark_side_of_the_moon/Pink_Floyd_DSOTM (3).jpeg"
-    ]
+    ],
+    "tags": [
+      {
+        "nome": "Clássico",
+        "cor": "azul-claro-tag"
+      },
+      {
+        "nome": "Cult",
+        "cor": "importado-tag"
+      },
+      {
+        "nome": "Raro",
+        "cor": "gold-tag"
+      }
+    ],
+    "estoque": 1,
+    "oferta": false,
+    "percentualDesconto": 0
   },
   {
     "id": "1774493496957",
     "album": "A Night To Remember",
     "artista": "Cyndi Lauper",
     "lancamento": 1989,
-    "estoque": 2,
-    "desconto": 10,
-    "preco": 189.9,
-    "temDesconto": true,
-    "peso": "140g",
-    "qtdDiscos": "Simples",
-    "tipo": "LP 12\"",
-    "paisOrigem": "us",
-    "paisFab": "br",
     "edicao": "1989",
-    "resumo": "Lançado em 1989, este quarto disco de estúdio apresenta um som pop rock mais maduro e polido. O álbum destaca-se pela poderosa balada I Drove All Night e por letras que exploram temas de amor e autorreflexão, consolidando a transição da artista para uma sonoridade mais adulta no final da década.",
+    "peso": "140g",
+    "tipo": "LP 12\"",
     "musicas": [
       {
         "lado": "A",
@@ -175,31 +164,40 @@
         "nome": "Kindred Spirit"
       }
     ],
+    "pais": "us",
+    "paisFab": "br",
+    "preco": 189.9,
     "estilo": [
       "Pop",
       "Synth-pop",
       "Pop rock"
     ],
-    "tags": [
-      {
-        "nome": "Bom Estado",
-        "classe": "verde-tag"
-      },
-      {
-        "nome": "Edição Limitada",
-        "classe": "azul-claro-tag"
-      },
-      {
-        "nome": "Oferta",
-        "classe": "oferta-tag"
-      }
+    "resumo": [
+      "Lançado em 1989, este quarto disco de estúdio apresenta um som pop rock mais maduro e polido. O álbum destaca-se pela poderosa balada I Drove All Night e por letras que exploram temas de amor e autorreflexão, consolidando a transição da artista para uma sonoridade mais adulta no final da década."
     ],
     "capa": "../imagens/capas/CyndiLauper_ANighttoRemember.jpg",
     "galeria": [
       "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (1).jpg",
       "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (2).jpg",
       "../imagens/galeria/cyndi_lauper_antr/cyndi_antr (3).jpg"
-    ]
+    ],
+    "tags": [
+      {
+        "nome": "Bom Estado",
+        "cor": "verde-tag"
+      },
+      {
+        "nome": "Edição Limitada",
+        "cor": "azul-claro-tag"
+      },
+      {
+        "nome": "Oferta",
+        "cor": "oferta-tag"
+      }
+    ],
+    "estoque": 2,
+    "oferta": true,
+    "percentualDesconto": 10
   },
   {
     "id": "1774493496958",
@@ -5569,7 +5567,7 @@
     "galeria": [
       "/imagens/galeria/BillyVinil/1777490524000.jpg",
       "/imagens/galeria/BillyVinil/1777490524001.jpg",
-      "/imagens/galeria/BillyVinil/1777490524022.jpg"
+      "/imagens/galeria/BillyVinil/1778021907503.jpg"
     ],
     "tags": [
       {
@@ -5592,5 +5590,74 @@
     "estoque": 3,
     "oferta": true,
     "percentualDesconto": 10
+  },
+  {
+    "id": "1778025465580",
+    "album": "Vinil Billy 2",
+    "artista": "Billy Vinil",
+    "lancamento": 2012,
+    "edicao": "2025",
+    "peso": "200g Duplo",
+    "tipo": "LP 12\"",
+    "musicas": [
+      {
+        "lado": "A",
+        "faixa": 1,
+        "nome": "Número um"
+      },
+      {
+        "lado": "A",
+        "faixa": 2,
+        "nome": "Número dois"
+      },
+      {
+        "lado": "B",
+        "faixa": 1,
+        "nome": "Número três"
+      },
+      {
+        "lado": "C",
+        "faixa": 1,
+        "nome": "Número quatro"
+      },
+      {
+        "lado": "D",
+        "faixa": 1,
+        "nome": "Número cinco"
+      }
+    ],
+    "pais": "se",
+    "paisFab": "br",
+    "preco": 127.99,
+    "estilo": [
+      "Pop Rock",
+      "Pop"
+    ],
+    "resumo": [
+      "Resumo sobre o segundo álbum de teste"
+    ],
+    "capa": "/imagens/capas/Vinil_Billy_2_Billy_Vinil_2012_1778025465441_capa.png",
+    "galeria": [
+      "/imagens/galeria/Vinil_Billy_2/Vinil_Billy_2_Billy_Vinil_2012_1778025465542_1.jpg",
+      "/imagens/galeria/Vinil_Billy_2/Vinil_Billy_2_Billy_Vinil_2012_1778025465548_2.jpg",
+      "/imagens/galeria/Vinil_Billy_2/Vinil_Billy_2_Billy_Vinil_2012_1778025465549_3.jpg"
+    ],
+    "tags": [
+      {
+        "nome": "Bom Estado",
+        "cor": "verde-tag"
+      },
+      {
+        "nome": "Destaque",
+        "cor": "destaque-tag"
+      },
+      {
+        "nome": "Raro",
+        "cor": "gold-tag"
+      }
+    ],
+    "estoque": 3,
+    "oferta": true,
+    "percentualDesconto": 35
   }
 ]

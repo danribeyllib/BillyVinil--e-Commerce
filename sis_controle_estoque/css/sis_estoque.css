@@ -106,7 +106,7 @@ backdrop-filter: blur(14px);
     transition: opacity 0.4s ease, transform 0.4s ease;
     max-height: 2000px;
     overflow-x: auto;
-    overflow-y: auto; /* /////////////////////////////////////// ALTERAR /////////////// */
+    overflow-y: auto;
 }
 
 #container-formulario.is-hidden {
@@ -211,7 +211,7 @@ display: block !important;
 .container-tracklist {
     max-height: 250px;
     overflow-y: auto;
-    background: #0a0a0a;
+    background: #121212;
     padding: 15px;
     border-radius: 8px;
     border: 1px solid #222;
@@ -225,7 +225,7 @@ display: block !important;
 }
 
 .track-header-lado {
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #66614b;
     margin-bottom: 5px;
     font-size: 0.75rem;
     letter-spacing: 1px;
