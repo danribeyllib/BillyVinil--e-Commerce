@@ -295,8 +295,8 @@ async function carregarDiscosIDJson(idDesejado) {
 
                 <div class="titulo-detalhes container mb-6">
                     <div class="is-flex mb-4">${tagsHtml}</div>
-                    <h1 class="title is-size-2 has-text-link-60 has-text-weight-bold mb-2">${disco.album}</h1>
-                    <p class="subtitulo-detalhes subtitle is-size-4 has-text-weight-bold has-text-danger-60 mb-4">${disco.artista}</p>
+                    <h1 class="title is-size-2 has-text-warning text-weight-bold mb-2">${disco.album}</h1>
+                    <p class="subtitulo-detalhes subtitle is-size-4 has-text-weight-bold has-text-link-70 mb-4">${disco.artista}</p>
                 </div>
 
                 <div class="columns detalhes-disco">
