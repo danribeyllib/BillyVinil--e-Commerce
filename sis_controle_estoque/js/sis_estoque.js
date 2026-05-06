@@ -1165,12 +1165,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // LogOut
     const btnLogout = document.getElementById("btn-logout");
+
     if (btnLogout) {
-        btnLogout.addEventListener("click", () => {
-            sessionStorage.removeItem("billyvinil_sessao");
-            localStorage.removeItem("billyvinil_login_persistente");
-            window.location.href = "login_estoque.html";
-        });
+        btnLogout.addEventListener("click", confirmarLogout);
     }
 
     // Tags
@@ -1269,6 +1266,56 @@ function coletarMusicasParaJSON() {
         });
     });
     return listaFinal;
+}
+
+// Modal logOut
+function confirmarLogout() {
+    const container = document.getElementById("id-container-modais");
+
+    container.innerHTML = `
+        <div class="modal-alerta is-active">
+
+            <div class="modal-fundo" onclick="fecharModal()"></div>
+
+            <div class="alerta-cartao">
+
+                <div class="alerta-topo">
+                    <span>Confirmar saída</span>
+                    <button class="delete" onclick="fecharModal()"></button>
+                </div>
+
+                <div class="alerta-corpo has-text-centered">
+
+                    <p class="subtitle is-5" style="color:white;">
+                        Tem certeza que deseja sair do sistema?
+                    </p>
+
+                    <div class="buttons is-centered mt-5">
+
+                        <button class="button is-danger"
+                            onclick="logoutSistema()">
+                            Sim, sair
+                        </button>
+
+                        <button class="button is-info"
+                            onclick="fecharModal()">
+                            Cancelar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    `;
+}
+
+function logoutSistema() {
+    sessionStorage.removeItem("billyvinil_sessao");
+    localStorage.removeItem("billyvinil_login_persistente");
+    window.location.href = "login_estoque.html";
 }
 
 // ALteração de imagens
