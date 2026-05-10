@@ -115,8 +115,9 @@
         <section class="section destaques-fundo">
 
             <div class="container mx-auto px-8 py-12">
-                <h1 class="title is-size-2 has-text-white has-text-weight-bold mb-8">
-                    <span class="has-text-primary-45">CARRINHO</span> <span class="has-text-primary-45"><i class="fa-solid fa-cart-shopping"></i></span>
+                <h1 class="title is-size-2 has-text-weight-bold mb-8">
+                    <span class="has-text-warning">CARRINHO</span> <span class="has-text-primary-45"><i
+                            class="fa-solid fa-cart-shopping"></i></span>
                 </h1>
 
                 <!--Carrinho-->
@@ -139,7 +140,7 @@
 
                         <!--Frete-->
                         <div class="p-6 resumo-disco mb-4">
-                            <h3 class="has-text-white has-text-weight-bold is-size-4 mb-6">Calcular Frete</h3>
+                            <h3 class="has-text-warning has-text-weight-bold is-size-4 mb-6">Calcular Frete</h3>
 
                             <div class="field has-addons mb-4">
                                 <div class="control is-expanded">
@@ -172,7 +173,7 @@
 
                         <!--Resumo-->
                         <div class="p-6 resumo-disco">
-                            <h3 class="has-text-white has-text-weight-bold is-size-4 mb-6">Resumo da Compra</h3>
+                            <h3 class="has-text-warning has-text-weight-bold is-size-4 mb-6">Resumo da Compra</h3>
                             <div class="is-flex is-justify-content-space-between mb-4">
                                 <span class="has-text-info">Subtotal</span>
                                 <span id="resumo-subtotal" class="has-text-white has-text-weight-semibold">
@@ -195,8 +196,8 @@
                             </div>
 
                             <div class="is-flex is-justify-content-space-between mb-6">
-                                <span class="has-text-white has-text-weight-bold is-size-5">Total</span>
-                                <span id="resumo-total" class="has-text-weight-bold has-text-primary-60 is-size-4">
+                                <span class="has-text-warning has-text-weight-bold is-size-5">Total</span>
+                                <span id="resumo-total" class="has-text-weight-bold has-text-warning is-size-4">
                                     <!--Total-->
                                 </span>
                             </div>
@@ -397,6 +398,135 @@
                         onclick="fecharModalErroCompra()">Voltar</button>
                 </div>
             </footer>
+        </div>
+    </div>
+
+    <!-- Modal Finalizar Compra -->
+    <div id="modal-finalizar-compra" class="modal">
+        <div class="modal-background" onclick="fecharModalFinalizarCompra()"></div>
+
+        <div class="modal-card">
+
+            <!-- Header -->
+            <header class="modal-card-head">
+                <p class="modal-card-title has-text-link">
+                    <span class="mr-2 has-text-primary">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </span>
+                    Finalizar Compra
+                </p>
+
+                <button class="delete" aria-label="close" onclick="fecharModalFinalizarCompra()"></button>
+            </header>
+
+            <!-- Body -->
+            <section class="modal-card-body">
+
+                <!-- Resumo -->
+                <div class="box-area mb-4 resumo-finalizar">
+
+                    <h3 class="title is-6 mb-3 has-text-warning">
+                        Resumo da Compra
+                    </h3>
+
+                    <div class="is-flex is-justify-content-space-between mb-2">
+                        <span>Itens</span>
+                        <span class="has-text-info has-text-weight-semibold" id="finalizar-itens has-text-warning">0</span>
+                    </div>
+
+                    <div class="is-flex is-justify-content-space-between mb-2">
+                        <span>Subtotal</span>
+                        <span class="has-text-info has-text-weight-semibold" id="finalizar-subtotal">R$ 0,00</span>
+                    </div>
+
+                    <div class="is-flex is-justify-content-space-between mb-2">
+                        <span>Desconto</span>
+                        <span class="has-text-info has-text-weight-semibold" id="finalizar-desconto">R$ 0,00</span>
+                    </div>
+
+                    <div class="is-flex is-justify-content-space-between mb-2">
+                        <span>Frete</span>
+                        <span class="has-text-info has-text-weight-semibold" id="finalizar-frete">R$ 0,00</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="is-flex is-justify-content-space-between has-text-weight-bold">
+                        <span class="has-text-warning has-text-weight-bold">Total</span>
+
+                        <span id="finalizar-total" class="has-text-warning has-text-weight-bold">
+                            R$ 0,00
+                        </span>
+                    </div>
+
+                    <hr>
+
+                </div>
+
+                <!-- Formulário -->
+                <div class="field">
+                    <label class="label">Nome Completo</label>
+
+                    <div class="control">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">E-mail</label>
+
+                    <div class="control">
+                        <input class="input" type="email">
+                    </div>
+                </div>
+
+                <div class="columns is-mobile">
+
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">CEP</label>
+
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label class="label">Método de Pagamento</label>
+
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select>
+                                <option>Selecione</option>
+                                <option>Pix</option>
+                                <option>Cartão</option>
+                                <option>Boleto</option>
+
+
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="modal-card-foot is-justify-content-flex-end">
+
+                <button class="button is-danger is-dark" onclick="fecharModalFinalizarCompra()">
+                    Cancelar
+                </button>
+
+                <button class="button is-success">
+                    Confirmar Compra
+                </button>
+
+            </footer>
+
         </div>
     </div>
 

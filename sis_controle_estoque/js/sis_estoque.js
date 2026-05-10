@@ -58,6 +58,7 @@ const nomesPaises = {
     "ar": "Argentina",
     "cl": "Chile",
     "uy": "Uruguai",
+    "cn": "China",
     "ot": "Outro"
 };
 

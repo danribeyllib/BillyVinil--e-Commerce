@@ -766,6 +766,8 @@ hr {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.3px);
   -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid var(--glass-border) !important;
+
 }
 
 .ofertas-fundo {
@@ -774,6 +776,8 @@ hr {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.3px);
   -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid var(--glass-border) !important;
+
 }
 
 .detalhes-disco {
@@ -791,6 +795,8 @@ hr {
   backdrop-filter: blur(7.3px);
   border-radius: 10px;
   -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid var(--glass-border) !important;
+
 }
 
 /* Newsletter */

@@ -333,6 +333,7 @@ function calcularPrecoComDesconto(produto) {
     return produto.preco - desconto;
 }
 
+/*
 //   Botão Concluir Compra (erro -  somente para demonstração)
 const botao = document.getElementById("btn-concluir-compra");
 const textoOriginal = botao.textContent;
@@ -368,5 +369,49 @@ function abrirModalErroCompra() {
 
 function fecharModalErroCompra() {
     const modal = document.getElementById("modal-compra-erro");
+    modal.classList.remove("is-active");
+}*/
+
+
+
+
+// Botão concluir compra 
+const botao = document.getElementById("btn-concluir-compra");
+
+botao.addEventListener("click", () => {
+    abrirModalFinalizarCompra();
+});
+
+// Abrir modal
+function abrirModalFinalizarCompra() {
+
+    copiarResumoParaModal();
+
+    const modal = document.getElementById("modal-finalizar-compra");
+    modal.classList.add("is-active");
+}
+
+// Copiar resumo da página para modal
+function copiarResumoParaModal() {
+
+    const subtotal =
+        document.getElementById("resumo-subtotal")?.innerText || "R$ 0,00";
+
+    const desconto =
+        document.getElementById("resumo-desconto")?.innerText || "R$ 0,00";
+
+    const total =
+        document.getElementById("resumo-total")?.innerText || "R$ 0,00";
+
+    document.getElementById("finalizar-subtotal").innerText = subtotal;
+    document.getElementById("finalizar-desconto").innerText = desconto;
+    document.getElementById("finalizar-total").innerText = total;
+
+    document.getElementById("finalizar-frete").innerText = "R$ 0,00";
+}
+
+// Fechar modal
+function fecharModalFinalizarCompra() {
+    const modal = document.getElementById("modal-finalizar-compra");
     modal.classList.remove("is-active");
 }

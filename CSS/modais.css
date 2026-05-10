@@ -322,3 +322,88 @@ input[type=number]::-webkit-outer-spin-button {
         font-weight: 500;
     }
 }
+
+/* Modal finalizar compra */
+#modal-finalizar-compra.modal {
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#modal-finalizar-compra .modal-card {
+    background: rgba(91, 68, 96, 0.156) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+
+    width: 560px !important;
+    max-width: 95vw !important;
+    max-height: 92vh !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+}
+
+/* Body */
+#modal-finalizar-compra .modal-card-body {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    padding: 20px !important;
+    border: 1px solid var(--glass-border) !important;
+
+}
+
+/* Header */
+#modal-finalizar-compra .modal-card-head {
+    flex-shrink: 0 !important;
+    background: rgba(26, 0, 38, 0.618);
+    backdrop-filter: var(--blur) !important;
+    -webkit-backdrop-filter: var(--blur) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+}
+
+/* Footer */
+#modal-finalizar-compra .modal-card-foot {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(26, 0, 38, 0.618);
+    backdrop-filter: var(--blur) !important;
+    -webkit-backdrop-filter: var(--blur) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+
+}
+
+/* Botões */
+#modal-finalizar-compra .modal-card-foot .button {
+    min-width: 170px;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+
+    #modal-finalizar-compra .modal-card {
+        width: calc(100% - 20px) !important;
+        max-height: 95vh !important;
+    }
+
+    #modal-finalizar-compra .modal-card-foot .button {
+        width: 100%;
+    }
+
+    #modal-finalizar-compra .columns.is-mobile {
+        display: block;
+    }
+
+    #modal-finalizar-compra .column {
+        padding: 0;
+        margin-bottom: 12px;
+    }
+}

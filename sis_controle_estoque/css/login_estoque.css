@@ -2,9 +2,10 @@
 
 body {
     min-height: 100vh;
-    background-image: url("/imagens/fundo/3265419.jpg") !important;
+    background-image: url("/imagens/fundo/9155454.jpg") !important;
     background-repeat: repeat;
-    background-size: fill;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -26,16 +27,22 @@ body {
     --bulma-success-l: 59%;
     --bulma-danger-l: 61%;
     --bulma-burger-h: 272deg;
+    --glass: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 250, 224, 0.2);
+    --blur: blur(20px);
+    --shift-x: 22vw;
 }
 
 .login-card {
+    background: var(--glass) !important;
+    backdrop-filter: var(--blur) !important;
+    -webkit-backdrop-filter: var(--blur) !important;
+    border: 1px solid var(--glass-border) !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     max-width: 400px;
     width: 90%;
-    background: rgba(50, 0, 54, 0.499) !important;
     border-radius: 16px;
-    backdrop-filter: blur(10.2px) !important;
-    -webkit-backdrop-filter: blur(10.2px) !important;
+
 }
 
 .login-header {

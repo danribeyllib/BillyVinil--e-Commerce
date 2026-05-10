@@ -6,20 +6,22 @@
 
 /* Cards Discos Carrinho */
 .card-disco-carinho {
-    background: rgba(129, 13, 85, 0.233);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.4px);
-    -webkit-backdrop-filter: blur(4.4px);
+    background: rgba(26, 0, 38, 0.618);
+    backdrop-filter: var(--blur) !important;
+    -webkit-backdrop-filter: var(--blur) !important;
+    border: 1px solid var(--glass-border) !important;
 }
 
 /* Card Resumo da Compra */
 .resumo-disco {
-    background: rgba(137, 43, 226, 0.34);
+    background: rgba(0, 48, 48, 0.237);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.4px);
-    -webkit-backdrop-filter: blur(4.4px);
+    backdrop-filter: var(--blur) !important;
+    -webkit-backdrop-filter: var(--blur) !important;
+    border: 1px solid var(--glass-border) !important;
 }
 
 /* Imagens */
@@ -67,12 +69,12 @@
 
 /* Desconto Preçomodal-compra-erro */
 .preco-normal-carrinho {
-  text-decoration: line-through;
-  opacity: 0.6;
-  font-size: 0.9rem;
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-size: 0.9rem;
 }
 
 .preco-desconto-carrinho {
-  color: #3ee08f;
-  font-size: 1.1rem;
+    color: #3ee08f;
+    font-size: 1.1rem;
 }
