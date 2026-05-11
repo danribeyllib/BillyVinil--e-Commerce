@@ -871,19 +871,19 @@ hr {
 }
 
 .selo-desconto-10 {
-  border: 3px dashed #ff57a3;
-  background-color: #7d008877;
-  color: #ff578f;
+  border: 3px dashed #d82877;
+  background-color: #41012b8d;
+  color: #da0b46;
   text-shadow:
-    0 0 10px #8005bdd2,
-    0 0 15px #d017ed,
-    0 0 35px #9600e6;
+    0 0 10px #85838689,
+    0 0 15px #737374a5,
+    0 0 35px #8480849b;
 }
 
 .selo-desconto-20 {
   border: 3px dashed #ffd138;
   background-color: #a9c1305e;
-  color: #28271f;
+  color: #ffcc00;
   text-shadow:
     0 0 10px #91ac7dd2,
     0 0 15px #27a18b9e,

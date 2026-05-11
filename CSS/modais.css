@@ -203,7 +203,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Confirmação */
-#modal-carrinho-confirmacao .modal-card {
+#modal-carrinho-confirmacao .modal-card #modal-concluir-compra-sucesso .modal-card {
     background: rgba(68, 80, 96, 0.156);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -324,13 +324,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Modal finalizar compra */
-#modal-finalizar-compra.modal {
+#modal-finalizar-compra.modal,
+#modal-concluir-compra-sucesso.modal {
     align-items: center;
     justify-content: center;
     z-index: 1000;
 }
 
-#modal-finalizar-compra .modal-card {
+#modal-finalizar-compra .modal-card,
+#modal-concluir-compra-sucesso .modal-card {
     background: rgba(91, 68, 96, 0.156) !important;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -348,7 +350,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Body */
-#modal-finalizar-compra .modal-card-body {
+#modal-finalizar-compra .modal-card-body,
+#modal-concluir-compra-sucesso .modal-card-body {
     flex: 1 1 auto !important;
     overflow-y: auto !important;
     padding: 20px !important;
@@ -357,7 +360,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Header */
-#modal-finalizar-compra .modal-card-head {
+#modal-finalizar-compra .modal-card-head,
+#modal-concluir-compra-sucesso .modal-card-head {
     flex-shrink: 0 !important;
     background: rgba(26, 0, 38, 0.618);
     backdrop-filter: var(--blur) !important;
@@ -366,7 +370,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Footer */
-#modal-finalizar-compra .modal-card-foot {
+#modal-finalizar-compra .modal-card-foot,
+#modal-concluir-compra-sucesso .modal-card-foot {
     flex-shrink: 0 !important;
     display: flex !important;
     gap: 10px;
@@ -378,7 +383,6 @@ input[type=number]::-webkit-outer-spin-button {
     backdrop-filter: var(--blur) !important;
     -webkit-backdrop-filter: var(--blur) !important;
     border-bottom: 1px solid var(--glass-border) !important;
-
 }
 
 /* Botões */

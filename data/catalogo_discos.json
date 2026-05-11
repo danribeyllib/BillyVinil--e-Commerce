@@ -1,6 +1,6 @@
 [
   {
-    "id": "1774493496956",
+    "id": 1774493496956,
     "album": "Dark Side of the Moon",
     "artista": "Pink Floyd",
     "lancamento": 1973,
@@ -95,7 +95,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496957",
+    "id": 1774493496957,
     "album": "A Night To Remember",
     "artista": "Cyndi Lauper",
     "lancamento": 1989,
@@ -200,7 +200,7 @@
     "percentualDesconto": 10
   },
   {
-    "id": "1774493496958",
+    "id": 1774493496958,
     "album": "Hot Space",
     "artista": "Queen",
     "lancamento": 1982,
@@ -302,7 +302,7 @@
     "percentualDesconto": 5
   },
   {
-    "id": "1774493496959",
+    "id": 1774493496959,
     "album": "News of the World",
     "artista": "Queen",
     "lancamento": 1977,
@@ -396,7 +396,7 @@
     "percentualDesconto": 5
   },
   {
-    "id": "1774493496960",
+    "id": 1774493496960,
     "album": "The Wall",
     "artista": "Pink Floyd",
     "lancamento": 1979,
@@ -562,7 +562,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496961",
+    "id": 1774493496961,
     "album": "She's So Unusual",
     "artista": "Cyndi Lauper",
     "lancamento": 1983,
@@ -656,7 +656,7 @@
     "percentualDesconto": 10
   },
   {
-    "id": "1774493496962",
+    "id": 1774493496962,
     "album": "Gita",
     "artista": "Raul Seixas",
     "lancamento": 1974,
@@ -761,7 +761,7 @@
     "percentualDesconto": 20
   },
   {
-    "id": "1774493496963",
+    "id": 1774493496963,
     "album": "Krig-ha, Bandolo!",
     "artista": "Raul Seixas",
     "lancamento": 1973,
@@ -866,7 +866,7 @@
     "percentualDesconto": 20
   },
   {
-    "id": "1774493496964",
+    "id": 1774493496964,
     "album": "Demon Days",
     "artista": "Gorillaz",
     "lancamento": 2005,
@@ -987,7 +987,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496965",
+    "id": 1774493496965,
     "album": "Falso Brilhante",
     "artista": "Elis Regina",
     "lancamento": 1976,
@@ -1076,7 +1076,7 @@
     "percentualDesconto": 10
   },
   {
-    "id": "1774493496966",
+    "id": 1774493496966,
     "album": "Titãs (1984)",
     "artista": "Titãs",
     "lancamento": 1984,
@@ -1172,7 +1172,7 @@
     "percentualDesconto": 10
   },
   {
-    "id": "1774493496967",
+    "id": 1774493496967,
     "album": "Cabeça Dinossauro",
     "artista": "Titãs",
     "lancamento": 1986,
@@ -1277,7 +1277,7 @@
     "percentualDesconto": 10
   },
   {
-    "id": "1774493496968",
+    "id": 1774493496968,
     "album": "Outer Wilds: Secrets",
     "artista": "Andrew Prahlow",
     "lancamento": 2021,
@@ -1436,7 +1436,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496969",
+    "id": 1774493496969,
     "album": "Zelda: Majora's Mask",
     "artista": "Koji Kondo",
     "lancamento": 2022,
@@ -1917,7 +1917,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496970",
+    "id": 1774493496970,
     "album": "Zelda: Breath of the Wild",
     "artista": "Koji Kondo",
     "lancamento": 2017,
@@ -2128,7 +2128,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496971",
+    "id": 1774493496971,
     "album": "Undertale",
     "artista": "Toby Fox",
     "lancamento": 2016,
@@ -2717,7 +2717,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496972",
+    "id": 1774493496972,
     "album": "Deltarune Chapter 2",
     "artista": "Toby Fox",
     "lancamento": 2018,
@@ -2999,7 +2999,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496973",
+    "id": 1774493496973,
     "album": "Mestres da Música - Ravel",
     "artista": "Orquestra Sinfônica de Viena",
     "lancamento": 1980,
@@ -3053,7 +3053,7 @@
     "percentualDesconto": 15
   },
   {
-    "id": "1774493496974",
+    "id": 1774493496974,
     "album": "Phantom of the Opera",
     "artista": "Original Cast Recording",
     "lancamento": 1986,
@@ -3204,7 +3204,7 @@
     "percentualDesconto": 15
   },
   {
-    "id": "1774493496975",
+    "id": 1774493496975,
     "album": "Les Miserables",
     "artista": "Original London Cast",
     "lancamento": 1985,
@@ -3389,7 +3389,7 @@
     "percentualDesconto": 15
   },
   {
-    "id": "1774493496976",
+    "id": 1774493496976,
     "album": "Elis (1972)",
     "artista": "Elis Regina",
     "lancamento": 1972,
@@ -3484,7 +3484,7 @@
     "percentualDesconto": 10
   },
   {
-    "id": "1774493496977",
+    "id": 1774493496977,
     "album": "Secos & Molhados (1973)",
     "artista": "Secos & Molhados",
     "lancamento": 1973,
@@ -3592,7 +3592,7 @@
     "percentualDesconto": 10
   },
   {
-    "id": "1774493496978",
+    "id": 1774493496978,
     "album": "Outer Wilds: Signals",
     "artista": "Andrew Prahlow",
     "lancamento": 2020,
@@ -3752,7 +3752,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496979",
+    "id": 1774493496979,
     "album": "Novo Aeon",
     "artista": "Raul Seixas",
     "lancamento": 1975,
@@ -3857,7 +3857,7 @@
     "percentualDesconto": 20
   },
   {
-    "id": "1774493496980",
+    "id": 1774493496980,
     "album": "Rumours",
     "artista": "Fleetwood Mac",
     "lancamento": 1977,
@@ -3957,7 +3957,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496981",
+    "id": 1774493496981,
     "album": "Exagerado",
     "artista": "Cazuza",
     "lancamento": 1985,
@@ -4052,7 +4052,7 @@
     "percentualDesconto": 10
   },
   {
-    "id": "1774493496982",
+    "id": 1774493496982,
     "album": "Let It Be",
     "artista": "The Beatles",
     "lancamento": 1970,
@@ -4158,7 +4158,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496983",
+    "id": 1774493496983,
     "album": "O Lago dos Cisnes",
     "artista": "Pyotr Ilyich Tchaikovsky",
     "lancamento": 2020,
@@ -4238,7 +4238,7 @@
     "percentualDesconto": 15
   },
   {
-    "id": "1774493496984",
+    "id": 1774493496984,
     "album": "Voyage",
     "artista": "ABBA",
     "lancamento": 2021,
@@ -4328,7 +4328,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496985",
+    "id": 1774493496985,
     "album": "Waterloo",
     "artista": "ABBA",
     "lancamento": 1974,
@@ -4425,7 +4425,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496986",
+    "id": 1774493496986,
     "album": "ABBA (1975)",
     "artista": "ABBA",
     "lancamento": 1975,
@@ -4525,7 +4525,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496987",
+    "id": 1774493496987,
     "album": "Voulez-Vous",
     "artista": "ABBA",
     "lancamento": 1979,
@@ -4615,7 +4615,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496988",
+    "id": 1774493496988,
     "album": "A Night at the Opera",
     "artista": "Queen",
     "lancamento": 1975,
@@ -4715,7 +4715,7 @@
     "percentualDesconto": 5
   },
   {
-    "id": "1774493496989",
+    "id": 1774493496989,
     "album": "Sheer Heart Attack",
     "artista": "Queen",
     "lancamento": 1974,
@@ -4820,7 +4820,7 @@
     "percentualDesconto": 5
   },
   {
-    "id": "1774493496990",
+    "id": 1774493496990,
     "album": "Saturday Night Fever (The Original Movie Sound Track)",
     "artista": "Bee Gees",
     "lancamento": 1977,
@@ -4941,7 +4941,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496991",
+    "id": 1774493496991,
     "album": "Labyrinth (From The Original Soundtrack of the Jim Henson Film)",
     "artista": "David Bowie / Trevor Jones",
     "lancamento": 1986,
@@ -5046,7 +5046,7 @@
     "percentualDesconto": 15
   },
   {
-    "id": "1774493496992",
+    "id": 1774493496992,
     "album": "Mestres da Música - Strauss",
     "artista": "Richard Strauss",
     "lancamento": 1982,
@@ -5105,7 +5105,7 @@
     "percentualDesconto": 15
   },
   {
-    "id": "1774493496993",
+    "id": 1774493496993,
     "album": "Californication",
     "artista": "Red Hot Chili Peppers",
     "lancamento": 1999,
@@ -5221,7 +5221,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496994",
+    "id": 1774493496994,
     "album": "American Idiot - 20th Anniversary Edition",
     "artista": "Green Day",
     "lancamento": 2004,
@@ -5328,7 +5328,7 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1774493496995",
+    "id": 1774493496995,
     "album": "True Colors",
     "artista": "Cyndi Lauper",
     "lancamento": 1986,
@@ -5418,7 +5418,7 @@
     "percentualDesconto": 10
   },
   {
-    "id": "1774493496996",
+    "id": 1774493496996,
     "album": "Aladdin Sane",
     "artista": "David Bowie",
     "lancamento": 1973,
@@ -5514,60 +5514,60 @@
     "percentualDesconto": 0
   },
   {
-    "id": "1777490524044",
+    "id": 1778457656450,
     "album": "BillyVinil",
     "artista": "Billy",
-    "lancamento": 2024,
-    "edicao": "2026",
+    "lancamento": 2010,
+    "edicao": "2020",
     "peso": "180g",
     "tipo": "LP 12\"",
     "musicas": [
       {
         "lado": "A",
         "faixa": 1,
-        "nome": "Faixa 1"
+        "nome": "1"
       },
       {
         "lado": "A",
         "faixa": 2,
-        "nome": "Faixa 2"
+        "nome": "2"
       },
       {
         "lado": "A",
         "faixa": 3,
-        "nome": "Faixa 3"
+        "nome": "3"
       },
       {
         "lado": "B",
         "faixa": 1,
-        "nome": "Faixa 4"
+        "nome": "4"
       },
       {
         "lado": "B",
         "faixa": 2,
-        "nome": "Faixa 5"
+        "nome": "5"
       },
       {
         "lado": "B",
         "faixa": 3,
-        "nome": "Faixa 6"
+        "nome": "6"
       }
     ],
     "pais": "br",
-    "paisFab": "br",
-    "preco": 250,
+    "paisFab": "cn",
+    "preco": 195.8,
     "estilo": [
       "Rock",
       "Rock Felino"
     ],
     "resumo": [
-      "Resumo do álbum..."
+      "Resumo do disco BillyVinil"
     ],
-    "capa": "/imagens/capas/1777490523983.jpg",
+    "capa": "/imagens/capas/BillyVinil_Billy_2010_1778457656383_capa.png",
     "galeria": [
-      "/imagens/galeria/BillyVinil/1777490524000.jpg",
-      "/imagens/galeria/BillyVinil/1777490524001.jpg",
-      "/imagens/galeria/BillyVinil/1778021907503.jpg"
+      "/imagens/galeria/BillyVinil/BillyVinil_Billy_2010_1778457656436_1.jpg",
+      "/imagens/galeria/BillyVinil/BillyVinil_Billy_2010_1778457656440_2.jpg",
+      "/imagens/galeria/BillyVinil/BillyVinil_Billy_2010_1778457656441_3.jpg"
     ],
     "tags": [
       {
@@ -5579,85 +5579,12 @@
         "cor": "destaque-tag"
       },
       {
-        "nome": "Edição Limitada",
-        "cor": "azul-claro-tag"
-      },
-      {
-        "nome": "Importado",
-        "cor": "importado-tag"
+        "nome": "Novo",
+        "cor": "verde-tag"
       }
     ],
     "estoque": 3,
     "oferta": true,
     "percentualDesconto": 10
-  },
-  {
-    "id": "1778025465580",
-    "album": "Vinil Billy 2",
-    "artista": "Billy Vinil",
-    "lancamento": 2012,
-    "edicao": "2025",
-    "peso": "200g Duplo",
-    "tipo": "LP 12\"",
-    "musicas": [
-      {
-        "lado": "A",
-        "faixa": 1,
-        "nome": "Número um"
-      },
-      {
-        "lado": "A",
-        "faixa": 2,
-        "nome": "Número dois"
-      },
-      {
-        "lado": "B",
-        "faixa": 1,
-        "nome": "Número três"
-      },
-      {
-        "lado": "C",
-        "faixa": 1,
-        "nome": "Número quatro"
-      },
-      {
-        "lado": "D",
-        "faixa": 1,
-        "nome": "Número cinco"
-      }
-    ],
-    "pais": "br",
-    "paisFab": "cn",
-    "preco": 127.99,
-    "estilo": [
-      "Pop Rock",
-      "Pop"
-    ],
-    "resumo": [
-      "Resumo sobre o segundo álbum de teste"
-    ],
-    "capa": "/imagens/capas/Vinil_Billy_2_Billy_Vinil_2012_1778025465441_capa.png",
-    "galeria": [
-      "/imagens/galeria/Vinil_Billy_2/Vinil_Billy_2_Billy_Vinil_2012_1778025465542_1.jpg",
-      "/imagens/galeria/Vinil_Billy_2/Vinil_Billy_2_Billy_Vinil_2012_1778025465548_2.jpg",
-      "/imagens/galeria/Vinil_Billy_2/Vinil_Billy_2_Billy_Vinil_2012_1778025465549_3.jpg"
-    ],
-    "tags": [
-      {
-        "nome": "Bom Estado",
-        "cor": "verde-tag"
-      },
-      {
-        "nome": "Destaque",
-        "cor": "destaque-tag"
-      },
-      {
-        "nome": "Raro",
-        "cor": "gold-tag"
-      }
-    ],
-    "estoque": 3,
-    "oferta": true,
-    "percentualDesconto": 35
   }
 ]

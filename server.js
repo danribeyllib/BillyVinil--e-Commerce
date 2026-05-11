@@ -24,7 +24,6 @@ app.use((req, res, next) => {
 const caminhoArquivo = path.join(__dirname, "data", "catalogo_discos.json");
 
 // Funções auxiliares
-
 function limparNome(nome) {
     return nome
         .trim()
@@ -67,7 +66,6 @@ function caminhoPublico(caminhoArquivo) {
 }
 
 // Upload imagens
-
 const storage = multer.diskStorage({
 
     destination: (req, file, cb) => {
@@ -214,7 +212,7 @@ app.get("/discos/:id", (req, res) => {
     const discos = lerBanco();
 
     const disco = discos.find(d =>
-        String(d.id) === String(req.params.id)
+        Number(d.id) === Number(req.params.id)
     );
 
     if (!disco) {
@@ -240,7 +238,7 @@ app.post("/discos",
 
             const novoDisco = montarDisco(
                 req,
-                Date.now().toString()
+                Number(req.body.id) || Date.now()
             );
 
             discos.push(novoDisco);
@@ -260,7 +258,6 @@ app.post("/discos",
 );
 
 // Editar disco
-
 app.put("/discos/:id",
 
     upload.fields([
@@ -274,7 +271,7 @@ app.put("/discos/:id",
             const discos = lerBanco();
 
             const index = discos.findIndex(d =>
-                String(d.id) === String(req.params.id)
+                Number(d.id) === Number(req.params.id)
             );
 
             if (index === -1) {
@@ -283,7 +280,7 @@ app.put("/discos/:id",
 
             discos[index] = montarDisco(
                 req,
-                req.params.id,
+                Number(req.params.id),
                 discos[index]
             );
 
@@ -300,15 +297,48 @@ app.put("/discos/:id",
     }
 );
 
-// Excluir disco
+// Baixar somente estoque após compra
+app.patch("/discos/:id/estoque", (req, res) => {
+    try {
 
+        const discos = lerBanco();
+
+        const index = discos.findIndex(d =>
+            Number(d.id) === Number(req.params.id)
+        );
+
+        if (index === -1) {
+            return res.status(404).send("Disco não encontrado.");
+        }
+
+        const quantidadeVendida = paraNumero(req.body.quantidadeVendida);
+
+        const estoqueAtual = paraNumero(discos[index].estoque);
+
+        discos[index].estoque =
+            Math.max(0, estoqueAtual - quantidadeVendida);
+
+        salvarBanco(discos);
+
+        res.json({
+            mensagem: "Estoque atualizado com sucesso!",
+            estoque: discos[index].estoque
+        });
+
+    } catch (erro) {
+        console.log(erro);
+        res.status(500).send("Erro ao atualizar estoque.");
+    }
+});
+
+// Excluir disco
 app.delete("/discos/:id", (req, res) => {
     try {
 
         const discos = lerBanco();
 
         const novaLista = discos.filter(d =>
-            String(d.id) !== String(req.params.id)
+            Number(d.id) !== Number(req.params.id)
         );
 
         salvarBanco(novaLista);
@@ -323,7 +353,6 @@ app.delete("/discos/:id", (req, res) => {
 });
 
 // Iniciar servidor
-
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

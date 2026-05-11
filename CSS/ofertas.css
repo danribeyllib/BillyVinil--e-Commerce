@@ -59,7 +59,7 @@
     position: absolute;
     top: 20px;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.204);
+    background: rgba(255, 255, 255, 0.303);
 }
 
 .banner-ver-ofertas {
@@ -442,14 +442,14 @@
 
 .cyndi-glass .selo-desconto {
     border: 3px dashed #ff0099;
-    background-color: #9efaff25;
-    color: #f84868;
+    background-color: #ff9ee825;
+    color: #ff1168;
     left: 20px;
     right: auto;
     transform: rotate(-15deg);
     text-shadow:
-        0 0 10px #f9719a96,
-        0 0 15px #633c68,
+        0 0 10px #fb3e7796,
+        0 0 15px #5a2f5a,
         0 0 20px #623662;
 }
 

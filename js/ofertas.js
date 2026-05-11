@@ -37,17 +37,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     });
 
-    //  --  Renderizar seções por ID  --  //                                     //////// >>>> MODIFICAR <<<<  ////////
+    //  --  Renderizar seções por ID  --  //                                     
     ///-------------------- RAUL
-    renderizarDiscosPorId([7, 8, 23], "section-discos-raul");
+    renderizarDiscosPorId([1774493496962, 1774493496963, 1774493496979], "section-discos-raul");
     ///-------------------- MPB
-    renderizarDiscosPorId([9, 10, 18, 19, 20, 25], "section-discos-mpb");
+    renderizarDiscosPorId([1774493496965, 1774493496966, 1774493496967, 1774493496976, 1774493496977, 1774493496981], "section-discos-mpb");
     ///-------------------- QUEEN 
-    renderizarDiscosPorId([3, 4, 32, 33], "section-discos-queen");
+    renderizarDiscosPorId([1774493496958, 1774493496959, 1774493496988, 1774493496989], "section-discos-queen");
     ///-------------------- ORQUESTRA 
-    renderizarDiscosPorId([15, 16, 17, 27, 36], "section-discos-orquestra");
+    renderizarDiscosPorId([1774493496983, 1774493496974, 1774493496975, 1774493496973], "section-discos-orquestra");
     ///-------------------- CYNDI 
-    renderizarDiscosPorId([2, 6, 39], "section-discos-cyndi");
+    renderizarDiscosPorId([1774493496957, 1774493496961, 1774493496995], "section-discos-cyndi");
 
     //  --  Botão Ver Ofertas (checkbox)  -- //
     configurarToggle("toggle-ofertas-raul", "section-discos-raul", ".toggle-ofertas-raul");

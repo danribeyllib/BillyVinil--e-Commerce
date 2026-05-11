@@ -177,7 +177,7 @@ function atualizarResumo(subtotalSem, subtotalCom, desconto) {
 
 ///      MODAIS     ///
 function fecharModalCarrinhoSucesso() {
-    document.getElementById("modal-carrinho-add-sucesso").classList.remove("is-active");
+    document.getElementById("modal-concluir-compra-sucesso").classList.remove("is-active");
 };
 
 function fecharModalErroEstoque() {
@@ -403,15 +403,124 @@ function copiarResumoParaModal() {
     const total =
         document.getElementById("resumo-total")?.innerText || "R$ 0,00";
 
+    const carrinho =
+        JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    let totalItens = 0;
+
+    carrinho.forEach(item => {
+        totalItens += Number(item.quantidade || 1);
+    });
+
     document.getElementById("finalizar-subtotal").innerText = subtotal;
     document.getElementById("finalizar-desconto").innerText = desconto;
     document.getElementById("finalizar-total").innerText = total;
-
     document.getElementById("finalizar-frete").innerText = "R$ 0,00";
+    document.getElementById("finalizar-itens").innerText = totalItens;
 }
+
+// Opção Cartão
+document.addEventListener("DOMContentLoaded", () => {
+
+    const selectPagamento =
+        document.getElementById("select-pagamento");
+
+    const campoCartoes =
+        document.getElementById("campo-cartoes-salvos");
+
+    if (selectPagamento) {
+
+        selectPagamento.addEventListener("change", function () {
+
+            if (this.value === "cartao") {
+                campoCartoes.classList.remove("is-hidden");
+            } else {
+                campoCartoes.classList.add("is-hidden");
+            }
+
+        });
+
+    }
+
+});
 
 // Fechar modal
 function fecharModalFinalizarCompra() {
     const modal = document.getElementById("modal-finalizar-compra");
     modal.classList.remove("is-active");
 }
+
+// Confirmar compra final
+document.addEventListener("DOMContentLoaded", () => {
+    const btnConfirmar = document.getElementById("btn-confirmar-compra");
+
+    if (btnConfirmar) {
+
+        btnConfirmar.addEventListener("click", (e) => confirmarCompraFinal(e));
+    }
+});
+
+async function confirmarCompraFinal() {
+    if (event) event.preventDefault();
+    try {
+        const carrinho =
+            JSON.parse(localStorage.getItem("carrinho")) || [];
+
+        for (const item of carrinho) {
+
+            const resposta = await fetch(
+                `http://localhost:3000/discos/${item.id}/estoque`,
+                {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        quantidadeVendida: item.quantidade
+                    })
+                }
+            );
+
+            if (!resposta.ok) {
+                throw new Error("Erro item ID " + item.id);
+            }
+        }
+
+        localStorage.removeItem("carrinho");
+
+        fecharModalFinalizarCompra();
+
+        await renderizarCarrinho();
+
+        abrirModalCompraSucesso();
+
+    } catch (erro) {
+        debugger;
+        console.error("ERRO REAL:", erro);
+    }
+}
+
+// Modal Finalizar compra
+function abrirModalCompraSucesso() {
+    const modal = document.getElementById("modal-concluir-compra-sucesso");
+
+    const texto = document.getElementById("texto-sucesso-compra");
+
+    texto.innerText = "Compra concluída com sucesso!";
+
+    modal.classList.add("is-active");
+}
+
+// Fechar modal sucesso
+function fecharModalCompraSucesso() {
+
+    const modal =
+        document.getElementById(
+            "modal-concluir-compra-sucesso"
+        );
+
+    if (modal) {
+        modal.classList.remove("is-active");
+    }
+}
+

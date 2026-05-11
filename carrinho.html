@@ -306,7 +306,8 @@
 
                         <div class="column">
                             <p id="cart-artista" class="subtitle is-6 mb-2"></p>
-                            <p id="cart-preco" class="has-text-white is-size-5">Não foi possível adicionar ao carrinho.
+                            <p id="texto-erro-estoque" class="has-text-white is-size-5">Não foi possível adicionar ao
+                                carrinho.
                                 Estoque insuficiente</p>
                         </div>
                     </div>
@@ -363,44 +364,6 @@
         </div>
     </div>
 
-    <!--Modal Erro Compra-->
-    <div id="modal-compra-erro" class="modal">
-        <div class="modal-background" onclick="fecharModalErroCompra()"></div>
-
-        <div class="modal-card">
-
-            <header class="modal-card-head">
-                <p class="modal-card-title"><span><i
-                            class="fa-solid fa-triangle-exclamation has-text-danger-60 mr-2"></i></span> Erro!</p>
-                <button class="delete" aria-label="close" onclick="fecharModalErroCompra()"></button>
-            </header>
-
-            <section class="modal-card-body mx-4 my-4">
-                <div class="columns is-mobile is-vcentered">
-
-                    <div class="is-flex is-align-items-center is-flex-wrap-wrap">
-                        <div class="mr-5 mb-3">
-                            <img src="../imagens/logos/erroEstoque.png" style="max-width: 100px;" />
-                        </div>
-
-                        <div class="column">
-                            <p id="cart-artista" class="subtitle is-6 mb-2"></p>
-                            <p id="cart-preco" class="has-text-white is-size-5">Não foi possível concluir a compra.
-                                Sistema indisponível.</p>
-                        </div>
-                    </div>
-
-            </section>
-
-            <footer class="modal-card-foot is-justify-content-flex-end">
-                <div class="is-flex is-align-items-center w-100">
-                    <button class="button is-link is-dark is-inverted mx-1"
-                        onclick="fecharModalErroCompra()">Voltar</button>
-                </div>
-            </footer>
-        </div>
-    </div>
-
     <!-- Modal Finalizar Compra -->
     <div id="modal-finalizar-compra" class="modal">
         <div class="modal-background" onclick="fecharModalFinalizarCompra()"></div>
@@ -431,7 +394,7 @@
 
                     <div class="is-flex is-justify-content-space-between mb-2">
                         <span>Itens</span>
-                        <span class="has-text-info has-text-weight-semibold" id="finalizar-itens has-text-warning">0</span>
+                        <span class="has-text-info has-text-weight-semibold" id="finalizar-itens">0</span>
                     </div>
 
                     <div class="is-flex is-justify-content-space-between mb-2">
@@ -499,17 +462,34 @@
 
                     <div class="control">
                         <div class="select is-fullwidth">
-                            <select>
-                                <option>Selecione</option>
-                                <option>Pix</option>
-                                <option>Cartão</option>
-                                <option>Boleto</option>
-
-
-
+                            <select id="select-pagamento">
+                                <option value="">Selecione</option>
+                                <option value="pix" disabled>Pix</option>
+                                <option value="cartao">Cartão</option>
+                                <option value="boleto" disabled>Boleto</option>
                             </select>
                         </div>
                     </div>
+                </div>
+
+                <!-- Campo Cartões -->
+                <div class="field mt-4 is-hidden" id="campo-cartoes-salvos">
+
+                    <label class="label">
+                        Cartões Salvos
+                    </label>
+
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select id="select-cartao">
+                                <option value="">Selecione um cartão</option>
+                                <option>Visa final 0001</option>
+                                <option>Mastercard final 0002</option>
+                                <option>Elo final 0003</option>
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
 
             </section>
@@ -517,16 +497,97 @@
             <!-- Footer -->
             <footer class="modal-card-foot is-justify-content-flex-end">
 
-                <button class="button is-danger is-dark" onclick="fecharModalFinalizarCompra()">
+                <button type="button" class="button is-danger is-dark" onclick="fecharModalFinalizarCompra()">
                     Cancelar
                 </button>
 
-                <button class="button is-success">
+                <button type="button" id="btn-confirmar-compra" class="button is-success">
                     Confirmar Compra
                 </button>
 
             </footer>
 
+        </div>
+    </div>
+
+    <!--Modal Compra Sucesso-->
+    <div id="modal-concluir-compra-sucesso" class="modal">
+
+        <div class="modal-background">
+        </div>
+
+        <div class="modal-card">
+
+            <!-- Header -->
+            <header class="modal-card-head">
+                <p class="modal-card-title has-text-success">
+                    Compra Finalizada
+                </p>
+
+                <button class="delete" aria-label="close" onclick="fecharModalCompraSucesso()">
+                </button>
+            </header>
+
+            <!-- Body -->
+            <section class="modal-card-body has-text-centered">
+
+                <span class="icon is-large mb-4 has-text-success">
+                    <i class="fa-solid fa-circle-check fa-3x"></i>
+                </span>
+
+                <p id="texto-sucesso-compra" class="title is-5 mt-3">
+                    Compra concluída com sucesso!
+                </p>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="modal-card-foot is-justify-content-center">
+
+                <button class="button is-success" onclick="fecharModalCompraSucesso()">
+                    OK
+                </button>
+
+            </footer>
+
+        </div>
+    </div>
+
+    <!--Modal Erro Compra-->
+    <div id="modal-compra-erro" class="modal">
+        <div class="modal-background" onclick="fecharModalErroCompra()"></div>
+
+        <div class="modal-card">
+
+            <header class="modal-card-head">
+                <p class="modal-card-title"><span><i
+                            class="fa-solid fa-triangle-exclamation has-text-danger-60 mr-2"></i></span> Erro!</p>
+                <button class="delete" aria-label="close" onclick="fecharModalErroCompra()"></button>
+            </header>
+
+            <section class="modal-card-body mx-4 my-4">
+                <div class="columns is-mobile is-vcentered">
+
+                    <div class="is-flex is-align-items-center is-flex-wrap-wrap">
+                        <div class="mr-5 mb-3">
+                            <img src="../imagens/logos/erroEstoque.png" style="max-width: 100px;" />
+                        </div>
+
+                        <div class="column">
+                            <p id="cart-artista" class="subtitle is-6 mb-2"></p>
+                            <p id="cart-preco" class="has-text-white is-size-5">Não foi possível concluir a compra.
+                                Sistema indisponível.</p>
+                        </div>
+                    </div>
+
+            </section>
+
+            <footer class="modal-card-foot is-justify-content-flex-end">
+                <div class="is-flex is-align-items-center w-100">
+                    <button class="button is-link is-dark is-inverted mx-1"
+                        onclick="fecharModalErroCompra()">Voltar</button>
+                </div>
+            </footer>
         </div>
     </div>
 

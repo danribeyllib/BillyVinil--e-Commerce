@@ -73,6 +73,7 @@ document.getElementById("form-cadastro-completo").onsubmit = async function (e) 
     const porcentagemDesc = (isOferta && campoDesc) ? campoDesc.value : 0;
 
     const formData = new FormData();
+    formData.append("id", Number(Date.now())); 
     formData.append("album", obterValor("id-album"));
     formData.append("artista", obterValor("id-artista"));
     formData.append("lancamento", Number(obterValor("id-lancamento")));
@@ -1069,21 +1070,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const formulario = document.getElementById("form-cadastro-completo");
 
 
-    if (formulario) {
-        formulario.addEventListener("keydown", function (e) {
-            if (e.key === "Enter" && e.target.tagName !== "TEXTAREA") {
-                e.preventDefault();
-            }
-        });
-    }
+if (formulario) {
+    formulario.addEventListener("keydown", function (e) {
+
+        if (e.target.id === "id-input-estilo") {
+            return;
+        }
+
+        if (e.target.classList.contains("input-nome-faixa")) {
+            return;
+        }
+
+        if (e.key === "Enter" && e.target.tagName !== "TEXTAREA") {
+            e.preventDefault();
+        }
+    });
+}
 
     if (selectDesconto) {
-        for (let i = 5; i <= 70; i += 5) {
+
+        const descontos = [5, 10, 15, 20];
+
+        descontos.forEach(valor => {
             let opt = document.createElement("option");
-            opt.value = i;
-            opt.innerHTML = `${i}%`;
+            opt.value = valor;
+            opt.innerHTML = `${valor}%`;
             selectDesconto.appendChild(opt);
-        }
+        });
     }
 
     const switchDesconto = document.getElementById("id-switch-desconto");
@@ -1319,7 +1332,7 @@ function logoutSistema() {
     window.location.href = "login_estoque.html";
 }
 
-// ALteração de imagens
+// Alteração de imagens
 function removerCapaAtual() {
     removerCapa = true;
     document.getElementById("preview-capa-edicao").innerHTML =
