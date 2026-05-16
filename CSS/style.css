@@ -871,43 +871,43 @@ hr {
 }
 
 .selo-desconto-10 {
-  border: 3px dashed #d82877;
-  background-color: #41012b8d;
-  color: #da0b46;
+  border: 3px dashed #ff7eb6;
+  background-color: #4a022fda;
+  color: #ffd9e8;
   text-shadow:
-    0 0 10px #85838689,
-    0 0 15px #737374a5,
-    0 0 35px #8480849b;
+    0 0 10px #ff5fa2b5,
+    0 0 15px #ff89bfc9,
+    0 0 35px #ff4d94a8;
 }
 
 .selo-desconto-20 {
-  border: 3px dashed #ffd138;
-  background-color: #a9c1305e;
-  color: #ffcc00;
+  border: 3px dashed #ffe27a;
+  background-color: #5a4300d8;
+  color: #fff3bf;
   text-shadow:
-    0 0 10px #91ac7dd2,
-    0 0 15px #27a18b9e,
-    0 0 35px #47dfb9a9;
+    0 0 10px #ffd54ab7,
+    0 0 15px #ffe27ac7,
+    0 0 35px #ffcf33a8;
 }
 
 .selo-desconto-15 {
-  border: 3px dashed #28e5e8;
-  background-color: #03248782;
-  color: #28e5e8;
+  border: 3px dashed #7ffcff;
+  background-color: #003b70d8;
+  color: #d9ffff;
   text-shadow:
-    0 0 8px #b0b0b0f7,
-    0 0 15px #31373f9e,
-    0 0 35px #3c3c3c6d;
+    0 0 8px #5ff6ffb8,
+    0 0 15px #8ffcffc4,
+    0 0 35px #42efffa0;
 }
 
 .selo-desconto-05 {
-  border: 3px dashed #a35af7;
-  background-color: #38045d85;
-  color: #a255f5;
+  border: 3px dashed #d0a2ff;
+  background-color: #4a0a75d8;
+  color: #f2ddff;
   text-shadow:
-    0 0 10px #1c143bf7,
-    0 0 15px #9347949e,
-    0 0 35px #c862d1a9;
+    0 0 10px #b86cffba,
+    0 0 15px #d7a4ffca,
+    0 0 35px #b84dffa8;
 }
 
 .selo-porcentagem {

@@ -59,7 +59,6 @@
     position: absolute;
     top: 20px;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.303);
 }
 
 .banner-ver-ofertas {
@@ -74,26 +73,26 @@
 }
 
 @media screen and (max-width: 768px) {
-  .banner-ver-ofertas {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;  
-    text-align: center !important;
-    padding: 10px !important;
-  }
+    .banner-ver-ofertas {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 10px !important;
+    }
 
-  .banner-ver-ofertas p.title {
-    font-size: 0.8rem !important;     
-    display: inline-block !important;       
-    margin-bottom: 4px !important;    
-    white-space: normal !important;    
-    margin-top: 18px;
-  }
+    .banner-ver-ofertas p.title {
+        font-size: 0.8rem !important;
+        display: inline-block !important;
+        margin-bottom: 4px !important;
+        white-space: normal !important;
+        margin-top: 18px;
+    }
 
-  .banner-ver-ofertas .toggle-ofertas {
-    margin: 0 auto !important;        
-    max-width: 50% !important;
-  }
+    .banner-ver-ofertas .toggle-ofertas {
+        margin: 0 auto !important;
+        max-width: 50% !important;
+    }
 }
 
 /* --- Seção Raul --- */
@@ -122,15 +121,16 @@
 }
 
 .raul-glass .selo-desconto {
-    border: 3px dashed #ff38e8;
-    color: #fa0fa8;
     left: 20px;
     right: auto;
     transform: rotate(-15deg);
+    border: 3px dashed #ff7eb6;
+    background-color: #4a022fda;
+    color: #ffd9e8;
     text-shadow:
-        0 0 10px #535353d2,
-        0 0 15px #9a30c1,
-        0 0 35px #6f47df;
+        0 0 10px #ff5fa2b5,
+        0 0 15px #ff89bfc9,
+        0 0 35px #ff4d94a8;
 }
 
 .btn-raul {
@@ -219,15 +219,16 @@
 }
 
 .mpb-glass .selo-desconto {
-    border: 3px dashed #ffdd57;
-    color: #ffdd57;
+    border: 3px dashed #fff200;
+    color: #fff9a6;
     right: 20px;
     left: auto;
     transform: rotate(15deg);
+
     text-shadow:
-        0 0 10px #3fbd05d2,
-        0 0 15px #00e660,
-        0 0 35px #82e600;
+        0 0 10px #6dff3b,
+        0 0 15px #32ff7e,
+        0 0 35px #d4ff00;
 }
 
 .btn-mpb {
@@ -293,16 +294,16 @@
 }
 
 .queen-glass .selo-desconto {
-    border: 3px dashed #d000ff;
-    background-color: #00aeff3e;
-    color: #d000ff;
+    border: 3px dashed #d0a2ff;
+    background-color: #4a0a75d8;
+    color: #f2ddff;
+    text-shadow:
+        0 0 10px #b86cffba,
+        0 0 15px #d7a4ffca,
+        0 0 35px #b84dffa8;
     left: 20px;
     right: auto;
     transform: rotate(-15deg);
-    text-shadow:
-        0 0 10px #2d05bdd2,
-        0 0 15px #0073e6,
-        0 0 35px #0073e6;
 }
 
 .btn-queen {
@@ -366,15 +367,16 @@
 }
 
 .classica-glass .selo-desconto {
-    border: 3px dashed #00b0ff;
-    color: #00b0ff;
+    border: 3px dashed #7ffcff;
+    background-color: #003b70d8;
+    color: #d9ffff;
+    text-shadow:
+        0 0 8px #5ff6ffb8,
+        0 0 15px #8ffcffc4,
+        0 0 35px #42efffa0;
     right: 20px;
     left: auto;
     transform: rotate(15deg);
-    text-shadow:
-        0 0 10px #045b8eb5,
-        0 0 15px #9082f8,
-        0 0 35px #00c7e6;
 }
 
 .btn-orquestra {
@@ -441,16 +443,16 @@
 }
 
 .cyndi-glass .selo-desconto {
-    border: 3px dashed #ff0099;
-    background-color: #ff9ee825;
-    color: #ff1168;
+    border: 3px dashed #ff7eb6;
+    background-color: #4a022fda;
+    color: #ffd9e8;
+    text-shadow:
+        0 0 10px #ff5fa2b5,
+        0 0 15px #ff89bfc9,
+        0 0 35px #ff4d94a8;
     left: 20px;
     right: auto;
     transform: rotate(-15deg);
-    text-shadow:
-        0 0 10px #fb3e7796,
-        0 0 15px #5a2f5a,
-        0 0 20px #623662;
 }
 
 .btn-cyndi {

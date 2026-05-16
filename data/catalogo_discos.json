@@ -758,7 +758,7 @@
     ],
     "estoque": 1,
     "oferta": true,
-    "percentualDesconto": 20
+    "percentualDesconto": 10
   },
   {
     "id": 1774493496963,
@@ -863,7 +863,7 @@
     ],
     "estoque": 1,
     "oferta": true,
-    "percentualDesconto": 20
+    "percentualDesconto": 10
   },
   {
     "id": 1774493496964,
@@ -1073,7 +1073,7 @@
     ],
     "estoque": 1,
     "oferta": true,
-    "percentualDesconto": 10
+    "percentualDesconto": 20
   },
   {
     "id": 1774493496966,
@@ -1169,7 +1169,7 @@
     ],
     "estoque": 2,
     "oferta": true,
-    "percentualDesconto": 10
+    "percentualDesconto": 20
   },
   {
     "id": 1774493496967,
@@ -1274,7 +1274,7 @@
     ],
     "estoque": 0,
     "oferta": true,
-    "percentualDesconto": 10
+    "percentualDesconto": 20
   },
   {
     "id": 1774493496968,
@@ -3481,7 +3481,7 @@
     ],
     "estoque": 2,
     "oferta": true,
-    "percentualDesconto": 10
+    "percentualDesconto": 20
   },
   {
     "id": 1774493496977,
@@ -3589,7 +3589,7 @@
     ],
     "estoque": 3,
     "oferta": true,
-    "percentualDesconto": 10
+    "percentualDesconto": 20
   },
   {
     "id": 1774493496978,
@@ -3854,7 +3854,7 @@
     ],
     "estoque": 2,
     "oferta": true,
-    "percentualDesconto": 20
+    "percentualDesconto": 10
   },
   {
     "id": 1774493496980,
@@ -4049,7 +4049,7 @@
     ],
     "estoque": 2,
     "oferta": true,
-    "percentualDesconto": 10
+    "percentualDesconto": 20
   },
   {
     "id": 1774493496982,
