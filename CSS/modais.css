@@ -10,6 +10,8 @@
 #modal-carrinho .modal-card-head,
 #modal-carrinho .modal-card-foot {
     background: rgba(123, 59, 129, 0.427) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 10px 20px;
     border: none;
     color: white;
@@ -17,7 +19,9 @@
 }
 
 #modal-carrinho .modal-card-body {
-    background: transparent !important;
+    background: rgba(91, 68, 96, 0.156) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     color: white;
 }
 
@@ -126,6 +130,8 @@ input[type=number]::-webkit-outer-spin-button {
 #modal-newsletter-sucesso .modal-card-head,
 #modal-newsletter-sucesso .modal-card-foot {
     background: rgba(139, 222, 97, 0.458) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 10px 20px;
     border: none;
     color: white;
@@ -134,7 +140,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 #modal-carrinho-add-sucesso .modal-card-body,
 #modal-newsletter-sucesso .modal-card-body {
-    background: transparent !important;
+    background: rgba(91, 68, 96, 0.156) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     color: white;
 }
 
@@ -172,6 +180,8 @@ input[type=number]::-webkit-outer-spin-button {
 #modal-compra-erro .modal-card-head,
 #modal-compra-erro .modal-card-foot {
     background: rgba(217, 61, 97, 0.514) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 10px 20px;
     border: none;
     color: white;
@@ -180,7 +190,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 #modal-carrinho-erro .modal-card-body,
 #modal-compra-erro .modal-card-body {
-    background: transparent !important;
+    background: rgba(91, 68, 96, 0.156) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     color: white;
 }
 
@@ -214,6 +226,8 @@ input[type=number]::-webkit-outer-spin-button {
 #modal-carrinho-confirmacao .modal-card-head,
 #modal-carrinho-confirmacao .modal-card-foot {
     background: rgba(217, 61, 97, 0.514) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 10px 20px;
     border: none;
     color: white;
@@ -221,7 +235,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #modal-carrinho-confirmacao .modal-card-body {
-    background: transparent !important;
+    background: rgba(91, 68, 96, 0.156) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     color: white;
 }
 
@@ -276,6 +292,8 @@ input[type=number]::-webkit-outer-spin-button {
     #modal-carrinho .modal-card-head,
     #modal-carrinho .modal-card-foot {
         background: rgba(176, 88, 184, 0.603) !important;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         padding: 10px 20px;
         border: none;
         font-weight: 500;
@@ -292,6 +310,8 @@ input[type=number]::-webkit-outer-spin-button {
     #modal-carrinho-add-sucesso .modal-card-head,
     #modal-carrinho-add-sucesso .modal-card-foot {
         background: rgba(171, 243, 135, 0.492) !important;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         padding: 10px 20px;
         border: none;
         color: white;
@@ -316,6 +336,8 @@ input[type=number]::-webkit-outer-spin-button {
     #modal-compra-erro .modal-card-head,
     #modal-compra-erro .modal-card-foot {
         background: rgba(232, 52, 94, 0.634) !important;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         padding: 10px 20px;
         border: none;
         color: white;
@@ -356,7 +378,6 @@ input[type=number]::-webkit-outer-spin-button {
     overflow-y: auto !important;
     padding: 20px !important;
     border: 1px solid var(--glass-border) !important;
-
 }
 
 /* Header */
