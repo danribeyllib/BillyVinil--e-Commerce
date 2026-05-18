@@ -9,7 +9,7 @@
 
 #modal-carrinho .modal-card-head,
 #modal-carrinho .modal-card-foot {
-    background: rgba(123, 59, 129, 0.427) !important;
+    background: rgba(123, 59, 129, 0.34) !important;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     padding: 10px 20px;
