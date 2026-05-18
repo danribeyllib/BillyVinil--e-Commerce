@@ -194,8 +194,7 @@ window.alternarFavorito = function (id) {
     let favoritosAtuais = (JSON.parse(localStorage.getItem("favoritos")) || [])
         .map(f => typeof f === "object" ? Number(f.id) : Number(f));
 
-    const btn = document.getElementById(`fav-btn-${id}`);
-    const icone = btn ? btn.querySelector("i") : null;
+    const botoes = document.querySelectorAll(`.fav-btn[data-id="${id}"]`);
 
     const index = favoritosAtuais.indexOf(Number(id));
 
@@ -203,18 +202,33 @@ window.alternarFavorito = function (id) {
         // --- Remover ---
         favoritosAtuais.splice(index, 1);
 
-        if (icone) icone.classList.replace("fa-solid", "fa-regular");
-        if (btn) btn.classList.add("is-light");
+        botoes.forEach(btn => {
+            const icone = btn.querySelector("i");
+
+            if (icone) {
+                icone.classList.replace("fa-solid", "fa-regular");
+            }
+
+            btn.classList.add("is-light");
+        });
 
     } else {
         // --- Adicionar ---
         favoritosAtuais.push(Number(id));
 
-        if (icone) icone.classList.replace("fa-regular", "fa-solid");
-        if (btn) btn.classList.remove("is-light");
+        botoes.forEach(btn => {
+            const icone = btn.querySelector("i");
+
+            if (icone) {
+                icone.classList.replace("fa-regular", "fa-solid");
+            }
+
+            btn.classList.remove("is-light");
+        });
     }
 
     favoritos = favoritosAtuais;
+
     localStorage.setItem("favoritos", JSON.stringify(favoritosAtuais));
 };
 
@@ -289,7 +303,7 @@ function renderizarHorizontal(discos, container, isReversed = false) {
                                   <button class="button is-link is-small" onclick="abrirModalCarrinho(${disco.id})" ${indisponivel ? "disabled" : ""}>Comprar</button>
                                     <button class="button is-small is-info is-inverted" data-id="${disco.id}">Detalhes</button>
 
-                                    <button id="fav-btn-${disco.id}" class="button is-small is-danger ${estaFavoritado ? "" : "is-light"} is-inverted" onclick="alternarFavorito(${disco.id})">
+                                    <button data-id="${disco.id}" class="fav-btn button is-small is-danger ${estaFavoritado ? "" : "is-light"} is-inverted" onclick="alternarFavorito(${disco.id})">
                                      
                                      <span class="icon is-small"><i class="${estaFavoritado ? "fa-solid" : "fa-regular"} fa-heart"></i></span>
                                     </button>
@@ -371,7 +385,7 @@ window.renderizarVertical = function (discos, containerAlvo = null) {
                         <div class="buttons has-addons">
                             <button class="button is-link is-small" onclick="abrirModalCarrinho(${disco.id})" ${indisponivel ? "disabled" : ""}>Comprar</button>
                             <button class="button is-small is-info is-inverted" data-id="${disco.id}">Detalhes</button>
-                            <button id="fav-btn-${disco.id}" class="button is-small is-danger ${estaFavoritado ? "" : "is-light"} is-inverted" onclick="alternarFavorito(${disco.id})">
+                            <button data-id="${disco.id}" class="fav-btn button is-small is-danger ${estaFavoritado ? "" : "is-light"} is-inverted" onclick="alternarFavorito(${disco.id})">
                                 <span class="icon is-small"><i class="${estaFavoritado ? "fa-solid" : "fa-regular"} fa-heart"></i></span>
                             </button>
                         </div>

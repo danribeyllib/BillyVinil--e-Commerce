@@ -204,7 +204,7 @@
     "album": "Hot Space",
     "artista": "Queen",
     "lancamento": 1982,
-    "edicao": 2015,
+    "edicao": "2015",
     "peso": "180g",
     "tipo": "LP 12\"",
     "musicas": [
@@ -281,16 +281,12 @@
     ],
     "tags": [
       {
-        "nome": "Lacrado",
-        "cor": "prata-tag"
-      },
-      {
         "nome": "Importado",
         "cor": "importado-tag"
       },
       {
-        "nome": "Destaque",
-        "cor": "destaque-tag"
+        "nome": "Lacrado",
+        "cor": "prata-tag"
       },
       {
         "nome": "Oferta",
