@@ -21,24 +21,82 @@ O projeto busca reforçar a importância de preservar as mídias clássicas, a c
 - **Cards dinâmicos e responsivos**: Exibição dos discos de forma adaptável e responsiva em layout, exibição de preço e descontos.
 - **Sistema de busca**: Filtro para encontrar álbuns específicos.
 - **Carrossel de destaques**: Responsivo e dinâmico.
-- **Carrinho**: Simulação do carinho de compras com cálculo de estoque e descontos usando o LocalStrorage.
+- **Carrinho**: Simulação do carrinho de compras com cálculo de estoque e descontos usando o LocalStorage.
 - **Página de favoritos**: Salvos no LocalStorage.
-- **JSON**: Simulação de um banco de dados paea o estoque de discos usando um arquivo JSON extentro.
-- **Controle de Estoque**: Tabela de controle de estoque com as informações dos discos armazenados. 
+- **JSON**: Simulação de um banco de dados para o estoque de discos usando um arquivo JSON externo.
+- **Controle de Estoque**: Sistema de controle de estoque com informações dos discos armazenados e funções de cadastro.
+- **Upload de Imagens**: Gerenciamento e upload de arquivos de imagem para os novos discos cadastrados.
 
 ## Tecnologias Utilizadas
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- JSON (Armazenamento local de dados)
 - [Bulma CSS](https://bulma.io/) (Framework CSS)
-- Git e Gihub para controle de versão
+- **Node.js**: Ambiente de execução JavaScript no servidor.
+- **Express**: Framework web para gerenciamento de rotas e requisições HTTP.
+- **Multer**: Middleware para manipulação de `multipart/form-data`, utilizado para o upload de arquivos de imagem das capas.
+- Git e GitHub para controle de versão.
 
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/danribeyllib/BillyVinil--e-Commerce]
-2. Utilize a extensão Live Server do VS Code ou servidor local de sua preferência.
-3. Abra apágina index.html utilizando o servidor local (ex.: Open with Live Server). 
+---
+## Pré-Requisitos e Instalação
 
-**Opção 2**
-1. **Netlify**: Clique no link - https://billyvinil.netlify.app/
+## Pré-Requisitos
+### Node.js:
+
+Este projeto necessita do servidor Node.js e Express, caso ainda não tenha o ambiente configurado, siga os passos abaixo:
+
+#### Windows e macOS
+1. Acesse o site oficial do Node.js: https://nodejs.org
+2. Execute o instalador e siga os passos na tela. O gerenciador de pacotes NPM será instalado automaticamente.
+
+#### Linux (Ubuntu/Debian)
+Abra o seu terminal e execute os comandos para atualizar o sistema e instalar o Node.js junto com o NPM:
+```bash
+sudo apt update
+sudo apt install nodejs npm
+```
+### Live Server - Extensão 
+* No Visual Studio Code, instale a extensão **Live Server** através do menu de extensões.
+
+## Executando o Projeto
+
+### 1. Clone o repositório
+Abra o seu terminal (Git Bash, CMD ou terminal do VS Code) e execute o comando abaixo:
+
+```bash
+git clone [https://github.com/danribeyllib/BillyVinil--e-Commerce.git](https://github.com/danribeyllib/BillyVinil--e-Commerce.git)
+```
+## Front End (Página da Loja de Discos):
+### Opção 1: Executando com a extensão Live Server (Apenas Front-end)
+
+Se você deseja visualizar e testar apenas a interface do front-end diretamente pelo editor de código:
+
+#### Executar a página
+* Localize e abra o arquivo `inicio.html`no gerenciador de arquivos do projeto.
+* Clique com o botão direito sobre o arquivo escolhido e selecione a opção **Open with Live Server**.
+* O projeto será aberto automaticamente em seu navegador padrão, utilizando o endereço local configurado, exemplo: `http://127.0.0.1:5500/`.
+* Na página, selecione **Página Inicial - Loja**.
+
+
+### Opção 2: Execução Online (Acesso Direto)
+
+Caso prefira visualizar o comportamento do projeto sem realizar nenhuma configuração ou instalação local na sua máquina:
+
+* **Netlify**: Acesse a aplicação publicada através do link - [https://billyvinil.netlify.app/](https://billyvinil.netlify.app/)
+
+## Sistema de Controle de Estoque:
+
+### Node.js, Express e Multer (Servidor Backend)
+* Necessário para ativar o servidor backend completo para gerenciamento de rotas e uploads de arquivos de imagem.
+
+### Passo 1: Instalar as dependências
+* Com o terminal aberto na pasta do projeto, instale os pacotes necessários listados no package.json executando:
+```bash
+npm install
+```
+### Passo 2: Iniciar o servidor
+```bash
+npm start
+```
+### Passo 3: Abrir a Página
+* Abra o arquivo `inicio.html` e selecione **Estoque**, em seguida insira o login e senha indicados abaixo dos campos.

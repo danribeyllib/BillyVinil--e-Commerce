@@ -86,6 +86,10 @@
         "cor": "importado-tag"
       },
       {
+        "nome": "Destaque",
+        "cor": "destaque-tag"
+      },
+      {
         "nome": "Raro",
         "cor": "gold-tag"
       }
