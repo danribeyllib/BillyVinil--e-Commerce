@@ -7,3 +7,5 @@ desktop.ini
 .env
 *.env
 senhas.txt
+
+node_modules/
