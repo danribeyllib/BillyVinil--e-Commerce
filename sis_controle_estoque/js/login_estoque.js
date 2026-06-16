@@ -31,12 +31,12 @@ document.getElementById("form-login").onsubmit = function (e) {
         localStorage.setItem("billyvinil_login_persistente", JSON.stringify(statusLogin));
 
         console.log("Login realizado com sucesso.");
-        
-        window.location.href = "sis_estoque.html"; 
+
+        window.location.href = "sis_estoque.html";
     } else {
         console.error("Falha no login: Credenciais invalidas.");
         msgErro.style.display = "block";
-        
+
         document.getElementById("senha").value = "";
     }
 };
@@ -44,10 +44,10 @@ document.getElementById("form-login").onsubmit = function (e) {
 ///   Verificação de Sessão  ///
 window.onload = function() {
 
-   /* const sessaoAtiva = sessionStorage.getItem("billyvinil_sessao") || localStorage.getItem("billyvinil_login_persistente");
-
-    if (sessaoAtiva) {
-        console.log("Sessao encontrada. Usuario ja autenticado.");
-        window.location.href = "sis_estoque.html";
-    }*/
+    /* const sessaoAtiva = sessionStorage.getItem("billyvinil_sessao") || localStorage.getItem("billyvinil_login_persistente");
+ 
+     if (sessaoAtiva) {
+         console.log("Sessao encontrada. Usuario ja autenticado.");
+         window.location.href = "sis_estoque.html";
+     }*/
 };
